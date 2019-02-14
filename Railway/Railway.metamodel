@@ -1,16 +1,227 @@
 {
 	"types": {
-		"Track": [],
-		"Straight": [],
-		"Turnout": [],
-		"Junction": [],
-		"Crossing": [],
-		"Start": [],
-		"End": [],
-		"Station": [],
-		"Train": [],
-		"Light": [],
-		"Positionable": []
+		"Track": [
+			{
+				"name": "position",
+				"type": "list<int>",
+				"default": [
+					0,
+					0
+				]
+			},
+			{
+				"name": "width",
+				"type": "int",
+				"default": 100
+			},
+			{
+				"name": "height",
+				"type": "int",
+				"default": 100
+			}
+		],
+		"Straight": [
+			{
+				"name": "width",
+				"type": "int",
+				"default": 180
+			},
+			{
+				"name": "height",
+				"type": "int",
+				"default": 40
+			},
+			{
+				"name": "position",
+				"type": "list<int>",
+				"default": [
+					0,
+					0
+				]
+			}
+		],
+		"Turnout": [
+			{
+				"name": "width",
+				"type": "int",
+				"default": 180
+			},
+			{
+				"name": "height",
+				"type": "int",
+				"default": 100
+			},
+			{
+				"name": "position",
+				"type": "list<int>",
+				"default": [
+					0,
+					0
+				]
+			}
+		],
+		"Junction": [
+			{
+				"name": "width",
+				"type": "int",
+				"default": 180
+			},
+			{
+				"name": "height",
+				"type": "int",
+				"default": 100
+			},
+			{
+				"name": "position",
+				"type": "list<int>",
+				"default": [
+					0,
+					0
+				]
+			}
+		],
+		"Crossing": [
+			{
+				"name": "width",
+				"type": "int",
+				"default": 180
+			},
+			{
+				"name": "height",
+				"type": "int",
+				"default": 120
+			},
+			{
+				"name": "position",
+				"type": "list<int>",
+				"default": [
+					0,
+					0
+				]
+			}
+		],
+		"Start": [
+			{
+				"name": "width",
+				"type": "int",
+				"default": 180
+			},
+			{
+				"name": "height",
+				"type": "int",
+				"default": 80
+			},
+			{
+				"name": "position",
+				"type": "list<int>",
+				"default": [
+					0,
+					0
+				]
+			}
+		],
+		"End": [
+			{
+				"name": "width",
+				"type": "int",
+				"default": 180
+			},
+			{
+				"name": "height",
+				"type": "int",
+				"default": 80
+			},
+			{
+				"name": "position",
+				"type": "list<int>",
+				"default": [
+					0,
+					0
+				]
+			}
+		],
+		"Station": [
+			{
+				"name": "width",
+				"type": "int",
+				"default": 180
+			},
+			{
+				"name": "height",
+				"type": "int",
+				"default": 70
+			},
+			{
+				"name": "position",
+				"type": "list<int>",
+				"default": [
+					0,
+					0
+				]
+			}
+		],
+		"Train": [
+			{
+				"name": "width",
+				"type": "int",
+				"default": 100
+			},
+			{
+				"name": "height",
+				"type": "int",
+				"default": 40
+			},
+			{
+				"name": "position",
+				"type": "list<int>",
+				"default": [
+					0,
+					0
+				]
+			}
+		],
+		"Light": [
+			{
+				"name": "width",
+				"type": "int",
+				"default": 70
+			},
+			{
+				"name": "height",
+				"type": "int",
+				"default": 30
+			},
+			{
+				"name": "position",
+				"type": "list<int>",
+				"default": [
+					0,
+					0
+				]
+			}
+		],
+		"Positionable": [
+			{
+				"name": "position",
+				"type": "list<int>",
+				"default": [
+					0,
+					0
+				]
+			},
+			{
+				"name": "width",
+				"type": "int",
+				"default": 100
+			},
+			{
+				"name": "height",
+				"type": "int",
+				"default": 100
+			}
+		],
+		"TrackIn": [],
+		"TrackOut": []
 	},
 	"constraints": [
 		{
@@ -28,20 +239,692 @@
 	],
 	"actions": [],
 	"cardinalities": {
-		"Track": [],
-		"Straight": [],
-		"Turnout": [],
-		"Junction": [],
-		"Crossing": [],
-		"Start": [],
-		"End": [],
-		"Station": [],
+		"Track": [
+			{
+				"dir": "in",
+				"type": "TrackIn",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "TrackOut",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "TrackIn",
+				"min": "0",
+				"max": "Infinity"
+			},
+			{
+				"dir": "out",
+				"type": "TrackOut",
+				"min": "0",
+				"max": "Infinity"
+			}
+		],
+		"Straight": [
+			{
+				"dir": "in",
+				"type": "TrackIn",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "TrackOut",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "TrackIn",
+				"min": "0",
+				"max": "Infinity"
+			},
+			{
+				"dir": "out",
+				"type": "TrackOut",
+				"min": "0",
+				"max": "Infinity"
+			}
+		],
+		"Turnout": [
+			{
+				"dir": "in",
+				"type": "TrackIn",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "TrackOut",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "TrackIn",
+				"min": "0",
+				"max": "Infinity"
+			},
+			{
+				"dir": "out",
+				"type": "TrackOut",
+				"min": "0",
+				"max": "Infinity"
+			}
+		],
+		"Junction": [
+			{
+				"dir": "in",
+				"type": "TrackIn",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "TrackOut",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "TrackIn",
+				"min": "0",
+				"max": "Infinity"
+			},
+			{
+				"dir": "out",
+				"type": "TrackOut",
+				"min": "0",
+				"max": "Infinity"
+			}
+		],
+		"Crossing": [
+			{
+				"dir": "in",
+				"type": "TrackIn",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "TrackOut",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "TrackIn",
+				"min": "0",
+				"max": "Infinity"
+			},
+			{
+				"dir": "out",
+				"type": "TrackOut",
+				"min": "0",
+				"max": "Infinity"
+			}
+		],
+		"Start": [
+			{
+				"dir": "in",
+				"type": "TrackIn",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "TrackOut",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "TrackIn",
+				"min": "0",
+				"max": "Infinity"
+			},
+			{
+				"dir": "out",
+				"type": "TrackOut",
+				"min": "0",
+				"max": "Infinity"
+			}
+		],
+		"End": [
+			{
+				"dir": "in",
+				"type": "TrackIn",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "TrackOut",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "TrackIn",
+				"min": "0",
+				"max": "Infinity"
+			},
+			{
+				"dir": "out",
+				"type": "TrackOut",
+				"min": "0",
+				"max": "Infinity"
+			}
+		],
+		"Station": [
+			{
+				"dir": "in",
+				"type": "TrackIn",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "TrackOut",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "TrackIn",
+				"min": "0",
+				"max": "Infinity"
+			},
+			{
+				"dir": "out",
+				"type": "TrackOut",
+				"min": "0",
+				"max": "Infinity"
+			}
+		],
 		"Train": [],
 		"Light": [],
-		"Positionable": []
+		"Positionable": [],
+		"TrackIn": [
+			{
+				"dir": "in",
+				"type": "Track",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "Track",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "Straight",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "Straight",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "Turnout",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "Turnout",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "Junction",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "Junction",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "Crossing",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "Crossing",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "Start",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "Start",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "End",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "End",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "Station",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "Station",
+				"min": "0",
+				"max": "1"
+			}
+		],
+		"TrackOut": [
+			{
+				"dir": "in",
+				"type": "Track",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "Track",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "Straight",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "Straight",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "Turnout",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "Turnout",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "Junction",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "Junction",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "Crossing",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "Crossing",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "Start",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "Start",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "End",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "End",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "Station",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "Station",
+				"min": "0",
+				"max": "1"
+			}
+		]
 	},
-	"legalConnections": {},
-	"connectorTypes": {},
+	"legalConnections": {
+		"Track": {
+			"Track": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"Straight": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"Turnout": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"Junction": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"Crossing": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"Start": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"End": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"Station": [
+				"TrackIn",
+				"TrackOut"
+			]
+		},
+		"Straight": {
+			"Track": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"Straight": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"Turnout": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"Junction": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"Crossing": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"Start": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"End": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"Station": [
+				"TrackIn",
+				"TrackOut"
+			]
+		},
+		"Turnout": {
+			"Track": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"Straight": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"Turnout": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"Junction": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"Crossing": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"Start": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"End": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"Station": [
+				"TrackIn",
+				"TrackOut"
+			]
+		},
+		"Junction": {
+			"Track": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"Straight": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"Turnout": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"Junction": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"Crossing": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"Start": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"End": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"Station": [
+				"TrackIn",
+				"TrackOut"
+			]
+		},
+		"Crossing": {
+			"Track": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"Straight": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"Turnout": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"Junction": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"Crossing": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"Start": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"End": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"Station": [
+				"TrackIn",
+				"TrackOut"
+			]
+		},
+		"Start": {
+			"Track": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"Straight": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"Turnout": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"Junction": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"Crossing": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"Start": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"End": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"Station": [
+				"TrackIn",
+				"TrackOut"
+			]
+		},
+		"End": {
+			"Track": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"Straight": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"Turnout": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"Junction": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"Crossing": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"Start": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"End": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"Station": [
+				"TrackIn",
+				"TrackOut"
+			]
+		},
+		"Station": {
+			"Track": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"Straight": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"Turnout": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"Junction": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"Crossing": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"Start": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"End": [
+				"TrackIn",
+				"TrackOut"
+			],
+			"Station": [
+				"TrackIn",
+				"TrackOut"
+			]
+		}
+	},
+	"connectorTypes": {
+		"TrackIn": "visual",
+		"TrackOut": "visual"
+	},
 	"types2parentTypes": {
 		"Track": [
 			"Positionable"
@@ -80,6 +963,8 @@
 		"Light": [
 			"Positionable"
 		],
-		"Positionable": []
+		"Positionable": [],
+		"TrackIn": [],
+		"TrackOut": []
 	}
 }

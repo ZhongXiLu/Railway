@@ -30,12 +30,12 @@
 			{
 				"name": "mapper",
 				"type": "code",
-				"default": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+				"default": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */\n({position:getAttr(\"position\")})"
 			},
 			{
 				"name": "parser",
 				"type": "code",
-				"default": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+				"default": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */\n({position:getAttr(\"position\")})"
 			},
 			{
 				"name": "$contents",
@@ -70,11 +70,11 @@
 							},
 							"mapper": {
 								"type": "code",
-								"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+								"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */\n(\n{\n    width:getAttr(\"width\"),\n    height:getAttr(\"height\")   \n}\n)"
 							},
 							"parser": {
 								"type": "code",
-								"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+								"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */\n(\n{\n    width:getAttr(\"width\"),\n    height:getAttr(\"height\")   \n}\n)"
 							},
 							"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Image",
 							"position": {
@@ -136,12 +136,12 @@
 			{
 				"name": "mapper",
 				"type": "code",
-				"default": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+				"default": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */\n({position:getAttr(\"position\")})"
 			},
 			{
 				"name": "parser",
 				"type": "code",
-				"default": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+				"default": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */\n({position:getAttr(\"position\")})"
 			},
 			{
 				"name": "$contents",
@@ -176,11 +176,11 @@
 							},
 							"mapper": {
 								"type": "code",
-								"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+								"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */\n(\n{\n    width:getAttr(\"width\"),\n    height:getAttr(\"height\")   \n}\n)"
 							},
 							"parser": {
 								"type": "code",
-								"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+								"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */\n(\n{\n    width:getAttr(\"width\"),\n    height:getAttr(\"height\")   \n}\n)"
 							},
 							"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Image",
 							"position": {
@@ -242,12 +242,12 @@
 			{
 				"name": "mapper",
 				"type": "code",
-				"default": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+				"default": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */\n({position:getAttr(\"position\")})"
 			},
 			{
 				"name": "parser",
 				"type": "code",
-				"default": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+				"default": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */\n({position:getAttr(\"position\")})"
 			},
 			{
 				"name": "$contents",
@@ -282,11 +282,11 @@
 							},
 							"mapper": {
 								"type": "code",
-								"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+								"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */\n(\n{\n    width:getAttr(\"width\"),\n    height:getAttr(\"height\")   \n}\n)"
 							},
 							"parser": {
 								"type": "code",
-								"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+								"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */\n(\n{\n    width:getAttr(\"width\"),\n    height:getAttr(\"height\")   \n}\n)"
 							},
 							"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Image",
 							"position": {
@@ -348,12 +348,12 @@
 			{
 				"name": "mapper",
 				"type": "code",
-				"default": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+				"default": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */\n({position:getAttr(\"position\")})"
 			},
 			{
 				"name": "parser",
 				"type": "code",
-				"default": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+				"default": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */\n({position:getAttr(\"position\")})"
 			},
 			{
 				"name": "$contents",
@@ -388,11 +388,11 @@
 							},
 							"mapper": {
 								"type": "code",
-								"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+								"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */\n(\n{\n    width:getAttr(\"width\"),\n    height:getAttr(\"height\")   \n}\n)"
 							},
 							"parser": {
 								"type": "code",
-								"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+								"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */\n(\n{\n    width:getAttr(\"width\"),\n    height:getAttr(\"height\")   \n}\n)"
 							},
 							"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Image",
 							"position": {
@@ -454,12 +454,12 @@
 			{
 				"name": "mapper",
 				"type": "code",
-				"default": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+				"default": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */\n({position:getAttr(\"position\")})"
 			},
 			{
 				"name": "parser",
 				"type": "code",
-				"default": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+				"default": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */\n({position:getAttr(\"position\")})"
 			},
 			{
 				"name": "$contents",
@@ -494,11 +494,11 @@
 							},
 							"mapper": {
 								"type": "code",
-								"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+								"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */\n(\n{\n    width:getAttr(\"width\"),\n    height:getAttr(\"height\")   \n}\n)"
 							},
 							"parser": {
 								"type": "code",
-								"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+								"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */\n(\n{\n    width:getAttr(\"width\"),\n    height:getAttr(\"height\")   \n}\n)"
 							},
 							"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Image",
 							"position": {
@@ -560,12 +560,12 @@
 			{
 				"name": "mapper",
 				"type": "code",
-				"default": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+				"default": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */\n({position:getAttr(\"position\")})"
 			},
 			{
 				"name": "parser",
 				"type": "code",
-				"default": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+				"default": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */\n({position:getAttr(\"position\")})"
 			},
 			{
 				"name": "$contents",
@@ -600,11 +600,11 @@
 							},
 							"mapper": {
 								"type": "code",
-								"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+								"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */\n(\n{\n    width:getAttr(\"width\"),\n    height:getAttr(\"height\")   \n}\n)"
 							},
 							"parser": {
 								"type": "code",
-								"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+								"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */\n(\n{\n    width:getAttr(\"width\"),\n    height:getAttr(\"height\")   \n}\n)"
 							},
 							"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Image",
 							"position": {
@@ -666,12 +666,12 @@
 			{
 				"name": "mapper",
 				"type": "code",
-				"default": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+				"default": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */\n({position:getAttr(\"position\")})"
 			},
 			{
 				"name": "parser",
 				"type": "code",
-				"default": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+				"default": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */\n({position:getAttr(\"position\")})"
 			},
 			{
 				"name": "$contents",
@@ -706,11 +706,11 @@
 							},
 							"mapper": {
 								"type": "code",
-								"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+								"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */\n(\n{\n    width:getAttr(\"width\"),\n    height:getAttr(\"height\")   \n}\n)"
 							},
 							"parser": {
 								"type": "code",
-								"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+								"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */\n(\n{\n    width:getAttr(\"width\"),\n    height:getAttr(\"height\")   \n}\n)"
 							},
 							"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Image",
 							"position": {
@@ -772,12 +772,12 @@
 			{
 				"name": "mapper",
 				"type": "code",
-				"default": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+				"default": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */\n({position:getAttr(\"position\")})"
 			},
 			{
 				"name": "parser",
 				"type": "code",
-				"default": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+				"default": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */\n({position:getAttr(\"position\")})"
 			},
 			{
 				"name": "$contents",
@@ -812,11 +812,11 @@
 							},
 							"mapper": {
 								"type": "code",
-								"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+								"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */\n(\n{\n    width:getAttr(\"width\"),\n    height:getAttr(\"height\")   \n}\n)"
 							},
 							"parser": {
 								"type": "code",
-								"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+								"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */\n(\n{\n    width:getAttr(\"width\"),\n    height:getAttr(\"height\")   \n}\n)"
 							},
 							"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Image",
 							"position": {
@@ -878,12 +878,12 @@
 			{
 				"name": "mapper",
 				"type": "code",
-				"default": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+				"default": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */\n({position:getAttr(\"position\")})"
 			},
 			{
 				"name": "parser",
 				"type": "code",
-				"default": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+				"default": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */\n({position:getAttr(\"position\")})"
 			},
 			{
 				"name": "$contents",
@@ -918,11 +918,11 @@
 							},
 							"mapper": {
 								"type": "code",
-								"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+								"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */\n(\n{\n    width:getAttr(\"width\"),\n    height:getAttr(\"height\")   \n}\n)"
 							},
 							"parser": {
 								"type": "code",
-								"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+								"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */\n(\n{\n    width:getAttr(\"width\"),\n    height:getAttr(\"height\")   \n}\n)"
 							},
 							"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Image",
 							"position": {
@@ -953,6 +953,158 @@
 				"type": "string",
 				"default": "-1"
 			}
+		],
+		"TrackInLink": [
+			{
+				"name": "link-style",
+				"type": "map<string,string>",
+				"default": {
+					"stroke": "#000000",
+					"stroke-dasharray": "",
+					"stroke-opacity": 1,
+					"stroke-width": 2
+				}
+			},
+			{
+				"name": "arrowHead",
+				"type": "ENUM(circle-black,circle-black-large,circle-white,circle-white-large,diamond-black,diamond-black-large,diamond-white,diamond-white-large,triangle-black,triangle-black-large,triangle-white,triangle-white-large,arrow-black,arrow-black-large,arrow-empty,arrow-empty-large,custom)",
+				"default": "custom"
+			},
+			{
+				"name": "arrowTail",
+				"type": "ENUM(circle-black,circle-black-large,circle-white,circle-white-large,diamond-black,diamond-black-large,diamond-white,diamond-white-large,triangle-black,triangle-black-large,triangle-white,triangle-white-large,arrow-black,arrow-black-large,arrow-empty,arrow-empty-large,custom)",
+				"default": "arrow-black"
+			},
+			{
+				"name": "typename",
+				"type": "string",
+				"default": "TrackInLink"
+			},
+			{
+				"name": "position",
+				"type": "list<double>",
+				"default": [
+					700,
+					350
+				]
+			},
+			{
+				"name": "orientation",
+				"type": "double",
+				"default": 0
+			},
+			{
+				"name": "scale",
+				"type": "list<double>",
+				"default": [
+					1,
+					1
+				]
+			},
+			{
+				"name": "mapper",
+				"type": "code",
+				"default": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+			},
+			{
+				"name": "parser",
+				"type": "code",
+				"default": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+			},
+			{
+				"name": "$contents",
+				"type": "map<string,*>",
+				"default": {
+					"nodes": {},
+					"edges": []
+				}
+			},
+			{
+				"name": "$asuri",
+				"type": "string",
+				"default": "-1"
+			},
+			{
+				"name": "$segments",
+				"type": "map<string,list<string>>",
+				"default": {}
+			}
+		],
+		"TrackOutLink": [
+			{
+				"name": "link-style",
+				"type": "map<string,string>",
+				"default": {
+					"stroke": "#000000",
+					"stroke-dasharray": "",
+					"stroke-opacity": 1,
+					"stroke-width": 2
+				}
+			},
+			{
+				"name": "arrowHead",
+				"type": "ENUM(circle-black,circle-black-large,circle-white,circle-white-large,diamond-black,diamond-black-large,diamond-white,diamond-white-large,triangle-black,triangle-black-large,triangle-white,triangle-white-large,arrow-black,arrow-black-large,arrow-empty,arrow-empty-large,custom)",
+				"default": "custom"
+			},
+			{
+				"name": "arrowTail",
+				"type": "ENUM(circle-black,circle-black-large,circle-white,circle-white-large,diamond-black,diamond-black-large,diamond-white,diamond-white-large,triangle-black,triangle-black-large,triangle-white,triangle-white-large,arrow-black,arrow-black-large,arrow-empty,arrow-empty-large,custom)",
+				"default": "arrow-black"
+			},
+			{
+				"name": "typename",
+				"type": "string",
+				"default": "TrackOutLink"
+			},
+			{
+				"name": "position",
+				"type": "list<double>",
+				"default": [
+					700,
+					525
+				]
+			},
+			{
+				"name": "orientation",
+				"type": "double",
+				"default": 0
+			},
+			{
+				"name": "scale",
+				"type": "list<double>",
+				"default": [
+					1,
+					1
+				]
+			},
+			{
+				"name": "mapper",
+				"type": "code",
+				"default": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+			},
+			{
+				"name": "parser",
+				"type": "code",
+				"default": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+			},
+			{
+				"name": "$contents",
+				"type": "map<string,*>",
+				"default": {
+					"nodes": {},
+					"edges": []
+				}
+			},
+			{
+				"name": "$asuri",
+				"type": "string",
+				"default": "-1"
+			},
+			{
+				"name": "$segments",
+				"type": "map<string,list<string>>",
+				"default": {}
+			}
 		]
 	},
 	"constraints": [],
@@ -966,7 +1118,9 @@
 		"StartIcon": [],
 		"EndIcon": [],
 		"TrainIcon": [],
-		"LightIcon": []
+		"LightIcon": [],
+		"TrackInLink": [],
+		"TrackOutLink": []
 	},
 	"legalConnections": {},
 	"connectorTypes": {},
@@ -979,6 +1133,8 @@
 		"StartIcon": [],
 		"EndIcon": [],
 		"TrainIcon": [],
-		"LightIcon": []
+		"LightIcon": [],
+		"TrackInLink": [],
+		"TrackOutLink": []
 	}
 }
