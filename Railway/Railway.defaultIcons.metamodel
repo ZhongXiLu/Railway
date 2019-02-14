@@ -1,0 +1,984 @@
+{
+	"types": {
+		"StraightIcon": [
+			{
+				"name": "typename",
+				"type": "string",
+				"default": "StraightIcon"
+			},
+			{
+				"name": "position",
+				"type": "list<double>",
+				"default": [
+					150,
+					150
+				]
+			},
+			{
+				"name": "orientation",
+				"type": "double",
+				"default": 0
+			},
+			{
+				"name": "scale",
+				"type": "list<double>",
+				"default": [
+					1,
+					1
+				]
+			},
+			{
+				"name": "mapper",
+				"type": "code",
+				"default": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+			},
+			{
+				"name": "parser",
+				"type": "code",
+				"default": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+			},
+			{
+				"name": "$contents",
+				"type": "map<string,*>",
+				"default": {
+					"nodes": {
+						"4": {
+							"src": {
+								"type": "string",
+								"value": "/Formalisms/Railway/Icons/straight.png"
+							},
+							"width": {
+								"type": "double",
+								"value": 180
+							},
+							"height": {
+								"type": "double",
+								"value": 40
+							},
+							"style": {
+								"type": "map<string,string>",
+								"value": {
+									"stroke": "#000000",
+									"stroke-dasharray": "",
+									"fill": "#ffffff",
+									"fill-opacity": 1,
+									"font-size": "20px",
+									"stroke-width": 1,
+									"arrow-start": "none",
+									"arrow-end": "none"
+								}
+							},
+							"mapper": {
+								"type": "code",
+								"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+							},
+							"parser": {
+								"type": "code",
+								"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+							},
+							"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Image",
+							"position": {
+								"type": "list<double>",
+								"value": [
+									2,
+									2
+								]
+							},
+							"orientation": {
+								"type": "double",
+								"value": 0
+							},
+							"scale": {
+								"type": "list<double>",
+								"value": [
+									1,
+									1
+								]
+							}
+						}
+					},
+					"edges": []
+				}
+			},
+			{
+				"name": "$asuri",
+				"type": "string",
+				"default": "-1"
+			}
+		],
+		"TurnoutIcon": [
+			{
+				"name": "typename",
+				"type": "string",
+				"default": "TurnoutIcon"
+			},
+			{
+				"name": "position",
+				"type": "list<double>",
+				"default": [
+					150,
+					325
+				]
+			},
+			{
+				"name": "orientation",
+				"type": "double",
+				"default": 0
+			},
+			{
+				"name": "scale",
+				"type": "list<double>",
+				"default": [
+					1,
+					1
+				]
+			},
+			{
+				"name": "mapper",
+				"type": "code",
+				"default": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+			},
+			{
+				"name": "parser",
+				"type": "code",
+				"default": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+			},
+			{
+				"name": "$contents",
+				"type": "map<string,*>",
+				"default": {
+					"nodes": {
+						"7": {
+							"src": {
+								"type": "string",
+								"value": "/Formalisms/Railway/Icons/turnout.png"
+							},
+							"width": {
+								"type": "double",
+								"value": 180
+							},
+							"height": {
+								"type": "double",
+								"value": 100
+							},
+							"style": {
+								"type": "map<string,string>",
+								"value": {
+									"stroke": "#000000",
+									"stroke-dasharray": "",
+									"fill": "#ffffff",
+									"fill-opacity": 1,
+									"font-size": "20px",
+									"stroke-width": 1,
+									"arrow-start": "none",
+									"arrow-end": "none"
+								}
+							},
+							"mapper": {
+								"type": "code",
+								"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+							},
+							"parser": {
+								"type": "code",
+								"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+							},
+							"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Image",
+							"position": {
+								"type": "list<double>",
+								"value": [
+									2,
+									2
+								]
+							},
+							"orientation": {
+								"type": "double",
+								"value": 0
+							},
+							"scale": {
+								"type": "list<double>",
+								"value": [
+									1,
+									1
+								]
+							}
+						}
+					},
+					"edges": []
+				}
+			},
+			{
+				"name": "$asuri",
+				"type": "string",
+				"default": "-1"
+			}
+		],
+		"JunctionIcon": [
+			{
+				"name": "typename",
+				"type": "string",
+				"default": "JunctionIcon"
+			},
+			{
+				"name": "position",
+				"type": "list<double>",
+				"default": [
+					150,
+					500
+				]
+			},
+			{
+				"name": "orientation",
+				"type": "double",
+				"default": 0
+			},
+			{
+				"name": "scale",
+				"type": "list<double>",
+				"default": [
+					1,
+					1
+				]
+			},
+			{
+				"name": "mapper",
+				"type": "code",
+				"default": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+			},
+			{
+				"name": "parser",
+				"type": "code",
+				"default": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+			},
+			{
+				"name": "$contents",
+				"type": "map<string,*>",
+				"default": {
+					"nodes": {
+						"10": {
+							"src": {
+								"type": "string",
+								"value": "/Formalisms/Railway/Icons/junction.png"
+							},
+							"width": {
+								"type": "double",
+								"value": 180
+							},
+							"height": {
+								"type": "double",
+								"value": 100
+							},
+							"style": {
+								"type": "map<string,string>",
+								"value": {
+									"stroke": "#000000",
+									"stroke-dasharray": "",
+									"fill": "#ffffff",
+									"fill-opacity": 1,
+									"font-size": "20px",
+									"stroke-width": 1,
+									"arrow-start": "none",
+									"arrow-end": "none"
+								}
+							},
+							"mapper": {
+								"type": "code",
+								"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+							},
+							"parser": {
+								"type": "code",
+								"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+							},
+							"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Image",
+							"position": {
+								"type": "list<double>",
+								"value": [
+									2,
+									2
+								]
+							},
+							"orientation": {
+								"type": "double",
+								"value": 0
+							},
+							"scale": {
+								"type": "list<double>",
+								"value": [
+									1,
+									1
+								]
+							}
+						}
+					},
+					"edges": []
+				}
+			},
+			{
+				"name": "$asuri",
+				"type": "string",
+				"default": "-1"
+			}
+		],
+		"StationIcon": [
+			{
+				"name": "typename",
+				"type": "string",
+				"default": "StationIcon"
+			},
+			{
+				"name": "position",
+				"type": "list<double>",
+				"default": [
+					151,
+					675
+				]
+			},
+			{
+				"name": "orientation",
+				"type": "double",
+				"default": 0
+			},
+			{
+				"name": "scale",
+				"type": "list<double>",
+				"default": [
+					1,
+					1
+				]
+			},
+			{
+				"name": "mapper",
+				"type": "code",
+				"default": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+			},
+			{
+				"name": "parser",
+				"type": "code",
+				"default": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+			},
+			{
+				"name": "$contents",
+				"type": "map<string,*>",
+				"default": {
+					"nodes": {
+						"13": {
+							"src": {
+								"type": "string",
+								"value": "/Formalisms/Railway/Icons/station.png"
+							},
+							"width": {
+								"type": "double",
+								"value": 180
+							},
+							"height": {
+								"type": "double",
+								"value": 70
+							},
+							"style": {
+								"type": "map<string,string>",
+								"value": {
+									"stroke": "#000000",
+									"stroke-dasharray": "",
+									"fill": "#ffffff",
+									"fill-opacity": 1,
+									"font-size": "20px",
+									"stroke-width": 1,
+									"arrow-start": "none",
+									"arrow-end": "none"
+								}
+							},
+							"mapper": {
+								"type": "code",
+								"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+							},
+							"parser": {
+								"type": "code",
+								"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+							},
+							"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Image",
+							"position": {
+								"type": "list<double>",
+								"value": [
+									2,
+									2
+								]
+							},
+							"orientation": {
+								"type": "double",
+								"value": 0
+							},
+							"scale": {
+								"type": "list<double>",
+								"value": [
+									1,
+									1
+								]
+							}
+						}
+					},
+					"edges": []
+				}
+			},
+			{
+				"name": "$asuri",
+				"type": "string",
+				"default": "-1"
+			}
+		],
+		"CrossingIcon": [
+			{
+				"name": "typename",
+				"type": "string",
+				"default": "CrossingIcon"
+			},
+			{
+				"name": "position",
+				"type": "list<double>",
+				"default": [
+					376,
+					150
+				]
+			},
+			{
+				"name": "orientation",
+				"type": "double",
+				"default": 0
+			},
+			{
+				"name": "scale",
+				"type": "list<double>",
+				"default": [
+					1,
+					1
+				]
+			},
+			{
+				"name": "mapper",
+				"type": "code",
+				"default": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+			},
+			{
+				"name": "parser",
+				"type": "code",
+				"default": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+			},
+			{
+				"name": "$contents",
+				"type": "map<string,*>",
+				"default": {
+					"nodes": {
+						"16": {
+							"src": {
+								"type": "string",
+								"value": "/Formalisms/Railway/Icons/crossing.png"
+							},
+							"width": {
+								"type": "double",
+								"value": 180
+							},
+							"height": {
+								"type": "double",
+								"value": 120
+							},
+							"style": {
+								"type": "map<string,string>",
+								"value": {
+									"stroke": "#000000",
+									"stroke-dasharray": "",
+									"fill": "#ffffff",
+									"fill-opacity": 1,
+									"font-size": "20px",
+									"stroke-width": 1,
+									"arrow-start": "none",
+									"arrow-end": "none"
+								}
+							},
+							"mapper": {
+								"type": "code",
+								"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+							},
+							"parser": {
+								"type": "code",
+								"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+							},
+							"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Image",
+							"position": {
+								"type": "list<double>",
+								"value": [
+									2,
+									2
+								]
+							},
+							"orientation": {
+								"type": "double",
+								"value": 0
+							},
+							"scale": {
+								"type": "list<double>",
+								"value": [
+									1,
+									1
+								]
+							}
+						}
+					},
+					"edges": []
+				}
+			},
+			{
+				"name": "$asuri",
+				"type": "string",
+				"default": "-1"
+			}
+		],
+		"StartIcon": [
+			{
+				"name": "typename",
+				"type": "string",
+				"default": "StartIcon"
+			},
+			{
+				"name": "position",
+				"type": "list<double>",
+				"default": [
+					376,
+					325
+				]
+			},
+			{
+				"name": "orientation",
+				"type": "double",
+				"default": 0
+			},
+			{
+				"name": "scale",
+				"type": "list<double>",
+				"default": [
+					1,
+					1
+				]
+			},
+			{
+				"name": "mapper",
+				"type": "code",
+				"default": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+			},
+			{
+				"name": "parser",
+				"type": "code",
+				"default": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+			},
+			{
+				"name": "$contents",
+				"type": "map<string,*>",
+				"default": {
+					"nodes": {
+						"19": {
+							"src": {
+								"type": "string",
+								"value": "/Formalisms/Railway/Icons/start.png"
+							},
+							"width": {
+								"type": "double",
+								"value": 180
+							},
+							"height": {
+								"type": "double",
+								"value": 80
+							},
+							"style": {
+								"type": "map<string,string>",
+								"value": {
+									"stroke": "#000000",
+									"stroke-dasharray": "",
+									"fill": "#ffffff",
+									"fill-opacity": 1,
+									"font-size": "20px",
+									"stroke-width": 1,
+									"arrow-start": "none",
+									"arrow-end": "none"
+								}
+							},
+							"mapper": {
+								"type": "code",
+								"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+							},
+							"parser": {
+								"type": "code",
+								"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+							},
+							"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Image",
+							"position": {
+								"type": "list<double>",
+								"value": [
+									2,
+									2
+								]
+							},
+							"orientation": {
+								"type": "double",
+								"value": 0
+							},
+							"scale": {
+								"type": "list<double>",
+								"value": [
+									1,
+									1
+								]
+							}
+						}
+					},
+					"edges": []
+				}
+			},
+			{
+				"name": "$asuri",
+				"type": "string",
+				"default": "-1"
+			}
+		],
+		"EndIcon": [
+			{
+				"name": "typename",
+				"type": "string",
+				"default": "EndIcon"
+			},
+			{
+				"name": "position",
+				"type": "list<double>",
+				"default": [
+					376,
+					500
+				]
+			},
+			{
+				"name": "orientation",
+				"type": "double",
+				"default": 0
+			},
+			{
+				"name": "scale",
+				"type": "list<double>",
+				"default": [
+					1,
+					1
+				]
+			},
+			{
+				"name": "mapper",
+				"type": "code",
+				"default": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+			},
+			{
+				"name": "parser",
+				"type": "code",
+				"default": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+			},
+			{
+				"name": "$contents",
+				"type": "map<string,*>",
+				"default": {
+					"nodes": {
+						"22": {
+							"src": {
+								"type": "string",
+								"value": "/Formalisms/Railway/Icons/end.png"
+							},
+							"width": {
+								"type": "double",
+								"value": 180
+							},
+							"height": {
+								"type": "double",
+								"value": 80
+							},
+							"style": {
+								"type": "map<string,string>",
+								"value": {
+									"stroke": "#000000",
+									"stroke-dasharray": "",
+									"fill": "#ffffff",
+									"fill-opacity": 1,
+									"font-size": "20px",
+									"stroke-width": 1,
+									"arrow-start": "none",
+									"arrow-end": "none"
+								}
+							},
+							"mapper": {
+								"type": "code",
+								"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+							},
+							"parser": {
+								"type": "code",
+								"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+							},
+							"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Image",
+							"position": {
+								"type": "list<double>",
+								"value": [
+									2,
+									2
+								]
+							},
+							"orientation": {
+								"type": "double",
+								"value": 0
+							},
+							"scale": {
+								"type": "list<double>",
+								"value": [
+									1,
+									1
+								]
+							}
+						}
+					},
+					"edges": []
+				}
+			},
+			{
+				"name": "$asuri",
+				"type": "string",
+				"default": "-1"
+			}
+		],
+		"TrainIcon": [
+			{
+				"name": "typename",
+				"type": "string",
+				"default": "TrainIcon"
+			},
+			{
+				"name": "position",
+				"type": "list<double>",
+				"default": [
+					700,
+					150
+				]
+			},
+			{
+				"name": "orientation",
+				"type": "double",
+				"default": 0
+			},
+			{
+				"name": "scale",
+				"type": "list<double>",
+				"default": [
+					1,
+					1
+				]
+			},
+			{
+				"name": "mapper",
+				"type": "code",
+				"default": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+			},
+			{
+				"name": "parser",
+				"type": "code",
+				"default": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+			},
+			{
+				"name": "$contents",
+				"type": "map<string,*>",
+				"default": {
+					"nodes": {
+						"25": {
+							"src": {
+								"type": "string",
+								"value": "/Formalisms/Railway/Icons/train.png"
+							},
+							"width": {
+								"type": "double",
+								"value": 100
+							},
+							"height": {
+								"type": "double",
+								"value": 40
+							},
+							"style": {
+								"type": "map<string,string>",
+								"value": {
+									"stroke": "#000000",
+									"stroke-dasharray": "",
+									"fill": "#ffffff",
+									"fill-opacity": 1,
+									"font-size": "20px",
+									"stroke-width": 1,
+									"arrow-start": "none",
+									"arrow-end": "none"
+								}
+							},
+							"mapper": {
+								"type": "code",
+								"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+							},
+							"parser": {
+								"type": "code",
+								"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+							},
+							"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Image",
+							"position": {
+								"type": "list<double>",
+								"value": [
+									2,
+									2
+								]
+							},
+							"orientation": {
+								"type": "double",
+								"value": 0
+							},
+							"scale": {
+								"type": "list<double>",
+								"value": [
+									1,
+									1
+								]
+							}
+						}
+					},
+					"edges": []
+				}
+			},
+			{
+				"name": "$asuri",
+				"type": "string",
+				"default": "-1"
+			}
+		],
+		"LightIcon": [
+			{
+				"name": "typename",
+				"type": "string",
+				"default": "LightIcon"
+			},
+			{
+				"name": "position",
+				"type": "list<double>",
+				"default": [
+					1025,
+					150
+				]
+			},
+			{
+				"name": "orientation",
+				"type": "double",
+				"default": 0
+			},
+			{
+				"name": "scale",
+				"type": "list<double>",
+				"default": [
+					1,
+					1
+				]
+			},
+			{
+				"name": "mapper",
+				"type": "code",
+				"default": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+			},
+			{
+				"name": "parser",
+				"type": "code",
+				"default": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+			},
+			{
+				"name": "$contents",
+				"type": "map<string,*>",
+				"default": {
+					"nodes": {
+						"28": {
+							"src": {
+								"type": "string",
+								"value": "/Formalisms/Railway/Icons/light_red.png"
+							},
+							"width": {
+								"type": "double",
+								"value": 70
+							},
+							"height": {
+								"type": "double",
+								"value": 30
+							},
+							"style": {
+								"type": "map<string,string>",
+								"value": {
+									"stroke": "#000000",
+									"stroke-dasharray": "",
+									"fill": "#ffffff",
+									"fill-opacity": 1,
+									"font-size": "20px",
+									"stroke-width": 1,
+									"arrow-start": "none",
+									"arrow-end": "none"
+								}
+							},
+							"mapper": {
+								"type": "code",
+								"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+							},
+							"parser": {
+								"type": "code",
+								"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+							},
+							"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Image",
+							"position": {
+								"type": "list<double>",
+								"value": [
+									2,
+									2
+								]
+							},
+							"orientation": {
+								"type": "double",
+								"value": 0
+							},
+							"scale": {
+								"type": "list<double>",
+								"value": [
+									1,
+									1
+								]
+							}
+						}
+					},
+					"edges": []
+				}
+			},
+			{
+				"name": "$asuri",
+				"type": "string",
+				"default": "-1"
+			}
+		]
+	},
+	"constraints": [],
+	"actions": [],
+	"cardinalities": {
+		"StraightIcon": [],
+		"TurnoutIcon": [],
+		"JunctionIcon": [],
+		"StationIcon": [],
+		"CrossingIcon": [],
+		"StartIcon": [],
+		"EndIcon": [],
+		"TrainIcon": [],
+		"LightIcon": []
+	},
+	"legalConnections": {},
+	"connectorTypes": {},
+	"types2parentTypes": {
+		"StraightIcon": [],
+		"TurnoutIcon": [],
+		"JunctionIcon": [],
+		"StationIcon": [],
+		"CrossingIcon": [],
+		"StartIcon": [],
+		"EndIcon": [],
+		"TrainIcon": [],
+		"LightIcon": []
+	}
+}

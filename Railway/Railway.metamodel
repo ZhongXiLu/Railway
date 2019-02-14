@@ -1,0 +1,85 @@
+{
+	"types": {
+		"Track": [],
+		"Straight": [],
+		"Turnout": [],
+		"Junction": [],
+		"Crossing": [],
+		"Start": [],
+		"End": [],
+		"Station": [],
+		"Train": [],
+		"Light": [],
+		"Positionable": []
+	},
+	"constraints": [
+		{
+			"name": "noAbstractInstances",
+			"event": "pre-create",
+			"code": "false",
+			"targetType": "Track"
+		},
+		{
+			"name": "noAbstractInstances",
+			"event": "pre-create",
+			"code": "false",
+			"targetType": "Positionable"
+		}
+	],
+	"actions": [],
+	"cardinalities": {
+		"Track": [],
+		"Straight": [],
+		"Turnout": [],
+		"Junction": [],
+		"Crossing": [],
+		"Start": [],
+		"End": [],
+		"Station": [],
+		"Train": [],
+		"Light": [],
+		"Positionable": []
+	},
+	"legalConnections": {},
+	"connectorTypes": {},
+	"types2parentTypes": {
+		"Track": [
+			"Positionable"
+		],
+		"Straight": [
+			"Positionable",
+			"Track"
+		],
+		"Turnout": [
+			"Positionable",
+			"Track"
+		],
+		"Junction": [
+			"Positionable",
+			"Track"
+		],
+		"Crossing": [
+			"Positionable",
+			"Track"
+		],
+		"Start": [
+			"Positionable",
+			"Track"
+		],
+		"End": [
+			"Positionable",
+			"Track"
+		],
+		"Station": [
+			"Positionable",
+			"Track"
+		],
+		"Train": [
+			"Positionable"
+		],
+		"Light": [
+			"Positionable"
+		],
+		"Positionable": []
+	}
+}
