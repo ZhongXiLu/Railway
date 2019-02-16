@@ -2640,7 +2640,7 @@
 							"99": {
 								"textContent": {
 									"type": "string",
-									"value": "+ width : int = 180\n+ height : int = 70"
+									"value": "+ width : int = 180\n+ height : int = 70\n+ name : string = S"
 								},
 								"style": {
 									"type": "map<string,string>",
@@ -2991,7 +2991,7 @@
 							"99": {
 								"textContent": {
 									"type": "string",
-									"value": "+ width : int = 60\n+ height : int = 25"
+									"value": "+ width : int = 60\n+ height : int = 25\n+ name : string = T"
 								},
 								"style": {
 									"type": "map<string,string>",
@@ -3342,7 +3342,7 @@
 							"99": {
 								"textContent": {
 									"type": "string",
-									"value": "+ width : int = 70\n+ height : int = 30"
+									"value": "+ width : int = 40\n+ height : int = 20\n+ isRed : boolean = true"
 								},
 								"style": {
 									"type": "map<string,string>",
@@ -6891,7 +6891,7 @@
 						{
 							"name": "snapping",
 							"event": "post-connect",
-							"code": "/*newline*/function getSelfAdjustment() {/*newline*/    if(getAttr('$type').match(/Straight/)) {/*newline*/        return getAttr('height')/2;/*newline*/    } else if(getAttr('$type').match(/Start/)) {/*newline*/        return getAttr('height')/2;/*newline*/    } else if(getAttr('$type').match(/Station/)) {/*newline*/        return 4*getAttr('height')/5;/*newline*/    } else if(getAttr('$type').match(/Turnout/)) {/*newline*/        if(getNeighbors('>').length > 1) {/*newline*/            return getAttr('height');/*newline*/        } else {/*newline*/            return 20;/*newline*/        }/*newline*/    } else if(getAttr('$type').match(/Junction/)) {/*newline*/        return 20;/*newline*/    } else if(getAttr('$type').match(/Crossing/)) {/*newline*/        if(getNeighbors('>').length > 1) {/*newline*/            return getAttr('height');/*newline*/        } else {/*newline*/            return getAttr('height')/2;/*newline*/        }/*newline*/    }/*newline*/}/*newline*/function getNeighbourAdjustment(neighbour) {/*newline*/    if(getAttr('$type', neighbour).match(/Straight/)) {/*newline*/        return getAttr('height', neighbour)/2;/*newline*/    } else if(getAttr('$type', neighbour).match(/End/)) {/*newline*/        return getAttr('height', neighbour)/2;/*newline*/    } else if(getAttr('$type', neighbour).match(/Station/)) {/*newline*/        return 4*getAttr('height', neighbour)/5;/*newline*/    } else if(getAttr('$type', neighbour).match(/Turnout/)) {/*newline*/        return 20;/*newline*/    } else if(getAttr('$type', neighbour).match(/Junction/)) {/*newline*/        if(getNeighbors('<', '*', neighbour).length > 1) {/*newline*/            return getAttr('height', neighbour);/*newline*/        } else {/*newline*/            return 20;/*newline*/        }/*newline*/    } else if(getAttr('$type', neighbour).match(/Crossing/)) {/*newline*/        if(getNeighbors('<', '*', neighbour).length > 1) {/*newline*/            return getAttr('height', neighbour)/2;/*newline*/        } else {/*newline*/            return 0;/*newline*/        }/*newline*/    }/*newline*/}/*newline*/var neighbourLinks = getNeighbors('>');/*newline*/var neighbourLink = neighbourLinks[neighbourLinks.length-1];/*newline*/if(neighbourLink) {/*newline*/    if(getAttr('$type', neighbourLink).match(/TrackToTrack/)) {/*newline*/        var neighbour = getNeighbors('>', '*', neighbourLink)[0],/*newline*/            neighbourPos = getAttr('position', neighbour);/*newline*/        setAttr('position', [neighbourPos[0] - getAttr('width', neighbour), neighbourPos[1] - getSelfAdjustment() + getNeighbourAdjustment(neighbour)]);/*newline*/    } else if(getAttr('$type', neighbourLink).match(/TrainOnTrack/)) {/*newline*/        var neighbour = getNeighbors('>','*',neighbourLink)[0],/*newline*/            gpos = getAttr('position');/*newline*/        setAttr('position', [gpos[0] + getAttr('width')/2  - getAttr('width', neighbour)/2, gpos[1] + getAttr('height')/2 -getAttr('height', neighbour)/2], neighbour);/*newline*/    } else if(getAttr('$type', neighbourLink).match(/LightOnTrack/)) {/*newline*/        var neighbour = getNeighbors('>','*',neighbourLink)[0],/*newline*/            gpos = getAttr('position');/*newline*/        setAttr('position', [gpos[0], gpos[1] + getAttr('height') + 10], neighbour);/*newline*/    } else {/*newline*/        print('Invalid grid node link');/*newline*/    }/*newline*/}"
+							"code": "/*newline*/var singleTrackHeight = 20;/*newline*/function getSelfAdjustment() {/*newline*/    if(getAttr('$type').match(/Straight/)) {/*newline*/        return getAttr('height')/2;/*newline*/    } else if(getAttr('$type').match(/Start/)) {/*newline*/        return getAttr('height')/2;/*newline*/    } else if(getAttr('$type').match(/Station/)) {/*newline*/        return 4*getAttr('height')/5;/*newline*/    } else if(getAttr('$type').match(/Turnout/)) {/*newline*/        if(getNeighbors('>').length > 1) {/*newline*/            return getAttr('height');/*newline*/        } else {/*newline*/            return singleTrackHeight;/*newline*/        }/*newline*/    } else if(getAttr('$type').match(/Junction/)) {/*newline*/        return singleTrackHeight;/*newline*/    } else if(getAttr('$type').match(/Crossing/)) {/*newline*/        if(getNeighbors('>').length > 1) {/*newline*/            return getAttr('height');/*newline*/        } else {/*newline*/            return getAttr('height')/2;/*newline*/        }/*newline*/    }/*newline*/}/*newline*/function getNeighbourAdjustment(neighbour) {/*newline*/    if(getAttr('$type', neighbour).match(/Straight/)) {/*newline*/        return getAttr('height', neighbour)/2;/*newline*/    } else if(getAttr('$type', neighbour).match(/End/)) {/*newline*/        return getAttr('height', neighbour)/2;/*newline*/    } else if(getAttr('$type', neighbour).match(/Station/)) {/*newline*/        return 4*getAttr('height', neighbour)/5;/*newline*/    } else if(getAttr('$type', neighbour).match(/Turnout/)) {/*newline*/        return singleTrackHeight;/*newline*/    } else if(getAttr('$type', neighbour).match(/Junction/)) {/*newline*/        if(getNeighbors('<', '*', neighbour).length > 1) {/*newline*/            return getAttr('height', neighbour);/*newline*/        } else {/*newline*/            return singleTrackHeight;/*newline*/        }/*newline*/    } else if(getAttr('$type', neighbour).match(/Crossing/)) {/*newline*/        if(getNeighbors('<', '*', neighbour).length > 1) {/*newline*/            return getAttr('height', neighbour)/2;/*newline*/        } else {/*newline*/            return 0;/*newline*/        }/*newline*/    }/*newline*/}/*newline*/var neighbourLinks = getNeighbors('>');/*newline*/var neighbourLink = neighbourLinks[neighbourLinks.length-1];/*newline*/if(neighbourLink) {/*newline*/    if(getAttr('$type', neighbourLink).match(/TrackToTrack/)) {/*newline*/        var neighbour = getNeighbors('>', '*', neighbourLink)[0],/*newline*/            neighbourPos = getAttr('position', neighbour);/*newline*/        setAttr('position', [neighbourPos[0] - getAttr('width', neighbour), neighbourPos[1] - getSelfAdjustment() + getNeighbourAdjustment(neighbour)]);/*newline*/    } else if(getAttr('$type', neighbourLink).match(/TrainOnTrack/)) {/*newline*/        var neighbour = getNeighbors('>', '*', neighbourLink)[0],/*newline*/            globalPos = getAttr('position');/*newline*/        if(getAttr('$type').match(/Station/)) {/*newline*/            setAttr('position', [globalPos[0] + getAttr('width')/2  - getAttr('width', neighbour)/2, globalPos[1] + 3*getAttr('height')/4 - getAttr('height', neighbour)/2], neighbour);/*newline*/        } else {/*newline*/            setAttr('position', [globalPos[0] + getAttr('width')/2  - getAttr('width', neighbour)/2, globalPos[1] + getAttr('height')/2 - getAttr('height', neighbour)/2], neighbour);/*newline*/        }/*newline*/    } else if(getAttr('$type', neighbourLink).match(/LightOnTrack/)) {/*newline*/        var neighbour = getNeighbors('>', '*', neighbourLink)[0],/*newline*/            globalPos = getAttr('position');/*newline*/        if(getAttr('$type').match(/Station/)) {/*newline*/            setAttr('position', [globalPos[0], globalPos[1] + getAttr('height')], neighbour);/*newline*/        } else if(getAttr('$type').match(/Crossing/)) {/*newline*/            setAttr('position', [globalPos[0], globalPos[1] + getAttr('height')/2], neighbour);/*newline*/        } else {/*newline*/            setAttr('position', [globalPos[0], globalPos[1] + singleTrackHeight*2], neighbour);/*newline*/        }/*newline*/    } else {/*newline*/        print('Invalid grid node link');/*newline*/    }/*newline*/}"
 						}
 					]
 				},
@@ -6911,13 +6911,13 @@
 							"max": "1"
 						},
 						{
-							"dir": "in",
+							"dir": "out",
 							"type": "TrainOnTrack",
 							"min": "0",
 							"max": "1"
 						},
 						{
-							"dir": "in",
+							"dir": "out",
 							"type": "LightOnTrack",
 							"min": "0",
 							"max": "1"
@@ -7228,6 +7228,11 @@
 							"name": "height",
 							"type": "int",
 							"default": 70
+						},
+						{
+							"name": "name",
+							"type": "string",
+							"default": "S"
 						}
 					]
 				},
@@ -7266,6 +7271,11 @@
 							"name": "height",
 							"type": "int",
 							"default": 25
+						},
+						{
+							"name": "name",
+							"type": "string",
+							"default": "T"
 						}
 					]
 				},
@@ -7298,12 +7308,17 @@
 						{
 							"name": "width",
 							"type": "int",
-							"default": 70
+							"default": 40
 						},
 						{
 							"name": "height",
 							"type": "int",
-							"default": 30
+							"default": 20
+						},
+						{
+							"name": "isRed",
+							"type": "boolean",
+							"default": true
 						}
 					]
 				},
