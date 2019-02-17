@@ -148,10 +148,10 @@
 				"type": "map<string,*>",
 				"default": {
 					"nodes": {
-						"7": {
+						"42": {
 							"src": {
 								"type": "string",
-								"value": "/Formalisms/Railway/Icons/turnout.png"
+								"value": "/Formalisms/Railway/Icons/turnout1.png"
 							},
 							"width": {
 								"type": "double",
@@ -176,7 +176,7 @@
 							},
 							"mapper": {
 								"type": "code",
-								"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */\n(\n{\n    width:getAttr(\"width\"),\n    height:getAttr(\"height\")   \n}\n)"
+								"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */\n(\n{\n    width:getAttr(\"width\"),\n    height:getAttr(\"height\")   \n}\n)\nif(getAttr(\"outDirection\") == \"STRAIGHT\") {\n    ({'src':'/Formalisms/Railway/Icons/turnout1.png'})\n} else {\n    ({'src':'/Formalisms/Railway/Icons/turnout2.png'})\n}"
 							},
 							"parser": {
 								"type": "code",
@@ -186,8 +186,8 @@
 							"position": {
 								"type": "list<double>",
 								"value": [
-									2,
-									2
+									1,
+									3
 								]
 							},
 							"orientation": {
@@ -254,10 +254,10 @@
 				"type": "map<string,*>",
 				"default": {
 					"nodes": {
-						"10": {
+						"44": {
 							"src": {
 								"type": "string",
-								"value": "/Formalisms/Railway/Icons/junction.png"
+								"value": "/Formalisms/Railway/Icons/junction1.png"
 							},
 							"width": {
 								"type": "double",
@@ -282,7 +282,7 @@
 							},
 							"mapper": {
 								"type": "code",
-								"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */\n(\n{\n    width:getAttr(\"width\"),\n    height:getAttr(\"height\")   \n}\n)"
+								"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */\n(\n{\n    width:getAttr(\"width\"),\n    height:getAttr(\"height\")   \n}\n)\nif(getAttr(\"inDirection\") == \"STRAIGHT\") {\n    ({'src':'/Formalisms/Railway/Icons/junction1.png'})\n} else {\n    ({'src':'/Formalisms/Railway/Icons/junction2.png'})\n}"
 							},
 							"parser": {
 								"type": "code",
@@ -552,10 +552,10 @@
 				"type": "map<string,*>",
 				"default": {
 					"nodes": {
-						"16": {
+						"47": {
 							"src": {
 								"type": "string",
-								"value": "/Formalisms/Railway/Icons/crossing.png"
+								"value": "/Formalisms/Railway/Icons/crossing21.png"
 							},
 							"width": {
 								"type": "double",
@@ -580,7 +580,7 @@
 							},
 							"mapper": {
 								"type": "code",
-								"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */\n(\n{\n    width:getAttr(\"width\"),\n    height:getAttr(\"height\")   \n}\n)"
+								"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */\n(\n{\n    width:getAttr(\"width\"),\n    height:getAttr(\"height\")   \n}\n)\nif(getAttr(\"inDirection\") == \"STRAIGHT\") {\n    if(getAttr(\"outDirection\") == \"STRAIGHT\") {\n        ({'src':'/Formalisms/Railway/Icons/crossing21.png'})\n    } else {\n        ({'src':'/Formalisms/Railway/Icons/crossing22.png'})\n    }\n} else {\n    if(getAttr(\"outDirection\") == \"STRAIGHT\") {\n        ({'src':'/Formalisms/Railway/Icons/crossing11.png'})\n    } else {\n        ({'src':'/Formalisms/Railway/Icons/crossing12.png'})\n    }\n}"
 							},
 							"parser": {
 								"type": "code",
@@ -590,7 +590,7 @@
 							"position": {
 								"type": "list<double>",
 								"value": [
-									2,
+									1,
 									2
 								]
 							},
@@ -1051,7 +1051,7 @@
 							},
 							"mapper": {
 								"type": "code",
-								"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */\n(\n{\n    width:getAttr(\"width\"),\n    height:getAttr(\"height\")   \n}\n)\nif(getAttr('isRed')) {\n    ({'src':'/Formalisms/Railway/Icons/light_red.png'})\n} else {\n    ({'src':'/Formalisms/Railway/Icons/light_green.png'})\n}"
+								"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */\n(\n{\n    width:getAttr(\"width\"),\n    height:getAttr(\"height\")   \n}\n)\nif(getAttr(\"color\") == \"RED\"){\n    ({'src':'/Formalisms/Railway/Icons/light_red.png'})\n} else {\n    ({'src':'/Formalisms/Railway/Icons/light_green.png'})\n}"
 							},
 							"parser": {
 								"type": "code",

@@ -52,6 +52,11 @@
 				"default": 100
 			},
 			{
+				"name": "outDirection",
+				"type": "ENUM(STRAIGHT, TURN)",
+				"default": "STRAIGHT"
+			},
+			{
 				"name": "position",
 				"type": "list<int>",
 				"default": [
@@ -72,6 +77,11 @@
 				"default": 100
 			},
 			{
+				"name": "inDirection",
+				"type": "ENUM(STRAIGHT, TURN)",
+				"default": "STRAIGHT"
+			},
+			{
 				"name": "position",
 				"type": "list<int>",
 				"default": [
@@ -90,6 +100,16 @@
 				"name": "height",
 				"type": "int",
 				"default": 160
+			},
+			{
+				"name": "outDirection",
+				"type": "ENUM(STRAIGHT, TURN)",
+				"default": "STRAIGHT"
+			},
+			{
+				"name": "inDirection",
+				"type": "ENUM(STRAIGHT, TURN)",
+				"default": "STRAIGHT"
 			},
 			{
 				"name": "position",
@@ -202,9 +222,9 @@
 				"default": 20
 			},
 			{
-				"name": "isRed",
-				"type": "boolean",
-				"default": true
+				"name": "color",
+				"type": "ENUM(RED, GREEN)",
+				"default": "RED"
 			},
 			{
 				"name": "position",

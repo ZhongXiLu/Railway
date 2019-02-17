@@ -885,7 +885,7 @@
 							"99": {
 								"textContent": {
 									"type": "string",
-									"value": "+ width : int = 180\n+ height : int = 100"
+									"value": "+ width : int = 180\n+ height : int = 100\n+ outDirection : ENUM(STRAIGHT, TURN) = STRAIGHT"
 								},
 								"style": {
 									"type": "map<string,string>",
@@ -1236,7 +1236,7 @@
 							"99": {
 								"textContent": {
 									"type": "string",
-									"value": "+ width : int = 180\n+ height : int = 100"
+									"value": "+ width : int = 180\n+ height : int = 100\n+ inDirection : ENUM(STRAIGHT, TURN) = STRAIGHT"
 								},
 								"style": {
 									"type": "map<string,string>",
@@ -1587,7 +1587,7 @@
 							"99": {
 								"textContent": {
 									"type": "string",
-									"value": "+ width : int = 180\n+ height : int = 160"
+									"value": "+ width : int = 180\n+ height : int = 160\n+ outDirection : ENUM(STRAIGHT, TURN) = STRAIGHT\n+ inDirection : ENUM(STRAIGHT, TURN) = STRAIGHT"
 								},
 								"style": {
 									"type": "map<string,string>",
@@ -3342,7 +3342,7 @@
 							"99": {
 								"textContent": {
 									"type": "string",
-									"value": "+ width : int = 40\n+ height : int = 20\n+ isRed : boolean = true"
+									"value": "+ width : int = 40\n+ height : int = 20\n+ color : ENUM(RED, GREEN) = RED"
 								},
 								"style": {
 									"type": "map<string,string>",
@@ -6985,6 +6985,11 @@
 							"name": "height",
 							"type": "int",
 							"default": 100
+						},
+						{
+							"name": "outDirection",
+							"type": "ENUM(STRAIGHT, TURN)",
+							"default": "STRAIGHT"
 						}
 					]
 				},
@@ -7030,6 +7035,11 @@
 							"name": "height",
 							"type": "int",
 							"default": 100
+						},
+						{
+							"name": "inDirection",
+							"type": "ENUM(STRAIGHT, TURN)",
+							"default": "STRAIGHT"
 						}
 					]
 				},
@@ -7075,6 +7085,16 @@
 							"name": "height",
 							"type": "int",
 							"default": 160
+						},
+						{
+							"name": "outDirection",
+							"type": "ENUM(STRAIGHT, TURN)",
+							"default": "STRAIGHT"
+						},
+						{
+							"name": "inDirection",
+							"type": "ENUM(STRAIGHT, TURN)",
+							"default": "STRAIGHT"
 						}
 					]
 				},
@@ -7316,9 +7336,9 @@
 							"default": 20
 						},
 						{
-							"name": "isRed",
-							"type": "boolean",
-							"default": true
+							"name": "color",
+							"type": "ENUM(RED, GREEN)",
+							"default": "RED"
 						}
 					]
 				},
