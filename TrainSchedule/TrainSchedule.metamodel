@@ -1,0 +1,307 @@
+{
+	"types": {
+		"Schedule": [
+			{
+				"name": "train",
+				"type": "string",
+				"default": "T"
+			}
+		],
+		"Step": [],
+		"StepInSchedule": [],
+		"Start": [
+			{
+				"name": "station",
+				"type": "string",
+				"default": "S"
+			}
+		],
+		"Waypoint": [
+			{
+				"name": "direction",
+				"type": "ENUM(STRAIGHT, TURN)",
+				"default": "STRAIGHT"
+			}
+		],
+		"End": [
+			{
+				"name": "station",
+				"type": "string",
+				"default": "S"
+			}
+		],
+		"NextStep": []
+	},
+	"constraints": [
+		{
+			"name": "noAbstractInstances",
+			"event": "pre-create",
+			"code": "false",
+			"targetType": "Step"
+		}
+	],
+	"actions": [],
+	"cardinalities": {
+		"Schedule": [
+			{
+				"dir": "out",
+				"type": "StepInSchedule",
+				"min": "0",
+				"max": "Infinity"
+			}
+		],
+		"Step": [
+			{
+				"dir": "in",
+				"type": "NextStep",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "NextStep",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "StepInSchedule",
+				"min": "0",
+				"max": "Infinity"
+			}
+		],
+		"StepInSchedule": [
+			{
+				"dir": "in",
+				"type": "Schedule",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "Step",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "Start",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "Waypoint",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "End",
+				"min": "0",
+				"max": "1"
+			}
+		],
+		"Start": [
+			{
+				"dir": "in",
+				"type": "NextStep",
+				"min": "0",
+				"max": "0"
+			},
+			{
+				"dir": "out",
+				"type": "NextStep",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "StepInSchedule",
+				"min": "0",
+				"max": "Infinity"
+			}
+		],
+		"Waypoint": [
+			{
+				"dir": "in",
+				"type": "NextStep",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "NextStep",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "StepInSchedule",
+				"min": "0",
+				"max": "Infinity"
+			}
+		],
+		"End": [
+			{
+				"dir": "out",
+				"type": "NextStep",
+				"min": "0",
+				"max": "0"
+			},
+			{
+				"dir": "in",
+				"type": "NextStep",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "StepInSchedule",
+				"min": "0",
+				"max": "Infinity"
+			}
+		],
+		"NextStep": [
+			{
+				"dir": "in",
+				"type": "Step",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "Step",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "Start",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "Start",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "Waypoint",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "Waypoint",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "End",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "End",
+				"min": "0",
+				"max": "1"
+			}
+		]
+	},
+	"legalConnections": {
+		"Schedule": {
+			"Step": [
+				"StepInSchedule"
+			],
+			"Start": [
+				"StepInSchedule"
+			],
+			"Waypoint": [
+				"StepInSchedule"
+			],
+			"End": [
+				"StepInSchedule"
+			]
+		},
+		"Step": {
+			"Step": [
+				"NextStep"
+			],
+			"Start": [
+				"NextStep"
+			],
+			"Waypoint": [
+				"NextStep"
+			],
+			"End": [
+				"NextStep"
+			]
+		},
+		"Start": {
+			"Step": [
+				"NextStep"
+			],
+			"Start": [
+				"NextStep"
+			],
+			"Waypoint": [
+				"NextStep"
+			],
+			"End": [
+				"NextStep"
+			]
+		},
+		"Waypoint": {
+			"Step": [
+				"NextStep"
+			],
+			"Start": [
+				"NextStep"
+			],
+			"Waypoint": [
+				"NextStep"
+			],
+			"End": [
+				"NextStep"
+			]
+		},
+		"End": {
+			"Step": [
+				"NextStep"
+			],
+			"Start": [
+				"NextStep"
+			],
+			"Waypoint": [
+				"NextStep"
+			],
+			"End": [
+				"NextStep"
+			]
+		}
+	},
+	"connectorTypes": {
+		"StepInSchedule": "containment",
+		"NextStep": "visual"
+	},
+	"types2parentTypes": {
+		"Schedule": [],
+		"Step": [],
+		"StepInSchedule": [],
+		"Start": [
+			"Step"
+		],
+		"Waypoint": [
+			"Step"
+		],
+		"End": [
+			"Step"
+		],
+		"NextStep": []
+	}
+}
