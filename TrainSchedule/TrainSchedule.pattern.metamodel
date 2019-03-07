@@ -1,0 +1,457 @@
+{
+	"types": {
+		"__pSchedule": [
+			{
+				"name": "__pLabel",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotIn",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotOut",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pMatchSubtypes",
+				"type": "boolean",
+				"default": true
+			},
+			{
+				"name": "train",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			}
+		],
+		"__pStep": [
+			{
+				"name": "__pLabel",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotIn",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotOut",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pMatchSubtypes",
+				"type": "boolean",
+				"default": true
+			}
+		],
+		"__pStepInSchedule": [
+			{
+				"name": "__pLabel",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotIn",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotOut",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pMatchSubtypes",
+				"type": "boolean",
+				"default": true
+			}
+		],
+		"__pStart": [
+			{
+				"name": "__pLabel",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotIn",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotOut",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pMatchSubtypes",
+				"type": "boolean",
+				"default": true
+			},
+			{
+				"name": "station",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			}
+		],
+		"__pWaypoint": [
+			{
+				"name": "__pLabel",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotIn",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotOut",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pMatchSubtypes",
+				"type": "boolean",
+				"default": true
+			},
+			{
+				"name": "direction",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			}
+		],
+		"__pEnd": [
+			{
+				"name": "__pLabel",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotIn",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotOut",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pMatchSubtypes",
+				"type": "boolean",
+				"default": true
+			},
+			{
+				"name": "station",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			}
+		],
+		"__pNextStep": [
+			{
+				"name": "__pLabel",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotIn",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotOut",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pMatchSubtypes",
+				"type": "boolean",
+				"default": true
+			}
+		]
+	},
+	"constraints": [
+		{
+			"name": "noAbstractInstances",
+			"event": "pre-create",
+			"code": "/* comment next line to enable this constraint */\nthrow \"IgnoredConstraint\"\nfalse",
+			"targetType": "Step"
+		}
+	],
+	"actions": [
+		{
+			"name": "distinctPLabels",
+			"event": "post-create",
+			"code": "if( getAttr(\"__pLabel\") == \"\" )\n{\n\tvar pLabels = getAllNodes().\n\t\t\t\t\t\t\tfilter( function(n) {return hasAttr(\"__pLabel\",n);} ).\n\t\t\t\t\t\t\t\tmap( function(n) {return getAttr(\"__pLabel\",n);} ),\n\t\t i\t\t\t= \"0\";\n\n\twhile( _utils.contains(pLabels,i) )\n\t\ti = String(parseInt(i)+1);\n\tsetAttr(\"__pLabel\",i);\n}",
+			"targetType": "*"
+		}
+	],
+	"cardinalities": {
+		"__pSchedule": [
+			{
+				"dir": "out",
+				"type": "__pStepInSchedule",
+				"min": 0,
+				"max": "Infinity"
+			}
+		],
+		"__pStep": [
+			{
+				"dir": "in",
+				"type": "__pNextStep",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "__pNextStep",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "__pStepInSchedule",
+				"min": 0,
+				"max": "Infinity"
+			}
+		],
+		"__pStepInSchedule": [
+			{
+				"dir": "in",
+				"type": "__pSchedule",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "__pStep",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "__pStart",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "__pWaypoint",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "__pEnd",
+				"min": 0,
+				"max": "1"
+			}
+		],
+		"__pStart": [
+			{
+				"dir": "in",
+				"type": "__pNextStep",
+				"min": 0,
+				"max": "0"
+			},
+			{
+				"dir": "out",
+				"type": "__pNextStep",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "__pStepInSchedule",
+				"min": 0,
+				"max": "Infinity"
+			}
+		],
+		"__pWaypoint": [
+			{
+				"dir": "in",
+				"type": "__pNextStep",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "__pNextStep",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "__pStepInSchedule",
+				"min": 0,
+				"max": "Infinity"
+			}
+		],
+		"__pEnd": [
+			{
+				"dir": "out",
+				"type": "__pNextStep",
+				"min": 0,
+				"max": "0"
+			},
+			{
+				"dir": "in",
+				"type": "__pNextStep",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "__pStepInSchedule",
+				"min": 0,
+				"max": "Infinity"
+			}
+		],
+		"__pNextStep": [
+			{
+				"dir": "in",
+				"type": "__pStep",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "__pStep",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "__pStart",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "__pStart",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "__pWaypoint",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "__pWaypoint",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "__pEnd",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "__pEnd",
+				"min": 0,
+				"max": "1"
+			}
+		]
+	},
+	"legalConnections": {
+		"__pSchedule": {
+			"__pStep": [
+				"__pStepInSchedule"
+			],
+			"__pStart": [
+				"__pStepInSchedule"
+			],
+			"__pWaypoint": [
+				"__pStepInSchedule"
+			],
+			"__pEnd": [
+				"__pStepInSchedule"
+			]
+		},
+		"__pStep": {
+			"__pStep": [
+				"__pNextStep"
+			],
+			"__pStart": [
+				"__pNextStep"
+			],
+			"__pWaypoint": [
+				"__pNextStep"
+			],
+			"__pEnd": [
+				"__pNextStep"
+			]
+		},
+		"__pStart": {
+			"__pStep": [
+				"__pNextStep"
+			],
+			"__pStart": [
+				"__pNextStep"
+			],
+			"__pWaypoint": [
+				"__pNextStep"
+			],
+			"__pEnd": [
+				"__pNextStep"
+			]
+		},
+		"__pWaypoint": {
+			"__pStep": [
+				"__pNextStep"
+			],
+			"__pStart": [
+				"__pNextStep"
+			],
+			"__pWaypoint": [
+				"__pNextStep"
+			],
+			"__pEnd": [
+				"__pNextStep"
+			]
+		},
+		"__pEnd": {
+			"__pStep": [
+				"__pNextStep"
+			],
+			"__pStart": [
+				"__pNextStep"
+			],
+			"__pWaypoint": [
+				"__pNextStep"
+			],
+			"__pEnd": [
+				"__pNextStep"
+			]
+		}
+	},
+	"connectorTypes": {
+		"__pStepInSchedule": "containment",
+		"__pNextStep": "visual"
+	},
+	"types2parentTypes": {
+		"__pSchedule": [],
+		"__pStep": [],
+		"__pStepInSchedule": [],
+		"__pStart": [
+			"__pStep"
+		],
+		"__pWaypoint": [
+			"__pStep"
+		],
+		"__pEnd": [
+			"__pStep"
+		],
+		"__pNextStep": []
+	}
+}

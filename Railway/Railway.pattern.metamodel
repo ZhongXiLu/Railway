@@ -1,0 +1,1350 @@
+{
+	"types": {
+		"__pTrack": [
+			{
+				"name": "__pLabel",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotIn",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotOut",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pMatchSubtypes",
+				"type": "boolean",
+				"default": true
+			},
+			{
+				"name": "position",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			},
+			{
+				"name": "width",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			},
+			{
+				"name": "height",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			}
+		],
+		"__pStraight": [
+			{
+				"name": "__pLabel",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotIn",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotOut",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pMatchSubtypes",
+				"type": "boolean",
+				"default": true
+			},
+			{
+				"name": "width",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			},
+			{
+				"name": "height",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			},
+			{
+				"name": "position",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			}
+		],
+		"__pTurnout": [
+			{
+				"name": "__pLabel",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotIn",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotOut",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pMatchSubtypes",
+				"type": "boolean",
+				"default": true
+			},
+			{
+				"name": "width",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			},
+			{
+				"name": "height",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			},
+			{
+				"name": "outDirection",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			},
+			{
+				"name": "position",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			}
+		],
+		"__pJunction": [
+			{
+				"name": "__pLabel",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotIn",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotOut",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pMatchSubtypes",
+				"type": "boolean",
+				"default": true
+			},
+			{
+				"name": "width",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			},
+			{
+				"name": "height",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			},
+			{
+				"name": "inDirection",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			},
+			{
+				"name": "position",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			}
+		],
+		"__pCrossing": [
+			{
+				"name": "__pLabel",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotIn",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotOut",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pMatchSubtypes",
+				"type": "boolean",
+				"default": true
+			},
+			{
+				"name": "width",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			},
+			{
+				"name": "height",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			},
+			{
+				"name": "outDirection",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			},
+			{
+				"name": "inDirection",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			},
+			{
+				"name": "position",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			}
+		],
+		"__pStart": [
+			{
+				"name": "__pLabel",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotIn",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotOut",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pMatchSubtypes",
+				"type": "boolean",
+				"default": true
+			},
+			{
+				"name": "width",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			},
+			{
+				"name": "height",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			},
+			{
+				"name": "position",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			}
+		],
+		"__pEnd": [
+			{
+				"name": "__pLabel",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotIn",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotOut",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pMatchSubtypes",
+				"type": "boolean",
+				"default": true
+			},
+			{
+				"name": "width",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			},
+			{
+				"name": "height",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			},
+			{
+				"name": "position",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			}
+		],
+		"__pStation": [
+			{
+				"name": "__pLabel",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotIn",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotOut",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pMatchSubtypes",
+				"type": "boolean",
+				"default": true
+			},
+			{
+				"name": "width",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			},
+			{
+				"name": "height",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			},
+			{
+				"name": "name",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			},
+			{
+				"name": "position",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			}
+		],
+		"__pTrain": [
+			{
+				"name": "__pLabel",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotIn",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotOut",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pMatchSubtypes",
+				"type": "boolean",
+				"default": true
+			},
+			{
+				"name": "width",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			},
+			{
+				"name": "height",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			},
+			{
+				"name": "name",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			},
+			{
+				"name": "position",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			}
+		],
+		"__pLight": [
+			{
+				"name": "__pLabel",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotIn",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotOut",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pMatchSubtypes",
+				"type": "boolean",
+				"default": true
+			},
+			{
+				"name": "width",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			},
+			{
+				"name": "height",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			},
+			{
+				"name": "color",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			},
+			{
+				"name": "position",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			}
+		],
+		"__pPositionable": [
+			{
+				"name": "__pLabel",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotIn",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotOut",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pMatchSubtypes",
+				"type": "boolean",
+				"default": true
+			},
+			{
+				"name": "position",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			},
+			{
+				"name": "width",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			},
+			{
+				"name": "height",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			}
+		],
+		"__pTrackToTrack": [
+			{
+				"name": "__pLabel",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotIn",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotOut",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pMatchSubtypes",
+				"type": "boolean",
+				"default": true
+			}
+		],
+		"__pTrainOnTrack": [
+			{
+				"name": "__pLabel",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotIn",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotOut",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pMatchSubtypes",
+				"type": "boolean",
+				"default": true
+			}
+		],
+		"__pLightOnTrack": [
+			{
+				"name": "__pLabel",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotIn",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotOut",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pMatchSubtypes",
+				"type": "boolean",
+				"default": true
+			}
+		]
+	},
+	"constraints": [
+		{
+			"name": "noAbstractInstances",
+			"event": "pre-create",
+			"code": "/* comment next line to enable this constraint */\nthrow \"IgnoredConstraint\"\nfalse",
+			"targetType": "Track"
+		},
+		{
+			"name": "noAbstractInstances",
+			"event": "pre-create",
+			"code": "/* comment next line to enable this constraint */\nthrow \"IgnoredConstraint\"\nfalse",
+			"targetType": "Positionable"
+		}
+	],
+	"actions": [
+		{
+			"name": "snapping",
+			"event": "post-connect",
+			"code": "/* comment next line to enable this action */\nthrow \"IgnoredConstraint\"\n/*newline*/var singleTrackHeight = 20;/*newline*/function getSelfAdjustment() {/*newline*/    if(getAttr('$type').match(/Straight/)) {/*newline*/        return getAttr('height')/2;/*newline*/    } else if(getAttr('$type').match(/Start/)) {/*newline*/        return getAttr('height')/2;/*newline*/    } else if(getAttr('$type').match(/Station/)) {/*newline*/        return 4*getAttr('height')/5;/*newline*/    } else if(getAttr('$type').match(/Turnout/)) {/*newline*/        if(getNeighbors('>').length > 1) {/*newline*/            return getAttr('height');/*newline*/        } else {/*newline*/            return singleTrackHeight;/*newline*/        }/*newline*/    } else if(getAttr('$type').match(/Junction/)) {/*newline*/        return singleTrackHeight;/*newline*/    } else if(getAttr('$type').match(/Crossing/)) {/*newline*/        if(getNeighbors('>').length > 1) {/*newline*/            return getAttr('height');/*newline*/        } else {/*newline*/            return getAttr('height')/2;/*newline*/        }/*newline*/    }/*newline*/}/*newline*/function getNeighbourAdjustment(neighbour) {/*newline*/    if(getAttr('$type', neighbour).match(/Straight/)) {/*newline*/        return getAttr('height', neighbour)/2;/*newline*/    } else if(getAttr('$type', neighbour).match(/End/)) {/*newline*/        return getAttr('height', neighbour)/2;/*newline*/    } else if(getAttr('$type', neighbour).match(/Station/)) {/*newline*/        return 4*getAttr('height', neighbour)/5;/*newline*/    } else if(getAttr('$type', neighbour).match(/Turnout/)) {/*newline*/        return singleTrackHeight;/*newline*/    } else if(getAttr('$type', neighbour).match(/Junction/)) {/*newline*/        if(getNeighbors('<', '*', neighbour).length > 1) {/*newline*/            return getAttr('height', neighbour);/*newline*/        } else {/*newline*/            return singleTrackHeight;/*newline*/        }/*newline*/    } else if(getAttr('$type', neighbour).match(/Crossing/)) {/*newline*/        if(getNeighbors('<', '*', neighbour).length > 1) {/*newline*/            return getAttr('height', neighbour)/2;/*newline*/        } else {/*newline*/            return 0;/*newline*/        }/*newline*/    }/*newline*/}/*newline*/var neighbourLinks = getNeighbors('>');/*newline*/var neighbourLink = neighbourLinks[neighbourLinks.length-1];/*newline*/if(neighbourLink) {/*newline*/    if(getAttr('$type', neighbourLink).match(/TrackToTrack/)) {/*newline*/        var neighbour = getNeighbors('>', '*', neighbourLink)[0],/*newline*/            neighbourPos = getAttr('position', neighbour);/*newline*/        setAttr('position', [neighbourPos[0] - getAttr('width', neighbour), neighbourPos[1] - getSelfAdjustment() + getNeighbourAdjustment(neighbour)]);/*newline*/    } else if(getAttr('$type', neighbourLink).match(/TrainOnTrack/)) {/*newline*/        var neighbour = getNeighbors('>', '*', neighbourLink)[0],/*newline*/            globalPos = getAttr('position');/*newline*/        if(getAttr('$type').match(/Station/)) {/*newline*/            setAttr('position', [globalPos[0] + getAttr('width')/2  - getAttr('width', neighbour)/2, globalPos[1] + 3*getAttr('height')/4 - getAttr('height', neighbour)/2], neighbour);/*newline*/        } else {/*newline*/            setAttr('position', [globalPos[0] + getAttr('width')/2  - getAttr('width', neighbour)/2, globalPos[1] + getAttr('height')/2 - getAttr('height', neighbour)/2], neighbour);/*newline*/        }/*newline*/    } else if(getAttr('$type', neighbourLink).match(/LightOnTrack/)) {/*newline*/        var neighbour = getNeighbors('>', '*', neighbourLink)[0],/*newline*/            globalPos = getAttr('position');/*newline*/        if(getAttr('$type').match(/Station/)) {/*newline*/            setAttr('position', [globalPos[0], globalPos[1] + getAttr('height')], neighbour);/*newline*/        } else if(getAttr('$type').match(/Crossing/)) {/*newline*/            setAttr('position', [globalPos[0], globalPos[1] + getAttr('height')/2], neighbour);/*newline*/        } else {/*newline*/            setAttr('position', [globalPos[0], globalPos[1] + singleTrackHeight*2], neighbour);/*newline*/        }/*newline*/    } else {/*newline*/        print('Invalid grid node link');/*newline*/    }/*newline*/}",
+			"targetType": "__pTrack"
+		},
+		{
+			"name": "snapping",
+			"event": "post-connect",
+			"code": "/* comment next line to enable this action */\nthrow \"IgnoredConstraint\"\n/*newline*/var singleTrackHeight = 20;/*newline*/function getSelfAdjustment() {/*newline*/    if(getAttr('$type').match(/Straight/)) {/*newline*/        return getAttr('height')/2;/*newline*/    } else if(getAttr('$type').match(/Start/)) {/*newline*/        return getAttr('height')/2;/*newline*/    } else if(getAttr('$type').match(/Station/)) {/*newline*/        return 4*getAttr('height')/5;/*newline*/    } else if(getAttr('$type').match(/Turnout/)) {/*newline*/        if(getNeighbors('>').length > 1) {/*newline*/            return getAttr('height');/*newline*/        } else {/*newline*/            return singleTrackHeight;/*newline*/        }/*newline*/    } else if(getAttr('$type').match(/Junction/)) {/*newline*/        return singleTrackHeight;/*newline*/    } else if(getAttr('$type').match(/Crossing/)) {/*newline*/        if(getNeighbors('>').length > 1) {/*newline*/            return getAttr('height');/*newline*/        } else {/*newline*/            return getAttr('height')/2;/*newline*/        }/*newline*/    }/*newline*/}/*newline*/function getNeighbourAdjustment(neighbour) {/*newline*/    if(getAttr('$type', neighbour).match(/Straight/)) {/*newline*/        return getAttr('height', neighbour)/2;/*newline*/    } else if(getAttr('$type', neighbour).match(/End/)) {/*newline*/        return getAttr('height', neighbour)/2;/*newline*/    } else if(getAttr('$type', neighbour).match(/Station/)) {/*newline*/        return 4*getAttr('height', neighbour)/5;/*newline*/    } else if(getAttr('$type', neighbour).match(/Turnout/)) {/*newline*/        return singleTrackHeight;/*newline*/    } else if(getAttr('$type', neighbour).match(/Junction/)) {/*newline*/        if(getNeighbors('<', '*', neighbour).length > 1) {/*newline*/            return getAttr('height', neighbour);/*newline*/        } else {/*newline*/            return singleTrackHeight;/*newline*/        }/*newline*/    } else if(getAttr('$type', neighbour).match(/Crossing/)) {/*newline*/        if(getNeighbors('<', '*', neighbour).length > 1) {/*newline*/            return getAttr('height', neighbour)/2;/*newline*/        } else {/*newline*/            return 0;/*newline*/        }/*newline*/    }/*newline*/}/*newline*/var neighbourLinks = getNeighbors('>');/*newline*/var neighbourLink = neighbourLinks[neighbourLinks.length-1];/*newline*/if(neighbourLink) {/*newline*/    if(getAttr('$type', neighbourLink).match(/TrackToTrack/)) {/*newline*/        var neighbour = getNeighbors('>', '*', neighbourLink)[0],/*newline*/            neighbourPos = getAttr('position', neighbour);/*newline*/        setAttr('position', [neighbourPos[0] - getAttr('width', neighbour), neighbourPos[1] - getSelfAdjustment() + getNeighbourAdjustment(neighbour)]);/*newline*/    } else if(getAttr('$type', neighbourLink).match(/TrainOnTrack/)) {/*newline*/        var neighbour = getNeighbors('>', '*', neighbourLink)[0],/*newline*/            globalPos = getAttr('position');/*newline*/        if(getAttr('$type').match(/Station/)) {/*newline*/            setAttr('position', [globalPos[0] + getAttr('width')/2  - getAttr('width', neighbour)/2, globalPos[1] + 3*getAttr('height')/4 - getAttr('height', neighbour)/2], neighbour);/*newline*/        } else {/*newline*/            setAttr('position', [globalPos[0] + getAttr('width')/2  - getAttr('width', neighbour)/2, globalPos[1] + getAttr('height')/2 - getAttr('height', neighbour)/2], neighbour);/*newline*/        }/*newline*/    } else if(getAttr('$type', neighbourLink).match(/LightOnTrack/)) {/*newline*/        var neighbour = getNeighbors('>', '*', neighbourLink)[0],/*newline*/            globalPos = getAttr('position');/*newline*/        if(getAttr('$type').match(/Station/)) {/*newline*/            setAttr('position', [globalPos[0], globalPos[1] + getAttr('height')], neighbour);/*newline*/        } else if(getAttr('$type').match(/Crossing/)) {/*newline*/            setAttr('position', [globalPos[0], globalPos[1] + getAttr('height')/2], neighbour);/*newline*/        } else {/*newline*/            setAttr('position', [globalPos[0], globalPos[1] + singleTrackHeight*2], neighbour);/*newline*/        }/*newline*/    } else {/*newline*/        print('Invalid grid node link');/*newline*/    }/*newline*/}",
+			"targetType": "__pStraight"
+		},
+		{
+			"name": "snapping",
+			"event": "post-connect",
+			"code": "/* comment next line to enable this action */\nthrow \"IgnoredConstraint\"\n/*newline*/var singleTrackHeight = 20;/*newline*/function getSelfAdjustment() {/*newline*/    if(getAttr('$type').match(/Straight/)) {/*newline*/        return getAttr('height')/2;/*newline*/    } else if(getAttr('$type').match(/Start/)) {/*newline*/        return getAttr('height')/2;/*newline*/    } else if(getAttr('$type').match(/Station/)) {/*newline*/        return 4*getAttr('height')/5;/*newline*/    } else if(getAttr('$type').match(/Turnout/)) {/*newline*/        if(getNeighbors('>').length > 1) {/*newline*/            return getAttr('height');/*newline*/        } else {/*newline*/            return singleTrackHeight;/*newline*/        }/*newline*/    } else if(getAttr('$type').match(/Junction/)) {/*newline*/        return singleTrackHeight;/*newline*/    } else if(getAttr('$type').match(/Crossing/)) {/*newline*/        if(getNeighbors('>').length > 1) {/*newline*/            return getAttr('height');/*newline*/        } else {/*newline*/            return getAttr('height')/2;/*newline*/        }/*newline*/    }/*newline*/}/*newline*/function getNeighbourAdjustment(neighbour) {/*newline*/    if(getAttr('$type', neighbour).match(/Straight/)) {/*newline*/        return getAttr('height', neighbour)/2;/*newline*/    } else if(getAttr('$type', neighbour).match(/End/)) {/*newline*/        return getAttr('height', neighbour)/2;/*newline*/    } else if(getAttr('$type', neighbour).match(/Station/)) {/*newline*/        return 4*getAttr('height', neighbour)/5;/*newline*/    } else if(getAttr('$type', neighbour).match(/Turnout/)) {/*newline*/        return singleTrackHeight;/*newline*/    } else if(getAttr('$type', neighbour).match(/Junction/)) {/*newline*/        if(getNeighbors('<', '*', neighbour).length > 1) {/*newline*/            return getAttr('height', neighbour);/*newline*/        } else {/*newline*/            return singleTrackHeight;/*newline*/        }/*newline*/    } else if(getAttr('$type', neighbour).match(/Crossing/)) {/*newline*/        if(getNeighbors('<', '*', neighbour).length > 1) {/*newline*/            return getAttr('height', neighbour)/2;/*newline*/        } else {/*newline*/            return 0;/*newline*/        }/*newline*/    }/*newline*/}/*newline*/var neighbourLinks = getNeighbors('>');/*newline*/var neighbourLink = neighbourLinks[neighbourLinks.length-1];/*newline*/if(neighbourLink) {/*newline*/    if(getAttr('$type', neighbourLink).match(/TrackToTrack/)) {/*newline*/        var neighbour = getNeighbors('>', '*', neighbourLink)[0],/*newline*/            neighbourPos = getAttr('position', neighbour);/*newline*/        setAttr('position', [neighbourPos[0] - getAttr('width', neighbour), neighbourPos[1] - getSelfAdjustment() + getNeighbourAdjustment(neighbour)]);/*newline*/    } else if(getAttr('$type', neighbourLink).match(/TrainOnTrack/)) {/*newline*/        var neighbour = getNeighbors('>', '*', neighbourLink)[0],/*newline*/            globalPos = getAttr('position');/*newline*/        if(getAttr('$type').match(/Station/)) {/*newline*/            setAttr('position', [globalPos[0] + getAttr('width')/2  - getAttr('width', neighbour)/2, globalPos[1] + 3*getAttr('height')/4 - getAttr('height', neighbour)/2], neighbour);/*newline*/        } else {/*newline*/            setAttr('position', [globalPos[0] + getAttr('width')/2  - getAttr('width', neighbour)/2, globalPos[1] + getAttr('height')/2 - getAttr('height', neighbour)/2], neighbour);/*newline*/        }/*newline*/    } else if(getAttr('$type', neighbourLink).match(/LightOnTrack/)) {/*newline*/        var neighbour = getNeighbors('>', '*', neighbourLink)[0],/*newline*/            globalPos = getAttr('position');/*newline*/        if(getAttr('$type').match(/Station/)) {/*newline*/            setAttr('position', [globalPos[0], globalPos[1] + getAttr('height')], neighbour);/*newline*/        } else if(getAttr('$type').match(/Crossing/)) {/*newline*/            setAttr('position', [globalPos[0], globalPos[1] + getAttr('height')/2], neighbour);/*newline*/        } else {/*newline*/            setAttr('position', [globalPos[0], globalPos[1] + singleTrackHeight*2], neighbour);/*newline*/        }/*newline*/    } else {/*newline*/        print('Invalid grid node link');/*newline*/    }/*newline*/}",
+			"targetType": "__pTurnout"
+		},
+		{
+			"name": "snapping",
+			"event": "post-connect",
+			"code": "/* comment next line to enable this action */\nthrow \"IgnoredConstraint\"\n/*newline*/var singleTrackHeight = 20;/*newline*/function getSelfAdjustment() {/*newline*/    if(getAttr('$type').match(/Straight/)) {/*newline*/        return getAttr('height')/2;/*newline*/    } else if(getAttr('$type').match(/Start/)) {/*newline*/        return getAttr('height')/2;/*newline*/    } else if(getAttr('$type').match(/Station/)) {/*newline*/        return 4*getAttr('height')/5;/*newline*/    } else if(getAttr('$type').match(/Turnout/)) {/*newline*/        if(getNeighbors('>').length > 1) {/*newline*/            return getAttr('height');/*newline*/        } else {/*newline*/            return singleTrackHeight;/*newline*/        }/*newline*/    } else if(getAttr('$type').match(/Junction/)) {/*newline*/        return singleTrackHeight;/*newline*/    } else if(getAttr('$type').match(/Crossing/)) {/*newline*/        if(getNeighbors('>').length > 1) {/*newline*/            return getAttr('height');/*newline*/        } else {/*newline*/            return getAttr('height')/2;/*newline*/        }/*newline*/    }/*newline*/}/*newline*/function getNeighbourAdjustment(neighbour) {/*newline*/    if(getAttr('$type', neighbour).match(/Straight/)) {/*newline*/        return getAttr('height', neighbour)/2;/*newline*/    } else if(getAttr('$type', neighbour).match(/End/)) {/*newline*/        return getAttr('height', neighbour)/2;/*newline*/    } else if(getAttr('$type', neighbour).match(/Station/)) {/*newline*/        return 4*getAttr('height', neighbour)/5;/*newline*/    } else if(getAttr('$type', neighbour).match(/Turnout/)) {/*newline*/        return singleTrackHeight;/*newline*/    } else if(getAttr('$type', neighbour).match(/Junction/)) {/*newline*/        if(getNeighbors('<', '*', neighbour).length > 1) {/*newline*/            return getAttr('height', neighbour);/*newline*/        } else {/*newline*/            return singleTrackHeight;/*newline*/        }/*newline*/    } else if(getAttr('$type', neighbour).match(/Crossing/)) {/*newline*/        if(getNeighbors('<', '*', neighbour).length > 1) {/*newline*/            return getAttr('height', neighbour)/2;/*newline*/        } else {/*newline*/            return 0;/*newline*/        }/*newline*/    }/*newline*/}/*newline*/var neighbourLinks = getNeighbors('>');/*newline*/var neighbourLink = neighbourLinks[neighbourLinks.length-1];/*newline*/if(neighbourLink) {/*newline*/    if(getAttr('$type', neighbourLink).match(/TrackToTrack/)) {/*newline*/        var neighbour = getNeighbors('>', '*', neighbourLink)[0],/*newline*/            neighbourPos = getAttr('position', neighbour);/*newline*/        setAttr('position', [neighbourPos[0] - getAttr('width', neighbour), neighbourPos[1] - getSelfAdjustment() + getNeighbourAdjustment(neighbour)]);/*newline*/    } else if(getAttr('$type', neighbourLink).match(/TrainOnTrack/)) {/*newline*/        var neighbour = getNeighbors('>', '*', neighbourLink)[0],/*newline*/            globalPos = getAttr('position');/*newline*/        if(getAttr('$type').match(/Station/)) {/*newline*/            setAttr('position', [globalPos[0] + getAttr('width')/2  - getAttr('width', neighbour)/2, globalPos[1] + 3*getAttr('height')/4 - getAttr('height', neighbour)/2], neighbour);/*newline*/        } else {/*newline*/            setAttr('position', [globalPos[0] + getAttr('width')/2  - getAttr('width', neighbour)/2, globalPos[1] + getAttr('height')/2 - getAttr('height', neighbour)/2], neighbour);/*newline*/        }/*newline*/    } else if(getAttr('$type', neighbourLink).match(/LightOnTrack/)) {/*newline*/        var neighbour = getNeighbors('>', '*', neighbourLink)[0],/*newline*/            globalPos = getAttr('position');/*newline*/        if(getAttr('$type').match(/Station/)) {/*newline*/            setAttr('position', [globalPos[0], globalPos[1] + getAttr('height')], neighbour);/*newline*/        } else if(getAttr('$type').match(/Crossing/)) {/*newline*/            setAttr('position', [globalPos[0], globalPos[1] + getAttr('height')/2], neighbour);/*newline*/        } else {/*newline*/            setAttr('position', [globalPos[0], globalPos[1] + singleTrackHeight*2], neighbour);/*newline*/        }/*newline*/    } else {/*newline*/        print('Invalid grid node link');/*newline*/    }/*newline*/}",
+			"targetType": "__pJunction"
+		},
+		{
+			"name": "snapping",
+			"event": "post-connect",
+			"code": "/* comment next line to enable this action */\nthrow \"IgnoredConstraint\"\n/*newline*/var singleTrackHeight = 20;/*newline*/function getSelfAdjustment() {/*newline*/    if(getAttr('$type').match(/Straight/)) {/*newline*/        return getAttr('height')/2;/*newline*/    } else if(getAttr('$type').match(/Start/)) {/*newline*/        return getAttr('height')/2;/*newline*/    } else if(getAttr('$type').match(/Station/)) {/*newline*/        return 4*getAttr('height')/5;/*newline*/    } else if(getAttr('$type').match(/Turnout/)) {/*newline*/        if(getNeighbors('>').length > 1) {/*newline*/            return getAttr('height');/*newline*/        } else {/*newline*/            return singleTrackHeight;/*newline*/        }/*newline*/    } else if(getAttr('$type').match(/Junction/)) {/*newline*/        return singleTrackHeight;/*newline*/    } else if(getAttr('$type').match(/Crossing/)) {/*newline*/        if(getNeighbors('>').length > 1) {/*newline*/            return getAttr('height');/*newline*/        } else {/*newline*/            return getAttr('height')/2;/*newline*/        }/*newline*/    }/*newline*/}/*newline*/function getNeighbourAdjustment(neighbour) {/*newline*/    if(getAttr('$type', neighbour).match(/Straight/)) {/*newline*/        return getAttr('height', neighbour)/2;/*newline*/    } else if(getAttr('$type', neighbour).match(/End/)) {/*newline*/        return getAttr('height', neighbour)/2;/*newline*/    } else if(getAttr('$type', neighbour).match(/Station/)) {/*newline*/        return 4*getAttr('height', neighbour)/5;/*newline*/    } else if(getAttr('$type', neighbour).match(/Turnout/)) {/*newline*/        return singleTrackHeight;/*newline*/    } else if(getAttr('$type', neighbour).match(/Junction/)) {/*newline*/        if(getNeighbors('<', '*', neighbour).length > 1) {/*newline*/            return getAttr('height', neighbour);/*newline*/        } else {/*newline*/            return singleTrackHeight;/*newline*/        }/*newline*/    } else if(getAttr('$type', neighbour).match(/Crossing/)) {/*newline*/        if(getNeighbors('<', '*', neighbour).length > 1) {/*newline*/            return getAttr('height', neighbour)/2;/*newline*/        } else {/*newline*/            return 0;/*newline*/        }/*newline*/    }/*newline*/}/*newline*/var neighbourLinks = getNeighbors('>');/*newline*/var neighbourLink = neighbourLinks[neighbourLinks.length-1];/*newline*/if(neighbourLink) {/*newline*/    if(getAttr('$type', neighbourLink).match(/TrackToTrack/)) {/*newline*/        var neighbour = getNeighbors('>', '*', neighbourLink)[0],/*newline*/            neighbourPos = getAttr('position', neighbour);/*newline*/        setAttr('position', [neighbourPos[0] - getAttr('width', neighbour), neighbourPos[1] - getSelfAdjustment() + getNeighbourAdjustment(neighbour)]);/*newline*/    } else if(getAttr('$type', neighbourLink).match(/TrainOnTrack/)) {/*newline*/        var neighbour = getNeighbors('>', '*', neighbourLink)[0],/*newline*/            globalPos = getAttr('position');/*newline*/        if(getAttr('$type').match(/Station/)) {/*newline*/            setAttr('position', [globalPos[0] + getAttr('width')/2  - getAttr('width', neighbour)/2, globalPos[1] + 3*getAttr('height')/4 - getAttr('height', neighbour)/2], neighbour);/*newline*/        } else {/*newline*/            setAttr('position', [globalPos[0] + getAttr('width')/2  - getAttr('width', neighbour)/2, globalPos[1] + getAttr('height')/2 - getAttr('height', neighbour)/2], neighbour);/*newline*/        }/*newline*/    } else if(getAttr('$type', neighbourLink).match(/LightOnTrack/)) {/*newline*/        var neighbour = getNeighbors('>', '*', neighbourLink)[0],/*newline*/            globalPos = getAttr('position');/*newline*/        if(getAttr('$type').match(/Station/)) {/*newline*/            setAttr('position', [globalPos[0], globalPos[1] + getAttr('height')], neighbour);/*newline*/        } else if(getAttr('$type').match(/Crossing/)) {/*newline*/            setAttr('position', [globalPos[0], globalPos[1] + getAttr('height')/2], neighbour);/*newline*/        } else {/*newline*/            setAttr('position', [globalPos[0], globalPos[1] + singleTrackHeight*2], neighbour);/*newline*/        }/*newline*/    } else {/*newline*/        print('Invalid grid node link');/*newline*/    }/*newline*/}",
+			"targetType": "__pCrossing"
+		},
+		{
+			"name": "snapping",
+			"event": "post-connect",
+			"code": "/* comment next line to enable this action */\nthrow \"IgnoredConstraint\"\n/*newline*/var singleTrackHeight = 20;/*newline*/function getSelfAdjustment() {/*newline*/    if(getAttr('$type').match(/Straight/)) {/*newline*/        return getAttr('height')/2;/*newline*/    } else if(getAttr('$type').match(/Start/)) {/*newline*/        return getAttr('height')/2;/*newline*/    } else if(getAttr('$type').match(/Station/)) {/*newline*/        return 4*getAttr('height')/5;/*newline*/    } else if(getAttr('$type').match(/Turnout/)) {/*newline*/        if(getNeighbors('>').length > 1) {/*newline*/            return getAttr('height');/*newline*/        } else {/*newline*/            return singleTrackHeight;/*newline*/        }/*newline*/    } else if(getAttr('$type').match(/Junction/)) {/*newline*/        return singleTrackHeight;/*newline*/    } else if(getAttr('$type').match(/Crossing/)) {/*newline*/        if(getNeighbors('>').length > 1) {/*newline*/            return getAttr('height');/*newline*/        } else {/*newline*/            return getAttr('height')/2;/*newline*/        }/*newline*/    }/*newline*/}/*newline*/function getNeighbourAdjustment(neighbour) {/*newline*/    if(getAttr('$type', neighbour).match(/Straight/)) {/*newline*/        return getAttr('height', neighbour)/2;/*newline*/    } else if(getAttr('$type', neighbour).match(/End/)) {/*newline*/        return getAttr('height', neighbour)/2;/*newline*/    } else if(getAttr('$type', neighbour).match(/Station/)) {/*newline*/        return 4*getAttr('height', neighbour)/5;/*newline*/    } else if(getAttr('$type', neighbour).match(/Turnout/)) {/*newline*/        return singleTrackHeight;/*newline*/    } else if(getAttr('$type', neighbour).match(/Junction/)) {/*newline*/        if(getNeighbors('<', '*', neighbour).length > 1) {/*newline*/            return getAttr('height', neighbour);/*newline*/        } else {/*newline*/            return singleTrackHeight;/*newline*/        }/*newline*/    } else if(getAttr('$type', neighbour).match(/Crossing/)) {/*newline*/        if(getNeighbors('<', '*', neighbour).length > 1) {/*newline*/            return getAttr('height', neighbour)/2;/*newline*/        } else {/*newline*/            return 0;/*newline*/        }/*newline*/    }/*newline*/}/*newline*/var neighbourLinks = getNeighbors('>');/*newline*/var neighbourLink = neighbourLinks[neighbourLinks.length-1];/*newline*/if(neighbourLink) {/*newline*/    if(getAttr('$type', neighbourLink).match(/TrackToTrack/)) {/*newline*/        var neighbour = getNeighbors('>', '*', neighbourLink)[0],/*newline*/            neighbourPos = getAttr('position', neighbour);/*newline*/        setAttr('position', [neighbourPos[0] - getAttr('width', neighbour), neighbourPos[1] - getSelfAdjustment() + getNeighbourAdjustment(neighbour)]);/*newline*/    } else if(getAttr('$type', neighbourLink).match(/TrainOnTrack/)) {/*newline*/        var neighbour = getNeighbors('>', '*', neighbourLink)[0],/*newline*/            globalPos = getAttr('position');/*newline*/        if(getAttr('$type').match(/Station/)) {/*newline*/            setAttr('position', [globalPos[0] + getAttr('width')/2  - getAttr('width', neighbour)/2, globalPos[1] + 3*getAttr('height')/4 - getAttr('height', neighbour)/2], neighbour);/*newline*/        } else {/*newline*/            setAttr('position', [globalPos[0] + getAttr('width')/2  - getAttr('width', neighbour)/2, globalPos[1] + getAttr('height')/2 - getAttr('height', neighbour)/2], neighbour);/*newline*/        }/*newline*/    } else if(getAttr('$type', neighbourLink).match(/LightOnTrack/)) {/*newline*/        var neighbour = getNeighbors('>', '*', neighbourLink)[0],/*newline*/            globalPos = getAttr('position');/*newline*/        if(getAttr('$type').match(/Station/)) {/*newline*/            setAttr('position', [globalPos[0], globalPos[1] + getAttr('height')], neighbour);/*newline*/        } else if(getAttr('$type').match(/Crossing/)) {/*newline*/            setAttr('position', [globalPos[0], globalPos[1] + getAttr('height')/2], neighbour);/*newline*/        } else {/*newline*/            setAttr('position', [globalPos[0], globalPos[1] + singleTrackHeight*2], neighbour);/*newline*/        }/*newline*/    } else {/*newline*/        print('Invalid grid node link');/*newline*/    }/*newline*/}",
+			"targetType": "__pStart"
+		},
+		{
+			"name": "snapping",
+			"event": "post-connect",
+			"code": "/* comment next line to enable this action */\nthrow \"IgnoredConstraint\"\n/*newline*/var singleTrackHeight = 20;/*newline*/function getSelfAdjustment() {/*newline*/    if(getAttr('$type').match(/Straight/)) {/*newline*/        return getAttr('height')/2;/*newline*/    } else if(getAttr('$type').match(/Start/)) {/*newline*/        return getAttr('height')/2;/*newline*/    } else if(getAttr('$type').match(/Station/)) {/*newline*/        return 4*getAttr('height')/5;/*newline*/    } else if(getAttr('$type').match(/Turnout/)) {/*newline*/        if(getNeighbors('>').length > 1) {/*newline*/            return getAttr('height');/*newline*/        } else {/*newline*/            return singleTrackHeight;/*newline*/        }/*newline*/    } else if(getAttr('$type').match(/Junction/)) {/*newline*/        return singleTrackHeight;/*newline*/    } else if(getAttr('$type').match(/Crossing/)) {/*newline*/        if(getNeighbors('>').length > 1) {/*newline*/            return getAttr('height');/*newline*/        } else {/*newline*/            return getAttr('height')/2;/*newline*/        }/*newline*/    }/*newline*/}/*newline*/function getNeighbourAdjustment(neighbour) {/*newline*/    if(getAttr('$type', neighbour).match(/Straight/)) {/*newline*/        return getAttr('height', neighbour)/2;/*newline*/    } else if(getAttr('$type', neighbour).match(/End/)) {/*newline*/        return getAttr('height', neighbour)/2;/*newline*/    } else if(getAttr('$type', neighbour).match(/Station/)) {/*newline*/        return 4*getAttr('height', neighbour)/5;/*newline*/    } else if(getAttr('$type', neighbour).match(/Turnout/)) {/*newline*/        return singleTrackHeight;/*newline*/    } else if(getAttr('$type', neighbour).match(/Junction/)) {/*newline*/        if(getNeighbors('<', '*', neighbour).length > 1) {/*newline*/            return getAttr('height', neighbour);/*newline*/        } else {/*newline*/            return singleTrackHeight;/*newline*/        }/*newline*/    } else if(getAttr('$type', neighbour).match(/Crossing/)) {/*newline*/        if(getNeighbors('<', '*', neighbour).length > 1) {/*newline*/            return getAttr('height', neighbour)/2;/*newline*/        } else {/*newline*/            return 0;/*newline*/        }/*newline*/    }/*newline*/}/*newline*/var neighbourLinks = getNeighbors('>');/*newline*/var neighbourLink = neighbourLinks[neighbourLinks.length-1];/*newline*/if(neighbourLink) {/*newline*/    if(getAttr('$type', neighbourLink).match(/TrackToTrack/)) {/*newline*/        var neighbour = getNeighbors('>', '*', neighbourLink)[0],/*newline*/            neighbourPos = getAttr('position', neighbour);/*newline*/        setAttr('position', [neighbourPos[0] - getAttr('width', neighbour), neighbourPos[1] - getSelfAdjustment() + getNeighbourAdjustment(neighbour)]);/*newline*/    } else if(getAttr('$type', neighbourLink).match(/TrainOnTrack/)) {/*newline*/        var neighbour = getNeighbors('>', '*', neighbourLink)[0],/*newline*/            globalPos = getAttr('position');/*newline*/        if(getAttr('$type').match(/Station/)) {/*newline*/            setAttr('position', [globalPos[0] + getAttr('width')/2  - getAttr('width', neighbour)/2, globalPos[1] + 3*getAttr('height')/4 - getAttr('height', neighbour)/2], neighbour);/*newline*/        } else {/*newline*/            setAttr('position', [globalPos[0] + getAttr('width')/2  - getAttr('width', neighbour)/2, globalPos[1] + getAttr('height')/2 - getAttr('height', neighbour)/2], neighbour);/*newline*/        }/*newline*/    } else if(getAttr('$type', neighbourLink).match(/LightOnTrack/)) {/*newline*/        var neighbour = getNeighbors('>', '*', neighbourLink)[0],/*newline*/            globalPos = getAttr('position');/*newline*/        if(getAttr('$type').match(/Station/)) {/*newline*/            setAttr('position', [globalPos[0], globalPos[1] + getAttr('height')], neighbour);/*newline*/        } else if(getAttr('$type').match(/Crossing/)) {/*newline*/            setAttr('position', [globalPos[0], globalPos[1] + getAttr('height')/2], neighbour);/*newline*/        } else {/*newline*/            setAttr('position', [globalPos[0], globalPos[1] + singleTrackHeight*2], neighbour);/*newline*/        }/*newline*/    } else {/*newline*/        print('Invalid grid node link');/*newline*/    }/*newline*/}",
+			"targetType": "__pEnd"
+		},
+		{
+			"name": "snapping",
+			"event": "post-connect",
+			"code": "/* comment next line to enable this action */\nthrow \"IgnoredConstraint\"\n/*newline*/var singleTrackHeight = 20;/*newline*/function getSelfAdjustment() {/*newline*/    if(getAttr('$type').match(/Straight/)) {/*newline*/        return getAttr('height')/2;/*newline*/    } else if(getAttr('$type').match(/Start/)) {/*newline*/        return getAttr('height')/2;/*newline*/    } else if(getAttr('$type').match(/Station/)) {/*newline*/        return 4*getAttr('height')/5;/*newline*/    } else if(getAttr('$type').match(/Turnout/)) {/*newline*/        if(getNeighbors('>').length > 1) {/*newline*/            return getAttr('height');/*newline*/        } else {/*newline*/            return singleTrackHeight;/*newline*/        }/*newline*/    } else if(getAttr('$type').match(/Junction/)) {/*newline*/        return singleTrackHeight;/*newline*/    } else if(getAttr('$type').match(/Crossing/)) {/*newline*/        if(getNeighbors('>').length > 1) {/*newline*/            return getAttr('height');/*newline*/        } else {/*newline*/            return getAttr('height')/2;/*newline*/        }/*newline*/    }/*newline*/}/*newline*/function getNeighbourAdjustment(neighbour) {/*newline*/    if(getAttr('$type', neighbour).match(/Straight/)) {/*newline*/        return getAttr('height', neighbour)/2;/*newline*/    } else if(getAttr('$type', neighbour).match(/End/)) {/*newline*/        return getAttr('height', neighbour)/2;/*newline*/    } else if(getAttr('$type', neighbour).match(/Station/)) {/*newline*/        return 4*getAttr('height', neighbour)/5;/*newline*/    } else if(getAttr('$type', neighbour).match(/Turnout/)) {/*newline*/        return singleTrackHeight;/*newline*/    } else if(getAttr('$type', neighbour).match(/Junction/)) {/*newline*/        if(getNeighbors('<', '*', neighbour).length > 1) {/*newline*/            return getAttr('height', neighbour);/*newline*/        } else {/*newline*/            return singleTrackHeight;/*newline*/        }/*newline*/    } else if(getAttr('$type', neighbour).match(/Crossing/)) {/*newline*/        if(getNeighbors('<', '*', neighbour).length > 1) {/*newline*/            return getAttr('height', neighbour)/2;/*newline*/        } else {/*newline*/            return 0;/*newline*/        }/*newline*/    }/*newline*/}/*newline*/var neighbourLinks = getNeighbors('>');/*newline*/var neighbourLink = neighbourLinks[neighbourLinks.length-1];/*newline*/if(neighbourLink) {/*newline*/    if(getAttr('$type', neighbourLink).match(/TrackToTrack/)) {/*newline*/        var neighbour = getNeighbors('>', '*', neighbourLink)[0],/*newline*/            neighbourPos = getAttr('position', neighbour);/*newline*/        setAttr('position', [neighbourPos[0] - getAttr('width', neighbour), neighbourPos[1] - getSelfAdjustment() + getNeighbourAdjustment(neighbour)]);/*newline*/    } else if(getAttr('$type', neighbourLink).match(/TrainOnTrack/)) {/*newline*/        var neighbour = getNeighbors('>', '*', neighbourLink)[0],/*newline*/            globalPos = getAttr('position');/*newline*/        if(getAttr('$type').match(/Station/)) {/*newline*/            setAttr('position', [globalPos[0] + getAttr('width')/2  - getAttr('width', neighbour)/2, globalPos[1] + 3*getAttr('height')/4 - getAttr('height', neighbour)/2], neighbour);/*newline*/        } else {/*newline*/            setAttr('position', [globalPos[0] + getAttr('width')/2  - getAttr('width', neighbour)/2, globalPos[1] + getAttr('height')/2 - getAttr('height', neighbour)/2], neighbour);/*newline*/        }/*newline*/    } else if(getAttr('$type', neighbourLink).match(/LightOnTrack/)) {/*newline*/        var neighbour = getNeighbors('>', '*', neighbourLink)[0],/*newline*/            globalPos = getAttr('position');/*newline*/        if(getAttr('$type').match(/Station/)) {/*newline*/            setAttr('position', [globalPos[0], globalPos[1] + getAttr('height')], neighbour);/*newline*/        } else if(getAttr('$type').match(/Crossing/)) {/*newline*/            setAttr('position', [globalPos[0], globalPos[1] + getAttr('height')/2], neighbour);/*newline*/        } else {/*newline*/            setAttr('position', [globalPos[0], globalPos[1] + singleTrackHeight*2], neighbour);/*newline*/        }/*newline*/    } else {/*newline*/        print('Invalid grid node link');/*newline*/    }/*newline*/}",
+			"targetType": "__pStation"
+		},
+		{
+			"name": "distinctPLabels",
+			"event": "post-create",
+			"code": "if( getAttr(\"__pLabel\") == \"\" )\n{\n\tvar pLabels = getAllNodes().\n\t\t\t\t\t\t\tfilter( function(n) {return hasAttr(\"__pLabel\",n);} ).\n\t\t\t\t\t\t\t\tmap( function(n) {return getAttr(\"__pLabel\",n);} ),\n\t\t i\t\t\t= \"0\";\n\n\twhile( _utils.contains(pLabels,i) )\n\t\ti = String(parseInt(i)+1);\n\tsetAttr(\"__pLabel\",i);\n}",
+			"targetType": "*"
+		}
+	],
+	"cardinalities": {
+		"__pTrack": [
+			{
+				"dir": "in",
+				"type": "__pTrackToTrack",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "__pTrackToTrack",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "__pTrainOnTrack",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "__pLightOnTrack",
+				"min": 0,
+				"max": "1"
+			}
+		],
+		"__pStraight": [
+			{
+				"dir": "in",
+				"type": "__pTrackToTrack",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "__pTrackToTrack",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "__pTrainOnTrack",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "__pLightOnTrack",
+				"min": 0,
+				"max": "1"
+			}
+		],
+		"__pTurnout": [
+			{
+				"dir": "out",
+				"type": "__pTrackToTrack",
+				"min": 0,
+				"max": "2"
+			},
+			{
+				"dir": "in",
+				"type": "__pTrackToTrack",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "__pTrainOnTrack",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "__pLightOnTrack",
+				"min": 0,
+				"max": "1"
+			}
+		],
+		"__pJunction": [
+			{
+				"dir": "in",
+				"type": "__pTrackToTrack",
+				"min": 0,
+				"max": "2"
+			},
+			{
+				"dir": "out",
+				"type": "__pTrackToTrack",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "__pTrainOnTrack",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "__pLightOnTrack",
+				"min": 0,
+				"max": "1"
+			}
+		],
+		"__pCrossing": [
+			{
+				"dir": "in",
+				"type": "__pTrackToTrack",
+				"min": 0,
+				"max": "2"
+			},
+			{
+				"dir": "out",
+				"type": "__pTrackToTrack",
+				"min": 0,
+				"max": "2"
+			},
+			{
+				"dir": "out",
+				"type": "__pTrainOnTrack",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "__pLightOnTrack",
+				"min": 0,
+				"max": "1"
+			}
+		],
+		"__pStart": [
+			{
+				"dir": "in",
+				"type": "__pTrackIn",
+				"min": 0,
+				"max": "0"
+			},
+			{
+				"dir": "in",
+				"type": "__pTrackOut",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "__pTrackToTrack",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "__pTrackToTrack",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "__pTrainOnTrack",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "__pLightOnTrack",
+				"min": 0,
+				"max": "1"
+			}
+		],
+		"__pEnd": [
+			{
+				"dir": "in",
+				"type": "__pTrackIn",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "__pTrackOut",
+				"min": 0,
+				"max": "0"
+			},
+			{
+				"dir": "in",
+				"type": "__pTrackToTrack",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "__pTrackToTrack",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "__pTrainOnTrack",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "__pLightOnTrack",
+				"min": 0,
+				"max": "1"
+			}
+		],
+		"__pStation": [
+			{
+				"dir": "in",
+				"type": "__pTrackToTrack",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "__pTrackToTrack",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "__pTrainOnTrack",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "__pLightOnTrack",
+				"min": 0,
+				"max": "1"
+			}
+		],
+		"__pTrain": [
+			{
+				"dir": "in",
+				"type": "__pTrainOnTrack",
+				"min": 0,
+				"max": "Infinity"
+			}
+		],
+		"__pLight": [
+			{
+				"dir": "in",
+				"type": "__pLightOnTrack",
+				"min": 0,
+				"max": "Infinity"
+			}
+		],
+		"__pPositionable": [],
+		"__pTrackToTrack": [
+			{
+				"dir": "in",
+				"type": "__pTrack",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "__pTrack",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "__pTurnout",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "__pJunction",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "__pCrossing",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "__pStraight",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "__pStraight",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "__pTurnout",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "__pJunction",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "__pCrossing",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "__pStart",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "__pStart",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "__pEnd",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "__pEnd",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "__pStation",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "__pStation",
+				"min": 0,
+				"max": "1"
+			}
+		],
+		"__pTrainOnTrack": [
+			{
+				"dir": "in",
+				"type": "__pTrack",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "__pTrain",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "__pStraight",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "__pTurnout",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "__pJunction",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "__pCrossing",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "__pStart",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "__pEnd",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "__pStation",
+				"min": 0,
+				"max": "1"
+			}
+		],
+		"__pLightOnTrack": [
+			{
+				"dir": "in",
+				"type": "__pTrack",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "__pLight",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "__pStraight",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "__pTurnout",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "__pJunction",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "__pCrossing",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "__pStart",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "__pEnd",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "__pStation",
+				"min": 0,
+				"max": "1"
+			}
+		]
+	},
+	"legalConnections": {
+		"__pTrack": {
+			"__pTrack": [
+				"__pTrackToTrack"
+			],
+			"__pStraight": [
+				"__pTrackToTrack"
+			],
+			"__pTurnout": [
+				"__pTrackToTrack"
+			],
+			"__pJunction": [
+				"__pTrackToTrack"
+			],
+			"__pCrossing": [
+				"__pTrackToTrack"
+			],
+			"__pStart": [
+				"__pTrackToTrack"
+			],
+			"__pEnd": [
+				"__pTrackToTrack"
+			],
+			"__pStation": [
+				"__pTrackToTrack"
+			],
+			"__pTrain": [
+				"__pTrainOnTrack"
+			],
+			"__pLight": [
+				"__pLightOnTrack"
+			]
+		},
+		"__pStraight": {
+			"__pTrack": [
+				"__pTrackToTrack"
+			],
+			"__pStraight": [
+				"__pTrackToTrack"
+			],
+			"__pTurnout": [
+				"__pTrackToTrack"
+			],
+			"__pJunction": [
+				"__pTrackToTrack"
+			],
+			"__pCrossing": [
+				"__pTrackToTrack"
+			],
+			"__pStart": [
+				"__pTrackToTrack"
+			],
+			"__pEnd": [
+				"__pTrackToTrack"
+			],
+			"__pStation": [
+				"__pTrackToTrack"
+			],
+			"__pTrain": [
+				"__pTrainOnTrack"
+			],
+			"__pLight": [
+				"__pLightOnTrack"
+			]
+		},
+		"__pTurnout": {
+			"__pTrack": [
+				"__pTrackToTrack"
+			],
+			"__pStraight": [
+				"__pTrackToTrack"
+			],
+			"__pTurnout": [
+				"__pTrackToTrack"
+			],
+			"__pJunction": [
+				"__pTrackToTrack"
+			],
+			"__pCrossing": [
+				"__pTrackToTrack"
+			],
+			"__pStart": [
+				"__pTrackToTrack"
+			],
+			"__pEnd": [
+				"__pTrackToTrack"
+			],
+			"__pStation": [
+				"__pTrackToTrack"
+			],
+			"__pTrain": [
+				"__pTrainOnTrack"
+			],
+			"__pLight": [
+				"__pLightOnTrack"
+			]
+		},
+		"__pJunction": {
+			"__pTrack": [
+				"__pTrackToTrack"
+			],
+			"__pStraight": [
+				"__pTrackToTrack"
+			],
+			"__pTurnout": [
+				"__pTrackToTrack"
+			],
+			"__pJunction": [
+				"__pTrackToTrack"
+			],
+			"__pCrossing": [
+				"__pTrackToTrack"
+			],
+			"__pStart": [
+				"__pTrackToTrack"
+			],
+			"__pEnd": [
+				"__pTrackToTrack"
+			],
+			"__pStation": [
+				"__pTrackToTrack"
+			],
+			"__pTrain": [
+				"__pTrainOnTrack"
+			],
+			"__pLight": [
+				"__pLightOnTrack"
+			]
+		},
+		"__pCrossing": {
+			"__pTrack": [
+				"__pTrackToTrack"
+			],
+			"__pStraight": [
+				"__pTrackToTrack"
+			],
+			"__pTurnout": [
+				"__pTrackToTrack"
+			],
+			"__pJunction": [
+				"__pTrackToTrack"
+			],
+			"__pCrossing": [
+				"__pTrackToTrack"
+			],
+			"__pStart": [
+				"__pTrackToTrack"
+			],
+			"__pEnd": [
+				"__pTrackToTrack"
+			],
+			"__pStation": [
+				"__pTrackToTrack"
+			],
+			"__pTrain": [
+				"__pTrainOnTrack"
+			],
+			"__pLight": [
+				"__pLightOnTrack"
+			]
+		},
+		"__pStart": {
+			"__pTrack": [
+				"__pTrackToTrack"
+			],
+			"__pStraight": [
+				"__pTrackToTrack"
+			],
+			"__pTurnout": [
+				"__pTrackToTrack"
+			],
+			"__pJunction": [
+				"__pTrackToTrack"
+			],
+			"__pCrossing": [
+				"__pTrackToTrack"
+			],
+			"__pStart": [
+				"__pTrackToTrack"
+			],
+			"__pEnd": [
+				"__pTrackToTrack"
+			],
+			"__pStation": [
+				"__pTrackToTrack"
+			],
+			"__pTrain": [
+				"__pTrainOnTrack"
+			],
+			"__pLight": [
+				"__pLightOnTrack"
+			]
+		},
+		"__pEnd": {
+			"__pTrack": [
+				"__pTrackToTrack"
+			],
+			"__pStraight": [
+				"__pTrackToTrack"
+			],
+			"__pTurnout": [
+				"__pTrackToTrack"
+			],
+			"__pJunction": [
+				"__pTrackToTrack"
+			],
+			"__pCrossing": [
+				"__pTrackToTrack"
+			],
+			"__pStart": [
+				"__pTrackToTrack"
+			],
+			"__pEnd": [
+				"__pTrackToTrack"
+			],
+			"__pStation": [
+				"__pTrackToTrack"
+			],
+			"__pTrain": [
+				"__pTrainOnTrack"
+			],
+			"__pLight": [
+				"__pLightOnTrack"
+			]
+		},
+		"__pStation": {
+			"__pTrack": [
+				"__pTrackToTrack"
+			],
+			"__pStraight": [
+				"__pTrackToTrack"
+			],
+			"__pTurnout": [
+				"__pTrackToTrack"
+			],
+			"__pJunction": [
+				"__pTrackToTrack"
+			],
+			"__pCrossing": [
+				"__pTrackToTrack"
+			],
+			"__pStart": [
+				"__pTrackToTrack"
+			],
+			"__pEnd": [
+				"__pTrackToTrack"
+			],
+			"__pStation": [
+				"__pTrackToTrack"
+			],
+			"__pTrain": [
+				"__pTrainOnTrack"
+			],
+			"__pLight": [
+				"__pLightOnTrack"
+			]
+		}
+	},
+	"connectorTypes": {
+		"__pTrackToTrack": "visual",
+		"__pTrainOnTrack": "containment",
+		"__pLightOnTrack": "containment"
+	},
+	"types2parentTypes": {
+		"__pTrack": [
+			"__pPositionable"
+		],
+		"__pStraight": [
+			"__pPositionable",
+			"__pTrack"
+		],
+		"__pTurnout": [
+			"__pPositionable",
+			"__pTrack"
+		],
+		"__pJunction": [
+			"__pPositionable",
+			"__pTrack"
+		],
+		"__pCrossing": [
+			"__pPositionable",
+			"__pTrack"
+		],
+		"__pStart": [
+			"__pPositionable",
+			"__pTrack",
+			"__pTrack"
+		],
+		"__pEnd": [
+			"__pPositionable",
+			"__pTrack"
+		],
+		"__pStation": [
+			"__pPositionable",
+			"__pTrack"
+		],
+		"__pTrain": [
+			"__pPositionable"
+		],
+		"__pLight": [
+			"__pPositionable"
+		],
+		"__pPositionable": [],
+		"__pTrackToTrack": [],
+		"__pTrainOnTrack": [],
+		"__pLightOnTrack": []
+	}
+}
