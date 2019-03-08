@@ -202,6 +202,11 @@
 				"default": "T"
 			},
 			{
+				"name": "step",
+				"type": "int",
+				"default": "1"
+			},
+			{
 				"name": "position",
 				"type": "list<int>",
 				"default": [
@@ -257,7 +262,54 @@
 		],
 		"TrackToTrack": [],
 		"TrainOnTrack": [],
-		"LightOnTrack": []
+		"LightOnTrack": [],
+		"Clock": [
+			{
+				"name": "step",
+				"type": "int",
+				"default": "1"
+			}
+		],
+		"Join": [
+			{
+				"name": "position",
+				"type": "list<int>",
+				"default": [
+					0,
+					0
+				]
+			},
+			{
+				"name": "width",
+				"type": "int",
+				"default": 100
+			},
+			{
+				"name": "height",
+				"type": "int",
+				"default": 100
+			}
+		],
+		"Split": [
+			{
+				"name": "position",
+				"type": "list<int>",
+				"default": [
+					0,
+					0
+				]
+			},
+			{
+				"name": "width",
+				"type": "int",
+				"default": 100
+			},
+			{
+				"name": "height",
+				"type": "int",
+				"default": 100
+			}
+		]
 	},
 	"constraints": [
 		{
@@ -271,6 +323,18 @@
 			"event": "pre-create",
 			"code": "false",
 			"targetType": "Positionable"
+		},
+		{
+			"name": "noAbstractInstances",
+			"event": "pre-create",
+			"code": "false",
+			"targetType": "Join"
+		},
+		{
+			"name": "noAbstractInstances",
+			"event": "pre-create",
+			"code": "false",
+			"targetType": "Split"
 		}
 	],
 	"actions": [
@@ -321,6 +385,18 @@
 			"event": "post-connect",
 			"code": "/*newline*/var singleTrackHeight = 20;/*newline*/function getSelfAdjustment() {/*newline*/    if(getAttr('$type').match(/Straight/)) {/*newline*/        return getAttr('height')/2;/*newline*/    } else if(getAttr('$type').match(/Start/)) {/*newline*/        return getAttr('height')/2;/*newline*/    } else if(getAttr('$type').match(/Station/)) {/*newline*/        return 4*getAttr('height')/5;/*newline*/    } else if(getAttr('$type').match(/Turnout/)) {/*newline*/        if(getNeighbors('>').length > 1) {/*newline*/            return getAttr('height');/*newline*/        } else {/*newline*/            return singleTrackHeight;/*newline*/        }/*newline*/    } else if(getAttr('$type').match(/Junction/)) {/*newline*/        return singleTrackHeight;/*newline*/    } else if(getAttr('$type').match(/Crossing/)) {/*newline*/        if(getNeighbors('>').length > 1) {/*newline*/            return getAttr('height');/*newline*/        } else {/*newline*/            return getAttr('height')/2;/*newline*/        }/*newline*/    }/*newline*/}/*newline*/function getNeighbourAdjustment(neighbour) {/*newline*/    if(getAttr('$type', neighbour).match(/Straight/)) {/*newline*/        return getAttr('height', neighbour)/2;/*newline*/    } else if(getAttr('$type', neighbour).match(/End/)) {/*newline*/        return getAttr('height', neighbour)/2;/*newline*/    } else if(getAttr('$type', neighbour).match(/Station/)) {/*newline*/        return 4*getAttr('height', neighbour)/5;/*newline*/    } else if(getAttr('$type', neighbour).match(/Turnout/)) {/*newline*/        return singleTrackHeight;/*newline*/    } else if(getAttr('$type', neighbour).match(/Junction/)) {/*newline*/        if(getNeighbors('<', '*', neighbour).length > 1) {/*newline*/            return getAttr('height', neighbour);/*newline*/        } else {/*newline*/            return singleTrackHeight;/*newline*/        }/*newline*/    } else if(getAttr('$type', neighbour).match(/Crossing/)) {/*newline*/        if(getNeighbors('<', '*', neighbour).length > 1) {/*newline*/            return getAttr('height', neighbour)/2;/*newline*/        } else {/*newline*/            return 0;/*newline*/        }/*newline*/    }/*newline*/}/*newline*/var neighbourLinks = getNeighbors('>');/*newline*/var neighbourLink = neighbourLinks[neighbourLinks.length-1];/*newline*/if(neighbourLink) {/*newline*/    if(getAttr('$type', neighbourLink).match(/TrackToTrack/)) {/*newline*/        var neighbour = getNeighbors('>', '*', neighbourLink)[0],/*newline*/            neighbourPos = getAttr('position', neighbour);/*newline*/        setAttr('position', [neighbourPos[0] - getAttr('width', neighbour), neighbourPos[1] - getSelfAdjustment() + getNeighbourAdjustment(neighbour)]);/*newline*/    } else if(getAttr('$type', neighbourLink).match(/TrainOnTrack/)) {/*newline*/        var neighbour = getNeighbors('>', '*', neighbourLink)[0],/*newline*/            globalPos = getAttr('position');/*newline*/        if(getAttr('$type').match(/Station/)) {/*newline*/            setAttr('position', [globalPos[0] + getAttr('width')/2  - getAttr('width', neighbour)/2, globalPos[1] + 3*getAttr('height')/4 - getAttr('height', neighbour)/2], neighbour);/*newline*/        } else {/*newline*/            setAttr('position', [globalPos[0] + getAttr('width')/2  - getAttr('width', neighbour)/2, globalPos[1] + getAttr('height')/2 - getAttr('height', neighbour)/2], neighbour);/*newline*/        }/*newline*/    } else if(getAttr('$type', neighbourLink).match(/LightOnTrack/)) {/*newline*/        var neighbour = getNeighbors('>', '*', neighbourLink)[0],/*newline*/            globalPos = getAttr('position');/*newline*/        if(getAttr('$type').match(/Station/)) {/*newline*/            setAttr('position', [globalPos[0], globalPos[1] + getAttr('height')], neighbour);/*newline*/        } else if(getAttr('$type').match(/Crossing/)) {/*newline*/            setAttr('position', [globalPos[0], globalPos[1] + getAttr('height')/2], neighbour);/*newline*/        } else {/*newline*/            setAttr('position', [globalPos[0], globalPos[1] + singleTrackHeight*2], neighbour);/*newline*/        }/*newline*/    } else {/*newline*/        print('Invalid grid node link');/*newline*/    }/*newline*/}",
 			"targetType": "Station"
+		},
+		{
+			"name": "snapping",
+			"event": "post-connect",
+			"code": "/*newline*/var singleTrackHeight = 20;/*newline*/function getSelfAdjustment() {/*newline*/    if(getAttr('$type').match(/Straight/)) {/*newline*/        return getAttr('height')/2;/*newline*/    } else if(getAttr('$type').match(/Start/)) {/*newline*/        return getAttr('height')/2;/*newline*/    } else if(getAttr('$type').match(/Station/)) {/*newline*/        return 4*getAttr('height')/5;/*newline*/    } else if(getAttr('$type').match(/Turnout/)) {/*newline*/        if(getNeighbors('>').length > 1) {/*newline*/            return getAttr('height');/*newline*/        } else {/*newline*/            return singleTrackHeight;/*newline*/        }/*newline*/    } else if(getAttr('$type').match(/Junction/)) {/*newline*/        return singleTrackHeight;/*newline*/    } else if(getAttr('$type').match(/Crossing/)) {/*newline*/        if(getNeighbors('>').length > 1) {/*newline*/            return getAttr('height');/*newline*/        } else {/*newline*/            return getAttr('height')/2;/*newline*/        }/*newline*/    }/*newline*/}/*newline*/function getNeighbourAdjustment(neighbour) {/*newline*/    if(getAttr('$type', neighbour).match(/Straight/)) {/*newline*/        return getAttr('height', neighbour)/2;/*newline*/    } else if(getAttr('$type', neighbour).match(/End/)) {/*newline*/        return getAttr('height', neighbour)/2;/*newline*/    } else if(getAttr('$type', neighbour).match(/Station/)) {/*newline*/        return 4*getAttr('height', neighbour)/5;/*newline*/    } else if(getAttr('$type', neighbour).match(/Turnout/)) {/*newline*/        return singleTrackHeight;/*newline*/    } else if(getAttr('$type', neighbour).match(/Junction/)) {/*newline*/        if(getNeighbors('<', '*', neighbour).length > 1) {/*newline*/            return getAttr('height', neighbour);/*newline*/        } else {/*newline*/            return singleTrackHeight;/*newline*/        }/*newline*/    } else if(getAttr('$type', neighbour).match(/Crossing/)) {/*newline*/        if(getNeighbors('<', '*', neighbour).length > 1) {/*newline*/            return getAttr('height', neighbour)/2;/*newline*/        } else {/*newline*/            return 0;/*newline*/        }/*newline*/    }/*newline*/}/*newline*/var neighbourLinks = getNeighbors('>');/*newline*/var neighbourLink = neighbourLinks[neighbourLinks.length-1];/*newline*/if(neighbourLink) {/*newline*/    if(getAttr('$type', neighbourLink).match(/TrackToTrack/)) {/*newline*/        var neighbour = getNeighbors('>', '*', neighbourLink)[0],/*newline*/            neighbourPos = getAttr('position', neighbour);/*newline*/        setAttr('position', [neighbourPos[0] - getAttr('width', neighbour), neighbourPos[1] - getSelfAdjustment() + getNeighbourAdjustment(neighbour)]);/*newline*/    } else if(getAttr('$type', neighbourLink).match(/TrainOnTrack/)) {/*newline*/        var neighbour = getNeighbors('>', '*', neighbourLink)[0],/*newline*/            globalPos = getAttr('position');/*newline*/        if(getAttr('$type').match(/Station/)) {/*newline*/            setAttr('position', [globalPos[0] + getAttr('width')/2  - getAttr('width', neighbour)/2, globalPos[1] + 3*getAttr('height')/4 - getAttr('height', neighbour)/2], neighbour);/*newline*/        } else {/*newline*/            setAttr('position', [globalPos[0] + getAttr('width')/2  - getAttr('width', neighbour)/2, globalPos[1] + getAttr('height')/2 - getAttr('height', neighbour)/2], neighbour);/*newline*/        }/*newline*/    } else if(getAttr('$type', neighbourLink).match(/LightOnTrack/)) {/*newline*/        var neighbour = getNeighbors('>', '*', neighbourLink)[0],/*newline*/            globalPos = getAttr('position');/*newline*/        if(getAttr('$type').match(/Station/)) {/*newline*/            setAttr('position', [globalPos[0], globalPos[1] + getAttr('height')], neighbour);/*newline*/        } else if(getAttr('$type').match(/Crossing/)) {/*newline*/            setAttr('position', [globalPos[0], globalPos[1] + getAttr('height')/2], neighbour);/*newline*/        } else {/*newline*/            setAttr('position', [globalPos[0], globalPos[1] + singleTrackHeight*2], neighbour);/*newline*/        }/*newline*/    } else {/*newline*/        print('Invalid grid node link');/*newline*/    }/*newline*/}",
+			"targetType": "Join"
+		},
+		{
+			"name": "snapping",
+			"event": "post-connect",
+			"code": "/*newline*/var singleTrackHeight = 20;/*newline*/function getSelfAdjustment() {/*newline*/    if(getAttr('$type').match(/Straight/)) {/*newline*/        return getAttr('height')/2;/*newline*/    } else if(getAttr('$type').match(/Start/)) {/*newline*/        return getAttr('height')/2;/*newline*/    } else if(getAttr('$type').match(/Station/)) {/*newline*/        return 4*getAttr('height')/5;/*newline*/    } else if(getAttr('$type').match(/Turnout/)) {/*newline*/        if(getNeighbors('>').length > 1) {/*newline*/            return getAttr('height');/*newline*/        } else {/*newline*/            return singleTrackHeight;/*newline*/        }/*newline*/    } else if(getAttr('$type').match(/Junction/)) {/*newline*/        return singleTrackHeight;/*newline*/    } else if(getAttr('$type').match(/Crossing/)) {/*newline*/        if(getNeighbors('>').length > 1) {/*newline*/            return getAttr('height');/*newline*/        } else {/*newline*/            return getAttr('height')/2;/*newline*/        }/*newline*/    }/*newline*/}/*newline*/function getNeighbourAdjustment(neighbour) {/*newline*/    if(getAttr('$type', neighbour).match(/Straight/)) {/*newline*/        return getAttr('height', neighbour)/2;/*newline*/    } else if(getAttr('$type', neighbour).match(/End/)) {/*newline*/        return getAttr('height', neighbour)/2;/*newline*/    } else if(getAttr('$type', neighbour).match(/Station/)) {/*newline*/        return 4*getAttr('height', neighbour)/5;/*newline*/    } else if(getAttr('$type', neighbour).match(/Turnout/)) {/*newline*/        return singleTrackHeight;/*newline*/    } else if(getAttr('$type', neighbour).match(/Junction/)) {/*newline*/        if(getNeighbors('<', '*', neighbour).length > 1) {/*newline*/            return getAttr('height', neighbour);/*newline*/        } else {/*newline*/            return singleTrackHeight;/*newline*/        }/*newline*/    } else if(getAttr('$type', neighbour).match(/Crossing/)) {/*newline*/        if(getNeighbors('<', '*', neighbour).length > 1) {/*newline*/            return getAttr('height', neighbour)/2;/*newline*/        } else {/*newline*/            return 0;/*newline*/        }/*newline*/    }/*newline*/}/*newline*/var neighbourLinks = getNeighbors('>');/*newline*/var neighbourLink = neighbourLinks[neighbourLinks.length-1];/*newline*/if(neighbourLink) {/*newline*/    if(getAttr('$type', neighbourLink).match(/TrackToTrack/)) {/*newline*/        var neighbour = getNeighbors('>', '*', neighbourLink)[0],/*newline*/            neighbourPos = getAttr('position', neighbour);/*newline*/        setAttr('position', [neighbourPos[0] - getAttr('width', neighbour), neighbourPos[1] - getSelfAdjustment() + getNeighbourAdjustment(neighbour)]);/*newline*/    } else if(getAttr('$type', neighbourLink).match(/TrainOnTrack/)) {/*newline*/        var neighbour = getNeighbors('>', '*', neighbourLink)[0],/*newline*/            globalPos = getAttr('position');/*newline*/        if(getAttr('$type').match(/Station/)) {/*newline*/            setAttr('position', [globalPos[0] + getAttr('width')/2  - getAttr('width', neighbour)/2, globalPos[1] + 3*getAttr('height')/4 - getAttr('height', neighbour)/2], neighbour);/*newline*/        } else {/*newline*/            setAttr('position', [globalPos[0] + getAttr('width')/2  - getAttr('width', neighbour)/2, globalPos[1] + getAttr('height')/2 - getAttr('height', neighbour)/2], neighbour);/*newline*/        }/*newline*/    } else if(getAttr('$type', neighbourLink).match(/LightOnTrack/)) {/*newline*/        var neighbour = getNeighbors('>', '*', neighbourLink)[0],/*newline*/            globalPos = getAttr('position');/*newline*/        if(getAttr('$type').match(/Station/)) {/*newline*/            setAttr('position', [globalPos[0], globalPos[1] + getAttr('height')], neighbour);/*newline*/        } else if(getAttr('$type').match(/Crossing/)) {/*newline*/            setAttr('position', [globalPos[0], globalPos[1] + getAttr('height')/2], neighbour);/*newline*/        } else {/*newline*/            setAttr('position', [globalPos[0], globalPos[1] + singleTrackHeight*2], neighbour);/*newline*/        }/*newline*/    } else {/*newline*/        print('Invalid grid node link');/*newline*/    }/*newline*/}",
+			"targetType": "Split"
 		}
 	],
 	"cardinalities": {
@@ -588,12 +664,48 @@
 			},
 			{
 				"dir": "in",
+				"type": "Join",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "Split",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "Straight",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "Straight",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "Turnout",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
 				"type": "Turnout",
 				"min": "0",
 				"max": "1"
 			},
 			{
 				"dir": "in",
+				"type": "Junction",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
 				"type": "Junction",
 				"min": "0",
 				"max": "1"
@@ -601,30 +713,6 @@
 			{
 				"dir": "in",
 				"type": "Crossing",
-				"min": "0",
-				"max": "1"
-			},
-			{
-				"dir": "in",
-				"type": "Straight",
-				"min": "0",
-				"max": "1"
-			},
-			{
-				"dir": "out",
-				"type": "Straight",
-				"min": "0",
-				"max": "1"
-			},
-			{
-				"dir": "out",
-				"type": "Turnout",
-				"min": "0",
-				"max": "1"
-			},
-			{
-				"dir": "out",
-				"type": "Junction",
 				"min": "0",
 				"max": "1"
 			},
@@ -667,6 +755,18 @@
 			{
 				"dir": "out",
 				"type": "Station",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "Join",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "Split",
 				"min": "0",
 				"max": "1"
 			}
@@ -725,6 +825,18 @@
 				"type": "Station",
 				"min": "0",
 				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "Join",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "Split",
+				"min": "0",
+				"max": "1"
 			}
 		],
 		"LightOnTrack": [
@@ -781,6 +893,71 @@
 				"type": "Station",
 				"min": "0",
 				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "Join",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "Split",
+				"min": "0",
+				"max": "1"
+			}
+		],
+		"Clock": [],
+		"Join": [
+			{
+				"dir": "in",
+				"type": "TrackToTrack",
+				"min": "0",
+				"max": "2"
+			},
+			{
+				"dir": "out",
+				"type": "TrackToTrack",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "TrainOnTrack",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "LightOnTrack",
+				"min": "0",
+				"max": "1"
+			}
+		],
+		"Split": [
+			{
+				"dir": "out",
+				"type": "TrackToTrack",
+				"min": "0",
+				"max": "2"
+			},
+			{
+				"dir": "in",
+				"type": "TrackToTrack",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "TrainOnTrack",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "LightOnTrack",
+				"min": "0",
+				"max": "1"
 			}
 		]
 	},
@@ -808,6 +985,12 @@
 				"TrackToTrack"
 			],
 			"Station": [
+				"TrackToTrack"
+			],
+			"Join": [
+				"TrackToTrack"
+			],
+			"Split": [
 				"TrackToTrack"
 			],
 			"Train": [
@@ -842,6 +1025,12 @@
 			"Station": [
 				"TrackToTrack"
 			],
+			"Join": [
+				"TrackToTrack"
+			],
+			"Split": [
+				"TrackToTrack"
+			],
 			"Train": [
 				"TrainOnTrack"
 			],
@@ -872,6 +1061,12 @@
 				"TrackToTrack"
 			],
 			"Station": [
+				"TrackToTrack"
+			],
+			"Join": [
+				"TrackToTrack"
+			],
+			"Split": [
 				"TrackToTrack"
 			],
 			"Train": [
@@ -906,6 +1101,12 @@
 			"Station": [
 				"TrackToTrack"
 			],
+			"Join": [
+				"TrackToTrack"
+			],
+			"Split": [
+				"TrackToTrack"
+			],
 			"Train": [
 				"TrainOnTrack"
 			],
@@ -936,6 +1137,12 @@
 				"TrackToTrack"
 			],
 			"Station": [
+				"TrackToTrack"
+			],
+			"Join": [
+				"TrackToTrack"
+			],
+			"Split": [
 				"TrackToTrack"
 			],
 			"Train": [
@@ -970,6 +1177,12 @@
 			"Station": [
 				"TrackToTrack"
 			],
+			"Join": [
+				"TrackToTrack"
+			],
+			"Split": [
+				"TrackToTrack"
+			],
 			"Train": [
 				"TrainOnTrack"
 			],
@@ -1000,6 +1213,12 @@
 				"TrackToTrack"
 			],
 			"Station": [
+				"TrackToTrack"
+			],
+			"Join": [
+				"TrackToTrack"
+			],
+			"Split": [
 				"TrackToTrack"
 			],
 			"Train": [
@@ -1034,6 +1253,88 @@
 			"Station": [
 				"TrackToTrack"
 			],
+			"Join": [
+				"TrackToTrack"
+			],
+			"Split": [
+				"TrackToTrack"
+			],
+			"Train": [
+				"TrainOnTrack"
+			],
+			"Light": [
+				"LightOnTrack"
+			]
+		},
+		"Join": {
+			"Track": [
+				"TrackToTrack"
+			],
+			"Straight": [
+				"TrackToTrack"
+			],
+			"Turnout": [
+				"TrackToTrack"
+			],
+			"Junction": [
+				"TrackToTrack"
+			],
+			"Crossing": [
+				"TrackToTrack"
+			],
+			"Start": [
+				"TrackToTrack"
+			],
+			"End": [
+				"TrackToTrack"
+			],
+			"Station": [
+				"TrackToTrack"
+			],
+			"Join": [
+				"TrackToTrack"
+			],
+			"Split": [
+				"TrackToTrack"
+			],
+			"Train": [
+				"TrainOnTrack"
+			],
+			"Light": [
+				"LightOnTrack"
+			]
+		},
+		"Split": {
+			"Track": [
+				"TrackToTrack"
+			],
+			"Straight": [
+				"TrackToTrack"
+			],
+			"Turnout": [
+				"TrackToTrack"
+			],
+			"Junction": [
+				"TrackToTrack"
+			],
+			"Crossing": [
+				"TrackToTrack"
+			],
+			"Start": [
+				"TrackToTrack"
+			],
+			"End": [
+				"TrackToTrack"
+			],
+			"Station": [
+				"TrackToTrack"
+			],
+			"Join": [
+				"TrackToTrack"
+			],
+			"Split": [
+				"TrackToTrack"
+			],
 			"Train": [
 				"TrainOnTrack"
 			],
@@ -1057,19 +1358,23 @@
 		],
 		"Turnout": [
 			"Positionable",
-			"Track"
+			"Track",
+			"Split"
 		],
 		"Junction": [
 			"Positionable",
-			"Track"
+			"Track",
+			"Join"
 		],
 		"Crossing": [
 			"Positionable",
-			"Track"
+			"Track",
+			"Track",
+			"Split",
+			"Join"
 		],
 		"Start": [
 			"Positionable",
-			"Track",
 			"Track"
 		],
 		"End": [
@@ -1089,6 +1394,15 @@
 		"Positionable": [],
 		"TrackToTrack": [],
 		"TrainOnTrack": [],
-		"LightOnTrack": []
+		"LightOnTrack": [],
+		"Clock": [],
+		"Join": [
+			"Positionable",
+			"Track"
+		],
+		"Split": [
+			"Positionable",
+			"Track"
+		]
 	}
 }

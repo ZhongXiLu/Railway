@@ -100,8 +100,8 @@
 				"position": {
 					"type": "list<double>",
 					"value": [
-						372,
-						452
+						417,
+						454
 					]
 				},
 				"orientation": {
@@ -269,266 +269,6 @@
 				},
 				"$type": "/Formalisms/__Transformations__/Transformation/MoTif.defaultIcons/EndSuccessIcon"
 			},
-			"2": {
-				"typename": {
-					"type": "string",
-					"value": "EndFailIcon"
-				},
-				"position": {
-					"type": "list<double>",
-					"value": [
-						514,
-						446
-					]
-				},
-				"orientation": {
-					"type": "double",
-					"value": 0
-				},
-				"scale": {
-					"type": "list<double>",
-					"value": [
-						1,
-						1
-					]
-				},
-				"mapper": {
-					"type": "code",
-					"value": "({position:getAttr(\"position\")})"
-				},
-				"parser": {
-					"type": "code",
-					"value": "({position:getAttr(\"position\")})"
-				},
-				"$contents": {
-					"type": "map<string,*>",
-					"value": {
-						"nodes": {
-							"451": {
-								"r": {
-									"type": "double",
-									"value": 10
-								},
-								"style": {
-									"type": "map<string,string>",
-									"value": {
-										"stroke": "#800000",
-										"stroke-dasharray": "",
-										"fill": "white",
-										"fill-opacity": 1,
-										"font-size": "20px",
-										"stroke-width": 2,
-										"arrow-start": "none",
-										"arrow-end": "none"
-									}
-								},
-								"mapper": {
-									"type": "code",
-									"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
-								},
-								"parser": {
-									"type": "code",
-									"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
-								},
-								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Circle",
-								"position": {
-									"type": "list<double>",
-									"value": [
-										2,
-										1
-									]
-								},
-								"orientation": {
-									"type": "double",
-									"value": 0
-								},
-								"scale": {
-									"type": "list<double>",
-									"value": [
-										1,
-										1
-									]
-								}
-							},
-							"455": {
-								"segments": {
-									"type": "string",
-									"value": "M 12.49983,1.5069319 1.50001,12.506752"
-								},
-								"style": {
-									"type": "map<string,string>",
-									"value": {
-										"fill": "none",
-										"stroke": "#800000",
-										"stroke-width": "3",
-										"stroke-linecap": "round",
-										"stroke-linejoin": "round",
-										"stroke-miterlimit": "4",
-										"stroke-opacity": "1",
-										"stroke-dasharray": "none"
-									}
-								},
-								"mapper": {
-									"type": "code",
-									"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
-								},
-								"parser": {
-									"type": "code",
-									"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
-								},
-								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Path",
-								"position": {
-									"type": "list<double>",
-									"value": [
-										5,
-										4
-									]
-								},
-								"orientation": {
-									"type": "double",
-									"value": 0
-								},
-								"scale": {
-									"type": "list<double>",
-									"value": [
-										1,
-										1
-									]
-								}
-							},
-							"456": {
-								"segments": {
-									"type": "string",
-									"value": "M 1.5,1.5069319 12.49983,12.506752"
-								},
-								"style": {
-									"type": "map<string,string>",
-									"value": {
-										"fill": "none",
-										"stroke": "#800000",
-										"stroke-width": "3",
-										"stroke-linecap": "round",
-										"stroke-linejoin": "round",
-										"stroke-miterlimit": "4",
-										"stroke-opacity": "1",
-										"stroke-dasharray": "none"
-									}
-								},
-								"mapper": {
-									"type": "code",
-									"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
-								},
-								"parser": {
-									"type": "code",
-									"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
-								},
-								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Path",
-								"position": {
-									"type": "list<double>",
-									"value": [
-										5,
-										4
-									]
-								},
-								"orientation": {
-									"type": "double",
-									"value": 0
-								},
-								"scale": {
-									"type": "list<double>",
-									"value": [
-										1,
-										1
-									]
-								}
-							},
-							"457": {
-								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Contain",
-								"position": {
-									"type": "list<double>",
-									"value": [
-										7.363811097006419,
-										5.348023328271552
-									]
-								},
-								"orientation": {
-									"type": "double",
-									"value": 0
-								},
-								"scale": {
-									"type": "list<double>",
-									"value": [
-										1,
-										1
-									]
-								},
-								"link-style": {
-									"type": "map<string,string>",
-									"value": {
-										"stroke": "#00ffff",
-										"stroke-dasharray": "",
-										"stroke-opacity": 0.1,
-										"stroke-width": 1
-									}
-								}
-							},
-							"458": {
-								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Contain",
-								"position": {
-									"type": "list<double>",
-									"value": [
-										7.3638135362075445,
-										5.348023328271552
-									]
-								},
-								"orientation": {
-									"type": "double",
-									"value": 0
-								},
-								"scale": {
-									"type": "list<double>",
-									"value": [
-										1,
-										1
-									]
-								},
-								"link-style": {
-									"type": "map<string,string>",
-									"value": {
-										"stroke": "#00ffff",
-										"stroke-dasharray": "",
-										"stroke-opacity": 0.1,
-										"stroke-width": 1
-									}
-								}
-							}
-						},
-						"edges": [
-							{
-								"src": "451",
-								"dest": "457"
-							},
-							{
-								"src": "457",
-								"dest": "455"
-							},
-							{
-								"src": "451",
-								"dest": "458"
-							},
-							{
-								"src": "458",
-								"dest": "456"
-							}
-						]
-					}
-				},
-				"$asuri": {
-					"type": "string",
-					"value": "/Formalisms/__Transformations__/Transformation/MoTif/EndFail/2.instance"
-				},
-				"$type": "/Formalisms/__Transformations__/Transformation/MoTif.defaultIcons/EndFailIcon"
-			},
 			"3": {
 				"typename": {
 					"type": "string",
@@ -539,606 +279,6 @@
 					"value": [
 						338,
 						213
-					]
-				},
-				"orientation": {
-					"type": "double",
-					"value": 0
-				},
-				"scale": {
-					"type": "list<double>",
-					"value": [
-						1,
-						1
-					]
-				},
-				"mapper": {
-					"type": "code",
-					"value": "({position:getAttr(\"position\")})"
-				},
-				"parser": {
-					"type": "code",
-					"value": "({position:getAttr(\"position\")})"
-				},
-				"$contents": {
-					"type": "map<string,*>",
-					"value": {
-						"nodes": {
-							"366": {
-								"width": {
-									"type": "double",
-									"value": 200
-								},
-								"height": {
-									"type": "double",
-									"value": 50
-								},
-								"cornerRadius": {
-									"type": "double",
-									"value": 1
-								},
-								"style": {
-									"type": "map<string,string>",
-									"value": {
-										"fill": "#ffffff",
-										"stroke": "#008000",
-										"stroke-width": "5",
-										"stroke-linecap": "butt",
-										"stroke-linejoin": "miter",
-										"stroke-miterlimit": "4",
-										"stroke-opacity": "1",
-										"fill-opacity": "0.5"
-									}
-								},
-								"mapper": {
-									"type": "code",
-									"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
-								},
-								"parser": {
-									"type": "code",
-									"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
-								},
-								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Rectangle",
-								"position": {
-									"type": "list<double>",
-									"value": [
-										1,
-										26
-									]
-								},
-								"orientation": {
-									"type": "double",
-									"value": 0
-								},
-								"scale": {
-									"type": "list<double>",
-									"value": [
-										1,
-										1
-									]
-								}
-							},
-							"367": {
-								"textContent": {
-									"type": "string",
-									"value": "SetLightsRed"
-								},
-								"style": {
-									"type": "map<string,string>",
-									"value": {
-										"font-size": "20px",
-										"font-style": "normal",
-										"font-variant": "normal",
-										"font-weight": "bold",
-										"font-stretch": "normal",
-										"text-align": "left",
-										"line-height": "125%",
-										"writing-mode": "lr-tb",
-										"text-anchor": "left",
-										"fill": "#008000",
-										"fill-opacity": "1",
-										"stroke": "none",
-										"font-family": "Arial"
-									}
-								},
-								"mapper": {
-									"type": "code",
-									"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */\n({'textContent': getAttr('name')})"
-								},
-								"parser": {
-									"type": "code",
-									"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
-								},
-								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Text",
-								"position": {
-									"type": "list<double>",
-									"value": [
-										48,
-										40
-									]
-								},
-								"orientation": {
-									"type": "double",
-									"value": 0
-								},
-								"scale": {
-									"type": "list<double>",
-									"value": [
-										1,
-										1
-									]
-								}
-							},
-							"368": {
-								"segments": {
-									"type": "string",
-									"value": "M 0.01697481,7.2449841 2.4082848,10.044684 11.016975,1.5335841"
-								},
-								"style": {
-									"type": "map<string,string>",
-									"value": {
-										"fill": "none",
-										"stroke": "#008000",
-										"stroke-width": "3",
-										"stroke-linecap": "round",
-										"stroke-linejoin": "round",
-										"stroke-miterlimit": "4",
-										"stroke-opacity": "1",
-										"stroke-dasharray": "none"
-									}
-								},
-								"mapper": {
-									"type": "code",
-									"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
-								},
-								"parser": {
-									"type": "code",
-									"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
-								},
-								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Path",
-								"position": {
-									"type": "list<double>",
-									"value": [
-										47,
-										79
-									]
-								},
-								"orientation": {
-									"type": "double",
-									"value": 0
-								},
-								"scale": {
-									"type": "list<double>",
-									"value": [
-										1,
-										1
-									]
-								}
-							},
-							"369": {
-								"textContent": {
-									"type": "string",
-									"value": ":"
-								},
-								"style": {
-									"type": "map<string,string>",
-									"value": {
-										"font-size": "20px",
-										"font-style": "normal",
-										"font-variant": "normal",
-										"font-weight": "bold",
-										"font-stretch": "normal",
-										"text-align": "left",
-										"line-height": "125%",
-										"writing-mode": "lr-tb",
-										"text-anchor": "left",
-										"fill": "#008000",
-										"fill-opacity": "1",
-										"stroke": "none",
-										"font-family": "Arial"
-									}
-								},
-								"mapper": {
-									"type": "code",
-									"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
-								},
-								"parser": {
-									"type": "code",
-									"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
-								},
-								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Text",
-								"position": {
-									"type": "list<double>",
-									"value": [
-										41,
-										40
-									]
-								},
-								"orientation": {
-									"type": "double",
-									"value": 0
-								},
-								"scale": {
-									"type": "list<double>",
-									"value": [
-										1,
-										1
-									]
-								}
-							},
-							"370": {
-								"segments": {
-									"type": "string",
-									"value": "M 12.49983,1.5069319 1.50001,12.506752"
-								},
-								"style": {
-									"type": "map<string,string>",
-									"value": {
-										"fill": "none",
-										"stroke": "#008000",
-										"stroke-width": "3",
-										"stroke-linecap": "round",
-										"stroke-linejoin": "round",
-										"stroke-miterlimit": "4",
-										"stroke-opacity": "1",
-										"stroke-dasharray": "none"
-									}
-								},
-								"mapper": {
-									"type": "code",
-									"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
-								},
-								"parser": {
-									"type": "code",
-									"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
-								},
-								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Path",
-								"position": {
-									"type": "list<double>",
-									"value": [
-										144,
-										79
-									]
-								},
-								"orientation": {
-									"type": "double",
-									"value": 0
-								},
-								"scale": {
-									"type": "list<double>",
-									"value": [
-										1,
-										1
-									]
-								}
-							},
-							"371": {
-								"textContent": {
-									"type": "string",
-									"value": ""
-								},
-								"style": {
-									"type": "map<string,string>",
-									"value": {
-										"font-size": "20px",
-										"font-style": "normal",
-										"font-variant": "normal",
-										"font-weight": "bold",
-										"font-stretch": "normal",
-										"line-height": "125%",
-										"text-anchor": "end",
-										"fill": "#008000",
-										"fill-opacity": "1",
-										"stroke": "none",
-										"font-family": "Arial"
-									}
-								},
-								"mapper": {
-									"type": "code",
-									"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */\n({'textContent': getAttr('alias')})"
-								},
-								"parser": {
-									"type": "code",
-									"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
-								},
-								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Text",
-								"position": {
-									"type": "list<double>",
-									"value": [
-										42,
-										40
-									]
-								},
-								"orientation": {
-									"type": "double",
-									"value": 0
-								},
-								"scale": {
-									"type": "list<double>",
-									"value": [
-										1,
-										1
-									]
-								}
-							},
-							"372": {
-								"segments": {
-									"type": "string",
-									"value": "M 1.5,1.5069319 12.49983,12.506752"
-								},
-								"style": {
-									"type": "map<string,string>",
-									"value": {
-										"fill": "none",
-										"stroke": "#008000",
-										"stroke-width": "3",
-										"stroke-linecap": "round",
-										"stroke-linejoin": "round",
-										"stroke-miterlimit": "4",
-										"stroke-opacity": "1",
-										"stroke-dasharray": "none"
-									}
-								},
-								"mapper": {
-									"type": "code",
-									"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
-								},
-								"parser": {
-									"type": "code",
-									"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
-								},
-								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Path",
-								"position": {
-									"type": "list<double>",
-									"value": [
-										144,
-										79
-									]
-								},
-								"orientation": {
-									"type": "double",
-									"value": 0
-								},
-								"scale": {
-									"type": "list<double>",
-									"value": [
-										1,
-										1
-									]
-								}
-							},
-							"373": {
-								"textContent": {
-									"type": "string",
-									"value": "F"
-								},
-								"style": {
-									"type": "map<string,string>",
-									"value": {
-										"font-size": "20px",
-										"font-style": "normal",
-										"font-variant": "normal",
-										"font-weight": "bold",
-										"font-stretch": "normal",
-										"text-align": "left",
-										"line-height": "100%",
-										"writing-mode": "lr-tb",
-										"text-anchor": "left",
-										"fill": "#008000",
-										"fill-opacity": "1",
-										"stroke": "none",
-										"font-family": "Arial"
-									}
-								},
-								"mapper": {
-									"type": "code",
-									"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
-								},
-								"parser": {
-									"type": "code",
-									"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
-								},
-								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Text",
-								"position": {
-									"type": "list<double>",
-									"value": [
-										205,
-										22
-									]
-								},
-								"orientation": {
-									"type": "double",
-									"value": 0
-								},
-								"scale": {
-									"type": "list<double>",
-									"value": [
-										1,
-										1
-									]
-								}
-							},
-							"374": {
-								"segments": {
-									"type": "string",
-									"value": "M 1,10.3685 7.03183,20.737 13.06367,10.3685 z"
-								},
-								"style": {
-									"type": "map<string,string>",
-									"value": {
-										"fill": "#ffffff",
-										"fill-opacity": "0.5",
-										"stroke": "#008000",
-										"stroke-width": "3",
-										"stroke-linecap": "butt",
-										"stroke-linejoin": "miter",
-										"stroke-miterlimit": "4",
-										"stroke-opacity": "1"
-									}
-								},
-								"mapper": {
-									"type": "code",
-									"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
-								},
-								"parser": {
-									"type": "code",
-									"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
-								},
-								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Path",
-								"position": {
-									"type": "list<double>",
-									"value": [
-										95,
-										2
-									]
-								},
-								"orientation": {
-									"type": "double",
-									"value": 0
-								},
-								"scale": {
-									"type": "list<double>",
-									"value": [
-										1,
-										1
-									]
-								}
-							},
-							"375": {
-								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Contain",
-								"position": {
-									"type": "list<double>",
-									"value": [
-										37.25,
-										39.5
-									]
-								},
-								"orientation": {
-									"type": "double",
-									"value": 0
-								},
-								"scale": {
-									"type": "list<double>",
-									"value": [
-										1,
-										1
-									]
-								},
-								"link-style": {
-									"type": "map<string,string>",
-									"value": {
-										"stroke": "#00ffff",
-										"stroke-dasharray": "",
-										"stroke-opacity": 0.1,
-										"stroke-width": 1
-									}
-								}
-							},
-							"376": {
-								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Contain",
-								"position": {
-									"type": "list<double>",
-									"value": [
-										15.25,
-										39.5
-									]
-								},
-								"orientation": {
-									"type": "double",
-									"value": 0
-								},
-								"scale": {
-									"type": "list<double>",
-									"value": [
-										1,
-										1
-									]
-								},
-								"link-style": {
-									"type": "map<string,string>",
-									"value": {
-										"stroke": "#00ffff",
-										"stroke-dasharray": "",
-										"stroke-opacity": 0.1,
-										"stroke-width": 1
-									}
-								}
-							},
-							"377": {
-								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Contain",
-								"position": {
-									"type": "list<double>",
-									"value": [
-										23,
-										39.5
-									]
-								},
-								"orientation": {
-									"type": "double",
-									"value": 0
-								},
-								"scale": {
-									"type": "list<double>",
-									"value": [
-										1,
-										1
-									]
-								},
-								"link-style": {
-									"type": "map<string,string>",
-									"value": {
-										"stroke": "#00ffff",
-										"stroke-dasharray": "",
-										"stroke-opacity": 0.1,
-										"stroke-width": 1
-									}
-								}
-							}
-						},
-						"edges": [
-							{
-								"src": "366",
-								"dest": "375"
-							},
-							{
-								"src": "375",
-								"dest": "367"
-							},
-							{
-								"src": "366",
-								"dest": "376"
-							},
-							{
-								"src": "376",
-								"dest": "371"
-							},
-							{
-								"src": "366",
-								"dest": "377"
-							},
-							{
-								"src": "377",
-								"dest": "369"
-							}
-						]
-					}
-				},
-				"$asuri": {
-					"type": "string",
-					"value": "/Formalisms/__Transformations__/Transformation/MoTif/FRule/3.instance"
-				},
-				"$type": "/Formalisms/__Transformations__/Transformation/MoTif.defaultIcons/FRuleIcon"
-			},
-			"4": {
-				"typename": {
-					"type": "string",
-					"value": "FRuleIcon"
-				},
-				"position": {
-					"type": "list<double>",
-					"value": [
-						335,
-						312
 					]
 				},
 				"orientation": {
@@ -1725,7 +865,7 @@
 				},
 				"$asuri": {
 					"type": "string",
-					"value": "/Formalisms/__Transformations__/Transformation/MoTif/FRule/4.instance"
+					"value": "/Formalisms/__Transformations__/Transformation/MoTif/FRule/3.instance"
 				},
 				"$type": "/Formalisms/__Transformations__/Transformation/MoTif.defaultIcons/FRuleIcon"
 			},
@@ -3434,7 +2574,607 @@
 				},
 				"$type": "/Formalisms/__Transformations__/Transformation/MoTif.defaultIcons/initialLink"
 			},
-			"6": {
+			"16": {
+				"typename": {
+					"type": "string",
+					"value": "FRuleIcon"
+				},
+				"position": {
+					"type": "list<double>",
+					"value": [
+						334,
+						316
+					]
+				},
+				"orientation": {
+					"type": "double",
+					"value": 0
+				},
+				"scale": {
+					"type": "list<double>",
+					"value": [
+						1,
+						1
+					]
+				},
+				"mapper": {
+					"type": "code",
+					"value": "({position:getAttr(\"position\")})"
+				},
+				"parser": {
+					"type": "code",
+					"value": "({position:getAttr(\"position\")})"
+				},
+				"$contents": {
+					"type": "map<string,*>",
+					"value": {
+						"nodes": {
+							"366": {
+								"width": {
+									"type": "double",
+									"value": 200
+								},
+								"height": {
+									"type": "double",
+									"value": 50
+								},
+								"cornerRadius": {
+									"type": "double",
+									"value": 1
+								},
+								"style": {
+									"type": "map<string,string>",
+									"value": {
+										"fill": "#ffffff",
+										"stroke": "#008000",
+										"stroke-width": "5",
+										"stroke-linecap": "butt",
+										"stroke-linejoin": "miter",
+										"stroke-miterlimit": "4",
+										"stroke-opacity": "1",
+										"fill-opacity": "0.5"
+									}
+								},
+								"mapper": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+								},
+								"parser": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+								},
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Rectangle",
+								"position": {
+									"type": "list<double>",
+									"value": [
+										1,
+										26
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": 0
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								}
+							},
+							"367": {
+								"textContent": {
+									"type": "string",
+									"value": "SetLightsRed"
+								},
+								"style": {
+									"type": "map<string,string>",
+									"value": {
+										"font-size": "20px",
+										"font-style": "normal",
+										"font-variant": "normal",
+										"font-weight": "bold",
+										"font-stretch": "normal",
+										"text-align": "left",
+										"line-height": "125%",
+										"writing-mode": "lr-tb",
+										"text-anchor": "left",
+										"fill": "#008000",
+										"fill-opacity": "1",
+										"stroke": "none",
+										"font-family": "Arial"
+									}
+								},
+								"mapper": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */\n({'textContent': getAttr('name')})"
+								},
+								"parser": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+								},
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Text",
+								"position": {
+									"type": "list<double>",
+									"value": [
+										48,
+										40
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": 0
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								}
+							},
+							"368": {
+								"segments": {
+									"type": "string",
+									"value": "M 0.01697481,7.2449841 2.4082848,10.044684 11.016975,1.5335841"
+								},
+								"style": {
+									"type": "map<string,string>",
+									"value": {
+										"fill": "none",
+										"stroke": "#008000",
+										"stroke-width": "3",
+										"stroke-linecap": "round",
+										"stroke-linejoin": "round",
+										"stroke-miterlimit": "4",
+										"stroke-opacity": "1",
+										"stroke-dasharray": "none"
+									}
+								},
+								"mapper": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+								},
+								"parser": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+								},
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Path",
+								"position": {
+									"type": "list<double>",
+									"value": [
+										47,
+										79
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": 0
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								}
+							},
+							"369": {
+								"textContent": {
+									"type": "string",
+									"value": ":"
+								},
+								"style": {
+									"type": "map<string,string>",
+									"value": {
+										"font-size": "20px",
+										"font-style": "normal",
+										"font-variant": "normal",
+										"font-weight": "bold",
+										"font-stretch": "normal",
+										"text-align": "left",
+										"line-height": "125%",
+										"writing-mode": "lr-tb",
+										"text-anchor": "left",
+										"fill": "#008000",
+										"fill-opacity": "1",
+										"stroke": "none",
+										"font-family": "Arial"
+									}
+								},
+								"mapper": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+								},
+								"parser": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+								},
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Text",
+								"position": {
+									"type": "list<double>",
+									"value": [
+										41,
+										40
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": 0
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								}
+							},
+							"370": {
+								"segments": {
+									"type": "string",
+									"value": "M 12.49983,1.5069319 1.50001,12.506752"
+								},
+								"style": {
+									"type": "map<string,string>",
+									"value": {
+										"fill": "none",
+										"stroke": "#008000",
+										"stroke-width": "3",
+										"stroke-linecap": "round",
+										"stroke-linejoin": "round",
+										"stroke-miterlimit": "4",
+										"stroke-opacity": "1",
+										"stroke-dasharray": "none"
+									}
+								},
+								"mapper": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+								},
+								"parser": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+								},
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Path",
+								"position": {
+									"type": "list<double>",
+									"value": [
+										144,
+										79
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": 0
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								}
+							},
+							"371": {
+								"textContent": {
+									"type": "string",
+									"value": ""
+								},
+								"style": {
+									"type": "map<string,string>",
+									"value": {
+										"font-size": "20px",
+										"font-style": "normal",
+										"font-variant": "normal",
+										"font-weight": "bold",
+										"font-stretch": "normal",
+										"line-height": "125%",
+										"text-anchor": "end",
+										"fill": "#008000",
+										"fill-opacity": "1",
+										"stroke": "none",
+										"font-family": "Arial"
+									}
+								},
+								"mapper": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */\n({'textContent': getAttr('alias')})"
+								},
+								"parser": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+								},
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Text",
+								"position": {
+									"type": "list<double>",
+									"value": [
+										42,
+										40
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": 0
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								}
+							},
+							"372": {
+								"segments": {
+									"type": "string",
+									"value": "M 1.5,1.5069319 12.49983,12.506752"
+								},
+								"style": {
+									"type": "map<string,string>",
+									"value": {
+										"fill": "none",
+										"stroke": "#008000",
+										"stroke-width": "3",
+										"stroke-linecap": "round",
+										"stroke-linejoin": "round",
+										"stroke-miterlimit": "4",
+										"stroke-opacity": "1",
+										"stroke-dasharray": "none"
+									}
+								},
+								"mapper": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+								},
+								"parser": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+								},
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Path",
+								"position": {
+									"type": "list<double>",
+									"value": [
+										144,
+										79
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": 0
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								}
+							},
+							"373": {
+								"textContent": {
+									"type": "string",
+									"value": "F"
+								},
+								"style": {
+									"type": "map<string,string>",
+									"value": {
+										"font-size": "20px",
+										"font-style": "normal",
+										"font-variant": "normal",
+										"font-weight": "bold",
+										"font-stretch": "normal",
+										"text-align": "left",
+										"line-height": "100%",
+										"writing-mode": "lr-tb",
+										"text-anchor": "left",
+										"fill": "#008000",
+										"fill-opacity": "1",
+										"stroke": "none",
+										"font-family": "Arial"
+									}
+								},
+								"mapper": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+								},
+								"parser": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+								},
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Text",
+								"position": {
+									"type": "list<double>",
+									"value": [
+										205,
+										22
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": 0
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								}
+							},
+							"374": {
+								"segments": {
+									"type": "string",
+									"value": "M 1,10.3685 7.03183,20.737 13.06367,10.3685 z"
+								},
+								"style": {
+									"type": "map<string,string>",
+									"value": {
+										"fill": "#ffffff",
+										"fill-opacity": "0.5",
+										"stroke": "#008000",
+										"stroke-width": "3",
+										"stroke-linecap": "butt",
+										"stroke-linejoin": "miter",
+										"stroke-miterlimit": "4",
+										"stroke-opacity": "1"
+									}
+								},
+								"mapper": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+								},
+								"parser": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+								},
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Path",
+								"position": {
+									"type": "list<double>",
+									"value": [
+										95,
+										2
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": 0
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								}
+							},
+							"375": {
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Contain",
+								"position": {
+									"type": "list<double>",
+									"value": [
+										37.25,
+										39.5
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": 0
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								},
+								"link-style": {
+									"type": "map<string,string>",
+									"value": {
+										"stroke": "#00ffff",
+										"stroke-dasharray": "",
+										"stroke-opacity": 0.1,
+										"stroke-width": 1
+									}
+								}
+							},
+							"376": {
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Contain",
+								"position": {
+									"type": "list<double>",
+									"value": [
+										15.25,
+										39.5
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": 0
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								},
+								"link-style": {
+									"type": "map<string,string>",
+									"value": {
+										"stroke": "#00ffff",
+										"stroke-dasharray": "",
+										"stroke-opacity": 0.1,
+										"stroke-width": 1
+									}
+								}
+							},
+							"377": {
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Contain",
+								"position": {
+									"type": "list<double>",
+									"value": [
+										23,
+										39.5
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": 0
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								},
+								"link-style": {
+									"type": "map<string,string>",
+									"value": {
+										"stroke": "#00ffff",
+										"stroke-dasharray": "",
+										"stroke-opacity": 0.1,
+										"stroke-width": 1
+									}
+								}
+							}
+						},
+						"edges": [
+							{
+								"src": "366",
+								"dest": "375"
+							},
+							{
+								"src": "375",
+								"dest": "367"
+							},
+							{
+								"src": "366",
+								"dest": "376"
+							},
+							{
+								"src": "376",
+								"dest": "371"
+							},
+							{
+								"src": "366",
+								"dest": "377"
+							},
+							{
+								"src": "377",
+								"dest": "369"
+							}
+						]
+					}
+				},
+				"$asuri": {
+					"type": "string",
+					"value": "/Formalisms/__Transformations__/Transformation/MoTif/FRule/16.instance"
+				},
+				"$type": "/Formalisms/__Transformations__/Transformation/MoTif.defaultIcons/FRuleIcon"
+			},
+			"17": {
 				"link-style": {
 					"type": "map<string,string>",
 					"value": {
@@ -3459,8 +3199,8 @@
 				"position": {
 					"type": "list<double>",
 					"value": [
-						388,
-						315
+						384.5022058759922,
+						315.1499995674741
 					]
 				},
 				"orientation": {
@@ -3512,13 +3252,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;4.997904865401551,3.224129401095928%",
-										"0;30.87055147327976,99.94801143396995%"
+										"0;4.497355186669495,1.4704292441877538%",
+										"0;33.79074251881377,99.98918860475786%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;88.15238973400534"
+									"value": "0;89.15747573925951"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -3563,13 +3303,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;10.994785551439747,3.224129401095928%",
-										"0;30.67710370921401,99.94801143396995%"
+										"0;10.496706502954964,1.4704292441877538%",
+										"0;33.70251676416251,99.98918860475786%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;88.15238973400534"
+									"value": "0;89.15747573925951"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -3614,13 +3354,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;10.994785551439747,3.224129401095928%",
-										"0;30.67710370921401,99.94801143396995%"
+										"0;10.496706502954964,1.4704292441877538%",
+										"0;33.70251676416251,99.98918860475786%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;88.15238973400534"
+									"value": "0;89.15747573925951"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -3665,13 +3405,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;10.994785551439747,3.224129401095928%",
-										"0;30.67710370921401,99.94801143396995%"
+										"0;10.496706502954964,1.4704292441877538%",
+										"0;33.70251676416251,99.98918860475786%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;88.15238973400534"
+									"value": "0;89.15747573925951"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -3716,13 +3456,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;5.997384979741241,3.224129401095928%",
-										"0;30.838310179268774,99.94801143396995%"
+										"0;5.497247072717073,1.4704292441877538%",
+										"0;33.776038226371895,99.98918860475786%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;88.15238973400534"
+									"value": "0;89.15747573925951"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -3767,13 +3507,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;5.997384979741241,3.224129401095928%",
-										"0;30.838310179268774,99.94801143396995%"
+										"0;5.497247072717073,1.4704292441877538%",
+										"0;33.776038226371895,99.98918860475786%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;88.15238973400534"
+									"value": "0;89.15747573925951"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -3818,13 +3558,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;10.994785551439747,3.224129401095928%",
-										"0;30.67710370921401,99.94801143396995%"
+										"0;10.496706502954964,1.4704292441877538%",
+										"0;33.70251676416251,99.98918860475786%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;88.15238973400534"
+									"value": "0;89.15747573925951"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -3869,13 +3609,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;4.997904865401551,3.224129401095928%",
-										"0;30.87055147327976,99.94801143396995%"
+										"0;4.497355186669495,1.4704292441877538%",
+										"0;33.79074251881377,99.98918860475786%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;88.15238973400534"
+									"value": "0;89.15747573925951"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -3920,13 +3660,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;8.99582532276031,3.224129401095928%",
-										"0;30.741586297235926,99.94801143396995%"
+										"0;8.496922730859808,1.4704292441877538%",
+										"0;33.731925349046264,99.98918860475786%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;88.15238973400534"
+									"value": "0;89.15747573925951"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -3971,13 +3711,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;10.994785551439747,3.224129401095928%",
-										"0;30.67710370921401,99.94801143396995%"
+										"0;10.496706502954964,1.4704292441877538%",
+										"0;33.70251676416251,99.98918860475786%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;88.15238973400534"
+									"value": "0;89.15747573925951"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -4022,13 +3762,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;5.997384979741241,3.224129401095928%",
-										"0;30.838310179268774,99.94801143396995%"
+										"0;5.497247072717073,1.4704292441877538%",
+										"0;33.776038226371895,99.98918860475786%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;88.15238973400534"
+									"value": "0;89.15747573925951"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -4074,13 +3814,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;8.99582532276031,3.224129401095928%",
-										"0;30.741586297235926,99.94801143396995%"
+										"0;8.496922730859808,1.4704292441877538%",
+										"0;33.731925349046264,99.98918860475786%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;88.15238973400534"
+									"value": "0;89.15747573925951"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -4125,13 +3865,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;5.997384979741241,3.224129401095928%",
-										"0;30.838310179268774,99.94801143396995%"
+										"0;5.497247072717073,1.4704292441877538%",
+										"0;33.776038226371895,99.98918860475786%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;88.15238973400534"
+									"value": "0;89.15747573925951"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -4176,13 +3916,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;10.994785551439747,3.224129401095928%",
-										"0;30.67710370921401,99.94801143396995%"
+										"0;10.496706502954964,1.4704292441877538%",
+										"0;33.70251676416251,99.98918860475786%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;88.15238973400534"
+									"value": "0;89.15747573925951"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -4228,13 +3968,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;4.997904865401551,3.224129401095928%",
-										"0;30.87055147327976,99.94801143396995%"
+										"0;4.497355186669495,1.4704292441877538%",
+										"0;33.79074251881377,99.98918860475786%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;88.15238973400534"
+									"value": "0;89.15747573925951"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -4279,13 +4019,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;5.997384979741241,3.224129401095928%",
-										"0;30.838310179268774,99.94801143396995%"
+										"0;5.497247072717073,1.4704292441877538%",
+										"0;33.776038226371895,99.98918860475786%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;88.15238973400534"
+									"value": "0;89.15747573925951"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -4330,13 +4070,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;3.997400571698506,0%",
-										"0;-31.161206470054765,0%"
+										"0;4.497253554245674,0%",
+										"0;-34.22352102968347,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;88.15238973400541"
+									"value": "0;89.15747573925967"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -4381,13 +4121,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;3.997400571698506,0%",
-										"0;-31.161206470054765,0%"
+										"0;4.497253554245674,0%",
+										"0;-34.22352102968347,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;88.15238973400541"
+									"value": "0;89.15747573925967"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -4432,13 +4172,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;3.997400571698506,0%",
-										"0;-31.161206470054765,0%"
+										"0;4.497253554245674,0%",
+										"0;-34.22352102968347,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;88.15238973400541"
+									"value": "0;89.15747573925967"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -4483,13 +4223,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;8.994801143397012,0%",
-										"0;-31.322412940109587,0%"
+										"0;9.496712984483565,0%",
+										"0;-34.29704249189285,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;88.15238973400541"
+									"value": "0;89.15747573925967"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -4534,13 +4274,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;6.995840914717576,0%",
-										"0;-31.25793035208767,0%"
+										"0;7.496929212388409,0%",
+										"0;-34.2676339070091,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;88.15238973400541"
+									"value": "0;89.15747573925967"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -4585,13 +4325,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;2.9979204573588163,0%",
-										"0;-31.128965176043835,0%"
+										"0;3.4973616681980957,0%",
+										"0;-34.20881673724159,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;88.15238973400541"
+									"value": "0;89.15747573925967"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -4636,13 +4376,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;8.994801143397012,0%",
-										"0;-31.322412940109587,0%"
+										"0;9.496712984483565,0%",
+										"0;-34.29704249189285,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;88.15238973400541"
+									"value": "0;89.15747573925967"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -4687,13 +4427,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;8.994801143397012,0%",
-										"0;-31.322412940109587,0%"
+										"0;9.496712984483565,0%",
+										"0;-34.29704249189285,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;88.15238973400541"
+									"value": "0;89.15747573925967"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -4738,13 +4478,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;3.997400571698506,0%",
-										"0;-31.161206470054765,0%"
+										"0;4.497253554245674,0%",
+										"0;-34.22352102968347,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;88.15238973400541"
+									"value": "0;89.15747573925967"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -4789,13 +4529,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;3.997400571698506,0%",
-										"0;-31.161206470054765,0%"
+										"0;4.497253554245674,0%",
+										"0;-34.22352102968347,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;88.15238973400541"
+									"value": "0;89.15747573925967"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -4840,13 +4580,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;8.994801143397012,0%",
-										"0;-31.322412940109587,0%"
+										"0;9.496712984483565,0%",
+										"0;-34.29704249189285,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;88.15238973400541"
+									"value": "0;89.15747573925967"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -4892,13 +4632,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;6.995840914717576,0%",
-										"0;-31.25793035208767,0%"
+										"0;7.496929212388409,0%",
+										"0;-34.2676339070091,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;88.15238973400541"
+									"value": "0;89.15747573925967"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -4944,13 +4684,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;2.9979204573588163,0%",
-										"0;-31.128965176043835,0%"
+										"0;3.4973616681980957,0%",
+										"0;-34.20881673724159,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;88.15238973400541"
+									"value": "0;89.15747573925967"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -4995,13 +4735,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;8.994801143397012,0%",
-										"0;-31.322412940109587,0%"
+										"0;9.496712984483565,0%",
+										"0;-34.29704249189285,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;88.15238973400541"
+									"value": "0;89.15747573925967"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -5046,13 +4786,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;2.9979204573588163,0%",
-										"0;-31.128965176043835,0%"
+										"0;3.4973616681980957,0%",
+										"0;-34.20881673724159,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;88.15238973400541"
+									"value": "0;89.15747573925967"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -5097,13 +4837,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;8.994801143397012,0%",
-										"0;-31.322412940109587,0%"
+										"0;9.496712984483565,0%",
+										"0;-34.29704249189285,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;88.15238973400541"
+									"value": "0;89.15747573925967"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -5128,18 +4868,18 @@
 				},
 				"$asuri": {
 					"type": "string",
-					"value": "/Formalisms/__Transformations__/Transformation/MoTif/success/6.instance"
+					"value": "/Formalisms/__Transformations__/Transformation/MoTif/success/17.instance"
 				},
 				"$segments": {
 					"type": "map<string,list<string>>",
 					"value": {
-						"/Formalisms/__Transformations__/Transformation/MoTif.defaultIcons/FRuleIcon/3.instance--/Formalisms/__Transformations__/Transformation/MoTif.defaultIcons/successLink/6.instance": "M387,284L388,315",
-						"/Formalisms/__Transformations__/Transformation/MoTif.defaultIcons/successLink/6.instance--/Formalisms/__Transformations__/Transformation/MoTif.defaultIcons/FRuleIcon/4.instance": "M388.00241154839057,315.07475800010707L388.99998440804274,345.9995166493236"
+						"/Formalisms/__Transformations__/Transformation/MoTif.defaultIcons/FRuleIcon/3.instance--/Formalisms/__Transformations__/Transformation/MoTif.defaultIcons/successLink/17.instance": "M384,281L384.5022058759922,315.1499995674741",
+						"/Formalisms/__Transformations__/Transformation/MoTif.defaultIcons/successLink/17.instance--/Formalisms/__Transformations__/Transformation/MoTif.defaultIcons/FRuleIcon/16.instance": "M384.50109969644376,315.07477935817457L384.9999935184714,348.99955925605536"
 					}
 				},
 				"$type": "/Formalisms/__Transformations__/Transformation/MoTif.defaultIcons/successLink"
 			},
-			"7": {
+			"18": {
 				"link-style": {
 					"type": "map<string,string>",
 					"value": {
@@ -5164,7 +4904,7 @@
 				"position": {
 					"type": "list<double>",
 					"value": [
-						491,
+						487,
 						315.5
 					]
 				},
@@ -5217,13 +4957,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;-0.028159416497146594,-11.856081112470699%",
-										"0;33.97379592883834,99.29467931694283%"
+										"0;4,6.123233995736766e-15%",
+										"0;31.499524313429106,100%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;96.80905017961335"
+									"value": "0;90"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -5268,13 +5008,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;5.929521342519422,-11.856081112470699%",
-										"0;34.68516079558657,99.29467931694283%"
+										"0;10,6.123233995736766e-15%",
+										"0;31.499524313429106,100%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;96.80905017961335"
+									"value": "0;90"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -5319,13 +5059,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;5.929521342519422,-11.856081112470699%",
-										"0;34.68516079558657,99.29467931694283%"
+										"0;10,6.123233995736766e-15%",
+										"0;31.499524313429106,100%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;96.80905017961335"
+									"value": "0;90"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -5370,13 +5110,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;5.929521342519422,-11.856081112470699%",
-										"0;34.68516079558657,99.29467931694283%"
+										"0;10,6.123233995736766e-15%",
+										"0;31.499524313429106,100%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;96.80905017961335"
+									"value": "0;90"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -5421,13 +5161,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;0.964787376672291,-11.856081112470699%",
-										"0;34.092356739963066,99.29467931694283%"
+										"0;5,6.123233995736766e-15%",
+										"0;31.499524313429106,100%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;96.80905017961335"
+									"value": "0;90"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -5472,13 +5212,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;0.964787376672291,-11.856081112470699%",
-										"0;34.092356739963066,99.29467931694283%"
+										"0;5,6.123233995736766e-15%",
+										"0;31.499524313429106,100%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;96.80905017961335"
+									"value": "0;90"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -5523,13 +5263,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;5.929521342519422,-11.856081112470699%",
-										"0;34.68516079558657,99.29467931694283%"
+										"0;10,6.123233995736766e-15%",
+										"0;31.499524313429106,100%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;96.80905017961335"
+									"value": "0;90"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -5574,13 +5314,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;-0.028159416497146594,-11.856081112470699%",
-										"0;33.97379592883834,99.29467931694283%"
+										"0;4,6.123233995736766e-15%",
+										"0;31.499524313429106,100%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;96.80905017961335"
+									"value": "0;90"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -5625,13 +5365,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;3.9436277561806037,-11.856081112470699%",
-										"0;34.44803917333718,99.29467931694283%"
+										"0;8,6.123233995736766e-15%",
+										"0;31.499524313429106,100%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;96.80905017961335"
+									"value": "0;90"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -5676,13 +5416,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;5.929521342519422,-11.856081112470699%",
-										"0;34.68516079558657,99.29467931694283%"
+										"0;10,6.123233995736766e-15%",
+										"0;31.499524313429106,100%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;96.80905017961335"
+									"value": "0;90"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -5727,13 +5467,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;0.964787376672291,-11.856081112470699%",
-										"0;34.092356739963066,99.29467931694283%"
+										"0;5,6.123233995736766e-15%",
+										"0;31.499524313429106,100%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;96.80905017961335"
+									"value": "0;90"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -5779,13 +5519,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;3.9436277561806037,-11.856081112470699%",
-										"0;34.44803917333718,99.29467931694283%"
+										"0;8,6.123233995736766e-15%",
+										"0;31.499524313429106,100%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;96.80905017961335"
+									"value": "0;90"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -5830,13 +5570,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;0.964787376672291,-11.856081112470699%",
-										"0;34.092356739963066,99.29467931694283%"
+										"0;5,6.123233995736766e-15%",
+										"0;31.499524313429106,100%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;96.80905017961335"
+									"value": "0;90"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -5881,13 +5621,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;5.929521342519422,-11.856081112470699%",
-										"0;34.68516079558657,99.29467931694283%"
+										"0;10,6.123233995736766e-15%",
+										"0;31.499524313429106,100%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;96.80905017961335"
+									"value": "0;90"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -5933,13 +5673,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;-0.028159416497146594,-11.856081112470699%",
-										"0;33.97379592883834,99.29467931694283%"
+										"0;4,6.123233995736766e-15%",
+										"0;31.499524313429106,100%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;96.80905017961335"
+									"value": "0;90"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -5984,13 +5724,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;0.964787376672291,-11.856081112470699%",
-										"0;34.092356739963066,99.29467931694283%"
+										"0;5,6.123233995736766e-15%",
+										"0;31.499524313429106,100%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;96.80905017961335"
+									"value": "0;90"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -6035,13 +5775,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;8.964733965847131,0%",
-										"0;-32.90719594437644,0%"
+										"0;5,0%",
+										"0;-31.5,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;96.80905017961341"
+									"value": "0;90"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -6086,13 +5826,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;8.964733965847131,0%",
-										"0;-32.90719594437644,0%"
+										"0;5,0%",
+										"0;-31.5,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;96.80905017961341"
+									"value": "0;90"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -6137,13 +5877,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;8.964733965847131,0%",
-										"0;-32.90719594437644,0%"
+										"0;5,0%",
+										"0;-31.5,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;96.80905017961341"
+									"value": "0;90"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -6188,13 +5928,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;13.929467931694262,0%",
-										"0;-32.31439188875294,0%"
+										"0;10,0%",
+										"0;-31.5,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;96.80905017961341"
+									"value": "0;90"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -6239,13 +5979,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;11.943574345355444,0%",
-										"0;-32.55151351100233,0%"
+										"0;8,0%",
+										"0;-31.5,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;96.80905017961341"
+									"value": "0;90"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -6290,13 +6030,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;7.971787172677693,0%",
-										"0;-33.02575675550116,0%"
+										"0;4,0%",
+										"0;-31.5,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;96.80905017961341"
+									"value": "0;90"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -6341,13 +6081,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;13.929467931694262,0%",
-										"0;-32.31439188875294,0%"
+										"0;10,0%",
+										"0;-31.5,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;96.80905017961341"
+									"value": "0;90"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -6392,13 +6132,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;13.929467931694262,0%",
-										"0;-32.31439188875294,0%"
+										"0;10,0%",
+										"0;-31.5,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;96.80905017961341"
+									"value": "0;90"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -6443,13 +6183,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;8.964733965847131,0%",
-										"0;-32.90719594437644,0%"
+										"0;5,0%",
+										"0;-31.5,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;96.80905017961341"
+									"value": "0;90"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -6494,13 +6234,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;8.964733965847131,0%",
-										"0;-32.90719594437644,0%"
+										"0;5,0%",
+										"0;-31.5,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;96.80905017961341"
+									"value": "0;90"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -6545,13 +6285,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;13.929467931694262,0%",
-										"0;-32.31439188875294,0%"
+										"0;10,0%",
+										"0;-31.5,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;96.80905017961341"
+									"value": "0;90"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -6597,13 +6337,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;11.943574345355444,0%",
-										"0;-32.55151351100233,0%"
+										"0;8,0%",
+										"0;-31.5,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;96.80905017961341"
+									"value": "0;90"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -6649,13 +6389,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;7.971787172677693,0%",
-										"0;-33.02575675550116,0%"
+										"0;4,0%",
+										"0;-31.5,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;96.80905017961341"
+									"value": "0;90"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -6700,13 +6440,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;13.929467931694262,0%",
-										"0;-32.31439188875294,0%"
+										"0;10,0%",
+										"0;-31.5,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;96.80905017961341"
+									"value": "0;90"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -6751,13 +6491,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;7.971787172677693,0%",
-										"0;-33.02575675550116,0%"
+										"0;4,0%",
+										"0;-31.5,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;96.80905017961341"
+									"value": "0;90"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -6802,13 +6542,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;13.929467931694262,0%",
-										"0;-32.31439188875294,0%"
+										"0;10,0%",
+										"0;-31.5,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;96.80905017961341"
+									"value": "0;90"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -6833,18 +6573,18 @@
 				},
 				"$asuri": {
 					"type": "string",
-					"value": "/Formalisms/__Transformations__/Transformation/MoTif/fail/7.instance"
+					"value": "/Formalisms/__Transformations__/Transformation/MoTif/fail/18.instance"
 				},
 				"$segments": {
 					"type": "map<string,list<string>>",
 					"value": {
-						"/Formalisms/__Transformations__/Transformation/MoTif.defaultIcons/FRuleIcon/3.instance--/Formalisms/__Transformations__/Transformation/MoTif.defaultIcons/failLink/7.instance": "M495,282L491,315.5",
-						"/Formalisms/__Transformations__/Transformation/MoTif.defaultIcons/failLink/7.instance--/Formalisms/__Transformations__/Transformation/MoTif.defaultIcons/FRuleIcon/4.instance": "M490.99107151472134,315.57477606420855L487.00005341082516,348.9995526843395"
+						"/Formalisms/__Transformations__/Transformation/MoTif.defaultIcons/FRuleIcon/3.instance--/Formalisms/__Transformations__/Transformation/MoTif.defaultIcons/failLink/18.instance": "M487,284L487,315.5",
+						"/Formalisms/__Transformations__/Transformation/MoTif.defaultIcons/failLink/18.instance--/Formalisms/__Transformations__/Transformation/MoTif.defaultIcons/FRuleIcon/16.instance": "M487.00000000000006,315.5771773507198L487,346.9995243134291"
 					}
 				},
 				"$type": "/Formalisms/__Transformations__/Transformation/MoTif.defaultIcons/failLink"
 			},
-			"8": {
+			"20": {
 				"link-style": {
 					"type": "map<string,string>",
 					"value": {
@@ -6869,8 +6609,8 @@
 				"position": {
 					"type": "list<double>",
 					"value": [
-						384.9928571563546,
-						424.1499997165533
+						404,
+						430.5
 					]
 				},
 				"orientation": {
@@ -6922,13 +6662,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;2.0026323878484504,-4.756514941544885%",
-										"0;42.03990402169808,99.88681377244376%"
+										"0;26.456535002915416,50.31907286678234%",
+										"0;37.486951097677945,86.41753818425661%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;92.72631099390624"
+									"value": "0;59.78867761416516"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -6973,13 +6713,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;7.995841214195025,-4.756514941544885%",
-										"0;42.325294918190764,99.88681377244376%"
+										"0;31.641587293970815,50.31907286678234%",
+										"0;34.46780672567098,86.41753818425661%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;92.72631099390624"
+									"value": "0;59.78867761416516"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -7024,13 +6764,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;7.995841214195025,-4.756514941544885%",
-										"0;42.325294918190764,99.88681377244376%"
+										"0;31.641587293970815,50.31907286678234%",
+										"0;34.46780672567098,86.41753818425661%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;92.72631099390624"
+									"value": "0;59.78867761416516"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -7075,13 +6815,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;7.995841214195025,-4.756514941544885%",
-										"0;42.325294918190764,99.88681377244376%"
+										"0;31.641587293970815,50.31907286678234%",
+										"0;34.46780672567098,86.41753818425661%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;92.72631099390624"
+									"value": "0;59.78867761416516"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -7126,13 +6866,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;3.001500525572851,-4.756514941544885%",
-										"0;42.087469171113526,99.88681377244376%"
+										"0;27.320710384757945,50.31907286678234%",
+										"0;36.9837603690101,86.41753818425661%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;92.72631099390624"
+									"value": "0;59.78867761416516"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -7177,13 +6917,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;3.001500525572851,-4.756514941544885%",
-										"0;42.087469171113526,99.88681377244376%"
+										"0;27.320710384757945,50.31907286678234%",
+										"0;36.9837603690101,86.41753818425661%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;92.72631099390624"
+									"value": "0;59.78867761416516"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -7228,13 +6968,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;7.995841214195025,-4.756514941544885%",
-										"0;42.325294918190764,99.88681377244376%"
+										"0;31.641587293970815,50.31907286678234%",
+										"0;34.46780672567098,86.41753818425661%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;92.72631099390624"
+									"value": "0;59.78867761416516"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -7279,13 +7019,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;2.0026323878484504,-4.756514941544885%",
-										"0;42.03990402169808,99.88681377244376%"
+										"0;26.456535002915416,50.31907286678234%",
+										"0;37.486951097677945,86.41753818425661%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;92.72631099390624"
+									"value": "0;59.78867761416516"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -7330,13 +7070,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;5.998104938746167,-4.756514941544885%",
-										"0;42.23016461935987,99.88681377244376%"
+										"0;29.913236530285644,50.31907286678234%",
+										"0;35.47418818300662,86.41753818425661%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;92.72631099390624"
+									"value": "0;59.78867761416516"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -7381,13 +7121,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;7.995841214195025,-4.756514941544885%",
-										"0;42.325294918190764,99.88681377244376%"
+										"0;31.641587293970815,50.31907286678234%",
+										"0;34.46780672567098,86.41753818425661%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;92.72631099390624"
+									"value": "0;59.78867761416516"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -7432,13 +7172,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;3.001500525572851,-4.756514941544885%",
-										"0;42.087469171113526,99.88681377244376%"
+										"0;27.320710384757945,50.31907286678234%",
+										"0;36.9837603690101,86.41753818425661%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;92.72631099390624"
+									"value": "0;59.78867761416516"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -7484,13 +7224,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;5.998104938746167,-4.756514941544885%",
-										"0;42.23016461935987,99.88681377244376%"
+										"0;29.913236530285644,50.31907286678234%",
+										"0;35.47418818300662,86.41753818425661%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;92.72631099390624"
+									"value": "0;59.78867761416516"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -7535,13 +7275,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;3.001500525572851,-4.756514941544885%",
-										"0;42.087469171113526,99.88681377244376%"
+										"0;27.320710384757945,50.31907286678234%",
+										"0;36.9837603690101,86.41753818425661%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;92.72631099390624"
+									"value": "0;59.78867761416516"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -7586,13 +7326,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;7.995841214195025,-4.756514941544885%",
-										"0;42.325294918190764,99.88681377244376%"
+										"0;31.641587293970815,50.31907286678234%",
+										"0;34.46780672567098,86.41753818425661%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;92.72631099390624"
+									"value": "0;59.78867761416516"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -7638,13 +7378,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;2.0026323878484504,-4.756514941544885%",
-										"0;42.03990402169808,99.88681377244376%"
+										"0;26.456535002915416,50.31907286678234%",
+										"0;37.486951097677945,86.41753818425661%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;92.72631099390624"
+									"value": "0;59.78867761416516"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -7689,13 +7429,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;3.001500525572851,-4.756514941544885%",
-										"0;42.087469171113526,99.88681377244376%"
+										"0;27.320710384757945,50.31907286678234%",
+										"0;36.9837603690101,86.41753818425661%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;92.72631099390624"
+									"value": "0;59.78867761416516"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -7740,13 +7480,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;7.001483532267571,0%",
-										"0;-41.912173969476044,0%"
+										"0;-18.679123090787186,0%",
+										"0;-42.01595364333912,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;92.72631099390628"
+									"value": "0;59.788677614165174"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -7791,13 +7531,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;7.001483532267571,0%",
-										"0;-41.912173969476044,0%"
+										"0;-18.679123090787186,0%",
+										"0;-42.01595364333912,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;92.72631099390628"
+									"value": "0;59.788677614165174"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -7842,13 +7582,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;7.001483532267571,0%",
-										"0;-41.912173969476044,0%"
+										"0;-18.679123090787186,0%",
+										"0;-42.01595364333912,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;92.72631099390628"
+									"value": "0;59.788677614165174"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -7893,13 +7633,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;11.995824220889745,0%",
-										"0;-41.674348222398805,0%"
+										"0;-14.358246181574316,0%",
+										"0;-44.53190728667823,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;92.72631099390628"
+									"value": "0;59.788677614165174"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -7944,13 +7684,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;9.998087945440886,0%",
-										"0;-41.7694785212297,0%"
+										"0;-16.086596945259487,0%",
+										"0;-43.5255258293426,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;92.72631099390628"
+									"value": "0;59.788677614165174"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -7995,13 +7735,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;6.00261539454317,0%",
-										"0;-41.95973911889149,0%"
+										"0;-19.543298472629715,0%",
+										"0;-41.51276291467127,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;92.72631099390628"
+									"value": "0;59.788677614165174"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -8046,13 +7786,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;11.995824220889745,0%",
-										"0;-41.674348222398805,0%"
+										"0;-14.358246181574316,0%",
+										"0;-44.53190728667823,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;92.72631099390628"
+									"value": "0;59.788677614165174"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -8097,13 +7837,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;11.995824220889745,0%",
-										"0;-41.674348222398805,0%"
+										"0;-14.358246181574316,0%",
+										"0;-44.53190728667823,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;92.72631099390628"
+									"value": "0;59.788677614165174"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -8148,13 +7888,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;7.001483532267571,0%",
-										"0;-41.912173969476044,0%"
+										"0;-18.679123090787186,0%",
+										"0;-42.01595364333912,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;92.72631099390628"
+									"value": "0;59.788677614165174"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -8199,13 +7939,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;7.001483532267571,0%",
-										"0;-41.912173969476044,0%"
+										"0;-18.679123090787186,0%",
+										"0;-42.01595364333912,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;92.72631099390628"
+									"value": "0;59.788677614165174"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -8250,13 +7990,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;11.995824220889745,0%",
-										"0;-41.674348222398805,0%"
+										"0;-14.358246181574316,0%",
+										"0;-44.53190728667823,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;92.72631099390628"
+									"value": "0;59.788677614165174"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -8302,13 +8042,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;9.998087945440886,0%",
-										"0;-41.7694785212297,0%"
+										"0;-16.086596945259487,0%",
+										"0;-43.5255258293426,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;92.72631099390628"
+									"value": "0;59.788677614165174"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -8354,13 +8094,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;6.00261539454317,0%",
-										"0;-41.95973911889149,0%"
+										"0;-19.543298472629715,0%",
+										"0;-41.51276291467127,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;92.72631099390628"
+									"value": "0;59.788677614165174"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -8405,13 +8145,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;11.995824220889745,0%",
-										"0;-41.674348222398805,0%"
+										"0;-14.358246181574316,0%",
+										"0;-44.53190728667823,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;92.72631099390628"
+									"value": "0;59.788677614165174"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -8456,13 +8196,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;6.00261539454317,0%",
-										"0;-41.95973911889149,0%"
+										"0;-19.543298472629715,0%",
+										"0;-41.51276291467127,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;92.72631099390628"
+									"value": "0;59.788677614165174"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -8507,13 +8247,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;11.995824220889745,0%",
-										"0;-41.674348222398805,0%"
+										"0;-14.358246181574316,0%",
+										"0;-44.53190728667823,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;92.72631099390628"
+									"value": "0;59.788677614165174"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -8538,18 +8278,18 @@
 				},
 				"$asuri": {
 					"type": "string",
-					"value": "/Formalisms/__Transformations__/Transformation/MoTif/success/8.instance"
+					"value": "/Formalisms/__Transformations__/Transformation/MoTif/success/20.instance"
 				},
 				"$segments": {
 					"type": "map<string,list<string>>",
 					"value": {
-						"/Formalisms/__Transformations__/Transformation/MoTif.defaultIcons/FRuleIcon/4.instance--/Formalisms/__Transformations__/Transformation/MoTif.defaultIcons/successLink/8.instance": "M387,382L384.9928571563546,424.1499997165533",
-						"/Formalisms/__Transformations__/Transformation/MoTif.defaultIcons/successLink/8.instance--/Formalisms/__Transformations__/Transformation/MoTif.defaultIcons/EndSuccessIcon/1.instance": "M384.9964370765051,424.07482139339305L383.0000169933053,465.99964314058957"
+						"/Formalisms/__Transformations__/Transformation/MoTif.defaultIcons/FRuleIcon/16.instance--/Formalisms/__Transformations__/Transformation/MoTif.defaultIcons/successLink/20.instance": "M381,391L404,430.5",
+						"/Formalisms/__Transformations__/Transformation/MoTif.defaultIcons/successLink/20.instance--/Formalisms/__Transformations__/Transformation/MoTif.defaultIcons/EndSuccessIcon/1.instance": "M404.0378287494817,430.56496676541417L426.99983347554513,469.9997140123492"
 					}
 				},
 				"$type": "/Formalisms/__Transformations__/Transformation/MoTif.defaultIcons/successLink"
 			},
-			"9": {
+			"21": {
 				"link-style": {
 					"type": "map<string,string>",
 					"value": {
@@ -8574,8 +8314,8 @@
 				"position": {
 					"type": "list<double>",
 					"value": [
-						436.8827068553287,
-						426.09473677069604
+						461.9112246130439,
+						429.6209181994748
 					]
 				},
 				"orientation": {
@@ -8627,13 +8367,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;-49.368653611063166,-77.79411802037211%",
-										"0;45.01645867572597,62.83371070876219%"
+										"0;-25.686721624984557,-59.18059251082523%",
+										"0;41.74605889665213,80.60804841991683%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;141.07245640720765"
+									"value": "0;126.28526712513894"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -8678,13 +8418,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;-45.59863096853741,-77.79411802037211%",
-										"0;49.68410575694827,62.83371070876219%"
+										"0;-20.85023871978956,-59.18059251082523%",
+										"0;45.29689444730167,80.60804841991683%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;141.07245640720765"
+									"value": "0;126.28526712513894"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -8729,13 +8469,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;-45.59863096853741,-77.79411802037211%",
-										"0;49.68410575694827,62.83371070876219%"
+										"0;-20.85023871978956,-59.18059251082523%",
+										"0;45.29689444730167,80.60804841991683%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;141.07245640720765"
+									"value": "0;126.28526712513894"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -8780,13 +8520,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;-45.59863096853741,-77.79411802037211%",
-										"0;49.68410575694827,62.83371070876219%"
+										"0;-20.85023871978956,-59.18059251082523%",
+										"0;45.29689444730167,80.60804841991683%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;141.07245640720765"
+									"value": "0;126.28526712513894"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -8831,13 +8571,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;-48.74031650397552,-77.79411802037211%",
-										"0;45.79439985592967,62.83371070876219%"
+										"0;-24.88064114078543,-59.18059251082523%",
+										"0;42.33786482176038,80.60804841991683%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;141.07245640720765"
+									"value": "0;126.28526712513894"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -8882,13 +8622,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;-48.74031650397552,-77.79411802037211%",
-										"0;45.79439985592967,62.83371070876219%"
+										"0;-24.88064114078543,-59.18059251082523%",
+										"0;42.33786482176038,80.60804841991683%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;141.07245640720765"
+									"value": "0;126.28526712513894"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -8933,13 +8673,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;-45.59863096853741,-77.79411802037211%",
-										"0;49.68410575694827,62.83371070876219%"
+										"0;-20.85023871978956,-59.18059251082523%",
+										"0;45.29689444730167,80.60804841991683%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;141.07245640720765"
+									"value": "0;126.28526712513894"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -8984,13 +8724,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;-49.368653611063166,-77.79411802037211%",
-										"0;45.01645867572597,62.83371070876219%"
+										"0;-25.686721624984557,-59.18059251082523%",
+										"0;41.74605889665213,80.60804841991683%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;141.07245640720765"
+									"value": "0;126.28526712513894"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -9035,13 +8775,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;-46.85530518271264,-77.79411802037211%",
-										"0;48.12822339654082,62.83371070876219%"
+										"0;-22.462399688187872,-59.18059251082523%",
+										"0;44.113282597085174,80.60804841991683%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;141.07245640720765"
+									"value": "0;126.28526712513894"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -9086,13 +8826,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;-45.59863096853741,-77.79411802037211%",
-										"0;49.68410575694827,62.83371070876219%"
+										"0;-20.85023871978956,-59.18059251082523%",
+										"0;45.29689444730167,80.60804841991683%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;141.07245640720765"
+									"value": "0;126.28526712513894"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -9137,13 +8877,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;-48.74031650397552,-77.79411802037211%",
-										"0;45.79439985592967,62.83371070876219%"
+										"0;-24.88064114078543,-59.18059251082523%",
+										"0;42.33786482176038,80.60804841991683%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;141.07245640720765"
+									"value": "0;126.28526712513894"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -9189,13 +8929,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;-46.85530518271264,-77.79411802037211%",
-										"0;48.12822339654082,62.83371070876219%"
+										"0;-22.462399688187872,-59.18059251082523%",
+										"0;44.113282597085174,80.60804841991683%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;141.07245640720765"
+									"value": "0;126.28526712513894"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -9240,13 +8980,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;-48.74031650397552,-77.79411802037211%",
-										"0;45.79439985592967,62.83371070876219%"
+										"0;-24.88064114078543,-59.18059251082523%",
+										"0;42.33786482176038,80.60804841991683%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;141.07245640720765"
+									"value": "0;126.28526712513894"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -9291,13 +9031,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;-45.59863096853741,-77.79411802037211%",
-										"0;49.68410575694827,62.83371070876219%"
+										"0;-20.85023871978956,-59.18059251082523%",
+										"0;45.29689444730167,80.60804841991683%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;141.07245640720765"
+									"value": "0;126.28526712513894"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -9343,13 +9083,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;-49.368653611063166,-77.79411802037211%",
-										"0;45.01645867572597,62.83371070876219%"
+										"0;-25.686721624984557,-59.18059251082523%",
+										"0;41.74605889665213,80.60804841991683%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;141.07245640720765"
+									"value": "0;126.28526712513894"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -9394,13 +9134,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;-48.74031650397552,-77.79411802037211%",
-										"0;45.79439985592967,62.83371070876219%"
+										"0;-24.88064114078543,-59.18059251082523%",
+										"0;42.33786482176038,80.60804841991683%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;141.07245640720765"
+									"value": "0;126.28526712513894"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -9445,13 +9185,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;55.25897868010941,0%",
-										"0;-38.205030869677444,0%"
+										"0;33.119177807951985,0%",
+										"0;-36.66188857393354,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;141.0724564072077"
+									"value": "0;126.28526712513882"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -9496,13 +9236,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;55.25897868010941,0%",
-										"0;-38.205030869677444,0%"
+										"0;33.119177807951985,0%",
+										"0;-36.66188857393354,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;141.0724564072077"
+									"value": "0;126.28526712513882"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -9547,13 +9287,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;55.25897868010941,0%",
-										"0;-38.205030869677444,0%"
+										"0;33.119177807951985,0%",
+										"0;-36.66188857393354,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;141.0724564072077"
+									"value": "0;126.28526712513882"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -9598,13 +9338,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;58.40066421554752,0%",
-										"0;-34.31532496865884,0%"
+										"0;37.1495802289478,0%",
+										"0;-33.70285894839225,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;141.0724564072077"
+									"value": "0;126.28526712513882"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -9649,13 +9389,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;57.14399000137229,0%",
-										"0;-35.871207329066294,0%"
+										"0;35.537419260549484,0%",
+										"0;-34.88647079860874,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;141.0724564072077"
+									"value": "0;126.28526712513882"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -9700,13 +9440,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;54.63064157302176,0%",
-										"0;-38.98297204988114,0%"
+										"0;32.3130973237528,0%",
+										"0;-37.253694499041785,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;141.0724564072077"
+									"value": "0;126.28526712513882"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -9751,13 +9491,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;58.40066421554752,0%",
-										"0;-34.31532496865884,0%"
+										"0;37.1495802289478,0%",
+										"0;-33.70285894839225,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;141.0724564072077"
+									"value": "0;126.28526712513882"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -9802,13 +9542,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;58.40066421554752,0%",
-										"0;-34.31532496865884,0%"
+										"0;37.1495802289478,0%",
+										"0;-33.70285894839225,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;141.0724564072077"
+									"value": "0;126.28526712513882"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -9853,13 +9593,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;55.25897868010941,0%",
-										"0;-38.205030869677444,0%"
+										"0;33.119177807951985,0%",
+										"0;-36.66188857393354,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;141.0724564072077"
+									"value": "0;126.28526712513882"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -9904,13 +9644,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;55.25897868010941,0%",
-										"0;-38.205030869677444,0%"
+										"0;33.119177807951985,0%",
+										"0;-36.66188857393354,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;141.0724564072077"
+									"value": "0;126.28526712513882"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -9955,13 +9695,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;58.40066421554752,0%",
-										"0;-34.31532496865884,0%"
+										"0;37.1495802289478,0%",
+										"0;-33.70285894839225,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;141.0724564072077"
+									"value": "0;126.28526712513882"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -10007,13 +9747,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;57.14399000137229,0%",
-										"0;-35.871207329066294,0%"
+										"0;35.537419260549484,0%",
+										"0;-34.88647079860874,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;141.0724564072077"
+									"value": "0;126.28526712513882"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -10059,13 +9799,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;54.63064157302176,0%",
-										"0;-38.98297204988114,0%"
+										"0;32.3130973237528,0%",
+										"0;-37.253694499041785,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;141.0724564072077"
+									"value": "0;126.28526712513882"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -10110,13 +9850,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;58.40066421554752,0%",
-										"0;-34.31532496865884,0%"
+										"0;37.1495802289478,0%",
+										"0;-33.70285894839225,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;141.0724564072077"
+									"value": "0;126.28526712513882"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -10161,13 +9901,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;54.63064157302176,0%",
-										"0;-38.98297204988114,0%"
+										"0;32.3130973237528,0%",
+										"0;-37.253694499041785,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;141.0724564072077"
+									"value": "0;126.28526712513882"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -10212,13 +9952,13 @@
 								"position": {
 									"type": "list<double>",
 									"value": [
-										"0;58.40066421554752,0%",
-										"0;-34.31532496865884,0%"
+										"0;37.1495802289478,0%",
+										"0;-33.70285894839225,0%"
 									]
 								},
 								"orientation": {
 									"type": "double",
-									"value": "0;141.0724564072077"
+									"value": "0;126.28526712513882"
 								},
 								"scale": {
 									"type": "list<double>",
@@ -10243,13 +9983,13 @@
 				},
 				"$asuri": {
 					"type": "string",
-					"value": "/Formalisms/__Transformations__/Transformation/MoTif/fail/9.instance"
+					"value": "/Formalisms/__Transformations__/Transformation/MoTif/fail/21.instance"
 				},
 				"$segments": {
 					"type": "map<string,list<string>>",
 					"value": {
-						"/Formalisms/__Transformations__/Transformation/MoTif.defaultIcons/FRuleIcon/4.instance--/Formalisms/__Transformations__/Transformation/MoTif.defaultIcons/failLink/9.instance": "M489,384L436.8827068553287,426.09473677069604",
-						"/Formalisms/__Transformations__/Transformation/MoTif.defaultIcons/failLink/9.instance--/Formalisms/__Transformations__/Transformation/MoTif.defaultIcons/EndSuccessIcon/1.instance": "M436.8830596161367,426.094451848505L385.00070481591507,467.9994307256071"
+						"/Formalisms/__Transformations__/Transformation/MoTif.defaultIcons/FRuleIcon/16.instance--/Formalisms/__Transformations__/Transformation/MoTif.defaultIcons/failLink/21.instance": "M491,390L461.9112246130439,429.6209181994748",
+						"/Formalisms/__Transformations__/Transformation/MoTif.defaultIcons/failLink/21.instance--/Formalisms/__Transformations__/Transformation/MoTif.defaultIcons/EndSuccessIcon/1.instance": "M461.95570284746515,429.56033577672855L433.00018105126264,468.9997533956939"
 					}
 				},
 				"$type": "/Formalisms/__Transformations__/Transformation/MoTif.defaultIcons/failLink"
@@ -10276,49 +10016,13 @@
 				"position": {
 					"type": "list<int>",
 					"value": [
-						372,
-						452
+						417,
+						454
 					]
 				},
 				"$type": "/Formalisms/__Transformations__/Transformation/MoTif/EndSuccess"
 			},
-			"2": {
-				"position": {
-					"type": "list<int>",
-					"value": [
-						514,
-						446
-					]
-				},
-				"$type": "/Formalisms/__Transformations__/Transformation/MoTif/EndFail"
-			},
 			"3": {
-				"maxIterations": {
-					"type": "int",
-					"value": 1000
-				},
-				"rule": {
-					"type": "file<R_.*\\.model>",
-					"value": "/Formalisms/Railway/OperationalSemantics/R_SetLightsRed.model"
-				},
-				"name": {
-					"type": "string",
-					"value": "SetLightsRed"
-				},
-				"alias": {
-					"type": "string",
-					"value": ""
-				},
-				"position": {
-					"type": "list<int>",
-					"value": [
-						338,
-						213
-					]
-				},
-				"$type": "/Formalisms/__Transformations__/Transformation/MoTif/FRule"
-			},
-			"4": {
 				"maxIterations": {
 					"type": "int",
 					"value": 1000
@@ -10338,8 +10042,8 @@
 				"position": {
 					"type": "list<int>",
 					"value": [
-						335,
-						312
+						338,
+						213
 					]
 				},
 				"$type": "/Formalisms/__Transformations__/Transformation/MoTif/FRule"
@@ -10347,16 +10051,42 @@
 			"5": {
 				"$type": "/Formalisms/__Transformations__/Transformation/MoTif/initial"
 			},
-			"6": {
+			"16": {
+				"maxIterations": {
+					"type": "int",
+					"value": 1000
+				},
+				"rule": {
+					"type": "file<R_.*\\.model>",
+					"value": "/Formalisms/Railway/OperationalSemantics/R_SetLightsRed.model"
+				},
+				"name": {
+					"type": "string",
+					"value": "SetLightsRed"
+				},
+				"alias": {
+					"type": "string",
+					"value": ""
+				},
+				"position": {
+					"type": "list<int>",
+					"value": [
+						334,
+						316
+					]
+				},
+				"$type": "/Formalisms/__Transformations__/Transformation/MoTif/FRule"
+			},
+			"17": {
 				"$type": "/Formalisms/__Transformations__/Transformation/MoTif/success"
 			},
-			"7": {
+			"18": {
 				"$type": "/Formalisms/__Transformations__/Transformation/MoTif/fail"
 			},
-			"8": {
+			"20": {
 				"$type": "/Formalisms/__Transformations__/Transformation/MoTif/success"
 			},
-			"9": {
+			"21": {
 				"$type": "/Formalisms/__Transformations__/Transformation/MoTif/fail"
 			}
 		},
@@ -10371,34 +10101,34 @@
 			},
 			{
 				"src": "3",
-				"dest": "6"
+				"dest": "17"
 			},
 			{
-				"src": "6",
-				"dest": "4"
+				"src": "17",
+				"dest": "16"
 			},
 			{
 				"src": "3",
-				"dest": "7"
+				"dest": "18"
 			},
 			{
-				"src": "7",
-				"dest": "4"
+				"src": "18",
+				"dest": "16"
 			},
 			{
-				"src": "4",
-				"dest": "8"
+				"src": "16",
+				"dest": "20"
 			},
 			{
-				"src": "8",
+				"src": "20",
 				"dest": "1"
 			},
 			{
-				"src": "4",
-				"dest": "9"
+				"src": "16",
+				"dest": "21"
 			},
 			{
-				"src": "9",
+				"src": "21",
 				"dest": "1"
 			}
 		],
