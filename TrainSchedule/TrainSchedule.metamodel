@@ -19,7 +19,7 @@
 		"Waypoint": [
 			{
 				"name": "direction",
-				"type": "ENUM(STRAIGHT, TURN)",
+				"type": "ENUM(STRAIGHT,TURN)",
 				"default": "STRAIGHT"
 			}
 		],

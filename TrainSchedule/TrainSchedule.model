@@ -1520,7 +1520,7 @@
 							"99": {
 								"textContent": {
 									"type": "string",
-									"value": "+ direction : ENUM(STRAIGHT, TURN) = STRAIGHT"
+									"value": "+ direction : ENUM(STRAIGHT,TURN) = STRAIGHT"
 								},
 								"style": {
 									"type": "map<string,string>",
@@ -2836,7 +2836,7 @@
 					"value": [
 						{
 							"name": "direction",
-							"type": "ENUM(STRAIGHT, TURN)",
+							"type": "ENUM(STRAIGHT,TURN)",
 							"default": "STRAIGHT"
 						}
 					]
