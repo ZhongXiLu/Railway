@@ -1,234 +1,7 @@
 {
 	"csm": {
 		"nodes": {
-			"146": {
-				"typename": {
-					"type": "string",
-					"value": "__pBasicTrackIcon"
-				},
-				"position": {
-					"type": "list<double>",
-					"value": [
-						331,
-						486
-					]
-				},
-				"orientation": {
-					"type": "double",
-					"value": 0
-				},
-				"scale": {
-					"type": "list<double>",
-					"value": [
-						1.1639344262295082,
-						1
-					]
-				},
-				"mapper": {
-					"type": "code",
-					"value": ""
-				},
-				"parser": {
-					"type": "code",
-					"value": ""
-				},
-				"$contents": {
-					"type": "map<string,*>",
-					"value": {
-						"nodes": {
-							"text": {
-								"textContent": {
-									"type": "string",
-									"value": "__pBasicTrackIcon"
-								},
-								"style": {
-									"type": "map<string,string>",
-									"value": {
-										"stroke": "#000000",
-										"stroke-dasharray": "",
-										"fill": "#000000",
-										"fill-opacity": "1",
-										"font-size": "13px"
-									}
-								},
-								"mapper": {
-									"type": "code",
-									"value": ""
-								},
-								"parser": {
-									"type": "code",
-									"value": ""
-								},
-								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Text",
-								"position": {
-									"type": "list<double>",
-									"value": [
-										10,
-										76
-									]
-								},
-								"orientation": {
-									"type": "double",
-									"value": 0
-								},
-								"scale": {
-									"type": "list<double>",
-									"value": [
-										1,
-										1
-									]
-								}
-							},
-							"rect": {
-								"width": {
-									"type": "double",
-									"value": 75
-								},
-								"height": {
-									"type": "double",
-									"value": 75
-								},
-								"cornerRadius": {
-									"type": "double",
-									"value": 15
-								},
-								"style": {
-									"type": "map<string,string>",
-									"value": {
-										"stroke": "#000000",
-										"fill": "#ffffff",
-										"fill-opacity": 0.75
-									}
-								},
-								"mapper": {
-									"type": "code",
-									"value": ""
-								},
-								"parser": {
-									"type": "code",
-									"value": ""
-								},
-								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Rectangle",
-								"position": {
-									"type": "list<double>",
-									"value": [
-										0,
-										0
-									]
-								},
-								"orientation": {
-									"type": "double",
-									"value": 0
-								},
-								"scale": {
-									"type": "list<double>",
-									"value": [
-										1,
-										1
-									]
-								}
-							},
-							"textBelowRect": {
-								"distance": {
-									"type": "double",
-									"value": 10
-								},
-								"alignment": {
-									"type": "ENUM(\"right\",\"left\",\"center\")",
-									"value": "center"
-								},
-								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Below",
-								"position": {
-									"type": "list<double>",
-									"value": [
-										5,
-										38
-									]
-								},
-								"orientation": {
-									"type": "double",
-									"value": 0
-								},
-								"scale": {
-									"type": "list<double>",
-									"value": [
-										1,
-										1
-									]
-								},
-								"link-style": {
-									"type": "map<string,string>",
-									"value": {
-										"stroke": "#00ff00",
-										"stroke-dasharray": "",
-										"stroke-opacity": 1,
-										"arrow-start": "none",
-										"arrow-end": "classic-wide-long"
-									}
-								}
-							},
-							"__pLabelText": {
-								"position": {
-									"type": "list<double>",
-									"value": [
-										0,
-										0
-									]
-								},
-								"orientation": {
-									"type": "double",
-									"value": 0
-								},
-								"scale": {
-									"type": "list<double>",
-									"value": [
-										1,
-										1
-									]
-								},
-								"textContent": {
-									"type": "string",
-									"value": "0"
-								},
-								"style": {
-									"type": "map<string,string>",
-									"value": {
-										"stroke": "#6000ff",
-										"fill": "#6000ff",
-										"font-size": "15px",
-										"opacity": "1"
-									}
-								},
-								"mapper": {
-									"type": "code",
-									"value": "({'textContent':getAttr('__pLabel')})"
-								},
-								"parser": {
-									"type": "code",
-									"value": "({'__pLabel':getAttr('textContent')})"
-								},
-								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Text"
-							}
-						},
-						"edges": [
-							{
-								"src": "text",
-								"dest": "textBelowRect"
-							},
-							{
-								"src": "textBelowRect",
-								"dest": "rect"
-							}
-						]
-					}
-				},
-				"$asuri": {
-					"type": "string",
-					"value": "/Formalisms/Railway/Railway.pattern/__pBasicTrack/146.instance"
-				},
-				"$type": "/Formalisms/Railway/Railway.defaultIcons.pattern/__pBasicTrackIcon"
-			},
-			"147": {
+			"3": {
 				"typename": {
 					"type": "string",
 					"value": "LHSIcon"
@@ -236,8 +9,8 @@
 				"position": {
 					"type": "list<double>",
 					"value": [
-						319,
-						256
+						291,
+						246
 					]
 				},
 				"orientation": {
@@ -314,11 +87,11 @@
 				},
 				"$asuri": {
 					"type": "string",
-					"value": "/Formalisms/__Transformations__/TransformationRule/TransformationRule/LHS/147.instance"
+					"value": "/Formalisms/__Transformations__/TransformationRule/TransformationRule/LHS/3.instance"
 				},
 				"$type": "/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons/LHSIcon"
 			},
-			"148": {
+			"4": {
 				"typename": {
 					"type": "string",
 					"value": "RHSIcon"
@@ -326,8 +99,8 @@
 				"position": {
 					"type": "list<double>",
 					"value": [
-						731,
-						255
+						692,
+						246
 					]
 				},
 				"orientation": {
@@ -404,20 +177,20 @@
 				},
 				"$asuri": {
 					"type": "string",
-					"value": "/Formalisms/__Transformations__/TransformationRule/TransformationRule/RHS/148.instance"
+					"value": "/Formalisms/__Transformations__/TransformationRule/TransformationRule/RHS/4.instance"
 				},
 				"$type": "/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons/RHSIcon"
 			},
-			"152": {
+			"31": {
 				"typename": {
 					"type": "string",
-					"value": "__pBasicTrackIcon"
+					"value": "__pTrackIcon"
 				},
 				"position": {
 					"type": "list<double>",
 					"value": [
-						844,
-						476
+						836,
+						446
 					]
 				},
 				"orientation": {
@@ -446,7 +219,7 @@
 							"text": {
 								"textContent": {
 									"type": "string",
-									"value": "__pBasicTrackIcon"
+									"value": "__pTrackIcon"
 								},
 								"style": {
 									"type": "map<string,string>",
@@ -631,156 +404,20 @@
 				},
 				"$asuri": {
 					"type": "string",
-					"value": "/Formalisms/Railway/Railway.pattern/__pBasicTrack/152.instance"
+					"value": "/Formalisms/Railway/Railway.pattern/__pTrack/31.instance"
 				},
-				"$type": "/Formalisms/Railway/Railway.defaultIcons.pattern/__pBasicTrackIcon"
+				"$type": "/Formalisms/Railway/Railway.defaultIcons.pattern/__pTrackIcon"
 			},
-			"153": {
-				"link-style": {
-					"type": "map<string,string>",
-					"value": {
-						"stroke": "#000000",
-						"stroke-dasharray": "",
-						"stroke-opacity": 0,
-						"stroke-width": 0
-					}
-				},
-				"arrowHead": {
-					"type": "ENUM(circle-black,circle-black-large,circle-white,circle-white-large,diamond-black,diamond-black-large,diamond-white,diamond-white-large,triangle-black,triangle-black-large,triangle-white,triangle-white-large,arrow-black,arrow-black-large,arrow-empty,arrow-empty-large,custom)",
-					"value": "custom"
-				},
-				"arrowTail": {
-					"type": "ENUM(circle-black,circle-black-large,circle-white,circle-white-large,diamond-black,diamond-black-large,diamond-white,diamond-white-large,triangle-black,triangle-black-large,triangle-white,triangle-white-large,arrow-black,arrow-black-large,arrow-empty,arrow-empty-large,custom)",
-					"value": "arrow-black"
-				},
+			"32": {
 				"typename": {
 					"type": "string",
-					"value": "PatternContentsLink"
+					"value": "__pTrackIcon"
 				},
 				"position": {
 					"type": "list<double>",
 					"value": [
-						818.0820754608765,
-						388.37570753059526
-					]
-				},
-				"orientation": {
-					"type": "double",
-					"value": 0
-				},
-				"scale": {
-					"type": "list<double>",
-					"value": [
-						1,
-						1
-					]
-				},
-				"mapper": {
-					"type": "code",
-					"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
-				},
-				"parser": {
-					"type": "code",
-					"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
-				},
-				"$contents": {
-					"type": "map<string,*>",
-					"value": {
-						"nodes": {},
-						"edges": []
-					}
-				},
-				"$asuri": {
-					"type": "string",
-					"value": "/Formalisms/__Transformations__/TransformationRule/TransformationRule/PatternContents/153.instance"
-				},
-				"$segments": {
-					"type": "map<string,list<string>>",
-					"value": {
-						"/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons/RHSIcon/148.instance--/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons/PatternContentsLink/153.instance": "M731,255L818.0820754608766,388.37570753059526",
-						"/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons/PatternContentsLink/153.instance--/Formalisms/Railway/Railway.defaultIcons.pattern/__pBasicTrackIcon/152.instance": "M818.040882875131,388.3126165874851L904.9995357140458,521.4992888953634"
-					}
-				},
-				"$type": "/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons/PatternContentsLink"
-			},
-			"154": {
-				"link-style": {
-					"type": "map<string,string>",
-					"value": {
-						"stroke": "#000000",
-						"stroke-dasharray": "",
-						"stroke-opacity": 0,
-						"stroke-width": 0
-					}
-				},
-				"arrowHead": {
-					"type": "ENUM(circle-black,circle-black-large,circle-white,circle-white-large,diamond-black,diamond-black-large,diamond-white,diamond-white-large,triangle-black,triangle-black-large,triangle-white,triangle-white-large,arrow-black,arrow-black-large,arrow-empty,arrow-empty-large,custom)",
-					"value": "custom"
-				},
-				"arrowTail": {
-					"type": "ENUM(circle-black,circle-black-large,circle-white,circle-white-large,diamond-black,diamond-black-large,diamond-white,diamond-white-large,triangle-black,triangle-black-large,triangle-white,triangle-white-large,arrow-black,arrow-black-large,arrow-empty,arrow-empty-large,custom)",
-					"value": "arrow-black"
-				},
-				"typename": {
-					"type": "string",
-					"value": "PatternContentsLink"
-				},
-				"position": {
-					"type": "list<double>",
-					"value": [
-						361.5,
-						393.75
-					]
-				},
-				"orientation": {
-					"type": "double",
-					"value": 0
-				},
-				"scale": {
-					"type": "list<double>",
-					"value": [
-						1,
-						1
-					]
-				},
-				"mapper": {
-					"type": "code",
-					"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
-				},
-				"parser": {
-					"type": "code",
-					"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
-				},
-				"$contents": {
-					"type": "map<string,*>",
-					"value": {
-						"nodes": {},
-						"edges": []
-					}
-				},
-				"$asuri": {
-					"type": "string",
-					"value": "/Formalisms/__Transformations__/TransformationRule/TransformationRule/PatternContents/154.instance"
-				},
-				"$segments": {
-					"type": "map<string,list<string>>",
-					"value": {
-						"/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons/LHSIcon/147.instance--/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons/PatternContentsLink/154.instance": "M320,256L361.5,393.75",
-						"/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons/PatternContentsLink/154.instance--/Formalisms/Railway/Railway.defaultIcons.pattern/__pBasicTrackIcon/146.instance": "M361.5215992051452,393.82169374719876L411.9997281212193,531.4990975589874"
-					}
-				},
-				"$type": "/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons/PatternContentsLink"
-			},
-			"156": {
-				"typename": {
-					"type": "string",
-					"value": "__pBasicTrackIcon"
-				},
-				"position": {
-					"type": "list<double>",
-					"value": [
-						608,
-						491
+						321,
+						453
 					]
 				},
 				"orientation": {
@@ -809,7 +446,370 @@
 							"text": {
 								"textContent": {
 									"type": "string",
-									"value": "__pBasicTrackIcon"
+									"value": "__pTrackIcon"
+								},
+								"style": {
+									"type": "map<string,string>",
+									"value": {
+										"stroke": "#000000",
+										"stroke-dasharray": "",
+										"fill": "#000000",
+										"fill-opacity": "1",
+										"font-size": "13px"
+									}
+								},
+								"mapper": {
+									"type": "code",
+									"value": ""
+								},
+								"parser": {
+									"type": "code",
+									"value": ""
+								},
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Text",
+								"position": {
+									"type": "list<double>",
+									"value": [
+										10,
+										76
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": 0
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								}
+							},
+							"rect": {
+								"width": {
+									"type": "double",
+									"value": 75
+								},
+								"height": {
+									"type": "double",
+									"value": 75
+								},
+								"cornerRadius": {
+									"type": "double",
+									"value": 15
+								},
+								"style": {
+									"type": "map<string,string>",
+									"value": {
+										"stroke": "#000000",
+										"fill": "#ffffff",
+										"fill-opacity": 0.75
+									}
+								},
+								"mapper": {
+									"type": "code",
+									"value": ""
+								},
+								"parser": {
+									"type": "code",
+									"value": ""
+								},
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Rectangle",
+								"position": {
+									"type": "list<double>",
+									"value": [
+										0,
+										0
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": 0
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								}
+							},
+							"textBelowRect": {
+								"distance": {
+									"type": "double",
+									"value": 10
+								},
+								"alignment": {
+									"type": "ENUM(\"right\",\"left\",\"center\")",
+									"value": "center"
+								},
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Below",
+								"position": {
+									"type": "list<double>",
+									"value": [
+										5,
+										38
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": 0
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								},
+								"link-style": {
+									"type": "map<string,string>",
+									"value": {
+										"stroke": "#00ff00",
+										"stroke-dasharray": "",
+										"stroke-opacity": 1,
+										"arrow-start": "none",
+										"arrow-end": "classic-wide-long"
+									}
+								}
+							},
+							"__pLabelText": {
+								"position": {
+									"type": "list<double>",
+									"value": [
+										0,
+										0
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": 0
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								},
+								"textContent": {
+									"type": "string",
+									"value": "0"
+								},
+								"style": {
+									"type": "map<string,string>",
+									"value": {
+										"stroke": "#6000ff",
+										"fill": "#6000ff",
+										"font-size": "15px",
+										"opacity": "1"
+									}
+								},
+								"mapper": {
+									"type": "code",
+									"value": "({'textContent':getAttr('__pLabel')})"
+								},
+								"parser": {
+									"type": "code",
+									"value": "({'__pLabel':getAttr('textContent')})"
+								},
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Text"
+							}
+						},
+						"edges": [
+							{
+								"src": "text",
+								"dest": "textBelowRect"
+							},
+							{
+								"src": "textBelowRect",
+								"dest": "rect"
+							}
+						]
+					}
+				},
+				"$asuri": {
+					"type": "string",
+					"value": "/Formalisms/Railway/Railway.pattern/__pTrack/32.instance"
+				},
+				"$type": "/Formalisms/Railway/Railway.defaultIcons.pattern/__pTrackIcon"
+			},
+			"33": {
+				"link-style": {
+					"type": "map<string,string>",
+					"value": {
+						"stroke": "#000000",
+						"stroke-dasharray": "",
+						"stroke-opacity": 0,
+						"stroke-width": 0
+					}
+				},
+				"arrowHead": {
+					"type": "ENUM(circle-black,circle-black-large,circle-white,circle-white-large,diamond-black,diamond-black-large,diamond-white,diamond-white-large,triangle-black,triangle-black-large,triangle-white,triangle-white-large,arrow-black,arrow-black-large,arrow-empty,arrow-empty-large,custom)",
+					"value": "custom"
+				},
+				"arrowTail": {
+					"type": "ENUM(circle-black,circle-black-large,circle-white,circle-white-large,diamond-black,diamond-black-large,diamond-white,diamond-white-large,triangle-black,triangle-black-large,triangle-white,triangle-white-large,arrow-black,arrow-black-large,arrow-empty,arrow-empty-large,custom)",
+					"value": "arrow-black"
+				},
+				"typename": {
+					"type": "string",
+					"value": "PatternContentsLink"
+				},
+				"position": {
+					"type": "list<double>",
+					"value": [
+						328.79208014449813,
+						372.39456104062293
+					]
+				},
+				"orientation": {
+					"type": "double",
+					"value": 0
+				},
+				"scale": {
+					"type": "list<double>",
+					"value": [
+						1,
+						1
+					]
+				},
+				"mapper": {
+					"type": "code",
+					"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+				},
+				"parser": {
+					"type": "code",
+					"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+				},
+				"$contents": {
+					"type": "map<string,*>",
+					"value": {
+						"nodes": {},
+						"edges": []
+					}
+				},
+				"$asuri": {
+					"type": "string",
+					"value": "/Formalisms/__Transformations__/TransformationRule/TransformationRule/PatternContents/33.instance"
+				},
+				"$segments": {
+					"type": "map<string,list<string>>",
+					"value": {
+						"/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons/LHSIcon/3.instance--/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons/PatternContentsLink/33.instance": "M292,246L328.79208014449813,372.39456104062293",
+						"/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons/PatternContentsLink/33.instance--/Formalisms/Railway/Railway.defaultIcons.pattern/__pTrackIcon/32.instance": "M328.79201590002765,372.3943403368296L365.49987157637304,498.49955881679165"
+					}
+				},
+				"$type": "/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons/PatternContentsLink"
+			},
+			"34": {
+				"link-style": {
+					"type": "map<string,string>",
+					"value": {
+						"stroke": "#000000",
+						"stroke-dasharray": "",
+						"stroke-opacity": 0,
+						"stroke-width": 0
+					}
+				},
+				"arrowHead": {
+					"type": "ENUM(circle-black,circle-black-large,circle-white,circle-white-large,diamond-black,diamond-black-large,diamond-white,diamond-white-large,triangle-black,triangle-black-large,triangle-white,triangle-white-large,arrow-black,arrow-black-large,arrow-empty,arrow-empty-large,custom)",
+					"value": "custom"
+				},
+				"arrowTail": {
+					"type": "ENUM(circle-black,circle-black-large,circle-white,circle-white-large,diamond-black,diamond-black-large,diamond-white,diamond-white-large,triangle-black,triangle-black-large,triangle-white,triangle-white-large,arrow-black,arrow-black-large,arrow-empty,arrow-empty-large,custom)",
+					"value": "arrow-black"
+				},
+				"typename": {
+					"type": "string",
+					"value": "PatternContentsLink"
+				},
+				"position": {
+					"type": "list<double>",
+					"value": [
+						786.25,
+						368.75
+					]
+				},
+				"orientation": {
+					"type": "double",
+					"value": 0
+				},
+				"scale": {
+					"type": "list<double>",
+					"value": [
+						1,
+						1
+					]
+				},
+				"mapper": {
+					"type": "code",
+					"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+				},
+				"parser": {
+					"type": "code",
+					"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+				},
+				"$contents": {
+					"type": "map<string,*>",
+					"value": {
+						"nodes": {},
+						"edges": []
+					}
+				},
+				"$asuri": {
+					"type": "string",
+					"value": "/Formalisms/__Transformations__/TransformationRule/TransformationRule/PatternContents/34.instance"
+				},
+				"$segments": {
+					"type": "map<string,list<string>>",
+					"value": {
+						"/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons/RHSIcon/4.instance--/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons/PatternContentsLink/34.instance": "M692,246L786.25,368.75",
+						"/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons/PatternContentsLink/34.instance--/Formalisms/Railway/Railway.defaultIcons.pattern/__pTrackIcon/31.instance": "M786.2955747462769,368.8093559692889L880.4994673070217,491.49930622744745"
+					}
+				},
+				"$type": "/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons/PatternContentsLink"
+			},
+			"35": {
+				"typename": {
+					"type": "string",
+					"value": "__pJoinIcon"
+				},
+				"position": {
+					"type": "list<double>",
+					"value": [
+						1048,
+						441
+					]
+				},
+				"orientation": {
+					"type": "double",
+					"value": 0
+				},
+				"scale": {
+					"type": "list<double>",
+					"value": [
+						1,
+						1
+					]
+				},
+				"mapper": {
+					"type": "code",
+					"value": ""
+				},
+				"parser": {
+					"type": "code",
+					"value": ""
+				},
+				"$contents": {
+					"type": "map<string,*>",
+					"value": {
+						"nodes": {
+							"text": {
+								"textContent": {
+									"type": "string",
+									"value": "__pJoinIcon"
 								},
 								"style": {
 									"type": "map<string,string>",
@@ -994,20 +994,20 @@
 				},
 				"$asuri": {
 					"type": "string",
-					"value": "/Formalisms/Railway/Railway.pattern/__pBasicTrack/156.instance"
+					"value": "/Formalisms/Railway/Railway.pattern/__pJoin/35.instance"
 				},
-				"$type": "/Formalisms/Railway/Railway.defaultIcons.pattern/__pBasicTrackIcon"
+				"$type": "/Formalisms/Railway/Railway.defaultIcons.pattern/__pJoinIcon"
 			},
-			"157": {
+			"36": {
 				"typename": {
 					"type": "string",
-					"value": "__pBasicTrackIcon"
+					"value": "__pJoinIcon"
 				},
 				"position": {
 					"type": "list<double>",
 					"value": [
-						1044,
-						473
+						579,
+						451
 					]
 				},
 				"orientation": {
@@ -1036,7 +1036,7 @@
 							"text": {
 								"textContent": {
 									"type": "string",
-									"value": "__pBasicTrackIcon"
+									"value": "__pJoinIcon"
 								},
 								"style": {
 									"type": "map<string,string>",
@@ -1221,11 +1221,11 @@
 				},
 				"$asuri": {
 					"type": "string",
-					"value": "/Formalisms/Railway/Railway.pattern/__pBasicTrack/157.instance"
+					"value": "/Formalisms/Railway/Railway.pattern/__pJoin/36.instance"
 				},
-				"$type": "/Formalisms/Railway/Railway.defaultIcons.pattern/__pBasicTrackIcon"
+				"$type": "/Formalisms/Railway/Railway.defaultIcons.pattern/__pJoinIcon"
 			},
-			"158": {
+			"37": {
 				"link-style": {
 					"type": "map<string,string>",
 					"value": {
@@ -1250,8 +1250,8 @@
 				"position": {
 					"type": "list<double>",
 					"value": [
-						924,
-						390.75
+						455.61934305627346,
+						371.34142335044794
 					]
 				},
 				"orientation": {
@@ -1282,18 +1282,18 @@
 				},
 				"$asuri": {
 					"type": "string",
-					"value": "/Formalisms/__Transformations__/TransformationRule/TransformationRule/PatternContents/158.instance"
+					"value": "/Formalisms/__Transformations__/TransformationRule/TransformationRule/PatternContents/37.instance"
 				},
 				"$segments": {
 					"type": "map<string,list<string>>",
 					"value": {
-						"/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons/RHSIcon/148.instance--/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons/PatternContentsLink/158.instance": "M731,255L923.9999999999999,390.75",
-						"/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons/PatternContentsLink/158.instance--/Formalisms/Railway/Railway.defaultIcons.pattern/__pBasicTrackIcon/157.instance": "M924.0613083685915,390.79312233697567L1104.999530403554,518.4996697009453"
+						"/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons/LHSIcon/3.instance--/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons/PatternContentsLink/37.instance": "M292,246L455.61934305627346,371.34142335044794",
+						"/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons/PatternContentsLink/37.instance--/Formalisms/Railway/Railway.defaultIcons.pattern/__pJoinIcon/36.instance": "M455.5594973082259,371.29557821318224L618.9994775839801,496.4995998005719"
 					}
 				},
 				"$type": "/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons/PatternContentsLink"
 			},
-			"159": {
+			"38": {
 				"link-style": {
 					"type": "map<string,string>",
 					"value": {
@@ -1318,8 +1318,8 @@
 				"position": {
 					"type": "list<double>",
 					"value": [
-						494.5,
-						396.25
+						890,
+						366.25
 					]
 				},
 				"orientation": {
@@ -1350,394 +1350,18 @@
 				},
 				"$asuri": {
 					"type": "string",
-					"value": "/Formalisms/__Transformations__/TransformationRule/TransformationRule/PatternContents/159.instance"
+					"value": "/Formalisms/__Transformations__/TransformationRule/TransformationRule/PatternContents/38.instance"
 				},
 				"$segments": {
 					"type": "map<string,list<string>>",
 					"value": {
-						"/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons/LHSIcon/147.instance--/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons/PatternContentsLink/159.instance": "M320,256L494.5,396.25",
-						"/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons/PatternContentsLink/159.instance--/Formalisms/Railway/Railway.defaultIcons.pattern/__pBasicTrackIcon/156.instance": "M494.55839984588465,396.29693741195024L668.9995286106287,536.4996211326111"
+						"/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons/RHSIcon/4.instance--/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons/PatternContentsLink/38.instance": "M692,246L890,366.25",
+						"/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons/PatternContentsLink/38.instance--/Formalisms/Railway/Railway.defaultIcons.pattern/__pJoinIcon/35.instance": "M890.0639806118786,366.2888569120122L1087.9995014493034,486.49969721857957"
 					}
 				},
 				"$type": "/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons/PatternContentsLink"
 			},
-			"160": {
-				"typename": {
-					"type": "string",
-					"value": "TrainIcon"
-				},
-				"position": {
-					"type": "list<double>",
-					"value": [
-						1050,
-						493
-					]
-				},
-				"orientation": {
-					"type": "double",
-					"value": 0
-				},
-				"scale": {
-					"type": "list<double>",
-					"value": [
-						1,
-						1
-					]
-				},
-				"mapper": {
-					"type": "code",
-					"value": "/* mapping and parsing code is disabled by default because pattern attribute values are code */"
-				},
-				"parser": {
-					"type": "code",
-					"value": "/* mapping and parsing code is disabled by default because pattern attribute values are code */"
-				},
-				"$contents": {
-					"type": "map<string,*>",
-					"value": {
-						"nodes": {
-							"25": {
-								"src": {
-									"type": "string",
-									"value": "/Formalisms/Railway/Icons/train.png"
-								},
-								"width": {
-									"type": "double",
-									"value": 60
-								},
-								"height": {
-									"type": "double",
-									"value": 25
-								},
-								"style": {
-									"type": "map<string,string>",
-									"value": {
-										"stroke": "#000000",
-										"stroke-dasharray": "",
-										"fill": "#ffffff",
-										"fill-opacity": 1,
-										"font-size": "20px",
-										"stroke-width": 1,
-										"arrow-start": "none",
-										"arrow-end": "none"
-									}
-								},
-								"mapper": {
-									"type": "code",
-									"value": "/* mapping and parsing code is disabled by default because pattern attribute values are code */"
-								},
-								"parser": {
-									"type": "code",
-									"value": "/* mapping and parsing code is disabled by default because pattern attribute values are code */"
-								},
-								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Image",
-								"position": {
-									"type": "list<double>",
-									"value": [
-										1,
-										4
-									]
-								},
-								"orientation": {
-									"type": "double",
-									"value": 0
-								},
-								"scale": {
-									"type": "list<double>",
-									"value": [
-										1,
-										1
-									]
-								}
-							},
-							"34": {
-								"textContent": {
-									"type": "string",
-									"value": "T"
-								},
-								"style": {
-									"type": "map<string,string>",
-									"value": {
-										"stroke": "#000000",
-										"stroke-dasharray": "",
-										"fill": "#000000",
-										"fill-opacity": 1,
-										"font-size": "20px",
-										"font-family": "Calibri",
-										"stroke-width": 1,
-										"arrow-start": "none",
-										"arrow-end": "none"
-									}
-								},
-								"mapper": {
-									"type": "code",
-									"value": "/* mapping and parsing code is disabled by default because pattern attribute values are code */"
-								},
-								"parser": {
-									"type": "code",
-									"value": "/* mapping and parsing code is disabled by default because pattern attribute values are code */"
-								},
-								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Text",
-								"position": {
-									"type": "list<double>",
-									"value": [
-										3,
-										5
-									]
-								},
-								"orientation": {
-									"type": "double",
-									"value": 0
-								},
-								"scale": {
-									"type": "list<double>",
-									"value": [
-										1,
-										1
-									]
-								}
-							},
-							"__pLabelText": {
-								"position": {
-									"type": "list<double>",
-									"value": [
-										0,
-										0
-									]
-								},
-								"orientation": {
-									"type": "double",
-									"value": 0
-								},
-								"scale": {
-									"type": "list<double>",
-									"value": [
-										1,
-										1
-									]
-								},
-								"textContent": {
-									"type": "string",
-									"value": "3"
-								},
-								"style": {
-									"type": "map<string,string>",
-									"value": {
-										"stroke": "#6000ff",
-										"fill": "#6000ff",
-										"font-size": "15px",
-										"opacity": "1"
-									}
-								},
-								"mapper": {
-									"type": "code",
-									"value": "({'textContent':getAttr('__pLabel')})"
-								},
-								"parser": {
-									"type": "code",
-									"value": "({'__pLabel':getAttr('textContent')})"
-								},
-								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Text"
-							}
-						},
-						"edges": []
-					}
-				},
-				"$asuri": {
-					"type": "string",
-					"value": "/Formalisms/Railway/Railway.pattern/__pTrain/160.instance"
-				},
-				"$type": "/Formalisms/Railway/Railway.defaultIcons.pattern/__pTrainIcon"
-			},
-			"161": {
-				"typename": {
-					"type": "string",
-					"value": "TrainIcon"
-				},
-				"position": {
-					"type": "list<double>",
-					"value": [
-						345,
-						500
-					]
-				},
-				"orientation": {
-					"type": "double",
-					"value": 0
-				},
-				"scale": {
-					"type": "list<double>",
-					"value": [
-						1,
-						1
-					]
-				},
-				"mapper": {
-					"type": "code",
-					"value": "/* mapping and parsing code is disabled by default because pattern attribute values are code */"
-				},
-				"parser": {
-					"type": "code",
-					"value": "/* mapping and parsing code is disabled by default because pattern attribute values are code */"
-				},
-				"$contents": {
-					"type": "map<string,*>",
-					"value": {
-						"nodes": {
-							"25": {
-								"src": {
-									"type": "string",
-									"value": "/Formalisms/Railway/Icons/train.png"
-								},
-								"width": {
-									"type": "double",
-									"value": 60
-								},
-								"height": {
-									"type": "double",
-									"value": 25
-								},
-								"style": {
-									"type": "map<string,string>",
-									"value": {
-										"stroke": "#000000",
-										"stroke-dasharray": "",
-										"fill": "#ffffff",
-										"fill-opacity": 1,
-										"font-size": "20px",
-										"stroke-width": 1,
-										"arrow-start": "none",
-										"arrow-end": "none"
-									}
-								},
-								"mapper": {
-									"type": "code",
-									"value": "/* mapping and parsing code is disabled by default because pattern attribute values are code */"
-								},
-								"parser": {
-									"type": "code",
-									"value": "/* mapping and parsing code is disabled by default because pattern attribute values are code */"
-								},
-								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Image",
-								"position": {
-									"type": "list<double>",
-									"value": [
-										1,
-										4
-									]
-								},
-								"orientation": {
-									"type": "double",
-									"value": 0
-								},
-								"scale": {
-									"type": "list<double>",
-									"value": [
-										1,
-										1
-									]
-								}
-							},
-							"34": {
-								"textContent": {
-									"type": "string",
-									"value": "T"
-								},
-								"style": {
-									"type": "map<string,string>",
-									"value": {
-										"stroke": "#000000",
-										"stroke-dasharray": "",
-										"fill": "#000000",
-										"fill-opacity": 1,
-										"font-size": "20px",
-										"font-family": "Calibri",
-										"stroke-width": 1,
-										"arrow-start": "none",
-										"arrow-end": "none"
-									}
-								},
-								"mapper": {
-									"type": "code",
-									"value": "/* mapping and parsing code is disabled by default because pattern attribute values are code */"
-								},
-								"parser": {
-									"type": "code",
-									"value": "/* mapping and parsing code is disabled by default because pattern attribute values are code */"
-								},
-								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Text",
-								"position": {
-									"type": "list<double>",
-									"value": [
-										3,
-										5
-									]
-								},
-								"orientation": {
-									"type": "double",
-									"value": 0
-								},
-								"scale": {
-									"type": "list<double>",
-									"value": [
-										1,
-										1
-									]
-								}
-							},
-							"__pLabelText": {
-								"position": {
-									"type": "list<double>",
-									"value": [
-										0,
-										0
-									]
-								},
-								"orientation": {
-									"type": "double",
-									"value": 0
-								},
-								"scale": {
-									"type": "list<double>",
-									"value": [
-										1,
-										1
-									]
-								},
-								"textContent": {
-									"type": "string",
-									"value": "3"
-								},
-								"style": {
-									"type": "map<string,string>",
-									"value": {
-										"stroke": "#6000ff",
-										"fill": "#6000ff",
-										"font-size": "15px",
-										"opacity": "1"
-									}
-								},
-								"mapper": {
-									"type": "code",
-									"value": "({'textContent':getAttr('__pLabel')})"
-								},
-								"parser": {
-									"type": "code",
-									"value": "({'__pLabel':getAttr('textContent')})"
-								},
-								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Text"
-							}
-						},
-						"edges": []
-					}
-				},
-				"$asuri": {
-					"type": "string",
-					"value": "/Formalisms/Railway/Railway.pattern/__pTrain/161.instance"
-				},
-				"$type": "/Formalisms/Railway/Railway.defaultIcons.pattern/__pTrainIcon"
-			},
-			"165": {
+			"39": {
 				"link-style": {
 					"type": "map<string,string>",
 					"value": {
@@ -1757,13 +1381,13 @@
 				},
 				"typename": {
 					"type": "string",
-					"value": "TrainOnTrackLink"
+					"value": "TrackToTrackLink"
 				},
 				"position": {
 					"type": "list<double>",
 					"value": [
-						366.3347218348322,
-						508.876388310979
+						487,
+						494
 					]
 				},
 				"orientation": {
@@ -1837,18 +1461,505 @@
 				},
 				"$asuri": {
 					"type": "string",
-					"value": "/Formalisms/Railway/Railway.pattern/__pTrainOnTrack/165.instance"
+					"value": "/Formalisms/Railway/Railway.pattern/__pTrackToTrack/39.instance"
 				},
 				"$segments": {
 					"type": "map<string,list<string>>",
 					"value": {
-						"/Formalisms/Railway/Railway.defaultIcons.pattern/__pBasicTrackIcon/146.instance--/Formalisms/Railway/Railway.defaultIcons.pattern/__pTrainOnTrackLink/165.instance": "M351,486L366.3347218348322,508.876388310979",
-						"/Formalisms/Railway/Railway.defaultIcons.pattern/__pTrainOnTrackLink/165.instance--/Formalisms/Railway/Railway.defaultIcons.pattern/__pTrainIcon/161.instance": "M366.2922041702194,508.8129603195075L375.4996866013819,514.4995324709141"
+						"/Formalisms/Railway/Railway.defaultIcons.pattern/__pTrackIcon/32.instance--/Formalisms/Railway/Railway.defaultIcons.pattern/__pTrackToTrackLink/39.instance": "M387,495L487,494",
+						"/Formalisms/Railway/Railway.defaultIcons.pattern/__pTrackToTrackLink/39.instance--/Formalisms/Railway/Railway.defaultIcons.pattern/__pJoinIcon/36.instance": "M487.14969995029935,493.99850300049695L586.9994004,493.000005996"
 					}
 				},
-				"$type": "/Formalisms/Railway/Railway.defaultIcons.pattern/__pTrainOnTrackLink"
+				"$type": "/Formalisms/Railway/Railway.defaultIcons.pattern/__pTrackToTrackLink"
 			},
-			"166": {
+			"40": {
+				"link-style": {
+					"type": "map<string,string>",
+					"value": {
+						"stroke": "#000000",
+						"stroke-dasharray": "",
+						"stroke-opacity": 0.2,
+						"stroke-width": 2
+					}
+				},
+				"arrowHead": {
+					"type": "ENUM(circle-black,circle-black-large,circle-white,circle-white-large,diamond-black,diamond-black-large,diamond-white,diamond-white-large,triangle-black,triangle-black-large,triangle-white,triangle-white-large,arrow-black,arrow-black-large,arrow-empty,arrow-empty-large,custom)",
+					"value": "custom"
+				},
+				"arrowTail": {
+					"type": "ENUM(circle-black,circle-black-large,circle-white,circle-white-large,diamond-black,diamond-black-large,diamond-white,diamond-white-large,triangle-black,triangle-black-large,triangle-white,triangle-white-large,arrow-black,arrow-black-large,arrow-empty,arrow-empty-large,custom)",
+					"value": "arrow-black"
+				},
+				"typename": {
+					"type": "string",
+					"value": "TrackToTrackLink"
+				},
+				"position": {
+					"type": "list<double>",
+					"value": [
+						982.5,
+						485.5
+					]
+				},
+				"orientation": {
+					"type": "double",
+					"value": 0
+				},
+				"scale": {
+					"type": "list<double>",
+					"value": [
+						1,
+						1
+					]
+				},
+				"mapper": {
+					"type": "code",
+					"value": "/* mapping and parsing code is disabled by default because pattern attribute values are code */"
+				},
+				"parser": {
+					"type": "code",
+					"value": "/* mapping and parsing code is disabled by default because pattern attribute values are code */"
+				},
+				"$contents": {
+					"type": "map<string,*>",
+					"value": {
+						"nodes": {
+							"__pLabelText": {
+								"position": {
+									"type": "list<double>",
+									"value": [
+										0,
+										0
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": 0
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								},
+								"textContent": {
+									"type": "string",
+									"value": "2"
+								},
+								"style": {
+									"type": "map<string,string>",
+									"value": {
+										"stroke": "#6000ff",
+										"fill": "#6000ff",
+										"font-size": "15px",
+										"opacity": "1"
+									}
+								},
+								"mapper": {
+									"type": "code",
+									"value": "({'textContent':getAttr('__pLabel')})"
+								},
+								"parser": {
+									"type": "code",
+									"value": "({'__pLabel':getAttr('textContent')})"
+								},
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Text"
+							}
+						},
+						"edges": []
+					}
+				},
+				"$asuri": {
+					"type": "string",
+					"value": "/Formalisms/Railway/Railway.pattern/__pTrackToTrack/40.instance"
+				},
+				"$segments": {
+					"type": "map<string,list<string>>",
+					"value": {
+						"/Formalisms/Railway/Railway.defaultIcons.pattern/__pTrackIcon/31.instance--/Formalisms/Railway/Railway.defaultIcons.pattern/__pTrackToTrackLink/40.instance": "M903,486L982.5,485.5",
+						"/Formalisms/Railway/Railway.defaultIcons.pattern/__pTrackToTrackLink/40.instance--/Formalisms/Railway/Railway.defaultIcons.pattern/__pJoinIcon/35.instance": "M982.6496225629942,485.49905897759123L1061.9992459159052,485.0000047426672"
+					}
+				},
+				"$type": "/Formalisms/Railway/Railway.defaultIcons.pattern/__pTrackToTrackLink"
+			},
+			"41": {
+				"typename": {
+					"type": "string",
+					"value": "TrainIcon"
+				},
+				"position": {
+					"type": "list<double>",
+					"value": [
+						1061,
+						456
+					]
+				},
+				"orientation": {
+					"type": "double",
+					"value": 0
+				},
+				"scale": {
+					"type": "list<double>",
+					"value": [
+						1,
+						1
+					]
+				},
+				"mapper": {
+					"type": "code",
+					"value": "/* mapping and parsing code is disabled by default because pattern attribute values are code */"
+				},
+				"parser": {
+					"type": "code",
+					"value": "/* mapping and parsing code is disabled by default because pattern attribute values are code */"
+				},
+				"$contents": {
+					"type": "map<string,*>",
+					"value": {
+						"nodes": {
+							"25": {
+								"src": {
+									"type": "string",
+									"value": "/Formalisms/Railway/Icons/train.png"
+								},
+								"width": {
+									"type": "double",
+									"value": 60
+								},
+								"height": {
+									"type": "double",
+									"value": 25
+								},
+								"style": {
+									"type": "map<string,string>",
+									"value": {
+										"stroke": "#000000",
+										"stroke-dasharray": "",
+										"fill": "#ffffff",
+										"fill-opacity": 1,
+										"font-size": "20px",
+										"stroke-width": 1,
+										"arrow-start": "none",
+										"arrow-end": "none"
+									}
+								},
+								"mapper": {
+									"type": "code",
+									"value": "/* mapping and parsing code is disabled by default because pattern attribute values are code */"
+								},
+								"parser": {
+									"type": "code",
+									"value": "/* mapping and parsing code is disabled by default because pattern attribute values are code */"
+								},
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Image",
+								"position": {
+									"type": "list<double>",
+									"value": [
+										1,
+										4
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": 0
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								}
+							},
+							"34": {
+								"textContent": {
+									"type": "string",
+									"value": "T"
+								},
+								"style": {
+									"type": "map<string,string>",
+									"value": {
+										"stroke": "#000000",
+										"stroke-dasharray": "",
+										"fill": "#000000",
+										"fill-opacity": 1,
+										"font-size": "20px",
+										"font-family": "Calibri",
+										"stroke-width": 1,
+										"arrow-start": "none",
+										"arrow-end": "none"
+									}
+								},
+								"mapper": {
+									"type": "code",
+									"value": "/* mapping and parsing code is disabled by default because pattern attribute values are code */"
+								},
+								"parser": {
+									"type": "code",
+									"value": "/* mapping and parsing code is disabled by default because pattern attribute values are code */"
+								},
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Text",
+								"position": {
+									"type": "list<double>",
+									"value": [
+										3,
+										5
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": 0
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								}
+							},
+							"__pLabelText": {
+								"position": {
+									"type": "list<double>",
+									"value": [
+										0,
+										0
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": 0
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								},
+								"textContent": {
+									"type": "string",
+									"value": "3"
+								},
+								"style": {
+									"type": "map<string,string>",
+									"value": {
+										"stroke": "#6000ff",
+										"fill": "#6000ff",
+										"font-size": "15px",
+										"opacity": "1"
+									}
+								},
+								"mapper": {
+									"type": "code",
+									"value": "({'textContent':getAttr('__pLabel')})"
+								},
+								"parser": {
+									"type": "code",
+									"value": "({'__pLabel':getAttr('textContent')})"
+								},
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Text"
+							}
+						},
+						"edges": []
+					}
+				},
+				"$asuri": {
+					"type": "string",
+					"value": "/Formalisms/Railway/Railway.pattern/__pTrain/41.instance"
+				},
+				"$type": "/Formalisms/Railway/Railway.defaultIcons.pattern/__pTrainIcon"
+			},
+			"42": {
+				"typename": {
+					"type": "string",
+					"value": "TrainIcon"
+				},
+				"position": {
+					"type": "list<double>",
+					"value": [
+						328,
+						468
+					]
+				},
+				"orientation": {
+					"type": "double",
+					"value": 0
+				},
+				"scale": {
+					"type": "list<double>",
+					"value": [
+						1,
+						1
+					]
+				},
+				"mapper": {
+					"type": "code",
+					"value": "/* mapping and parsing code is disabled by default because pattern attribute values are code */"
+				},
+				"parser": {
+					"type": "code",
+					"value": "/* mapping and parsing code is disabled by default because pattern attribute values are code */"
+				},
+				"$contents": {
+					"type": "map<string,*>",
+					"value": {
+						"nodes": {
+							"25": {
+								"src": {
+									"type": "string",
+									"value": "/Formalisms/Railway/Icons/train.png"
+								},
+								"width": {
+									"type": "double",
+									"value": 60
+								},
+								"height": {
+									"type": "double",
+									"value": 25
+								},
+								"style": {
+									"type": "map<string,string>",
+									"value": {
+										"stroke": "#000000",
+										"stroke-dasharray": "",
+										"fill": "#ffffff",
+										"fill-opacity": 1,
+										"font-size": "20px",
+										"stroke-width": 1,
+										"arrow-start": "none",
+										"arrow-end": "none"
+									}
+								},
+								"mapper": {
+									"type": "code",
+									"value": "/* mapping and parsing code is disabled by default because pattern attribute values are code */"
+								},
+								"parser": {
+									"type": "code",
+									"value": "/* mapping and parsing code is disabled by default because pattern attribute values are code */"
+								},
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Image",
+								"position": {
+									"type": "list<double>",
+									"value": [
+										1,
+										4
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": 0
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								}
+							},
+							"34": {
+								"textContent": {
+									"type": "string",
+									"value": "T"
+								},
+								"style": {
+									"type": "map<string,string>",
+									"value": {
+										"stroke": "#000000",
+										"stroke-dasharray": "",
+										"fill": "#000000",
+										"fill-opacity": 1,
+										"font-size": "20px",
+										"font-family": "Calibri",
+										"stroke-width": 1,
+										"arrow-start": "none",
+										"arrow-end": "none"
+									}
+								},
+								"mapper": {
+									"type": "code",
+									"value": "/* mapping and parsing code is disabled by default because pattern attribute values are code */"
+								},
+								"parser": {
+									"type": "code",
+									"value": "/* mapping and parsing code is disabled by default because pattern attribute values are code */"
+								},
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Text",
+								"position": {
+									"type": "list<double>",
+									"value": [
+										3,
+										5
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": 0
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								}
+							},
+							"__pLabelText": {
+								"position": {
+									"type": "list<double>",
+									"value": [
+										0,
+										0
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": 0
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								},
+								"textContent": {
+									"type": "string",
+									"value": "3"
+								},
+								"style": {
+									"type": "map<string,string>",
+									"value": {
+										"stroke": "#6000ff",
+										"fill": "#6000ff",
+										"font-size": "15px",
+										"opacity": "1"
+									}
+								},
+								"mapper": {
+									"type": "code",
+									"value": "({'textContent':getAttr('__pLabel')})"
+								},
+								"parser": {
+									"type": "code",
+									"value": "({'__pLabel':getAttr('textContent')})"
+								},
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Text"
+							}
+						},
+						"edges": []
+					}
+				},
+				"$asuri": {
+					"type": "string",
+					"value": "/Formalisms/Railway/Railway.pattern/__pTrain/42.instance"
+				},
+				"$type": "/Formalisms/Railway/Railway.defaultIcons.pattern/__pTrainIcon"
+			},
+			"45": {
 				"link-style": {
 					"type": "map<string,string>",
 					"value": {
@@ -1873,8 +1984,8 @@
 				"position": {
 					"type": "list<double>",
 					"value": [
-						1061.75,
-						495.25
+						339.75,
+						467.75
 					]
 				},
 				"orientation": {
@@ -1948,27 +2059,44 @@
 				},
 				"$asuri": {
 					"type": "string",
-					"value": "/Formalisms/Railway/Railway.pattern/__pTrainOnTrack/166.instance"
+					"value": "/Formalisms/Railway/Railway.pattern/__pTrainOnTrack/45.instance"
 				},
 				"$segments": {
 					"type": "map<string,list<string>>",
 					"value": {
-						"/Formalisms/Railway/Railway.defaultIcons.pattern/__pBasicTrackIcon/157.instance--/Formalisms/Railway/Railway.defaultIcons.pattern/__pTrainOnTrackLink/166.instance": "M1044,473L1061.75,495.25",
-						"/Formalisms/Railway/Railway.defaultIcons.pattern/__pTrainOnTrackLink/166.instance--/Formalisms/Railway/Railway.defaultIcons.pattern/__pTrainIcon/160.instance": "M1061.7973747905644,495.30938530084836L1080.4996607996995,507.499574805257"
+						"/Formalisms/Railway/Railway.defaultIcons.pattern/__pTrackIcon/32.instance--/Formalisms/Railway/Railway.defaultIcons.pattern/__pTrainOnTrackLink/45.instance": "M321,453L339.75,467.75",
+						"/Formalisms/Railway/Railway.defaultIcons.pattern/__pTrainOnTrackLink/45.instance--/Formalisms/Railway/Railway.defaultIcons.pattern/__pTrainIcon/42.instance": "M339.8095856962732,467.79687408106827L358.499491442166,482.4995999345039"
 					}
 				},
 				"$type": "/Formalisms/Railway/Railway.defaultIcons.pattern/__pTrainOnTrackLink"
 			},
-			"167": {
+			"46": {
+				"link-style": {
+					"type": "map<string,string>",
+					"value": {
+						"stroke": "#000000",
+						"stroke-dasharray": "",
+						"stroke-opacity": 0.2,
+						"stroke-width": 2
+					}
+				},
+				"arrowHead": {
+					"type": "ENUM(circle-black,circle-black-large,circle-white,circle-white-large,diamond-black,diamond-black-large,diamond-white,diamond-white-large,triangle-black,triangle-black-large,triangle-white,triangle-white-large,arrow-black,arrow-black-large,arrow-empty,arrow-empty-large,custom)",
+					"value": "custom"
+				},
+				"arrowTail": {
+					"type": "ENUM(circle-black,circle-black-large,circle-white,circle-white-large,diamond-black,diamond-black-large,diamond-white,diamond-white-large,triangle-black,triangle-black-large,triangle-white,triangle-white-large,arrow-black,arrow-black-large,arrow-empty,arrow-empty-large,custom)",
+					"value": "arrow-black"
+				},
 				"typename": {
 					"type": "string",
-					"value": "LightIcon"
+					"value": "TrainOnTrackLink"
 				},
 				"position": {
 					"type": "list<double>",
 					"value": [
-						849,
-						525
+						1069.8754801504895,
+						455.83509573423987
 					]
 				},
 				"orientation": {
@@ -1994,60 +2122,6 @@
 					"type": "map<string,*>",
 					"value": {
 						"nodes": {
-							"28": {
-								"src": {
-									"type": "string",
-									"value": "/Formalisms/Railway/Icons/light_red.png"
-								},
-								"width": {
-									"type": "double",
-									"value": 40
-								},
-								"height": {
-									"type": "double",
-									"value": 20
-								},
-								"style": {
-									"type": "map<string,string>",
-									"value": {
-										"stroke": "#000000",
-										"stroke-dasharray": "",
-										"fill": "#ffffff",
-										"fill-opacity": 1,
-										"font-size": "20px",
-										"stroke-width": 1,
-										"arrow-start": "none",
-										"arrow-end": "none"
-									}
-								},
-								"mapper": {
-									"type": "code",
-									"value": "/* mapping and parsing code is disabled by default because pattern attribute values are code */"
-								},
-								"parser": {
-									"type": "code",
-									"value": "/* mapping and parsing code is disabled by default because pattern attribute values are code */"
-								},
-								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Image",
-								"position": {
-									"type": "list<double>",
-									"value": [
-										2,
-										2
-									]
-								},
-								"orientation": {
-									"type": "double",
-									"value": 0
-								},
-								"scale": {
-									"type": "list<double>",
-									"value": [
-										1,
-										1
-									]
-								}
-							},
 							"__pLabelText": {
 								"position": {
 									"type": "list<double>",
@@ -2096,11 +2170,18 @@
 				},
 				"$asuri": {
 					"type": "string",
-					"value": "/Formalisms/Railway/Railway.pattern/__pLight/167.instance"
+					"value": "/Formalisms/Railway/Railway.pattern/__pTrainOnTrack/46.instance"
 				},
-				"$type": "/Formalisms/Railway/Railway.defaultIcons.pattern/__pLightIcon"
+				"$segments": {
+					"type": "map<string,list<string>>",
+					"value": {
+						"/Formalisms/Railway/Railway.defaultIcons.pattern/__pJoinIcon/35.instance--/Formalisms/Railway/Railway.defaultIcons.pattern/__pTrainOnTrackLink/46.instance": "M1048,441L1069.8754801504895,455.83509573423987",
+						"/Formalisms/Railway/Railway.defaultIcons.pattern/__pTrainOnTrackLink/46.instance--/Formalisms/Railway/Railway.defaultIcons.pattern/__pTrainIcon/41.instance": "M1069.8124989989903,455.79238437862546L1091.4995180003982,470.4996731267068"
+					}
+				},
+				"$type": "/Formalisms/Railway/Railway.defaultIcons.pattern/__pTrainOnTrackLink"
 			},
-			"168": {
+			"47": {
 				"typename": {
 					"type": "string",
 					"value": "LightIcon"
@@ -2108,8 +2189,8 @@
 				"position": {
 					"type": "list<double>",
 					"value": [
-						350,
-						537
+						847,
+						492
 					]
 				},
 				"orientation": {
@@ -2189,110 +2270,6 @@
 									]
 								}
 							},
-							"__pLabelText": {
-								"position": {
-									"type": "list<double>",
-									"value": [
-										0,
-										0
-									]
-								},
-								"orientation": {
-									"type": "double",
-									"value": 0
-								},
-								"scale": {
-									"type": "list<double>",
-									"value": [
-										1,
-										1
-									]
-								},
-								"textContent": {
-									"type": "string",
-									"value": "5"
-								},
-								"style": {
-									"type": "map<string,string>",
-									"value": {
-										"stroke": "#6000ff",
-										"fill": "#6000ff",
-										"font-size": "15px",
-										"opacity": "1"
-									}
-								},
-								"mapper": {
-									"type": "code",
-									"value": "({'textContent':getAttr('__pLabel')})"
-								},
-								"parser": {
-									"type": "code",
-									"value": "({'__pLabel':getAttr('textContent')})"
-								},
-								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Text"
-							}
-						},
-						"edges": []
-					}
-				},
-				"$asuri": {
-					"type": "string",
-					"value": "/Formalisms/Railway/Railway.pattern/__pLight/168.instance"
-				},
-				"$type": "/Formalisms/Railway/Railway.defaultIcons.pattern/__pLightIcon"
-			},
-			"170": {
-				"link-style": {
-					"type": "map<string,string>",
-					"value": {
-						"stroke": "#000000",
-						"stroke-dasharray": "",
-						"stroke-opacity": 0.2,
-						"stroke-width": 2
-					}
-				},
-				"arrowHead": {
-					"type": "ENUM(circle-black,circle-black-large,circle-white,circle-white-large,diamond-black,diamond-black-large,diamond-white,diamond-white-large,triangle-black,triangle-black-large,triangle-white,triangle-white-large,arrow-black,arrow-black-large,arrow-empty,arrow-empty-large,custom)",
-					"value": "custom"
-				},
-				"arrowTail": {
-					"type": "ENUM(circle-black,circle-black-large,circle-white,circle-white-large,diamond-black,diamond-black-large,diamond-white,diamond-white-large,triangle-black,triangle-black-large,triangle-white,triangle-white-large,arrow-black,arrow-black-large,arrow-empty,arrow-empty-large,custom)",
-					"value": "arrow-black"
-				},
-				"typename": {
-					"type": "string",
-					"value": "LightOnTrackLink"
-				},
-				"position": {
-					"type": "list<double>",
-					"value": [
-						351.08219157517533,
-						517.1273969415217
-					]
-				},
-				"orientation": {
-					"type": "double",
-					"value": 0
-				},
-				"scale": {
-					"type": "list<double>",
-					"value": [
-						1,
-						1
-					]
-				},
-				"mapper": {
-					"type": "code",
-					"value": "/* mapping and parsing code is disabled by default because pattern attribute values are code */"
-				},
-				"parser": {
-					"type": "code",
-					"value": "/* mapping and parsing code is disabled by default because pattern attribute values are code */"
-				},
-				"$contents": {
-					"type": "map<string,*>",
-					"value": {
-						"nodes": {
 							"__pLabelText": {
 								"position": {
 									"type": "list<double>",
@@ -2341,44 +2318,20 @@
 				},
 				"$asuri": {
 					"type": "string",
-					"value": "/Formalisms/Railway/Railway.pattern/__pLightOnTrack/170.instance"
+					"value": "/Formalisms/Railway/Railway.pattern/__pLight/47.instance"
 				},
-				"$segments": {
-					"type": "map<string,list<string>>",
-					"value": {
-						"/Formalisms/Railway/Railway.defaultIcons.pattern/__pBasicTrackIcon/146.instance--/Formalisms/Railway/Railway.defaultIcons.pattern/__pLightOnTrackLink/170.instance": "M331,486L351.08219157517533,517.1273969415217",
-						"/Formalisms/Railway/Railway.defaultIcons.pattern/__pLightOnTrackLink/170.instance--/Formalisms/Railway/Railway.defaultIcons.pattern/__pLightIcon/168.instance": "M351.04098327343524,517.0635240738247L370.9997750226854,547.9996512851624"
-					}
-				},
-				"$type": "/Formalisms/Railway/Railway.defaultIcons.pattern/__pLightOnTrackLink"
+				"$type": "/Formalisms/Railway/Railway.defaultIcons.pattern/__pLightIcon"
 			},
-			"171": {
-				"link-style": {
-					"type": "map<string,string>",
-					"value": {
-						"stroke": "#000000",
-						"stroke-dasharray": "",
-						"stroke-opacity": 0.2,
-						"stroke-width": 2
-					}
-				},
-				"arrowHead": {
-					"type": "ENUM(circle-black,circle-black-large,circle-white,circle-white-large,diamond-black,diamond-black-large,diamond-white,diamond-white-large,triangle-black,triangle-black-large,triangle-white,triangle-white-large,arrow-black,arrow-black-large,arrow-empty,arrow-empty-large,custom)",
-					"value": "custom"
-				},
-				"arrowTail": {
-					"type": "ENUM(circle-black,circle-black-large,circle-white,circle-white-large,diamond-black,diamond-black-large,diamond-white,diamond-white-large,triangle-black,triangle-black-large,triangle-white,triangle-white-large,arrow-black,arrow-black-large,arrow-empty,arrow-empty-large,custom)",
-					"value": "arrow-black"
-				},
+			"48": {
 				"typename": {
 					"type": "string",
-					"value": "LightOnTrackLink"
+					"value": "LightIcon"
 				},
 				"position": {
 					"type": "list<double>",
 					"value": [
-						857,
-						506
+						335,
+						507
 					]
 				},
 				"orientation": {
@@ -2404,6 +2357,60 @@
 					"type": "map<string,*>",
 					"value": {
 						"nodes": {
+							"28": {
+								"src": {
+									"type": "string",
+									"value": "/Formalisms/Railway/Icons/light_red.png"
+								},
+								"width": {
+									"type": "double",
+									"value": 40
+								},
+								"height": {
+									"type": "double",
+									"value": 20
+								},
+								"style": {
+									"type": "map<string,string>",
+									"value": {
+										"stroke": "#000000",
+										"stroke-dasharray": "",
+										"fill": "#ffffff",
+										"fill-opacity": 1,
+										"font-size": "20px",
+										"stroke-width": 1,
+										"arrow-start": "none",
+										"arrow-end": "none"
+									}
+								},
+								"mapper": {
+									"type": "code",
+									"value": "/* mapping and parsing code is disabled by default because pattern attribute values are code */"
+								},
+								"parser": {
+									"type": "code",
+									"value": "/* mapping and parsing code is disabled by default because pattern attribute values are code */"
+								},
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Image",
+								"position": {
+									"type": "list<double>",
+									"value": [
+										2,
+										2
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": 0
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								}
+							},
 							"__pLabelText": {
 								"position": {
 									"type": "list<double>",
@@ -2452,18 +2459,233 @@
 				},
 				"$asuri": {
 					"type": "string",
-					"value": "/Formalisms/Railway/Railway.pattern/__pLightOnTrack/171.instance"
+					"value": "/Formalisms/Railway/Railway.pattern/__pLight/48.instance"
+				},
+				"$type": "/Formalisms/Railway/Railway.defaultIcons.pattern/__pLightIcon"
+			},
+			"50": {
+				"link-style": {
+					"type": "map<string,string>",
+					"value": {
+						"stroke": "#000000",
+						"stroke-dasharray": "",
+						"stroke-opacity": 0.2,
+						"stroke-width": 2
+					}
+				},
+				"arrowHead": {
+					"type": "ENUM(circle-black,circle-black-large,circle-white,circle-white-large,diamond-black,diamond-black-large,diamond-white,diamond-white-large,triangle-black,triangle-black-large,triangle-white,triangle-white-large,arrow-black,arrow-black-large,arrow-empty,arrow-empty-large,custom)",
+					"value": "custom"
+				},
+				"arrowTail": {
+					"type": "ENUM(circle-black,circle-black-large,circle-white,circle-white-large,diamond-black,diamond-black-large,diamond-white,diamond-white-large,triangle-black,triangle-black-large,triangle-white,triangle-white-large,arrow-black,arrow-black-large,arrow-empty,arrow-empty-large,custom)",
+					"value": "arrow-black"
+				},
+				"typename": {
+					"type": "string",
+					"value": "LightOnTrackLink"
+				},
+				"position": {
+					"type": "list<double>",
+					"value": [
+						338.5,
+						485.5
+					]
+				},
+				"orientation": {
+					"type": "double",
+					"value": 0
+				},
+				"scale": {
+					"type": "list<double>",
+					"value": [
+						1,
+						1
+					]
+				},
+				"mapper": {
+					"type": "code",
+					"value": "/* mapping and parsing code is disabled by default because pattern attribute values are code */"
+				},
+				"parser": {
+					"type": "code",
+					"value": "/* mapping and parsing code is disabled by default because pattern attribute values are code */"
+				},
+				"$contents": {
+					"type": "map<string,*>",
+					"value": {
+						"nodes": {
+							"__pLabelText": {
+								"position": {
+									"type": "list<double>",
+									"value": [
+										0,
+										0
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": 0
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								},
+								"textContent": {
+									"type": "string",
+									"value": "7"
+								},
+								"style": {
+									"type": "map<string,string>",
+									"value": {
+										"stroke": "#6000ff",
+										"fill": "#6000ff",
+										"font-size": "15px",
+										"opacity": "1"
+									}
+								},
+								"mapper": {
+									"type": "code",
+									"value": "({'textContent':getAttr('__pLabel')})"
+								},
+								"parser": {
+									"type": "code",
+									"value": "({'__pLabel':getAttr('textContent')})"
+								},
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Text"
+							}
+						},
+						"edges": []
+					}
+				},
+				"$asuri": {
+					"type": "string",
+					"value": "/Formalisms/Railway/Railway.pattern/__pLightOnTrack/50.instance"
 				},
 				"$segments": {
 					"type": "map<string,list<string>>",
 					"value": {
-						"/Formalisms/Railway/Railway.defaultIcons.pattern/__pBasicTrackIcon/152.instance--/Formalisms/Railway/Railway.defaultIcons.pattern/__pLightOnTrackLink/171.instance": "M844.0000000000001,476L857.0000000000001,506",
-						"/Formalisms/Railway/Railway.defaultIcons.pattern/__pLightOnTrackLink/171.instance--/Formalisms/Railway/Railway.defaultIcons.pattern/__pLightIcon/167.instance": "M857.0299076688568,506.0690176973619L869.9998155739645,535.9995744014566"
+						"/Formalisms/Railway/Railway.defaultIcons.pattern/__pTrackIcon/32.instance--/Formalisms/Railway/Railway.defaultIcons.pattern/__pLightOnTrackLink/50.instance": "M321,453L338.5,485.5",
+						"/Formalisms/Railway/Railway.defaultIcons.pattern/__pLightOnTrackLink/50.instance--/Formalisms/Railway/Railway.defaultIcons.pattern/__pLightIcon/48.instance": "M338.53586036425577,485.5665978193323L355.9998031448497,517.9996344118638"
 					}
 				},
 				"$type": "/Formalisms/Railway/Railway.defaultIcons.pattern/__pLightOnTrackLink"
 			},
-			"172": {
+			"52": {
+				"link-style": {
+					"type": "map<string,string>",
+					"value": {
+						"stroke": "#000000",
+						"stroke-dasharray": "",
+						"stroke-opacity": 0.2,
+						"stroke-width": 2
+					}
+				},
+				"arrowHead": {
+					"type": "ENUM(circle-black,circle-black-large,circle-white,circle-white-large,diamond-black,diamond-black-large,diamond-white,diamond-white-large,triangle-black,triangle-black-large,triangle-white,triangle-white-large,arrow-black,arrow-black-large,arrow-empty,arrow-empty-large,custom)",
+					"value": "custom"
+				},
+				"arrowTail": {
+					"type": "ENUM(circle-black,circle-black-large,circle-white,circle-white-large,diamond-black,diamond-black-large,diamond-white,diamond-white-large,triangle-black,triangle-black-large,triangle-white,triangle-white-large,arrow-black,arrow-black-large,arrow-empty,arrow-empty-large,custom)",
+					"value": "arrow-black"
+				},
+				"typename": {
+					"type": "string",
+					"value": "LightOnTrackLink"
+				},
+				"position": {
+					"type": "list<double>",
+					"value": [
+						852,
+						474.5
+					]
+				},
+				"orientation": {
+					"type": "double",
+					"value": 0
+				},
+				"scale": {
+					"type": "list<double>",
+					"value": [
+						1,
+						1
+					]
+				},
+				"mapper": {
+					"type": "code",
+					"value": "/* mapping and parsing code is disabled by default because pattern attribute values are code */"
+				},
+				"parser": {
+					"type": "code",
+					"value": "/* mapping and parsing code is disabled by default because pattern attribute values are code */"
+				},
+				"$contents": {
+					"type": "map<string,*>",
+					"value": {
+						"nodes": {
+							"__pLabelText": {
+								"position": {
+									"type": "list<double>",
+									"value": [
+										0,
+										0
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": 0
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								},
+								"textContent": {
+									"type": "string",
+									"value": "7"
+								},
+								"style": {
+									"type": "map<string,string>",
+									"value": {
+										"stroke": "#6000ff",
+										"fill": "#6000ff",
+										"font-size": "15px",
+										"opacity": "1"
+									}
+								},
+								"mapper": {
+									"type": "code",
+									"value": "({'textContent':getAttr('__pLabel')})"
+								},
+								"parser": {
+									"type": "code",
+									"value": "({'__pLabel':getAttr('textContent')})"
+								},
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Text"
+							}
+						},
+						"edges": []
+					}
+				},
+				"$asuri": {
+					"type": "string",
+					"value": "/Formalisms/Railway/Railway.pattern/__pLightOnTrack/52.instance"
+				},
+				"$segments": {
+					"type": "map<string,list<string>>",
+					"value": {
+						"/Formalisms/Railway/Railway.defaultIcons.pattern/__pTrackIcon/31.instance--/Formalisms/Railway/Railway.defaultIcons.pattern/__pLightOnTrackLink/52.instance": "M836,446L852,474.5",
+						"/Formalisms/Railway/Railway.defaultIcons.pattern/__pLightOnTrackLink/52.instance--/Formalisms/Railway/Railway.defaultIcons.pattern/__pLightIcon/47.instance": "M852.0368094385931,474.5655668124939L867.9997730141101,502.9995956813837"
+					}
+				},
+				"$type": "/Formalisms/Railway/Railway.defaultIcons.pattern/__pLightOnTrackLink"
+			},
+			"53": {
 				"typename": {
 					"type": "string",
 					"value": "LightIcon"
@@ -2471,8 +2693,8 @@
 				"position": {
 					"type": "list<double>",
 					"value": [
-						618,
-						541
+						588,
+						499
 					]
 				},
 				"orientation": {
@@ -2573,7 +2795,7 @@
 								},
 								"textContent": {
 									"type": "string",
-									"value": "7"
+									"value": "8"
 								},
 								"style": {
 									"type": "map<string,string>",
@@ -2600,11 +2822,11 @@
 				},
 				"$asuri": {
 					"type": "string",
-					"value": "/Formalisms/Railway/Railway.pattern/__pLight/172.instance"
+					"value": "/Formalisms/Railway/Railway.pattern/__pLight/53.instance"
 				},
 				"$type": "/Formalisms/Railway/Railway.defaultIcons.pattern/__pLightIcon"
 			},
-			"173": {
+			"54": {
 				"typename": {
 					"type": "string",
 					"value": "LightIcon"
@@ -2612,8 +2834,8 @@
 				"position": {
 					"type": "list<double>",
 					"value": [
-						1063,
-						523
+						1067,
+						487
 					]
 				},
 				"orientation": {
@@ -2714,7 +2936,7 @@
 								},
 								"textContent": {
 									"type": "string",
-									"value": "7"
+									"value": "8"
 								},
 								"style": {
 									"type": "map<string,string>",
@@ -2741,11 +2963,11 @@
 				},
 				"$asuri": {
 					"type": "string",
-					"value": "/Formalisms/Railway/Railway.pattern/__pLight/173.instance"
+					"value": "/Formalisms/Railway/Railway.pattern/__pLight/54.instance"
 				},
 				"$type": "/Formalisms/Railway/Railway.defaultIcons.pattern/__pLightIcon"
 			},
-			"175": {
+			"56": {
 				"link-style": {
 					"type": "map<string,string>",
 					"value": {
@@ -2770,230 +2992,8 @@
 				"position": {
 					"type": "list<double>",
 					"value": [
-						1064,
-						503.5
-					]
-				},
-				"orientation": {
-					"type": "double",
-					"value": 0
-				},
-				"scale": {
-					"type": "list<double>",
-					"value": [
-						1,
-						1
-					]
-				},
-				"mapper": {
-					"type": "code",
-					"value": "/* mapping and parsing code is disabled by default because pattern attribute values are code */"
-				},
-				"parser": {
-					"type": "code",
-					"value": "/* mapping and parsing code is disabled by default because pattern attribute values are code */"
-				},
-				"$contents": {
-					"type": "map<string,*>",
-					"value": {
-						"nodes": {
-							"__pLabelText": {
-								"position": {
-									"type": "list<double>",
-									"value": [
-										0,
-										0
-									]
-								},
-								"orientation": {
-									"type": "double",
-									"value": 0
-								},
-								"scale": {
-									"type": "list<double>",
-									"value": [
-										1,
-										1
-									]
-								},
-								"textContent": {
-									"type": "string",
-									"value": "8"
-								},
-								"style": {
-									"type": "map<string,string>",
-									"value": {
-										"stroke": "#6000ff",
-										"fill": "#6000ff",
-										"font-size": "15px",
-										"opacity": "1"
-									}
-								},
-								"mapper": {
-									"type": "code",
-									"value": "({'textContent':getAttr('__pLabel')})"
-								},
-								"parser": {
-									"type": "code",
-									"value": "({'__pLabel':getAttr('textContent')})"
-								},
-								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Text"
-							}
-						},
-						"edges": []
-					}
-				},
-				"$asuri": {
-					"type": "string",
-					"value": "/Formalisms/Railway/Railway.pattern/__pLightOnTrack/175.instance"
-				},
-				"$segments": {
-					"type": "map<string,list<string>>",
-					"value": {
-						"/Formalisms/Railway/Railway.defaultIcons.pattern/__pBasicTrackIcon/157.instance--/Formalisms/Railway/Railway.defaultIcons.pattern/__pLightOnTrackLink/175.instance": "M1044,473L1064,503.5",
-						"/Formalisms/Railway/Railway.defaultIcons.pattern/__pLightOnTrackLink/175.instance--/Formalisms/Railway/Railway.defaultIcons.pattern/__pLightIcon/173.instance": "M1064.041550899357,503.56336512151904L1083.9997687328532,533.9996473176011"
-					}
-				},
-				"$type": "/Formalisms/Railway/Railway.defaultIcons.pattern/__pLightOnTrackLink"
-			},
-			"176": {
-				"link-style": {
-					"type": "map<string,string>",
-					"value": {
-						"stroke": "#000000",
-						"stroke-dasharray": "",
-						"stroke-opacity": 0.2,
-						"stroke-width": 2
-					}
-				},
-				"arrowHead": {
-					"type": "ENUM(circle-black,circle-black-large,circle-white,circle-white-large,diamond-black,diamond-black-large,diamond-white,diamond-white-large,triangle-black,triangle-black-large,triangle-white,triangle-white-large,arrow-black,arrow-black-large,arrow-empty,arrow-empty-large,custom)",
-					"value": "custom"
-				},
-				"arrowTail": {
-					"type": "ENUM(circle-black,circle-black-large,circle-white,circle-white-large,diamond-black,diamond-black-large,diamond-white,diamond-white-large,triangle-black,triangle-black-large,triangle-white,triangle-white-large,arrow-black,arrow-black-large,arrow-empty,arrow-empty-large,custom)",
-					"value": "arrow-black"
-				},
-				"typename": {
-					"type": "string",
-					"value": "LightOnTrackLink"
-				},
-				"position": {
-					"type": "list<double>",
-					"value": [
-						623.5,
-						521.5
-					]
-				},
-				"orientation": {
-					"type": "double",
-					"value": 0
-				},
-				"scale": {
-					"type": "list<double>",
-					"value": [
-						1,
-						1
-					]
-				},
-				"mapper": {
-					"type": "code",
-					"value": "/* mapping and parsing code is disabled by default because pattern attribute values are code */"
-				},
-				"parser": {
-					"type": "code",
-					"value": "/* mapping and parsing code is disabled by default because pattern attribute values are code */"
-				},
-				"$contents": {
-					"type": "map<string,*>",
-					"value": {
-						"nodes": {
-							"__pLabelText": {
-								"position": {
-									"type": "list<double>",
-									"value": [
-										0,
-										0
-									]
-								},
-								"orientation": {
-									"type": "double",
-									"value": 0
-								},
-								"scale": {
-									"type": "list<double>",
-									"value": [
-										1,
-										1
-									]
-								},
-								"textContent": {
-									"type": "string",
-									"value": "8"
-								},
-								"style": {
-									"type": "map<string,string>",
-									"value": {
-										"stroke": "#6000ff",
-										"fill": "#6000ff",
-										"font-size": "15px",
-										"opacity": "1"
-									}
-								},
-								"mapper": {
-									"type": "code",
-									"value": "({'textContent':getAttr('__pLabel')})"
-								},
-								"parser": {
-									"type": "code",
-									"value": "({'__pLabel':getAttr('textContent')})"
-								},
-								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Text"
-							}
-						},
-						"edges": []
-					}
-				},
-				"$asuri": {
-					"type": "string",
-					"value": "/Formalisms/Railway/Railway.pattern/__pLightOnTrack/176.instance"
-				},
-				"$segments": {
-					"type": "map<string,list<string>>",
-					"value": {
-						"/Formalisms/Railway/Railway.defaultIcons.pattern/__pBasicTrackIcon/156.instance--/Formalisms/Railway/Railway.defaultIcons.pattern/__pLightOnTrackLink/176.instance": "M608,491L623.5,521.5",
-						"/Formalisms/Railway/Railway.defaultIcons.pattern/__pLightOnTrackLink/176.instance--/Formalisms/Railway/Railway.defaultIcons.pattern/__pLightIcon/172.instance": "M623.534090589756,521.5670814830683L638.9997990726135,551.9996046267556"
-					}
-				},
-				"$type": "/Formalisms/Railway/Railway.defaultIcons.pattern/__pLightOnTrackLink"
-			},
-			"177": {
-				"link-style": {
-					"type": "map<string,string>",
-					"value": {
-						"stroke": "#000000",
-						"stroke-dasharray": "",
-						"stroke-opacity": 0.2,
-						"stroke-width": 2
-					}
-				},
-				"arrowHead": {
-					"type": "ENUM(circle-black,circle-black-large,circle-white,circle-white-large,diamond-black,diamond-black-large,diamond-white,diamond-white-large,triangle-black,triangle-black-large,triangle-white,triangle-white-large,arrow-black,arrow-black-large,arrow-empty,arrow-empty-large,custom)",
-					"value": "custom"
-				},
-				"arrowTail": {
-					"type": "ENUM(circle-black,circle-black-large,circle-white,circle-white-large,diamond-black,diamond-black-large,diamond-white,diamond-white-large,triangle-black,triangle-black-large,triangle-white,triangle-white-large,arrow-black,arrow-black-large,arrow-empty,arrow-empty-large,custom)",
-					"value": "arrow-black"
-				},
-				"typename": {
-					"type": "string",
-					"value": "TrackToTrackLink"
-				},
-				"position": {
-					"type": "list<double>",
-					"value": [
-						513,
-						530.5
+						1068,
+						469.5
 					]
 				},
 				"orientation": {
@@ -3067,18 +3067,18 @@
 				},
 				"$asuri": {
 					"type": "string",
-					"value": "/Formalisms/Railway/Railway.pattern/__pTrackToTrack/177.instance"
+					"value": "/Formalisms/Railway/Railway.pattern/__pLightOnTrack/56.instance"
 				},
 				"$segments": {
 					"type": "map<string,list<string>>",
 					"value": {
-						"/Formalisms/Railway/Railway.defaultIcons.pattern/__pBasicTrackIcon/146.instance--/Formalisms/Railway/Railway.defaultIcons.pattern/__pTrackToTrackLink/177.instance": "M410,533L513,530.5",
-						"/Formalisms/Railway/Railway.defaultIcons.pattern/__pTrackToTrackLink/177.instance--/Formalisms/Railway/Railway.defaultIcons.pattern/__pBasicTrackIcon/156.instance": "M513.1497086910082,530.4963662939076L615.9994178527666,528.0000141297871"
+						"/Formalisms/Railway/Railway.defaultIcons.pattern/__pJoinIcon/35.instance--/Formalisms/Railway/Railway.defaultIcons.pattern/__pLightOnTrackLink/56.instance": "M1048,441L1068,469.5",
+						"/Formalisms/Railway/Railway.defaultIcons.pattern/__pLightOnTrackLink/56.instance--/Formalisms/Railway/Railway.defaultIcons.pattern/__pLightIcon/54.instance": "M1068.0433522067485,469.5617768946164L1087.9997481956352,497.99964117878045"
 					}
 				},
-				"$type": "/Formalisms/Railway/Railway.defaultIcons.pattern/__pTrackToTrackLink"
+				"$type": "/Formalisms/Railway/Railway.defaultIcons.pattern/__pLightOnTrackLink"
 			},
-			"178": {
+			"58": {
 				"link-style": {
 					"type": "map<string,string>",
 					"value": {
@@ -3098,13 +3098,13 @@
 				},
 				"typename": {
 					"type": "string",
-					"value": "TrackToTrackLink"
+					"value": "LightOnTrackLink"
 				},
 				"position": {
 					"type": "list<double>",
 					"value": [
-						970.6499999188609,
-						504.48566879756106
+						594.0681816094832,
+						480.63409049865044
 					]
 				},
 				"orientation": {
@@ -3178,18 +3178,18 @@
 				},
 				"$asuri": {
 					"type": "string",
-					"value": "/Formalisms/Railway/Railway.pattern/__pTrackToTrack/178.instance"
+					"value": "/Formalisms/Railway/Railway.pattern/__pLightOnTrack/58.instance"
 				},
 				"$segments": {
 					"type": "map<string,list<string>>",
 					"value": {
-						"/Formalisms/Railway/Railway.defaultIcons.pattern/__pBasicTrackIcon/152.instance--/Formalisms/Railway/Railway.defaultIcons.pattern/__pTrackToTrackLink/178.instance": "M892,512L970.6499999188609,504.48566879756106",
-						"/Formalisms/Railway/Railway.defaultIcons.pattern/__pTrackToTrackLink/178.instance--/Formalisms/Railway/Railway.defaultIcons.pattern/__pBasicTrackIcon/157.instance": "M970.6496177538745,504.48570531013956L1048.9992363179033,497.0000729632577"
+						"/Formalisms/Railway/Railway.defaultIcons.pattern/__pJoinIcon/36.instance--/Formalisms/Railway/Railway.defaultIcons.pattern/__pLightOnTrackLink/58.instance": "M579,451L594.0681816094832,480.63409049865044",
+						"/Formalisms/Railway/Railway.defaultIcons.pattern/__pLightOnTrackLink/58.instance--/Formalisms/Railway/Railway.defaultIcons.pattern/__pLightIcon/53.instance": "M594.0339875774548,480.5668422356613L608.9997935971282,509.99959407435233"
 					}
 				},
-				"$type": "/Formalisms/Railway/Railway.defaultIcons.pattern/__pTrackToTrackLink"
+				"$type": "/Formalisms/Railway/Railway.defaultIcons.pattern/__pLightOnTrackLink"
 			},
-			"179": {
+			"59": {
 				"typename": {
 					"type": "string",
 					"value": "ClockIcon"
@@ -3197,8 +3197,8 @@
 				"position": {
 					"type": "list<double>",
 					"value": [
-						881,
-						359
+						873,
+						336
 					]
 				},
 				"orientation": {
@@ -3412,11 +3412,11 @@
 				},
 				"$asuri": {
 					"type": "string",
-					"value": "/Formalisms/Railway/Railway.pattern/__pClock/179.instance"
+					"value": "/Formalisms/Railway/Railway.pattern/__pClock/59.instance"
 				},
 				"$type": "/Formalisms/Railway/Railway.defaultIcons.pattern/__pClockIcon"
 			},
-			"180": {
+			"60": {
 				"typename": {
 					"type": "string",
 					"value": "ClockIcon"
@@ -3424,8 +3424,8 @@
 				"position": {
 					"type": "list<double>",
 					"value": [
-						456,
-						348
+						421,
+						326
 					]
 				},
 				"orientation": {
@@ -3639,11 +3639,11 @@
 				},
 				"$asuri": {
 					"type": "string",
-					"value": "/Formalisms/Railway/Railway.pattern/__pClock/180.instance"
+					"value": "/Formalisms/Railway/Railway.pattern/__pClock/60.instance"
 				},
 				"$type": "/Formalisms/Railway/Railway.defaultIcons.pattern/__pClockIcon"
 			},
-			"181": {
+			"61": {
 				"link-style": {
 					"type": "map<string,string>",
 					"value": {
@@ -3668,8 +3668,8 @@
 				"position": {
 					"type": "list<double>",
 					"value": [
-						419.62866376123065,
-						315.8272629118949
+						388.1309090548459,
+						299.82329543435384
 					]
 				},
 				"orientation": {
@@ -3700,18 +3700,18 @@
 				},
 				"$asuri": {
 					"type": "string",
-					"value": "/Formalisms/__Transformations__/TransformationRule/TransformationRule/PatternContents/181.instance"
+					"value": "/Formalisms/__Transformations__/TransformationRule/TransformationRule/PatternContents/61.instance"
 				},
 				"$segments": {
 					"type": "map<string,list<string>>",
 					"value": {
-						"/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons/LHSIcon/147.instance--/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons/PatternContentsLink/181.instance": "M320,256L419.62866376123065,315.8272629118949",
-						"/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons/PatternContentsLink/181.instance--/Formalisms/Railway/Railway.defaultIcons.pattern/__pClockIcon/180.instance": "M419.6284419272693,315.82712970004354L518.9995565867298,375.49973372921716"
+						"/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons/LHSIcon/3.instance--/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons/PatternContentsLink/61.instance": "M292,246L388.1309090548459,299.82329543435384",
+						"/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons/PatternContentsLink/61.instance--/Formalisms/Railway/Railway.defaultIcons.pattern/__pClockIcon/60.instance": "M388.1306710385134,299.82316217000096L483.999524255447,353.499733632607"
 					}
 				},
 				"$type": "/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons/PatternContentsLink"
 			},
-			"182": {
+			"62": {
 				"link-style": {
 					"type": "map<string,string>",
 					"value": {
@@ -3736,8 +3736,8 @@
 				"position": {
 					"type": "list<double>",
 					"value": [
-						837.627799972736,
-						320.82889998316796
+						814.1355555307626,
+						304.8152777658385
 					]
 				},
 				"orientation": {
@@ -3768,13 +3768,13 @@
 				},
 				"$asuri": {
 					"type": "string",
-					"value": "/Formalisms/__Transformations__/TransformationRule/TransformationRule/PatternContents/182.instance"
+					"value": "/Formalisms/__Transformations__/TransformationRule/TransformationRule/PatternContents/62.instance"
 				},
 				"$segments": {
 					"type": "map<string,list<string>>",
 					"value": {
-						"/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons/RHSIcon/148.instance--/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons/PatternContentsLink/182.instance": "M731,255L837.627799972736,320.82889998316796",
-						"/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons/PatternContentsLink/182.instance--/Formalisms/Railway/Railway.defaultIcons.pattern/__pClockIcon/179.instance": "M837.6275954928664,320.8287737432486L943.9995912581122,386.49974765465606"
+						"/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons/RHSIcon/4.instance--/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons/PatternContentsLink/62.instance": "M692,246L814.1355555307626,304.8152777658385",
+						"/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons/PatternContentsLink/62.instance--/Formalisms/Railway/Railway.defaultIcons.pattern/__pClockIcon/59.instance": "M814.1353547078274,304.81518105807254L935.9995985522532,363.49980667987603"
 					}
 				},
 				"$type": "/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons/PatternContentsLink"
@@ -3783,58 +3783,26 @@
 		"edges": [],
 		"metamodels": [
 			"/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons",
-			"/Formalisms/TrainSchedule/TrainSchedule.defaultIcons.pattern",
 			"/Formalisms/Railway/Railway.defaultIcons.pattern"
 		]
 	},
 	"asm": {
 		"nodes": {
-			"146": {
-				"__pLabel": {
-					"type": "string",
-					"value": "0"
-				},
-				"__pPivotIn": {
-					"type": "string",
-					"value": ""
-				},
-				"__pPivotOut": {
-					"type": "string",
-					"value": ""
-				},
-				"__pMatchSubtypes": {
-					"type": "boolean",
-					"value": true
-				},
-				"position": {
-					"type": "code",
-					"value": "result = True"
-				},
-				"width": {
-					"type": "code",
-					"value": "result = True"
-				},
-				"height": {
-					"type": "code",
-					"value": "result = True"
-				},
-				"$type": "/Formalisms/Railway/Railway.pattern/__pBasicTrack"
-			},
-			"147": {
+			"3": {
 				"Condition": {
 					"type": "code",
-					"value": "clockStep = getAttr(\"step\", \"10\")\ntrainStep = getAttr(\"step\", \"3\")\nresult = ((clockStep == trainStep) and (getAttr(\"color\", \"7\") == \"GREEN\"))"
+					"value": "clockStep = getAttr(\"step\", \"10\")\ntrainStep = getAttr(\"step\", \"3\")\nresult = ((getAttr(\"direction\", \"2\") == getAttr(\"inDirection\", \"1\")) and (getAttr(\"color\", \"8\") == \"GREEN\") and (clockStep == trainStep))"
 				},
 				"$type": "/Formalisms/__Transformations__/TransformationRule/TransformationRule/LHS"
 			},
-			"148": {
+			"4": {
 				"Action": {
 					"type": "code",
 					"value": "setAttr(\"step\", str(int(getAttr(\"step\", \"3\"))+1), \"3\")"
 				},
 				"$type": "/Formalisms/__Transformations__/TransformationRule/TransformationRule/RHS"
 			},
-			"152": {
+			"31": {
 				"__pLabel": {
 					"type": "string",
 					"value": "0"
@@ -3862,18 +3830,12 @@
 					"type": "code",
 					"value": "result = getAttr()"
 				},
-				"$type": "/Formalisms/Railway/Railway.pattern/__pBasicTrack"
+				"$type": "/Formalisms/Railway/Railway.pattern/__pTrack"
 			},
-			"153": {
-				"$type": "/Formalisms/__Transformations__/TransformationRule/TransformationRule/PatternContents"
-			},
-			"154": {
-				"$type": "/Formalisms/__Transformations__/TransformationRule/TransformationRule/PatternContents"
-			},
-			"156": {
+			"32": {
 				"__pLabel": {
 					"type": "string",
-					"value": "1"
+					"value": "0"
 				},
 				"__pPivotIn": {
 					"type": "string",
@@ -3899,9 +3861,15 @@
 					"type": "code",
 					"value": "result = True"
 				},
-				"$type": "/Formalisms/Railway/Railway.pattern/__pBasicTrack"
+				"$type": "/Formalisms/Railway/Railway.pattern/__pTrack"
 			},
-			"157": {
+			"33": {
+				"$type": "/Formalisms/__Transformations__/TransformationRule/TransformationRule/PatternContents"
+			},
+			"34": {
+				"$type": "/Formalisms/__Transformations__/TransformationRule/TransformationRule/PatternContents"
+			},
+			"35": {
 				"__pLabel": {
 					"type": "string",
 					"value": "1"
@@ -3917,6 +3885,10 @@
 				"__pMatchSubtypes": {
 					"type": "boolean"
 				},
+				"inDirection": {
+					"type": "code",
+					"value": "result = getAttr()"
+				},
 				"position": {
 					"type": "code",
 					"value": "result = getAttr()"
@@ -3929,18 +3901,16 @@
 					"type": "code",
 					"value": "result = getAttr()"
 				},
-				"$type": "/Formalisms/Railway/Railway.pattern/__pBasicTrack"
+				"outDirection": {
+					"type": "code",
+					"value": "result = getAttr()"
+				},
+				"$type": "/Formalisms/Railway/Railway.pattern/__pJoin"
 			},
-			"158": {
-				"$type": "/Formalisms/__Transformations__/TransformationRule/TransformationRule/PatternContents"
-			},
-			"159": {
-				"$type": "/Formalisms/__Transformations__/TransformationRule/TransformationRule/PatternContents"
-			},
-			"160": {
+			"36": {
 				"__pLabel": {
 					"type": "string",
-					"value": "3"
+					"value": "1"
 				},
 				"__pPivotIn": {
 					"type": "string",
@@ -3954,44 +3924,13 @@
 					"type": "boolean",
 					"value": true
 				},
-				"width": {
+				"inDirection": {
 					"type": "code",
-					"value": "result = getAttr()"
-				},
-				"height": {
-					"type": "code",
-					"value": "result = getAttr()"
-				},
-				"name": {
-					"type": "code",
-					"value": "result = getAttr()"
-				},
-				"step": {
-					"type": "code",
-					"value": "result = getAttr()"
+					"value": "result = True"
 				},
 				"position": {
 					"type": "code",
-					"value": "result = getAttr()"
-				},
-				"$type": "/Formalisms/Railway/Railway.pattern/__pTrain"
-			},
-			"161": {
-				"__pLabel": {
-					"type": "string",
-					"value": "3"
-				},
-				"__pPivotIn": {
-					"type": "string",
-					"value": ""
-				},
-				"__pPivotOut": {
-					"type": "string",
-					"value": ""
-				},
-				"__pMatchSubtypes": {
-					"type": "boolean",
-					"value": true
+					"value": "result = True"
 				},
 				"width": {
 					"type": "code",
@@ -4001,21 +3940,19 @@
 					"type": "code",
 					"value": "result = True"
 				},
-				"name": {
+				"outDirection": {
 					"type": "code",
 					"value": "result = True"
 				},
-				"step": {
-					"type": "code",
-					"value": "result = True"
-				},
-				"position": {
-					"type": "code",
-					"value": "result = True"
-				},
-				"$type": "/Formalisms/Railway/Railway.pattern/__pTrain"
+				"$type": "/Formalisms/Railway/Railway.pattern/__pJoin"
 			},
-			"165": {
+			"37": {
+				"$type": "/Formalisms/__Transformations__/TransformationRule/TransformationRule/PatternContents"
+			},
+			"38": {
+				"$type": "/Formalisms/__Transformations__/TransformationRule/TransformationRule/PatternContents"
+			},
+			"39": {
 				"__pLabel": {
 					"type": "string",
 					"value": "2"
@@ -4032,9 +3969,113 @@
 					"type": "boolean",
 					"value": true
 				},
-				"$type": "/Formalisms/Railway/Railway.pattern/__pTrainOnTrack"
+				"direction": {
+					"type": "code",
+					"value": "result = True"
+				},
+				"$type": "/Formalisms/Railway/Railway.pattern/__pTrackToTrack"
 			},
-			"166": {
+			"40": {
+				"__pLabel": {
+					"type": "string",
+					"value": "2"
+				},
+				"__pPivotIn": {
+					"type": "string",
+					"value": ""
+				},
+				"__pPivotOut": {
+					"type": "string",
+					"value": ""
+				},
+				"__pMatchSubtypes": {
+					"type": "boolean",
+					"value": true
+				},
+				"direction": {
+					"type": "code",
+					"value": "result = getAttr()"
+				},
+				"$type": "/Formalisms/Railway/Railway.pattern/__pTrackToTrack"
+			},
+			"41": {
+				"__pLabel": {
+					"type": "string",
+					"value": "3"
+				},
+				"__pPivotIn": {
+					"type": "string",
+					"value": ""
+				},
+				"__pPivotOut": {
+					"type": "string",
+					"value": ""
+				},
+				"__pMatchSubtypes": {
+					"type": "boolean"
+				},
+				"width": {
+					"type": "code",
+					"value": "result = getAttr()"
+				},
+				"height": {
+					"type": "code",
+					"value": "result = getAttr()"
+				},
+				"name": {
+					"type": "code",
+					"value": "result = getAttr()"
+				},
+				"step": {
+					"type": "code",
+					"value": "result = getAttr()"
+				},
+				"position": {
+					"type": "code",
+					"value": "result = getAttr()"
+				},
+				"$type": "/Formalisms/Railway/Railway.pattern/__pTrain"
+			},
+			"42": {
+				"__pLabel": {
+					"type": "string",
+					"value": "3"
+				},
+				"__pPivotIn": {
+					"type": "string",
+					"value": ""
+				},
+				"__pPivotOut": {
+					"type": "string",
+					"value": ""
+				},
+				"__pMatchSubtypes": {
+					"type": "boolean",
+					"value": true
+				},
+				"width": {
+					"type": "code",
+					"value": "result = True"
+				},
+				"height": {
+					"type": "code",
+					"value": "result = True"
+				},
+				"name": {
+					"type": "code",
+					"value": "result = True"
+				},
+				"step": {
+					"type": "code",
+					"value": "result = True"
+				},
+				"position": {
+					"type": "code",
+					"value": "result = True"
+				},
+				"$type": "/Formalisms/Railway/Railway.pattern/__pTrain"
+			},
+			"45": {
 				"__pLabel": {
 					"type": "string",
 					"value": "4"
@@ -4053,7 +4094,7 @@
 				},
 				"$type": "/Formalisms/Railway/Railway.pattern/__pTrainOnTrack"
 			},
-			"167": {
+			"46": {
 				"__pLabel": {
 					"type": "string",
 					"value": "5"
@@ -4069,6 +4110,24 @@
 				"__pMatchSubtypes": {
 					"type": "boolean",
 					"value": true
+				},
+				"$type": "/Formalisms/Railway/Railway.pattern/__pTrainOnTrack"
+			},
+			"47": {
+				"__pLabel": {
+					"type": "string",
+					"value": "6"
+				},
+				"__pPivotIn": {
+					"type": "string",
+					"value": ""
+				},
+				"__pPivotOut": {
+					"type": "string",
+					"value": ""
+				},
+				"__pMatchSubtypes": {
+					"type": "boolean"
 				},
 				"width": {
 					"type": "code",
@@ -4088,10 +4147,10 @@
 				},
 				"$type": "/Formalisms/Railway/Railway.pattern/__pLight"
 			},
-			"168": {
+			"48": {
 				"__pLabel": {
 					"type": "string",
-					"value": "5"
+					"value": "6"
 				},
 				"__pPivotIn": {
 					"type": "string",
@@ -4123,48 +4182,48 @@
 				},
 				"$type": "/Formalisms/Railway/Railway.pattern/__pLight"
 			},
-			"170": {
-				"__pLabel": {
-					"type": "string",
-					"value": "6"
-				},
-				"__pPivotIn": {
-					"type": "string",
-					"value": ""
-				},
-				"__pPivotOut": {
-					"type": "string",
-					"value": ""
-				},
-				"__pMatchSubtypes": {
-					"type": "boolean",
-					"value": true
-				},
-				"$type": "/Formalisms/Railway/Railway.pattern/__pLightOnTrack"
-			},
-			"171": {
-				"__pLabel": {
-					"type": "string",
-					"value": "6"
-				},
-				"__pPivotIn": {
-					"type": "string",
-					"value": ""
-				},
-				"__pPivotOut": {
-					"type": "string",
-					"value": ""
-				},
-				"__pMatchSubtypes": {
-					"type": "boolean",
-					"value": true
-				},
-				"$type": "/Formalisms/Railway/Railway.pattern/__pLightOnTrack"
-			},
-			"172": {
+			"50": {
 				"__pLabel": {
 					"type": "string",
 					"value": "7"
+				},
+				"__pPivotIn": {
+					"type": "string",
+					"value": ""
+				},
+				"__pPivotOut": {
+					"type": "string",
+					"value": ""
+				},
+				"__pMatchSubtypes": {
+					"type": "boolean",
+					"value": true
+				},
+				"$type": "/Formalisms/Railway/Railway.pattern/__pLightOnTrack"
+			},
+			"52": {
+				"__pLabel": {
+					"type": "string",
+					"value": "7"
+				},
+				"__pPivotIn": {
+					"type": "string",
+					"value": ""
+				},
+				"__pPivotOut": {
+					"type": "string",
+					"value": ""
+				},
+				"__pMatchSubtypes": {
+					"type": "boolean",
+					"value": true
+				},
+				"$type": "/Formalisms/Railway/Railway.pattern/__pLightOnTrack"
+			},
+			"53": {
+				"__pLabel": {
+					"type": "string",
+					"value": "8"
 				},
 				"__pPivotIn": {
 					"type": "string",
@@ -4196,10 +4255,10 @@
 				},
 				"$type": "/Formalisms/Railway/Railway.pattern/__pLight"
 			},
-			"173": {
+			"54": {
 				"__pLabel": {
 					"type": "string",
-					"value": "7"
+					"value": "8"
 				},
 				"__pPivotIn": {
 					"type": "string",
@@ -4230,45 +4289,7 @@
 				},
 				"$type": "/Formalisms/Railway/Railway.pattern/__pLight"
 			},
-			"175": {
-				"__pLabel": {
-					"type": "string",
-					"value": "8"
-				},
-				"__pPivotIn": {
-					"type": "string",
-					"value": ""
-				},
-				"__pPivotOut": {
-					"type": "string",
-					"value": ""
-				},
-				"__pMatchSubtypes": {
-					"type": "boolean",
-					"value": true
-				},
-				"$type": "/Formalisms/Railway/Railway.pattern/__pLightOnTrack"
-			},
-			"176": {
-				"__pLabel": {
-					"type": "string",
-					"value": "8"
-				},
-				"__pPivotIn": {
-					"type": "string",
-					"value": ""
-				},
-				"__pPivotOut": {
-					"type": "string",
-					"value": ""
-				},
-				"__pMatchSubtypes": {
-					"type": "boolean",
-					"value": true
-				},
-				"$type": "/Formalisms/Railway/Railway.pattern/__pLightOnTrack"
-			},
-			"177": {
+			"56": {
 				"__pLabel": {
 					"type": "string",
 					"value": "9"
@@ -4285,13 +4306,9 @@
 					"type": "boolean",
 					"value": true
 				},
-				"direction": {
-					"type": "code",
-					"value": "result = True"
-				},
-				"$type": "/Formalisms/Railway/Railway.pattern/__pTrackToTrack"
+				"$type": "/Formalisms/Railway/Railway.pattern/__pLightOnTrack"
 			},
-			"178": {
+			"58": {
 				"__pLabel": {
 					"type": "string",
 					"value": "9"
@@ -4308,13 +4325,9 @@
 					"type": "boolean",
 					"value": true
 				},
-				"direction": {
-					"type": "code",
-					"value": "result = getAttr()"
-				},
-				"$type": "/Formalisms/Railway/Railway.pattern/__pTrackToTrack"
+				"$type": "/Formalisms/Railway/Railway.pattern/__pLightOnTrack"
 			},
-			"179": {
+			"59": {
 				"__pLabel": {
 					"type": "string",
 					"value": "10"
@@ -4336,7 +4349,7 @@
 				},
 				"$type": "/Formalisms/Railway/Railway.pattern/__pClock"
 			},
-			"180": {
+			"60": {
 				"__pLabel": {
 					"type": "string",
 					"value": "10"
@@ -4359,130 +4372,129 @@
 				},
 				"$type": "/Formalisms/Railway/Railway.pattern/__pClock"
 			},
-			"181": {
+			"61": {
 				"$type": "/Formalisms/__Transformations__/TransformationRule/TransformationRule/PatternContents"
 			},
-			"182": {
+			"62": {
 				"$type": "/Formalisms/__Transformations__/TransformationRule/TransformationRule/PatternContents"
 			}
 		},
 		"edges": [
 			{
-				"src": "148",
-				"dest": "153"
+				"src": "3",
+				"dest": "33"
 			},
 			{
-				"src": "153",
-				"dest": "152"
+				"src": "33",
+				"dest": "32"
 			},
 			{
-				"src": "147",
-				"dest": "154"
+				"src": "4",
+				"dest": "34"
 			},
 			{
-				"src": "154",
-				"dest": "146"
+				"src": "34",
+				"dest": "31"
 			},
 			{
-				"src": "148",
-				"dest": "158"
+				"src": "3",
+				"dest": "37"
 			},
 			{
-				"src": "158",
-				"dest": "157"
+				"src": "37",
+				"dest": "36"
 			},
 			{
-				"src": "147",
-				"dest": "159"
+				"src": "4",
+				"dest": "38"
 			},
 			{
-				"src": "159",
-				"dest": "156"
+				"src": "38",
+				"dest": "35"
 			},
 			{
-				"src": "146",
-				"dest": "165"
+				"src": "32",
+				"dest": "39"
 			},
 			{
-				"src": "165",
-				"dest": "161"
+				"src": "39",
+				"dest": "36"
 			},
 			{
-				"src": "157",
-				"dest": "166"
+				"src": "31",
+				"dest": "40"
 			},
 			{
-				"src": "166",
-				"dest": "160"
+				"src": "40",
+				"dest": "35"
 			},
 			{
-				"src": "146",
-				"dest": "170"
+				"src": "32",
+				"dest": "45"
 			},
 			{
-				"src": "170",
-				"dest": "168"
+				"src": "45",
+				"dest": "42"
 			},
 			{
-				"src": "152",
-				"dest": "171"
+				"src": "35",
+				"dest": "46"
 			},
 			{
-				"src": "171",
-				"dest": "167"
+				"src": "46",
+				"dest": "41"
 			},
 			{
-				"src": "157",
-				"dest": "175"
+				"src": "32",
+				"dest": "50"
 			},
 			{
-				"src": "175",
-				"dest": "173"
+				"src": "50",
+				"dest": "48"
 			},
 			{
-				"src": "156",
-				"dest": "176"
+				"src": "31",
+				"dest": "52"
 			},
 			{
-				"src": "176",
-				"dest": "172"
+				"src": "52",
+				"dest": "47"
 			},
 			{
-				"src": "146",
-				"dest": "177"
+				"src": "35",
+				"dest": "56"
 			},
 			{
-				"src": "177",
-				"dest": "156"
+				"src": "56",
+				"dest": "54"
 			},
 			{
-				"src": "152",
-				"dest": "178"
+				"src": "36",
+				"dest": "58"
 			},
 			{
-				"src": "178",
-				"dest": "157"
+				"src": "58",
+				"dest": "53"
 			},
 			{
-				"src": "147",
-				"dest": "181"
+				"src": "3",
+				"dest": "61"
 			},
 			{
-				"src": "181",
-				"dest": "180"
+				"src": "61",
+				"dest": "60"
 			},
 			{
-				"src": "148",
-				"dest": "182"
+				"src": "4",
+				"dest": "62"
 			},
 			{
-				"src": "182",
-				"dest": "179"
+				"src": "62",
+				"dest": "59"
 			}
 		],
 		"metamodels": [
 			"/Formalisms/__Transformations__/TransformationRule/TransformationRule",
-			"/Formalisms/TrainSchedule/TrainSchedule.pattern",
 			"/Formalisms/Railway/Railway.pattern"
 		]
 	}
