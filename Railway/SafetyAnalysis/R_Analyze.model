@@ -1,0 +1,212 @@
+{
+	"csm": {
+		"nodes": {
+			"0": {
+				"typename": {
+					"type": "string",
+					"value": "LHSIcon"
+				},
+				"position": {
+					"type": "list<double>",
+					"value": [
+						236,
+						213
+					]
+				},
+				"orientation": {
+					"type": "double",
+					"value": 0
+				},
+				"scale": {
+					"type": "list<double>",
+					"value": [
+						1,
+						1
+					]
+				},
+				"mapper": {
+					"type": "code",
+					"value": ""
+				},
+				"parser": {
+					"type": "code",
+					"value": ""
+				},
+				"$contents": {
+					"type": "map<string,*>",
+					"value": {
+						"nodes": {
+							"4": {
+								"segments": {
+									"type": "string",
+									"value": "m0,0 l350,0 l100,250 l-100,250 l-350,0z"
+								},
+								"style": {
+									"type": "map<string,string>",
+									"value": {
+										"stroke": "#000000",
+										"stroke-dasharray": "",
+										"fill": "#ffffff",
+										"fill-opacity": 0.75,
+										"stroke-width": 2,
+										"arrow-start": "none",
+										"arrow-end": "none"
+									}
+								},
+								"mapper": {
+									"type": "code",
+									"value": ""
+								},
+								"parser": {
+									"type": "code",
+									"value": ""
+								},
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Path",
+								"position": {
+									"type": "list<double>",
+									"value": [
+										1,
+										0
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": 0
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								}
+							}
+						},
+						"edges": []
+					}
+				},
+				"$asuri": {
+					"type": "string",
+					"value": "/Formalisms/__Transformations__/TransformationRule/TransformationRule/LHS/0.instance"
+				},
+				"$type": "/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons/LHSIcon"
+			},
+			"1": {
+				"typename": {
+					"type": "string",
+					"value": "RHSIcon"
+				},
+				"position": {
+					"type": "list<double>",
+					"value": [
+						637,
+						213
+					]
+				},
+				"orientation": {
+					"type": "double",
+					"value": 0
+				},
+				"scale": {
+					"type": "list<double>",
+					"value": [
+						1,
+						1
+					]
+				},
+				"mapper": {
+					"type": "code",
+					"value": ""
+				},
+				"parser": {
+					"type": "code",
+					"value": ""
+				},
+				"$contents": {
+					"type": "map<string,*>",
+					"value": {
+						"nodes": {
+							"7": {
+								"segments": {
+									"type": "string",
+									"value": "m0,0 l450,0 l0,500 l-450,0 l100,-250z"
+								},
+								"style": {
+									"type": "map<string,string>",
+									"value": {
+										"stroke": "#000000",
+										"stroke-dasharray": "",
+										"fill": "#ffffff",
+										"fill-opacity": 0.75,
+										"stroke-width": 2,
+										"arrow-start": "none",
+										"arrow-end": "none"
+									}
+								},
+								"mapper": {
+									"type": "code",
+									"value": ""
+								},
+								"parser": {
+									"type": "code",
+									"value": ""
+								},
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Path",
+								"position": {
+									"type": "list<double>",
+									"value": [
+										0,
+										0
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": 0
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								}
+							}
+						},
+						"edges": []
+					}
+				},
+				"$asuri": {
+					"type": "string",
+					"value": "/Formalisms/__Transformations__/TransformationRule/TransformationRule/RHS/1.instance"
+				},
+				"$type": "/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons/RHSIcon"
+			}
+		},
+		"edges": [],
+		"metamodels": [
+			"/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons"
+		]
+	},
+	"asm": {
+		"nodes": {
+			"0": {
+				"Condition": {
+					"type": "code",
+					"value": "result = True"
+				},
+				"$type": "/Formalisms/__Transformations__/TransformationRule/TransformationRule/LHS"
+			},
+			"1": {
+				"Action": {
+					"type": "code",
+					"value": "import os\n\n'''\nGenerate .net file\n'''\n\nif not os.path.exists(\"railway\"):\n    os.makedirs(\"railway\")\n\nfileName = \"{}/{}/{}\".format(os.getcwd(), \"railway\", \"railway.net\")\nfile = open(fileName, \"w\")\n\n# Places\nmarkings = {}\nfile.write(\"\\nPLACE\\n\")\nplaces = getAllNodes([\"/Formalisms/PN/PN/Place\"])\nfor i, place in enumerate(places):\n    pname = getAttr(\"pname\", place)\n    tokens = getAttr(\"tokens\", place)\n    markings[pname] = tokens\n    if i == len(places) - 1:\n        file.write(pname + \"\\n\")\n    else:\n        file.write(pname + \",\\n\")\nfile.write(\";\\n\")\n\n# Markings\nfile.write(\"\\nMARKING\\n\")\nfor i, (pname, marking) in enumerate(markings.items()):\n    if i == len(markings) - 1:\n        file.write(\"{}: {}\\n\".format(pname, marking))\n    else:\n        file.write(\"{}: {},\\n\".format(pname, marking))\nfile.write(\";\\n\")\n\n# Transitions\nfor transition in getAllNodes([\"/Formalisms/PN/PN/Transition\"]):\n    produces = getNeighbors(\">\", \"*\", transition)\n    consumes = getNeighbors(\"<\", \"*\", transition)\n    file.write(\"\\nTRANSITION {}\\n\".format(getAttr(\"tname\", transition)))\n    file.write(\"CONSUME\\n\")\n    for i, consume in enumerate(consumes):\n        if getAttr(\"pname\", getNeighbors(\"<\", \"*\", consume)[0]) is not None:\n            pname = getAttr(\"pname\", getNeighbors(\"<\", \"*\", consume)[0])\n            if i == len(consumes) - 1:\n                file.write(\"{}: {}\".format(pname, getAttr(\"weight\", consume)))\n            else:\n                file.write(\"{}: {}, \".format(pname, getAttr(\"weight\", consume)))\n    file.write(\";\\n\")\n    file.write(\"PRODUCE\\n\")\n    for i, produce in enumerate(produces):\n        if getAttr(\"pname\", getNeighbors(\">\", \"*\", produce)[0]) is not None:\n            pname = getAttr(\"pname\", getNeighbors(\">\", \"*\", produce)[0])\n            if i == len(produces) - 1:\n                file.write(\"{}: {}\".format(pname, getAttr(\"weight\", produce)))\n            else:\n                file.write(\"{}: {}, \".format(pname, getAttr(\"weight\", produce)))\n    file.write(\";\\n\")\n\nfile.close()\n\n'''\nRun analysis with LoLA on the generated .net file\n'''\n\n# Deadlock\nos.system(\"lola railway/railway.net --json=railway/deadlock.json --path=railway/deadlock_path.txt --state=railway/deadlock_state.txt --formula='EF DEADLOCK'\")\n\n# Soundness\n\n# (1) No dead transitions\n# file2 = open(\"railway/deadtransition_transition.txt\", \"w\")\n# for task in getAllNodes([\"/Formalisms/YAWL/YAWL/Task\", \"/Formalisms/YAWL/YAWL/XorJoinTask\", \"/Formalisms/YAWL/YAWL/XorSplitTask\", \"/Formalisms/YAWL/YAWL/AndJoinTask\", \"/Formalisms/YAWL/YAWL/AndSplitTask\", \"/Formalisms/YAWL/YAWL/OrJoinTask\", \"/Formalisms/YAWL/YAWL/XorJoinTask\"]):\n#     os.system(\"lola railway/yawl.net --formula='AG NOT FIREABLE({})' --path=railway/deadtransition_path.txt --state=railway/deadtransition_state.txt\".format(getAttr(\"name\", task)))\n#     with open(\"railway/deadtransition_state.txt\", \"r+\") as file:\n#         lines = file.read().splitlines()\n#         if len(lines) > 0 and lines[0] == \"NOSTATE\":\n#             file2.write(getAttr(\"name\", task))\n# file2.close()\n\n# (2) Option to complete + (3) Proper completion\n# stateString = \"\"\n# for i, place in enumerate(places):\n#     pname = getAttr(\"pname\", place)\n#     tokens = 0\n#     if pname == \"End\":\n#         tokens = 1\n#     if i == len(places) - 1:\n#         stateString += \"{} = {}\".format(pname, tokens)\n#     else:\n#         stateString += \"{} = {} AND \".format(pname, tokens)\n# os.system(\"lola railway/yawl.net --formula='AGEF({})' --json=railway/completion.json\".format(stateString))\n\nresult = True"
+				},
+				"$type": "/Formalisms/__Transformations__/TransformationRule/TransformationRule/RHS"
+			}
+		},
+		"edges": [],
+		"metamodels": [
+			"/Formalisms/__Transformations__/TransformationRule/TransformationRule"
+		]
+	}
+}

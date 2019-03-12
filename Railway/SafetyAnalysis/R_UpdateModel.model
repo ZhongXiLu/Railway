@@ -1,0 +1,212 @@
+{
+	"csm": {
+		"nodes": {
+			"0": {
+				"typename": {
+					"type": "string",
+					"value": "LHSIcon"
+				},
+				"position": {
+					"type": "list<double>",
+					"value": [
+						185,
+						203
+					]
+				},
+				"orientation": {
+					"type": "double",
+					"value": 0
+				},
+				"scale": {
+					"type": "list<double>",
+					"value": [
+						1,
+						1
+					]
+				},
+				"mapper": {
+					"type": "code",
+					"value": ""
+				},
+				"parser": {
+					"type": "code",
+					"value": ""
+				},
+				"$contents": {
+					"type": "map<string,*>",
+					"value": {
+						"nodes": {
+							"4": {
+								"segments": {
+									"type": "string",
+									"value": "m0,0 l350,0 l100,250 l-100,250 l-350,0z"
+								},
+								"style": {
+									"type": "map<string,string>",
+									"value": {
+										"stroke": "#000000",
+										"stroke-dasharray": "",
+										"fill": "#ffffff",
+										"fill-opacity": 0.75,
+										"stroke-width": 2,
+										"arrow-start": "none",
+										"arrow-end": "none"
+									}
+								},
+								"mapper": {
+									"type": "code",
+									"value": ""
+								},
+								"parser": {
+									"type": "code",
+									"value": ""
+								},
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Path",
+								"position": {
+									"type": "list<double>",
+									"value": [
+										1,
+										0
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": 0
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								}
+							}
+						},
+						"edges": []
+					}
+				},
+				"$asuri": {
+					"type": "string",
+					"value": "/Formalisms/__Transformations__/TransformationRule/TransformationRule/LHS/0.instance"
+				},
+				"$type": "/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons/LHSIcon"
+			},
+			"1": {
+				"typename": {
+					"type": "string",
+					"value": "RHSIcon"
+				},
+				"position": {
+					"type": "list<double>",
+					"value": [
+						586,
+						203
+					]
+				},
+				"orientation": {
+					"type": "double",
+					"value": 0
+				},
+				"scale": {
+					"type": "list<double>",
+					"value": [
+						1,
+						1
+					]
+				},
+				"mapper": {
+					"type": "code",
+					"value": ""
+				},
+				"parser": {
+					"type": "code",
+					"value": ""
+				},
+				"$contents": {
+					"type": "map<string,*>",
+					"value": {
+						"nodes": {
+							"7": {
+								"segments": {
+									"type": "string",
+									"value": "m0,0 l450,0 l0,500 l-450,0 l100,-250z"
+								},
+								"style": {
+									"type": "map<string,string>",
+									"value": {
+										"stroke": "#000000",
+										"stroke-dasharray": "",
+										"fill": "#ffffff",
+										"fill-opacity": 0.75,
+										"stroke-width": 2,
+										"arrow-start": "none",
+										"arrow-end": "none"
+									}
+								},
+								"mapper": {
+									"type": "code",
+									"value": ""
+								},
+								"parser": {
+									"type": "code",
+									"value": ""
+								},
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Path",
+								"position": {
+									"type": "list<double>",
+									"value": [
+										0,
+										0
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": 0
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								}
+							}
+						},
+						"edges": []
+					}
+				},
+				"$asuri": {
+					"type": "string",
+					"value": "/Formalisms/__Transformations__/TransformationRule/TransformationRule/RHS/1.instance"
+				},
+				"$type": "/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons/RHSIcon"
+			}
+		},
+		"edges": [],
+		"metamodels": [
+			"/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons"
+		]
+	},
+	"asm": {
+		"nodes": {
+			"0": {
+				"Condition": {
+					"type": "code",
+					"value": "result = True"
+				},
+				"$type": "/Formalisms/__Transformations__/TransformationRule/TransformationRule/LHS"
+			},
+			"1": {
+				"Action": {
+					"type": "code",
+					"value": "import json\n\n\n# Deadlock\nwith open(\"railway/deadlock.json\", \"r\") as file:\n    data = json.load(file)\n    if data[\"analysis\"][\"result\"]:\n        with open(data[\"files\"][\"witness path\"][\"filename\"], \"r\") as logfile:\n            toTracks = []\n            for index, line in enumerate(logfile):\n                if index == 0:\n                    toTracks.append(line.split(\"To\")[0].split(\"From\")[1])\n                toTracks.append(line.split(\"To\")[1][:-1])\n\n            for track in getAllNodes([\"/Formalisms/Railway/Railway/Straight\", \"/Formalisms/Railway/Railway/Start\", \"/Formalisms/Railway/Railway/End\", \"/Formalisms/Railway/Railway/Station\", \"/Formalisms/Railway/Railway/Turnout\", \"/Formalisms/Railway/Railway/Junction\", \"/Formalisms/Railway/Railway/Crossing\"]):\n                if getAttr(\"$atompmId\", track) in toTracks:\n                    setAttr(\"highlight\", True, track)\n                    setAttr(\"comment\", \"Deadlock: path #{}\".format(toTracks.index(getAttr(\"$atompmId\", track))+1), track)\n\n# Dead transitions\n# if not stop:\n#     with open(\"railway/deadtransition_transition.txt\", \"r\") as file:\n#         lines = file.read().splitlines()\n#         if len(lines) > 0:\n#             stop = True\n#             for task in getAllNodes([\"/Formalisms/YAWL/YAWL/Task\", \"/Formalisms/YAWL/YAWL/XorJoinTask\", \"/Formalisms/YAWL/YAWL/XorSplitTask\", \"/Formalisms/YAWL/YAWL/AndJoinTask\", \"/Formalisms/YAWL/YAWL/AndSplitTask\", \"/Formalisms/YAWL/YAWL/OrJoinTask\", \"/Formalisms/YAWL/YAWL/XorJoinTask\"]):\n#                 if getAttr(\"name\", task) == lines[0]:\n#                     setAttr(\"highlight\", True, task)\n#                     setAttr(\"comment\", \"Dead transition\", task)\n\n# Option to complete + proper completion\n# if not stop:\n#     with open(\"railway/completion.json\", \"r\") as file:\n#         data = json.load(file)\n#         if not data[\"analysis\"][\"result\"]:\n#             for condition in getAllNodes([\"/Formalisms/YAWL/YAWL/EndCondition\"]):\n#                 setAttr(\"highlight\", True, condition)\n#                 setAttr(\"comment\", \"Cannot reach final marking\", condition)\n\nresult = True"
+				},
+				"$type": "/Formalisms/__Transformations__/TransformationRule/TransformationRule/RHS"
+			}
+		},
+		"edges": [],
+		"metamodels": [
+			"/Formalisms/__Transformations__/TransformationRule/TransformationRule"
+		]
+	}
+}

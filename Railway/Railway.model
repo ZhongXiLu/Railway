@@ -3693,7 +3693,7 @@
 							"99": {
 								"textContent": {
 									"type": "string",
-									"value": "+ position : list<int> = 0,0\n+ width : int = 100\n+ height : int = 100"
+									"value": "+ position : list<int> = 0,0\n+ width : int = 100\n+ height : int = 100\n+ highlight : boolean\n+ comment : string"
 								},
 								"style": {
 									"type": "map<string,string>",
@@ -8830,6 +8830,16 @@
 							"name": "height",
 							"type": "int",
 							"default": 100
+						},
+						{
+							"name": "highlight",
+							"type": "boolean",
+							"default": false
+						},
+						{
+							"name": "comment",
+							"type": "string",
+							"default": ""
 						}
 					]
 				},

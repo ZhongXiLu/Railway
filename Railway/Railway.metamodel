@@ -18,6 +18,16 @@
 				"name": "height",
 				"type": "int",
 				"default": 100
+			},
+			{
+				"name": "highlight",
+				"type": "boolean",
+				"default": false
+			},
+			{
+				"name": "comment",
+				"type": "string",
+				"default": ""
 			}
 		],
 		"Straight": [
@@ -38,6 +48,16 @@
 					0,
 					0
 				]
+			},
+			{
+				"name": "highlight",
+				"type": "boolean",
+				"default": false
+			},
+			{
+				"name": "comment",
+				"type": "string",
+				"default": ""
 			}
 		],
 		"Turnout": [
@@ -63,6 +83,16 @@
 					0,
 					0
 				]
+			},
+			{
+				"name": "highlight",
+				"type": "boolean",
+				"default": false
+			},
+			{
+				"name": "comment",
+				"type": "string",
+				"default": ""
 			}
 		],
 		"Junction": [
@@ -88,6 +118,16 @@
 					0,
 					0
 				]
+			},
+			{
+				"name": "highlight",
+				"type": "boolean",
+				"default": false
+			},
+			{
+				"name": "comment",
+				"type": "string",
+				"default": ""
 			}
 		],
 		"Crossing": [
@@ -115,6 +155,16 @@
 				]
 			},
 			{
+				"name": "highlight",
+				"type": "boolean",
+				"default": false
+			},
+			{
+				"name": "comment",
+				"type": "string",
+				"default": ""
+			},
+			{
 				"name": "outDirection",
 				"type": "ENUM(STRAIGHT,TURN)",
 				"default": "STRAIGHT"
@@ -138,6 +188,16 @@
 					0,
 					0
 				]
+			},
+			{
+				"name": "highlight",
+				"type": "boolean",
+				"default": false
+			},
+			{
+				"name": "comment",
+				"type": "string",
+				"default": ""
 			}
 		],
 		"End": [
@@ -158,6 +218,16 @@
 					0,
 					0
 				]
+			},
+			{
+				"name": "highlight",
+				"type": "boolean",
+				"default": false
+			},
+			{
+				"name": "comment",
+				"type": "string",
+				"default": ""
 			}
 		],
 		"Station": [
@@ -183,6 +253,16 @@
 					0,
 					0
 				]
+			},
+			{
+				"name": "highlight",
+				"type": "boolean",
+				"default": false
+			},
+			{
+				"name": "comment",
+				"type": "string",
+				"default": ""
 			}
 		],
 		"Train": [
@@ -213,6 +293,16 @@
 					0,
 					0
 				]
+			},
+			{
+				"name": "highlight",
+				"type": "boolean",
+				"default": false
+			},
+			{
+				"name": "comment",
+				"type": "string",
+				"default": ""
 			}
 		],
 		"Light": [
@@ -238,6 +328,16 @@
 					0,
 					0
 				]
+			},
+			{
+				"name": "highlight",
+				"type": "boolean",
+				"default": false
+			},
+			{
+				"name": "comment",
+				"type": "string",
+				"default": ""
 			}
 		],
 		"Positionable": [
@@ -258,6 +358,16 @@
 				"name": "height",
 				"type": "int",
 				"default": 100
+			},
+			{
+				"name": "highlight",
+				"type": "boolean",
+				"default": false
+			},
+			{
+				"name": "comment",
+				"type": "string",
+				"default": ""
 			}
 		],
 		"TrackToTrack": [
@@ -301,6 +411,16 @@
 				"default": 100
 			},
 			{
+				"name": "highlight",
+				"type": "boolean",
+				"default": false
+			},
+			{
+				"name": "comment",
+				"type": "string",
+				"default": ""
+			},
+			{
 				"name": "outDirection",
 				"type": "ENUM(STRAIGHT,TURN)",
 				"default": "STRAIGHT"
@@ -329,6 +449,16 @@
 				"name": "height",
 				"type": "int",
 				"default": 100
+			},
+			{
+				"name": "highlight",
+				"type": "boolean",
+				"default": false
+			},
+			{
+				"name": "comment",
+				"type": "string",
+				"default": ""
 			}
 		],
 		"BasicTrack": [
@@ -349,6 +479,16 @@
 				"name": "height",
 				"type": "int",
 				"default": 100
+			},
+			{
+				"name": "highlight",
+				"type": "boolean",
+				"default": false
+			},
+			{
+				"name": "comment",
+				"type": "string",
+				"default": ""
 			}
 		]
 	},

@@ -9940,7 +9940,7 @@
 			"4": {
 				"Action": {
 					"type": "code",
-					"value": "toTrack = str(getAttr(\"$atompmId\", \"1\"))\nsetAttr(\"tname\", \"To\" + toTrack, \"14\")"
+					"value": "fromTrack = str(getAttr(\"$atompmId\", \"0\"))\ntoTrack = str(getAttr(\"$atompmId\", \"1\"))\nsetAttr(\"tname\", \"From\" + fromTrack + \"To\" + toTrack, \"14\")"
 				},
 				"$type": "/Formalisms/__Transformations__/TransformationRule/TransformationRule/RHS"
 			},
