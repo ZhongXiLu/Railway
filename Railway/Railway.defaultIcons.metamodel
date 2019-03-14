@@ -378,7 +378,7 @@
 							},
 							"mapper": {
 								"type": "code",
-								"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */\n(\n{\n    width:getAttr(\"width\"),\n    height:getAttr(\"height\")   \n}\n)\nif(getAttr(\"outDirection\") == \"STRAIGHT\") {\nif(getAttr('highlight')) {\n\t({'src':'/Formalisms/Railway/Icons/junction1_m.png'})\n} else {\n\t({'src':'/Formalisms/Railway/Icons/junction1.png'})\n}\n} else {\nif(getAttr('highlight')) {\n\t({'src':'/Formalisms/Railway/Icons/junction2_m.png'})\n} else {\n\t({'src':'/Formalisms/Railway/Icons/junction2.png'})\n}\n}"
+								"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */\n(\n{\n    width:getAttr(\"width\"),\n    height:getAttr(\"height\")   \n}\n)\nif(getAttr(\"inDirection\") == \"STRAIGHT\") {\nif(getAttr('highlight')) {\n\t({'src':'/Formalisms/Railway/Icons/junction1_m.png'})\n} else {\n\t({'src':'/Formalisms/Railway/Icons/junction1.png'})\n}\n} else {\nif(getAttr('highlight')) {\n\t({'src':'/Formalisms/Railway/Icons/junction2_m.png'})\n} else {\n\t({'src':'/Formalisms/Railway/Icons/junction2.png'})\n}\n}"
 							},
 							"parser": {
 								"type": "code",

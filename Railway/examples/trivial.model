@@ -1133,289 +1133,6 @@
 				},
 				"$type": "/Formalisms/Railway/Railway.defaultIcons/TrackToTrackLink"
 			},
-			"319": {
-				"typename": {
-					"type": "string",
-					"value": "StraightIcon"
-				},
-				"position": {
-					"type": "list<double>",
-					"value": [
-						445,
-						395
-					]
-				},
-				"orientation": {
-					"type": "double",
-					"value": 0
-				},
-				"scale": {
-					"type": "list<double>",
-					"value": [
-						1,
-						1
-					]
-				},
-				"mapper": {
-					"type": "code",
-					"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */\n({position:getAttr(\"position\")})"
-				},
-				"parser": {
-					"type": "code",
-					"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */\n({position:getAttr(\"position\")})"
-				},
-				"$contents": {
-					"type": "map<string,*>",
-					"value": {
-						"nodes": {
-							"4": {
-								"src": {
-									"type": "string",
-									"value": "/Formalisms/Railway/Icons/straight.png"
-								},
-								"width": {
-									"type": "double",
-									"value": 180
-								},
-								"height": {
-									"type": "double",
-									"value": 40
-								},
-								"style": {
-									"type": "map<string,string>",
-									"value": {
-										"stroke": "#000000",
-										"stroke-dasharray": "",
-										"fill": "#ffffff",
-										"fill-opacity": 1,
-										"font-size": "20px",
-										"stroke-width": 1,
-										"arrow-start": "none",
-										"arrow-end": "none"
-									}
-								},
-								"mapper": {
-									"type": "code",
-									"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */\n(\n{\n    width:getAttr(\"width\"),\n    height:getAttr(\"height\")   \n}\n)\nif(getAttr('highlight')) {\n\t({'src':'/Formalisms/Railway/Icons/straight_m.png'})\n} else {\n\t({'src':'/Formalisms/Railway/Icons/straight.png'})\n}"
-								},
-								"parser": {
-									"type": "code",
-									"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */\n(\n{\n    width:getAttr(\"width\"),\n    height:getAttr(\"height\")   \n}\n)"
-								},
-								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Image",
-								"position": {
-									"type": "list<double>",
-									"value": [
-										2,
-										4
-									]
-								},
-								"orientation": {
-									"type": "double",
-									"value": 0
-								},
-								"scale": {
-									"type": "list<double>",
-									"value": [
-										1,
-										1
-									]
-								}
-							},
-							"119": {
-								"textContent": {
-									"type": "string",
-									"value": ""
-								},
-								"style": {
-									"type": "map<string,string>",
-									"value": {
-										"stroke": "#ff0000",
-										"stroke-dasharray": "",
-										"fill": "#ff0000",
-										"fill-opacity": 1,
-										"font-size": "16px",
-										"font-family": "Calibri",
-										"stroke-width": 1,
-										"arrow-start": "none",
-										"arrow-end": "none",
-										"font-style": "italic"
-									}
-								},
-								"mapper": {
-									"type": "code",
-									"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */\n({textContent:getAttr(\"comment\")})"
-								},
-								"parser": {
-									"type": "code",
-									"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
-								},
-								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Text",
-								"position": {
-									"type": "list<double>",
-									"value": [
-										9,
-										48
-									]
-								},
-								"orientation": {
-									"type": "double",
-									"value": 0
-								},
-								"scale": {
-									"type": "list<double>",
-									"value": [
-										1,
-										1
-									]
-								}
-							}
-						},
-						"edges": []
-					}
-				},
-				"$asuri": {
-					"type": "string",
-					"value": "/Formalisms/Railway/Railway/Straight/319.instance"
-				},
-				"$type": "/Formalisms/Railway/Railway.defaultIcons/StraightIcon"
-			},
-			"320": {
-				"link-style": {
-					"type": "map<string,string>",
-					"value": {
-						"stroke": "#000000",
-						"stroke-dasharray": "",
-						"stroke-opacity": 0.2,
-						"stroke-width": 2
-					}
-				},
-				"arrowHead": {
-					"type": "ENUM(circle-black,circle-black-large,circle-white,circle-white-large,diamond-black,diamond-black-large,diamond-white,diamond-white-large,triangle-black,triangle-black-large,triangle-white,triangle-white-large,arrow-black,arrow-black-large,arrow-empty,arrow-empty-large,custom)",
-					"value": "custom"
-				},
-				"arrowTail": {
-					"type": "ENUM(circle-black,circle-black-large,circle-white,circle-white-large,diamond-black,diamond-black-large,diamond-white,diamond-white-large,triangle-black,triangle-black-large,triangle-white,triangle-white-large,arrow-black,arrow-black-large,arrow-empty,arrow-empty-large,custom)",
-					"value": "arrow-black"
-				},
-				"typename": {
-					"type": "string",
-					"value": "TrackToTrackLink"
-				},
-				"position": {
-					"type": "list<double>",
-					"value": [
-						650.5,
-						443
-					]
-				},
-				"orientation": {
-					"type": "double",
-					"value": 0
-				},
-				"scale": {
-					"type": "list<double>",
-					"value": [
-						1,
-						1
-					]
-				},
-				"mapper": {
-					"type": "code",
-					"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
-				},
-				"parser": {
-					"type": "code",
-					"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
-				},
-				"$contents": {
-					"type": "map<string,*>",
-					"value": {
-						"nodes": {},
-						"edges": []
-					}
-				},
-				"$asuri": {
-					"type": "string",
-					"value": "/Formalisms/Railway/Railway/TrackToTrack/320.instance"
-				},
-				"$segments": {
-					"type": "map<string,list<string>>",
-					"value": {
-						"/Formalisms/Railway/Railway.defaultIcons/StraightIcon/319.instance--/Formalisms/Railway/Railway.defaultIcons/TrackToTrackLink/320.instance": "M633,471L650.5,443",
-						"/Formalisms/Railway/Railway.defaultIcons/TrackToTrackLink/320.instance--/Formalisms/Railway/Railway.defaultIcons/CrossingIcon/309.instance": "M650.5396521736973,442.9365565220842L667.9997591966496,415.0003852853605"
-					}
-				},
-				"$type": "/Formalisms/Railway/Railway.defaultIcons/TrackToTrackLink"
-			},
-			"321": {
-				"link-style": {
-					"type": "map<string,string>",
-					"value": {
-						"stroke": "#000000",
-						"stroke-dasharray": "",
-						"stroke-opacity": 0.2,
-						"stroke-width": 2
-					}
-				},
-				"arrowHead": {
-					"type": "ENUM(circle-black,circle-black-large,circle-white,circle-white-large,diamond-black,diamond-black-large,diamond-white,diamond-white-large,triangle-black,triangle-black-large,triangle-white,triangle-white-large,arrow-black,arrow-black-large,arrow-empty,arrow-empty-large,custom)",
-					"value": "custom"
-				},
-				"arrowTail": {
-					"type": "ENUM(circle-black,circle-black-large,circle-white,circle-white-large,diamond-black,diamond-black-large,diamond-white,diamond-white-large,triangle-black,triangle-black-large,triangle-white,triangle-white-large,arrow-black,arrow-black-large,arrow-empty,arrow-empty-large,custom)",
-					"value": "arrow-black"
-				},
-				"typename": {
-					"type": "string",
-					"value": "TrackToTrackLink"
-				},
-				"position": {
-					"type": "list<double>",
-					"value": [
-						420.5,
-						381
-					]
-				},
-				"orientation": {
-					"type": "double",
-					"value": 0
-				},
-				"scale": {
-					"type": "list<double>",
-					"value": [
-						1,
-						1
-					]
-				},
-				"mapper": {
-					"type": "code",
-					"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
-				},
-				"parser": {
-					"type": "code",
-					"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
-				},
-				"$contents": {
-					"type": "map<string,*>",
-					"value": {
-						"nodes": {},
-						"edges": []
-					}
-				},
-				"$asuri": {
-					"type": "string",
-					"value": "/Formalisms/Railway/Railway/TrackToTrack/321.instance"
-				},
-				"$segments": {
-					"type": "map<string,list<string>>",
-					"value": {
-						"/Formalisms/Railway/Railway.defaultIcons/TurnoutIcon/317.instance--/Formalisms/Railway/Railway.defaultIcons/TrackToTrackLink/321.instance": "M301,341L420.5,381",
-						"/Formalisms/Railway/Railway.defaultIcons/TrackToTrackLink/321.instance--/Formalisms/Railway/Railway.defaultIcons/StraightIcon/319.instance": "M420.64203606248725,381.0475434518787L539.9995486138606,420.9998489084053"
-					}
-				},
-				"$type": "/Formalisms/Railway/Railway.defaultIcons/TrackToTrackLink"
-			},
 			"322": {
 				"typename": {
 					"type": "string",
@@ -2056,8 +1773,8 @@
 				"position": {
 					"type": "list<double>",
 					"value": [
-						169,
-						852
+						856,
+						687
 					]
 				},
 				"orientation": {
@@ -3759,6 +3476,2389 @@
 					}
 				},
 				"$type": "/Formalisms/TrainSchedule/TrainSchedule.defaultIcons/NextStepLink"
+			},
+			"342": {
+				"typename": {
+					"type": "string",
+					"value": "StraightIcon"
+				},
+				"position": {
+					"type": "list<double>",
+					"value": [
+						867,
+						185
+					]
+				},
+				"orientation": {
+					"type": "double",
+					"value": 0
+				},
+				"scale": {
+					"type": "list<double>",
+					"value": [
+						1,
+						1
+					]
+				},
+				"mapper": {
+					"type": "code",
+					"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */\n({position:getAttr(\"position\")})"
+				},
+				"parser": {
+					"type": "code",
+					"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */\n({position:getAttr(\"position\")})"
+				},
+				"$contents": {
+					"type": "map<string,*>",
+					"value": {
+						"nodes": {
+							"4": {
+								"src": {
+									"type": "string",
+									"value": "/Formalisms/Railway/Icons/straight.png"
+								},
+								"width": {
+									"type": "double",
+									"value": 180
+								},
+								"height": {
+									"type": "double",
+									"value": 40
+								},
+								"style": {
+									"type": "map<string,string>",
+									"value": {
+										"stroke": "#000000",
+										"stroke-dasharray": "",
+										"fill": "#ffffff",
+										"fill-opacity": 1,
+										"font-size": "20px",
+										"stroke-width": 1,
+										"arrow-start": "none",
+										"arrow-end": "none"
+									}
+								},
+								"mapper": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */\n(\n{\n    width:getAttr(\"width\"),\n    height:getAttr(\"height\")   \n}\n)\nif(getAttr('highlight')) {\n\t({'src':'/Formalisms/Railway/Icons/straight_m.png'})\n} else {\n\t({'src':'/Formalisms/Railway/Icons/straight.png'})\n}"
+								},
+								"parser": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */\n(\n{\n    width:getAttr(\"width\"),\n    height:getAttr(\"height\")   \n}\n)"
+								},
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Image",
+								"position": {
+									"type": "list<double>",
+									"value": [
+										2,
+										4
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": 0
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								}
+							},
+							"119": {
+								"textContent": {
+									"type": "string",
+									"value": ""
+								},
+								"style": {
+									"type": "map<string,string>",
+									"value": {
+										"stroke": "#ff0000",
+										"stroke-dasharray": "",
+										"fill": "#ff0000",
+										"fill-opacity": 1,
+										"font-size": "16px",
+										"font-family": "Calibri",
+										"stroke-width": 1,
+										"arrow-start": "none",
+										"arrow-end": "none",
+										"font-style": "italic"
+									}
+								},
+								"mapper": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */\n({textContent:getAttr(\"comment\")})"
+								},
+								"parser": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+								},
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Text",
+								"position": {
+									"type": "list<double>",
+									"value": [
+										9,
+										48
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": 0
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								}
+							}
+						},
+						"edges": []
+					}
+				},
+				"$asuri": {
+					"type": "string",
+					"value": "/Formalisms/Railway/Railway/Straight/342.instance"
+				},
+				"$type": "/Formalisms/Railway/Railway.defaultIcons/StraightIcon"
+			},
+			"343": {
+				"typename": {
+					"type": "string",
+					"value": "JunctionIcon"
+				},
+				"position": {
+					"type": "list<double>",
+					"value": [
+						445,
+						395
+					]
+				},
+				"orientation": {
+					"type": "double",
+					"value": 0
+				},
+				"scale": {
+					"type": "list<double>",
+					"value": [
+						1,
+						1
+					]
+				},
+				"mapper": {
+					"type": "code",
+					"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */\n({position:getAttr(\"position\")})"
+				},
+				"parser": {
+					"type": "code",
+					"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */\n({position:getAttr(\"position\")})"
+				},
+				"$contents": {
+					"type": "map<string,*>",
+					"value": {
+						"nodes": {
+							"44": {
+								"src": {
+									"type": "string",
+									"value": "/Formalisms/Railway/Icons/junction1.png"
+								},
+								"width": {
+									"type": "double",
+									"value": 180
+								},
+								"height": {
+									"type": "double",
+									"value": 100
+								},
+								"style": {
+									"type": "map<string,string>",
+									"value": {
+										"stroke": "#000000",
+										"stroke-dasharray": "",
+										"fill": "#ffffff",
+										"fill-opacity": 1,
+										"font-size": "20px",
+										"stroke-width": 1,
+										"arrow-start": "none",
+										"arrow-end": "none"
+									}
+								},
+								"mapper": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */\n(\n{\n    width:getAttr(\"width\"),\n    height:getAttr(\"height\")   \n}\n)\nif(getAttr(\"inDirection\") == \"STRAIGHT\") {\nif(getAttr('highlight')) {\n\t({'src':'/Formalisms/Railway/Icons/junction1_m.png'})\n} else {\n\t({'src':'/Formalisms/Railway/Icons/junction1.png'})\n}\n} else {\nif(getAttr('highlight')) {\n\t({'src':'/Formalisms/Railway/Icons/junction2_m.png'})\n} else {\n\t({'src':'/Formalisms/Railway/Icons/junction2.png'})\n}\n}"
+								},
+								"parser": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */\n(\n{\n    width:getAttr(\"width\"),\n    height:getAttr(\"height\")   \n}\n)"
+								},
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Image",
+								"position": {
+									"type": "list<double>",
+									"value": [
+										4,
+										4
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": 0
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								}
+							},
+							"129": {
+								"textContent": {
+									"type": "string",
+									"value": ""
+								},
+								"style": {
+									"type": "map<string,string>",
+									"value": {
+										"stroke": "#ff0000",
+										"stroke-dasharray": "",
+										"fill": "#ff0000",
+										"fill-opacity": 1,
+										"font-size": "16px",
+										"font-family": "Calibri",
+										"stroke-width": 1,
+										"arrow-start": "none",
+										"arrow-end": "none",
+										"font-style": "italic"
+									}
+								},
+								"mapper": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */\n({textContent:getAttr(\"comment\")})"
+								},
+								"parser": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+								},
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Text",
+								"position": {
+									"type": "list<double>",
+									"value": [
+										8,
+										104
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": 0
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								}
+							}
+						},
+						"edges": []
+					}
+				},
+				"$asuri": {
+					"type": "string",
+					"value": "/Formalisms/Railway/Railway/Junction/343.instance"
+				},
+				"$type": "/Formalisms/Railway/Railway.defaultIcons/JunctionIcon"
+			},
+			"344": {
+				"link-style": {
+					"type": "map<string,string>",
+					"value": {
+						"stroke": "#000000",
+						"stroke-dasharray": "",
+						"stroke-opacity": 0.2,
+						"stroke-width": 2
+					}
+				},
+				"arrowHead": {
+					"type": "ENUM(circle-black,circle-black-large,circle-white,circle-white-large,diamond-black,diamond-black-large,diamond-white,diamond-white-large,triangle-black,triangle-black-large,triangle-white,triangle-white-large,arrow-black,arrow-black-large,arrow-empty,arrow-empty-large,custom)",
+					"value": "custom"
+				},
+				"arrowTail": {
+					"type": "ENUM(circle-black,circle-black-large,circle-white,circle-white-large,diamond-black,diamond-black-large,diamond-white,diamond-white-large,triangle-black,triangle-black-large,triangle-white,triangle-white-large,arrow-black,arrow-black-large,arrow-empty,arrow-empty-large,custom)",
+					"value": "arrow-black"
+				},
+				"typename": {
+					"type": "string",
+					"value": "TrackToTrackLink"
+				},
+				"position": {
+					"type": "list<double>",
+					"value": [
+						672.5,
+						483
+					]
+				},
+				"orientation": {
+					"type": "double",
+					"value": 0
+				},
+				"scale": {
+					"type": "list<double>",
+					"value": [
+						1,
+						1
+					]
+				},
+				"mapper": {
+					"type": "code",
+					"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+				},
+				"parser": {
+					"type": "code",
+					"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+				},
+				"$contents": {
+					"type": "map<string,*>",
+					"value": {
+						"nodes": {},
+						"edges": []
+					}
+				},
+				"$asuri": {
+					"type": "string",
+					"value": "/Formalisms/Railway/Railway/TrackToTrack/344.instance"
+				},
+				"$segments": {
+					"type": "map<string,list<string>>",
+					"value": {
+						"/Formalisms/Railway/Railway.defaultIcons/JunctionIcon/343.instance--/Formalisms/Railway/Railway.defaultIcons/TrackToTrackLink/344.instance": "M614,544L672.5,483",
+						"/Formalisms/Railway/Railway.defaultIcons/TrackToTrackLink/344.instance--/Formalisms/Railway/Railway.defaultIcons/CrossingIcon/309.instance": "M672.6036003159973,482.89197232007143L730.9995088084074,422.0005121826863"
+					}
+				},
+				"$type": "/Formalisms/Railway/Railway.defaultIcons/TrackToTrackLink"
+			},
+			"345": {
+				"link-style": {
+					"type": "map<string,string>",
+					"value": {
+						"stroke": "#000000",
+						"stroke-dasharray": "",
+						"stroke-opacity": 0.2,
+						"stroke-width": 2
+					}
+				},
+				"arrowHead": {
+					"type": "ENUM(circle-black,circle-black-large,circle-white,circle-white-large,diamond-black,diamond-black-large,diamond-white,diamond-white-large,triangle-black,triangle-black-large,triangle-white,triangle-white-large,arrow-black,arrow-black-large,arrow-empty,arrow-empty-large,custom)",
+					"value": "custom"
+				},
+				"arrowTail": {
+					"type": "ENUM(circle-black,circle-black-large,circle-white,circle-white-large,diamond-black,diamond-black-large,diamond-white,diamond-white-large,triangle-black,triangle-black-large,triangle-white,triangle-white-large,arrow-black,arrow-black-large,arrow-empty,arrow-empty-large,custom)",
+					"value": "arrow-black"
+				},
+				"typename": {
+					"type": "string",
+					"value": "TrackToTrackLink"
+				},
+				"position": {
+					"type": "list<double>",
+					"value": [
+						448.1222221328049,
+						376.58777771355994
+					]
+				},
+				"orientation": {
+					"type": "double",
+					"value": 0
+				},
+				"scale": {
+					"type": "list<double>",
+					"value": [
+						1,
+						1
+					]
+				},
+				"mapper": {
+					"type": "code",
+					"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+				},
+				"parser": {
+					"type": "code",
+					"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+				},
+				"$contents": {
+					"type": "map<string,*>",
+					"value": {
+						"nodes": {},
+						"edges": []
+					}
+				},
+				"$asuri": {
+					"type": "string",
+					"value": "/Formalisms/Railway/Railway/TrackToTrack/345.instance"
+				},
+				"$segments": {
+					"type": "map<string,list<string>>",
+					"value": {
+						"/Formalisms/Railway/Railway.defaultIcons/TurnoutIcon/317.instance--/Formalisms/Railway/Railway.defaultIcons/TrackToTrackLink/345.instance": "M393,337L448.1222221328049,376.58777771355994",
+						"/Formalisms/Railway/Railway.defaultIcons/TrackToTrackLink/345.instance--/Formalisms/Railway/Railway.defaultIcons/JunctionIcon/343.instance": "M448.1218599936797,376.58751763182454L502.99927643550274,415.99948034913376"
+					}
+				},
+				"$type": "/Formalisms/Railway/Railway.defaultIcons/TrackToTrackLink"
+			},
+			"346": {
+				"typename": {
+					"type": "string",
+					"value": "StraightIcon"
+				},
+				"position": {
+					"type": "list<double>",
+					"value": [
+						265,
+						475
+					]
+				},
+				"orientation": {
+					"type": "double",
+					"value": 0
+				},
+				"scale": {
+					"type": "list<double>",
+					"value": [
+						1,
+						1
+					]
+				},
+				"mapper": {
+					"type": "code",
+					"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */\n({position:getAttr(\"position\")})"
+				},
+				"parser": {
+					"type": "code",
+					"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */\n({position:getAttr(\"position\")})"
+				},
+				"$contents": {
+					"type": "map<string,*>",
+					"value": {
+						"nodes": {
+							"4": {
+								"src": {
+									"type": "string",
+									"value": "/Formalisms/Railway/Icons/straight.png"
+								},
+								"width": {
+									"type": "double",
+									"value": 180
+								},
+								"height": {
+									"type": "double",
+									"value": 40
+								},
+								"style": {
+									"type": "map<string,string>",
+									"value": {
+										"stroke": "#000000",
+										"stroke-dasharray": "",
+										"fill": "#ffffff",
+										"fill-opacity": 1,
+										"font-size": "20px",
+										"stroke-width": 1,
+										"arrow-start": "none",
+										"arrow-end": "none"
+									}
+								},
+								"mapper": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */\n(\n{\n    width:getAttr(\"width\"),\n    height:getAttr(\"height\")   \n}\n)\nif(getAttr('highlight')) {\n\t({'src':'/Formalisms/Railway/Icons/straight_m.png'})\n} else {\n\t({'src':'/Formalisms/Railway/Icons/straight.png'})\n}"
+								},
+								"parser": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */\n(\n{\n    width:getAttr(\"width\"),\n    height:getAttr(\"height\")   \n}\n)"
+								},
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Image",
+								"position": {
+									"type": "list<double>",
+									"value": [
+										2,
+										4
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": 0
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								}
+							},
+							"119": {
+								"textContent": {
+									"type": "string",
+									"value": ""
+								},
+								"style": {
+									"type": "map<string,string>",
+									"value": {
+										"stroke": "#ff0000",
+										"stroke-dasharray": "",
+										"fill": "#ff0000",
+										"fill-opacity": 1,
+										"font-size": "16px",
+										"font-family": "Calibri",
+										"stroke-width": 1,
+										"arrow-start": "none",
+										"arrow-end": "none",
+										"font-style": "italic"
+									}
+								},
+								"mapper": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */\n({textContent:getAttr(\"comment\")})"
+								},
+								"parser": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+								},
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Text",
+								"position": {
+									"type": "list<double>",
+									"value": [
+										9,
+										48
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": 0
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								}
+							}
+						},
+						"edges": []
+					}
+				},
+				"$asuri": {
+					"type": "string",
+					"value": "/Formalisms/Railway/Railway/Straight/346.instance"
+				},
+				"$type": "/Formalisms/Railway/Railway.defaultIcons/StraightIcon"
+			},
+			"347": {
+				"link-style": {
+					"type": "map<string,string>",
+					"value": {
+						"stroke": "#000000",
+						"stroke-dasharray": "",
+						"stroke-opacity": 0.2,
+						"stroke-width": 2
+					}
+				},
+				"arrowHead": {
+					"type": "ENUM(circle-black,circle-black-large,circle-white,circle-white-large,diamond-black,diamond-black-large,diamond-white,diamond-white-large,triangle-black,triangle-black-large,triangle-white,triangle-white-large,arrow-black,arrow-black-large,arrow-empty,arrow-empty-large,custom)",
+					"value": "custom"
+				},
+				"arrowTail": {
+					"type": "ENUM(circle-black,circle-black-large,circle-white,circle-white-large,diamond-black,diamond-black-large,diamond-white,diamond-white-large,triangle-black,triangle-black-large,triangle-white,triangle-white-large,arrow-black,arrow-black-large,arrow-empty,arrow-empty-large,custom)",
+					"value": "arrow-black"
+				},
+				"typename": {
+					"type": "string",
+					"value": "TrackToTrackLink"
+				},
+				"position": {
+					"type": "list<double>",
+					"value": [
+						444,
+						469.5
+					]
+				},
+				"orientation": {
+					"type": "double",
+					"value": 0
+				},
+				"scale": {
+					"type": "list<double>",
+					"value": [
+						1,
+						1
+					]
+				},
+				"mapper": {
+					"type": "code",
+					"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+				},
+				"parser": {
+					"type": "code",
+					"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+				},
+				"$contents": {
+					"type": "map<string,*>",
+					"value": {
+						"nodes": {},
+						"edges": []
+					}
+				},
+				"$asuri": {
+					"type": "string",
+					"value": "/Formalisms/Railway/Railway/TrackToTrack/347.instance"
+				},
+				"$segments": {
+					"type": "map<string,list<string>>",
+					"value": {
+						"/Formalisms/Railway/Railway.defaultIcons/StraightIcon/346.instance--/Formalisms/Railway/Railway.defaultIcons/TrackToTrackLink/347.instance": "M297,517L444,469.5",
+						"/Formalisms/Railway/Railway.defaultIcons/TrackToTrackLink/347.instance--/Formalisms/Railway/Railway.defaultIcons/JunctionIcon/343.instance": "M444.0713119809848,469.4769570129471L590.999163766502,422.0002702115044"
+					}
+				},
+				"$type": "/Formalisms/Railway/Railway.defaultIcons/TrackToTrackLink"
+			},
+			"348": {
+				"typename": {
+					"type": "string",
+					"value": "StationIcon"
+				},
+				"position": {
+					"type": "list<double>",
+					"value": [
+						85,
+						439
+					]
+				},
+				"orientation": {
+					"type": "double",
+					"value": 0
+				},
+				"scale": {
+					"type": "list<double>",
+					"value": [
+						1,
+						1
+					]
+				},
+				"mapper": {
+					"type": "code",
+					"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */\n({position:getAttr(\"position\")})"
+				},
+				"parser": {
+					"type": "code",
+					"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */\n({position:getAttr(\"position\")})"
+				},
+				"$contents": {
+					"type": "map<string,*>",
+					"value": {
+						"nodes": {
+							"13": {
+								"src": {
+									"type": "string",
+									"value": "/Formalisms/Railway/Icons/station.png"
+								},
+								"width": {
+									"type": "double",
+									"value": 180
+								},
+								"height": {
+									"type": "double",
+									"value": 70
+								},
+								"style": {
+									"type": "map<string,string>",
+									"value": {
+										"stroke": "#000000",
+										"stroke-dasharray": "",
+										"fill": "#ffffff",
+										"fill-opacity": 1,
+										"font-size": "20px",
+										"stroke-width": 1,
+										"arrow-start": "none",
+										"arrow-end": "none"
+									}
+								},
+								"mapper": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */\n(\n{\n    width:getAttr(\"width\"),\n    height:getAttr(\"height\")   \n}\n)\nif(getAttr('highlight')) {\n\t({'src':'/Formalisms/Railway/Icons/station_m.png'})\n} else {\n\t({'src':'/Formalisms/Railway/Icons/station.png'})\n}"
+								},
+								"parser": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */\n(\n{\n    width:getAttr(\"width\"),\n    height:getAttr(\"height\")   \n}\n)"
+								},
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Image",
+								"position": {
+									"type": "list<double>",
+									"value": [
+										2,
+										3
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": 0
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								}
+							},
+							"40": {
+								"textContent": {
+									"type": "string",
+									"value": "StartStation2"
+								},
+								"style": {
+									"type": "map<string,string>",
+									"value": {
+										"stroke": "#000000",
+										"stroke-dasharray": "",
+										"fill": "#000000",
+										"fill-opacity": 1,
+										"font-size": "20px",
+										"font-family": "Calibri",
+										"stroke-width": 1,
+										"arrow-start": "none",
+										"arrow-end": "none"
+									}
+								},
+								"mapper": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */\n({textContent:getAttr(\"name\")})"
+								},
+								"parser": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+								},
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Text",
+								"position": {
+									"type": "list<double>",
+									"value": [
+										32,
+										11
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": 0
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								}
+							},
+							"110": {
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Contain",
+								"position": {
+									"type": "list<double>",
+									"value": [
+										21.5,
+										13.5
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": 0
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								},
+								"link-style": {
+									"type": "map<string,string>",
+									"value": {
+										"stroke": "#00ffff",
+										"stroke-dasharray": "",
+										"stroke-opacity": 0.1,
+										"stroke-width": 1
+									}
+								}
+							},
+							"131": {
+								"textContent": {
+									"type": "string",
+									"value": ""
+								},
+								"style": {
+									"type": "map<string,string>",
+									"value": {
+										"stroke": "#ff0000",
+										"stroke-dasharray": "",
+										"fill": "#ff0000",
+										"fill-opacity": 1,
+										"font-size": "16px",
+										"font-family": "Calibri",
+										"stroke-width": 1,
+										"arrow-start": "none",
+										"arrow-end": "none",
+										"font-style": "italic"
+									}
+								},
+								"mapper": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */\n({textContent:getAttr(\"comment\")})"
+								},
+								"parser": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+								},
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Text",
+								"position": {
+									"type": "list<double>",
+									"value": [
+										6,
+										74
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": 0
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								}
+							}
+						},
+						"edges": [
+							{
+								"src": "13",
+								"dest": "110"
+							},
+							{
+								"src": "110",
+								"dest": "40"
+							}
+						]
+					}
+				},
+				"$asuri": {
+					"type": "string",
+					"value": "/Formalisms/Railway/Railway/Station/348.instance"
+				},
+				"$type": "/Formalisms/Railway/Railway.defaultIcons/StationIcon"
+			},
+			"349": {
+				"link-style": {
+					"type": "map<string,string>",
+					"value": {
+						"stroke": "#000000",
+						"stroke-dasharray": "",
+						"stroke-opacity": 0.2,
+						"stroke-width": 2
+					}
+				},
+				"arrowHead": {
+					"type": "ENUM(circle-black,circle-black-large,circle-white,circle-white-large,diamond-black,diamond-black-large,diamond-white,diamond-white-large,triangle-black,triangle-black-large,triangle-white,triangle-white-large,arrow-black,arrow-black-large,arrow-empty,arrow-empty-large,custom)",
+					"value": "custom"
+				},
+				"arrowTail": {
+					"type": "ENUM(circle-black,circle-black-large,circle-white,circle-white-large,diamond-black,diamond-black-large,diamond-white,diamond-white-large,triangle-black,triangle-black-large,triangle-white,triangle-white-large,arrow-black,arrow-black-large,arrow-empty,arrow-empty-large,custom)",
+					"value": "arrow-black"
+				},
+				"typename": {
+					"type": "string",
+					"value": "TrackToTrackLink"
+				},
+				"position": {
+					"type": "list<double>",
+					"value": [
+						282,
+						527
+					]
+				},
+				"orientation": {
+					"type": "double",
+					"value": 0
+				},
+				"scale": {
+					"type": "list<double>",
+					"value": [
+						1,
+						1
+					]
+				},
+				"mapper": {
+					"type": "code",
+					"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+				},
+				"parser": {
+					"type": "code",
+					"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+				},
+				"$contents": {
+					"type": "map<string,*>",
+					"value": {
+						"nodes": {},
+						"edges": []
+					}
+				},
+				"$asuri": {
+					"type": "string",
+					"value": "/Formalisms/Railway/Railway/TrackToTrack/349.instance"
+				},
+				"$segments": {
+					"type": "map<string,list<string>>",
+					"value": {
+						"/Formalisms/Railway/Railway.defaultIcons/StationIcon/348.instance--/Formalisms/Railway/Railway.defaultIcons/TrackToTrackLink/349.instance": "M203,551L282,527",
+						"/Formalisms/Railway/Railway.defaultIcons/TrackToTrackLink/349.instance--/Formalisms/Railway/Railway.defaultIcons/StraightIcon/346.instance": "M282.143288084435,526.9564694427032L360.9993041440298,503.000211399282"
+					}
+				},
+				"$type": "/Formalisms/Railway/Railway.defaultIcons/TrackToTrackLink"
+			},
+			"350": {
+				"typename": {
+					"type": "string",
+					"value": "ScheduleIcon"
+				},
+				"position": {
+					"type": "list<double>",
+					"value": [
+						161,
+						840
+					]
+				},
+				"orientation": {
+					"type": "double",
+					"value": 0
+				},
+				"scale": {
+					"type": "list<double>",
+					"value": [
+						1,
+						1
+					]
+				},
+				"mapper": {
+					"type": "code",
+					"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+				},
+				"parser": {
+					"type": "code",
+					"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+				},
+				"$contents": {
+					"type": "map<string,*>",
+					"value": {
+						"nodes": {
+							"1": {
+								"width": {
+									"type": "double",
+									"value": 600
+								},
+								"height": {
+									"type": "double",
+									"value": 200
+								},
+								"cornerRadius": {
+									"type": "double",
+									"value": 5
+								},
+								"style": {
+									"type": "map<string,string>",
+									"value": {
+										"stroke": "#000000",
+										"stroke-dasharray": "",
+										"fill": "#ffffff",
+										"fill-opacity": 1,
+										"font-size": "20px",
+										"stroke-width": 1,
+										"arrow-start": "none",
+										"arrow-end": "none"
+									}
+								},
+								"mapper": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+								},
+								"parser": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+								},
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Rectangle",
+								"position": {
+									"type": "list<double>",
+									"value": [
+										9,
+										8
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": 0
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								}
+							},
+							"3": {
+								"textContent": {
+									"type": "string",
+									"value": "Schedule: Train2"
+								},
+								"style": {
+									"type": "map<string,string>",
+									"value": {
+										"stroke": "#000000",
+										"stroke-dasharray": "",
+										"fill": "#000000",
+										"fill-opacity": 1,
+										"font-size": "20px",
+										"font-family": "Calibri",
+										"stroke-width": 1,
+										"arrow-start": "none",
+										"arrow-end": "none"
+									}
+								},
+								"mapper": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */\n({textContent:\"Schedule: \" + getAttr(\"train\")})"
+								},
+								"parser": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+								},
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Text",
+								"position": {
+									"type": "list<double>",
+									"value": [
+										10,
+										212
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": 0
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								}
+							}
+						},
+						"edges": []
+					}
+				},
+				"$asuri": {
+					"type": "string",
+					"value": "/Formalisms/TrainSchedule/TrainSchedule/Schedule/350.instance"
+				},
+				"$type": "/Formalisms/TrainSchedule/TrainSchedule.defaultIcons/ScheduleIcon"
+			},
+			"351": {
+				"typename": {
+					"type": "string",
+					"value": "StartIcon"
+				},
+				"position": {
+					"type": "list<double>",
+					"value": [
+						188,
+						916
+					]
+				},
+				"orientation": {
+					"type": "double",
+					"value": 0
+				},
+				"scale": {
+					"type": "list<double>",
+					"value": [
+						1,
+						1
+					]
+				},
+				"mapper": {
+					"type": "code",
+					"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+				},
+				"parser": {
+					"type": "code",
+					"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+				},
+				"$contents": {
+					"type": "map<string,*>",
+					"value": {
+						"nodes": {
+							"10": {
+								"width": {
+									"type": "double",
+									"value": 150
+								},
+								"height": {
+									"type": "double",
+									"value": 50
+								},
+								"cornerRadius": {
+									"type": "double",
+									"value": 5
+								},
+								"style": {
+									"type": "map<string,string>",
+									"value": {
+										"stroke": "#000000",
+										"stroke-dasharray": "",
+										"fill": "#00b050",
+										"fill-opacity": 1,
+										"font-size": "20px",
+										"stroke-width": 1,
+										"arrow-start": "none",
+										"arrow-end": "none"
+									}
+								},
+								"mapper": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+								},
+								"parser": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+								},
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Rectangle",
+								"position": {
+									"type": "list<double>",
+									"value": [
+										3,
+										5
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": 0
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								}
+							},
+							"13": {
+								"textContent": {
+									"type": "string",
+									"value": "StartStation2"
+								},
+								"style": {
+									"type": "map<string,string>",
+									"value": {
+										"stroke": "#000000",
+										"stroke-dasharray": "",
+										"fill": "#000000",
+										"fill-opacity": 1,
+										"font-size": "20px",
+										"font-family": "Calibri",
+										"stroke-width": 1,
+										"arrow-start": "none",
+										"arrow-end": "none"
+									}
+								},
+								"mapper": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */\n({textContent:getAttr(\"station\")})"
+								},
+								"parser": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+								},
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Text",
+								"position": {
+									"type": "list<double>",
+									"value": [
+										6,
+										20
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": 0
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								}
+							},
+							"14": {
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Contain",
+								"position": {
+									"type": "list<double>",
+									"value": [
+										28,
+										19
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": 0
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								},
+								"link-style": {
+									"type": "map<string,string>",
+									"value": {
+										"stroke": "#00ffff",
+										"stroke-dasharray": "",
+										"stroke-opacity": 0.1,
+										"stroke-width": 1
+									}
+								}
+							}
+						},
+						"edges": [
+							{
+								"src": "10",
+								"dest": "14"
+							},
+							{
+								"src": "14",
+								"dest": "13"
+							}
+						]
+					}
+				},
+				"$asuri": {
+					"type": "string",
+					"value": "/Formalisms/TrainSchedule/TrainSchedule/Start/351.instance"
+				},
+				"$type": "/Formalisms/TrainSchedule/TrainSchedule.defaultIcons/StartIcon"
+			},
+			"352": {
+				"link-style": {
+					"type": "map<string,string>",
+					"value": {
+						"stroke": "#000000",
+						"stroke-dasharray": "",
+						"stroke-opacity": 1,
+						"stroke-width": 2
+					}
+				},
+				"arrowHead": {
+					"type": "ENUM(circle-black,circle-black-large,circle-white,circle-white-large,diamond-black,diamond-black-large,diamond-white,diamond-white-large,triangle-black,triangle-black-large,triangle-white,triangle-white-large,arrow-black,arrow-black-large,arrow-empty,arrow-empty-large,custom)",
+					"value": "custom"
+				},
+				"arrowTail": {
+					"type": "ENUM(circle-black,circle-black-large,circle-white,circle-white-large,diamond-black,diamond-black-large,diamond-white,diamond-white-large,triangle-black,triangle-black-large,triangle-white,triangle-white-large,arrow-black,arrow-black-large,arrow-empty,arrow-empty-large,custom)",
+					"value": "arrow-black"
+				},
+				"typename": {
+					"type": "string",
+					"value": "StepInScheduleLink"
+				},
+				"position": {
+					"type": "list<double>",
+					"value": [
+						216.60648846688144,
+						894.6064884668814
+					]
+				},
+				"orientation": {
+					"type": "double",
+					"value": 0
+				},
+				"scale": {
+					"type": "list<double>",
+					"value": [
+						1,
+						1
+					]
+				},
+				"mapper": {
+					"type": "code",
+					"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+				},
+				"parser": {
+					"type": "code",
+					"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+				},
+				"$contents": {
+					"type": "map<string,*>",
+					"value": {
+						"nodes": {
+							"267": {
+								"segments": {
+									"type": "string",
+									"value": "m0,0 l10,4 l-10,4 l3,-4 z"
+								},
+								"style": {
+									"type": "map<string,string>",
+									"value": {
+										"stroke": "#000000",
+										"fill": "#000000",
+										"opacity": 1,
+										"stroke-width": 1
+									}
+								},
+								"mapper": {
+									"type": "code",
+									"value": ""
+								},
+								"parser": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+								},
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Path",
+								"position": {
+									"type": "list<double>",
+									"value": [
+										"0;49.22128900800621,70.71067811865467%",
+										"0;43.564434758513926,70.71067811865484%"
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": "0;45.00000000000007"
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								},
+								"$linkDecoratorInfo": {
+									"type": "map<string,double>",
+									"value": {
+										"xratio": 1,
+										"yoffset": -4
+									}
+								}
+							}
+						},
+						"edges": []
+					}
+				},
+				"$asuri": {
+					"type": "string",
+					"value": "/Formalisms/TrainSchedule/TrainSchedule/StepInSchedule/352.instance"
+				},
+				"$segments": {
+					"type": "map<string,list<string>>",
+					"value": {
+						"/Formalisms/TrainSchedule/TrainSchedule.defaultIcons/ScheduleIcon/350.instance--/Formalisms/TrainSchedule/TrainSchedule.defaultIcons/StepInScheduleLink/352.instance": "M170,848L216.60648846688144,894.6064884668814",
+						"/Formalisms/TrainSchedule/TrainSchedule.defaultIcons/StepInScheduleLink/352.instance--/Formalisms/TrainSchedule/TrainSchedule.defaultIcons/StartIcon/351.instance": "M216.60616331176038,894.6061633117604L262.99935035014147,940.9993503501415"
+					}
+				},
+				"$type": "/Formalisms/TrainSchedule/TrainSchedule.defaultIcons/StepInScheduleLink"
+			},
+			"353": {
+				"typename": {
+					"type": "string",
+					"value": "WaypointIcon"
+				},
+				"position": {
+					"type": "list<double>",
+					"value": [
+						389,
+						919
+					]
+				},
+				"orientation": {
+					"type": "double",
+					"value": 0
+				},
+				"scale": {
+					"type": "list<double>",
+					"value": [
+						1,
+						1
+					]
+				},
+				"mapper": {
+					"type": "code",
+					"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+				},
+				"parser": {
+					"type": "code",
+					"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+				},
+				"$contents": {
+					"type": "map<string,*>",
+					"value": {
+						"nodes": {
+							"21": {
+								"width": {
+									"type": "double",
+									"value": 120
+								},
+								"height": {
+									"type": "double",
+									"value": 50
+								},
+								"cornerRadius": {
+									"type": "double",
+									"value": 5
+								},
+								"style": {
+									"type": "map<string,string>",
+									"value": {
+										"stroke": "#000000",
+										"stroke-dasharray": "",
+										"fill": "#ffffff",
+										"fill-opacity": 1,
+										"font-size": "20px",
+										"stroke-width": 1,
+										"arrow-start": "none",
+										"arrow-end": "none"
+									}
+								},
+								"mapper": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+								},
+								"parser": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+								},
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Rectangle",
+								"position": {
+									"type": "list<double>",
+									"value": [
+										3,
+										5
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": 0
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								}
+							},
+							"22": {
+								"textContent": {
+									"type": "string",
+									"value": "TURN"
+								},
+								"style": {
+									"type": "map<string,string>",
+									"value": {
+										"stroke": "#000000",
+										"stroke-dasharray": "",
+										"fill": "#000000",
+										"fill-opacity": 1,
+										"font-size": "20px",
+										"font-family": "Calibri",
+										"stroke-width": 1,
+										"arrow-start": "none",
+										"arrow-end": "none"
+									}
+								},
+								"mapper": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */\n({textContent:getAttr(\"direction\")})"
+								},
+								"parser": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+								},
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Text",
+								"position": {
+									"type": "list<double>",
+									"value": [
+										6,
+										20
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": 0
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								}
+							},
+							"23": {
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Contain",
+								"position": {
+									"type": "list<double>",
+									"value": [
+										28,
+										19
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": 0
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								},
+								"link-style": {
+									"type": "map<string,string>",
+									"value": {
+										"stroke": "#00ffff",
+										"stroke-dasharray": "",
+										"stroke-opacity": 0.1,
+										"stroke-width": 1
+									}
+								}
+							}
+						},
+						"edges": [
+							{
+								"src": "21",
+								"dest": "23"
+							},
+							{
+								"src": "23",
+								"dest": "22"
+							}
+						]
+					}
+				},
+				"$asuri": {
+					"type": "string",
+					"value": "/Formalisms/TrainSchedule/TrainSchedule/Waypoint/353.instance"
+				},
+				"$type": "/Formalisms/TrainSchedule/TrainSchedule.defaultIcons/WaypointIcon"
+			},
+			"354": {
+				"link-style": {
+					"type": "map<string,string>",
+					"value": {
+						"stroke": "#000000",
+						"stroke-dasharray": "",
+						"stroke-opacity": 1,
+						"stroke-width": 2
+					}
+				},
+				"arrowHead": {
+					"type": "ENUM(circle-black,circle-black-large,circle-white,circle-white-large,diamond-black,diamond-black-large,diamond-white,diamond-white-large,triangle-black,triangle-black-large,triangle-white,triangle-white-large,arrow-black,arrow-black-large,arrow-empty,arrow-empty-large,custom)",
+					"value": "custom"
+				},
+				"arrowTail": {
+					"type": "ENUM(circle-black,circle-black-large,circle-white,circle-white-large,diamond-black,diamond-black-large,diamond-white,diamond-white-large,triangle-black,triangle-black-large,triangle-white,triangle-white-large,arrow-black,arrow-black-large,arrow-empty,arrow-empty-large,custom)",
+					"value": "arrow-black"
+				},
+				"typename": {
+					"type": "string",
+					"value": "StepInScheduleLink"
+				},
+				"position": {
+					"type": "list<double>",
+					"value": [
+						309.5,
+						896
+					]
+				},
+				"orientation": {
+					"type": "double",
+					"value": 0
+				},
+				"scale": {
+					"type": "list<double>",
+					"value": [
+						1,
+						1
+					]
+				},
+				"mapper": {
+					"type": "code",
+					"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+				},
+				"parser": {
+					"type": "code",
+					"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+				},
+				"$contents": {
+					"type": "map<string,*>",
+					"value": {
+						"nodes": {
+							"267": {
+								"segments": {
+									"type": "string",
+									"value": "m0,0 l10,4 l-10,4 l3,-4 z"
+								},
+								"style": {
+									"type": "map<string,string>",
+									"value": {
+										"stroke": "#000000",
+										"fill": "#000000",
+										"opacity": 1,
+										"stroke-width": 1
+									}
+								},
+								"mapper": {
+									"type": "code",
+									"value": ""
+								},
+								"parser": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+								},
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Path",
+								"position": {
+									"type": "list<double>",
+									"value": [
+										"0;140.80059063136503,94.55888763979723%",
+										"0;44.21734685089052,32.53639144595176%"
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": "0;18.987624087870177"
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								},
+								"$linkDecoratorInfo": {
+									"type": "map<string,double>",
+									"value": {
+										"xratio": 1,
+										"yoffset": -4
+									}
+								}
+							}
+						},
+						"edges": []
+					}
+				},
+				"$asuri": {
+					"type": "string",
+					"value": "/Formalisms/TrainSchedule/TrainSchedule/StepInSchedule/354.instance"
+				},
+				"$segments": {
+					"type": "map<string,list<string>>",
+					"value": {
+						"/Formalisms/TrainSchedule/TrainSchedule.defaultIcons/ScheduleIcon/350.instance--/Formalisms/TrainSchedule/TrainSchedule.defaultIcons/StepInScheduleLink/354.instance": "M170,848L309.5,896",
+						"/Formalisms/TrainSchedule/TrainSchedule.defaultIcons/StepInScheduleLink/354.instance--/Formalisms/TrainSchedule/TrainSchedule.defaultIcons/WaypointIcon/353.instance": "M309.5706436629294,896.024307496922L448.99913497352696,943.9997023564824"
+					}
+				},
+				"$type": "/Formalisms/TrainSchedule/TrainSchedule.defaultIcons/StepInScheduleLink"
+			},
+			"355": {
+				"link-style": {
+					"type": "map<string,string>",
+					"value": {
+						"stroke": "#000000",
+						"stroke-dasharray": "",
+						"stroke-opacity": 1,
+						"stroke-width": 2
+					}
+				},
+				"arrowHead": {
+					"type": "ENUM(circle-black,circle-black-large,circle-white,circle-white-large,diamond-black,diamond-black-large,diamond-white,diamond-white-large,triangle-black,triangle-black-large,triangle-white,triangle-white-large,arrow-black,arrow-black-large,arrow-empty,arrow-empty-large,custom)",
+					"value": "custom"
+				},
+				"arrowTail": {
+					"type": "ENUM(circle-black,circle-black-large,circle-white,circle-white-large,diamond-black,diamond-black-large,diamond-white,diamond-white-large,triangle-black,triangle-black-large,triangle-white,triangle-white-large,arrow-black,arrow-black-large,arrow-empty,arrow-empty-large,custom)",
+					"value": "arrow-black"
+				},
+				"typename": {
+					"type": "string",
+					"value": "NextStepLink"
+				},
+				"position": {
+					"type": "list<double>",
+					"value": [
+						359.6499997231834,
+						940.4982352973743
+					]
+				},
+				"orientation": {
+					"type": "double",
+					"value": 0
+				},
+				"scale": {
+					"type": "list<double>",
+					"value": [
+						1,
+						1
+					]
+				},
+				"mapper": {
+					"type": "code",
+					"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+				},
+				"parser": {
+					"type": "code",
+					"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+				},
+				"$contents": {
+					"type": "map<string,*>",
+					"value": {
+						"nodes": {
+							"267": {
+								"segments": {
+									"type": "string",
+									"value": "m0,0 l10,4 l-10,4 l3,-4 z"
+								},
+								"style": {
+									"type": "map<string,string>",
+									"value": {
+										"stroke": "#000000",
+										"fill": "#000000",
+										"opacity": 1,
+										"stroke-width": 1
+									}
+								},
+								"mapper": {
+									"type": "code",
+									"value": ""
+								},
+								"parser": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+								},
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Path",
+								"position": {
+									"type": "list<double>",
+									"value": [
+										"0;42.302592045255324,99.99308030307445%",
+										"0;-4.497954360504764,-1.1763891800361117%"
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": "0;-0.6740368979844719"
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								},
+								"$linkDecoratorInfo": {
+									"type": "map<string,double>",
+									"value": {
+										"xratio": 1,
+										"yoffset": -4
+									}
+								}
+							}
+						},
+						"edges": []
+					}
+				},
+				"$asuri": {
+					"type": "string",
+					"value": "/Formalisms/TrainSchedule/TrainSchedule/NextStep/355.instance"
+				},
+				"$segments": {
+					"type": "map<string,list<string>>",
+					"value": {
+						"/Formalisms/TrainSchedule/TrainSchedule.defaultIcons/StartIcon/351.instance--/Formalisms/TrainSchedule/TrainSchedule.defaultIcons/NextStepLink/355.instance": "M317,941L359.6499997231834,940.4982352973743",
+						"/Formalisms/TrainSchedule/TrainSchedule.defaultIcons/NextStepLink/355.instance--/Formalisms/TrainSchedule/TrainSchedule.defaultIcons/WaypointIcon/353.instance": "M359.5748234950534,940.4991197235877L401.99964733564013,940.0000041489925"
+					}
+				},
+				"$type": "/Formalisms/TrainSchedule/TrainSchedule.defaultIcons/NextStepLink"
+			},
+			"356": {
+				"typename": {
+					"type": "string",
+					"value": "EndIcon"
+				},
+				"position": {
+					"type": "list<double>",
+					"value": [
+						579,
+						913
+					]
+				},
+				"orientation": {
+					"type": "double",
+					"value": 0
+				},
+				"scale": {
+					"type": "list<double>",
+					"value": [
+						1,
+						1
+					]
+				},
+				"mapper": {
+					"type": "code",
+					"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+				},
+				"parser": {
+					"type": "code",
+					"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+				},
+				"$contents": {
+					"type": "map<string,*>",
+					"value": {
+						"nodes": {
+							"16": {
+								"width": {
+									"type": "double",
+									"value": 150
+								},
+								"height": {
+									"type": "double",
+									"value": 50
+								},
+								"cornerRadius": {
+									"type": "double",
+									"value": 5
+								},
+								"style": {
+									"type": "map<string,string>",
+									"value": {
+										"stroke": "#000000",
+										"stroke-dasharray": "",
+										"fill": "#e74170",
+										"fill-opacity": 1,
+										"font-size": "20px",
+										"stroke-width": 1,
+										"arrow-start": "none",
+										"arrow-end": "none"
+									}
+								},
+								"mapper": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+								},
+								"parser": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+								},
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Rectangle",
+								"position": {
+									"type": "list<double>",
+									"value": [
+										3,
+										5
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": 0
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								}
+							},
+							"17": {
+								"textContent": {
+									"type": "string",
+									"value": "EndStation"
+								},
+								"style": {
+									"type": "map<string,string>",
+									"value": {
+										"stroke": "#000000",
+										"stroke-dasharray": "",
+										"fill": "#000000",
+										"fill-opacity": 1,
+										"font-size": "20px",
+										"font-family": "Calibri",
+										"stroke-width": 1,
+										"arrow-start": "none",
+										"arrow-end": "none"
+									}
+								},
+								"mapper": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */\n({textContent:getAttr(\"station\")})"
+								},
+								"parser": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+								},
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Text",
+								"position": {
+									"type": "list<double>",
+									"value": [
+										6,
+										20
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": 0
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								}
+							},
+							"18": {
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Contain",
+								"position": {
+									"type": "list<double>",
+									"value": [
+										28,
+										19
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": 0
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								},
+								"link-style": {
+									"type": "map<string,string>",
+									"value": {
+										"stroke": "#00ffff",
+										"stroke-dasharray": "",
+										"stroke-opacity": 0.1,
+										"stroke-width": 1
+									}
+								}
+							}
+						},
+						"edges": [
+							{
+								"src": "16",
+								"dest": "18"
+							},
+							{
+								"src": "18",
+								"dest": "17"
+							}
+						]
+					}
+				},
+				"$asuri": {
+					"type": "string",
+					"value": "/Formalisms/TrainSchedule/TrainSchedule/End/356.instance"
+				},
+				"$type": "/Formalisms/TrainSchedule/TrainSchedule.defaultIcons/EndIcon"
+			},
+			"357": {
+				"link-style": {
+					"type": "map<string,string>",
+					"value": {
+						"stroke": "#000000",
+						"stroke-dasharray": "",
+						"stroke-opacity": 1,
+						"stroke-width": 2
+					}
+				},
+				"arrowHead": {
+					"type": "ENUM(circle-black,circle-black-large,circle-white,circle-white-large,diamond-black,diamond-black-large,diamond-white,diamond-white-large,triangle-black,triangle-black-large,triangle-white,triangle-white-large,arrow-black,arrow-black-large,arrow-empty,arrow-empty-large,custom)",
+					"value": "custom"
+				},
+				"arrowTail": {
+					"type": "ENUM(circle-black,circle-black-large,circle-white,circle-white-large,diamond-black,diamond-black-large,diamond-white,diamond-white-large,triangle-black,triangle-black-large,triangle-white,triangle-white-large,arrow-black,arrow-black-large,arrow-empty,arrow-empty-large,custom)",
+					"value": "arrow-black"
+				},
+				"typename": {
+					"type": "string",
+					"value": "StepInScheduleLink"
+				},
+				"position": {
+					"type": "list<double>",
+					"value": [
+						412.1475609674819,
+						893.0274390228789
+					]
+				},
+				"orientation": {
+					"type": "double",
+					"value": 0
+				},
+				"scale": {
+					"type": "list<double>",
+					"value": [
+						1,
+						1
+					]
+				},
+				"mapper": {
+					"type": "code",
+					"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+				},
+				"parser": {
+					"type": "code",
+					"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+				},
+				"$contents": {
+					"type": "map<string,*>",
+					"value": {
+						"nodes": {
+							"267": {
+								"segments": {
+									"type": "string",
+									"value": "m0,0 l10,4 l-10,4 l3,-4 z"
+								},
+								"style": {
+									"type": "map<string,string>",
+									"value": {
+										"stroke": "#000000",
+										"fill": "#000000",
+										"opacity": 1,
+										"stroke-width": 1
+									}
+								},
+								"mapper": {
+									"type": "code",
+									"value": ""
+								},
+								"parser": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+								},
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Path",
+								"position": {
+									"type": "list<double>",
+									"value": [
+										"0;242.58274619592885,98.31470346457965%",
+										"0;41.039794470067704,18.28165973514911%"
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": "0;10.53386180968449"
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								},
+								"$linkDecoratorInfo": {
+									"type": "map<string,double>",
+									"value": {
+										"xratio": 1,
+										"yoffset": -4
+									}
+								}
+							}
+						},
+						"edges": []
+					}
+				},
+				"$asuri": {
+					"type": "string",
+					"value": "/Formalisms/TrainSchedule/TrainSchedule/StepInSchedule/357.instance"
+				},
+				"$segments": {
+					"type": "map<string,list<string>>",
+					"value": {
+						"/Formalisms/TrainSchedule/TrainSchedule.defaultIcons/ScheduleIcon/350.instance--/Formalisms/TrainSchedule/TrainSchedule.defaultIcons/StepInScheduleLink/357.instance": "M170,848L412.1475609674819,893.0274390228789",
+						"/Formalisms/TrainSchedule/TrainSchedule.defaultIcons/StepInScheduleLink/357.instance--/Formalisms/TrainSchedule/TrainSchedule.defaultIcons/EndIcon/356.instance": "M412.14720106272256,893.0273720984401L653.9990407740048,937.9998216315298"
+					}
+				},
+				"$type": "/Formalisms/TrainSchedule/TrainSchedule.defaultIcons/StepInScheduleLink"
+			},
+			"358": {
+				"link-style": {
+					"type": "map<string,string>",
+					"value": {
+						"stroke": "#000000",
+						"stroke-dasharray": "",
+						"stroke-opacity": 1,
+						"stroke-width": 2
+					}
+				},
+				"arrowHead": {
+					"type": "ENUM(circle-black,circle-black-large,circle-white,circle-white-large,diamond-black,diamond-black-large,diamond-white,diamond-white-large,triangle-black,triangle-black-large,triangle-white,triangle-white-large,arrow-black,arrow-black-large,arrow-empty,arrow-empty-large,custom)",
+					"value": "custom"
+				},
+				"arrowTail": {
+					"type": "ENUM(circle-black,circle-black-large,circle-white,circle-white-large,diamond-black,diamond-black-large,diamond-white,diamond-white-large,triangle-black,triangle-black-large,triangle-white,triangle-white-large,arrow-black,arrow-black-large,arrow-empty,arrow-empty-large,custom)",
+					"value": "arrow-black"
+				},
+				"typename": {
+					"type": "string",
+					"value": "NextStepLink"
+				},
+				"position": {
+					"type": "list<double>",
+					"value": [
+						545.5,
+						939
+					]
+				},
+				"orientation": {
+					"type": "double",
+					"value": 0
+				},
+				"scale": {
+					"type": "list<double>",
+					"value": [
+						1,
+						1
+					]
+				},
+				"mapper": {
+					"type": "code",
+					"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */"
+				},
+				"parser": {
+					"type": "code",
+					"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+				},
+				"$contents": {
+					"type": "map<string,*>",
+					"value": {
+						"nodes": {
+							"267": {
+								"segments": {
+									"type": "string",
+									"value": "m0,0 l10,4 l-10,4 l3,-4 z"
+								},
+								"style": {
+									"type": "map<string,string>",
+									"value": {
+										"stroke": "#000000",
+										"fill": "#000000",
+										"opacity": 1,
+										"stroke-width": 1
+									}
+								},
+								"mapper": {
+									"type": "code",
+									"value": ""
+								},
+								"parser": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+								},
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Path",
+								"position": {
+									"type": "list<double>",
+									"value": [
+										"0;42.31162012260768,99.8894569235138%",
+										"0;-5.995561680970695,-4.700680325812366%"
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": "0;-2.6942842898560735"
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								},
+								"$linkDecoratorInfo": {
+									"type": "map<string,double>",
+									"value": {
+										"xratio": 1,
+										"yoffset": -4
+									}
+								}
+							}
+						},
+						"edges": []
+					}
+				},
+				"$asuri": {
+					"type": "string",
+					"value": "/Formalisms/TrainSchedule/TrainSchedule/NextStep/358.instance"
+				},
+				"$segments": {
+					"type": "map<string,list<string>>",
+					"value": {
+						"/Formalisms/TrainSchedule/TrainSchedule.defaultIcons/WaypointIcon/353.instance--/Formalisms/TrainSchedule/TrainSchedule.defaultIcons/NextStepLink/358.instance": "M503,941L545.5,939",
+						"/Formalisms/TrainSchedule/TrainSchedule.defaultIcons/NextStepLink/358.instance--/Formalisms/TrainSchedule/TrainSchedule.defaultIcons/EndIcon/356.instance": "M545.5748234950535,938.9964788943505L587.9996473356401,937.0000165959699"
+					}
+				},
+				"$type": "/Formalisms/TrainSchedule/TrainSchedule.defaultIcons/NextStepLink"
+			},
+			"360": {
+				"typename": {
+					"type": "string",
+					"value": "TrainIcon"
+				},
+				"position": {
+					"type": "list<double>",
+					"value": [
+						823,
+						925
+					]
+				},
+				"orientation": {
+					"type": "double",
+					"value": 0
+				},
+				"scale": {
+					"type": "list<double>",
+					"value": [
+						1,
+						1
+					]
+				},
+				"mapper": {
+					"type": "code",
+					"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */\n({position:getAttr(\"position\")})"
+				},
+				"parser": {
+					"type": "code",
+					"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */\n({position:getAttr(\"position\")})"
+				},
+				"$contents": {
+					"type": "map<string,*>",
+					"value": {
+						"nodes": {
+							"25": {
+								"src": {
+									"type": "string",
+									"value": "/Formalisms/Railway/Icons/train.png"
+								},
+								"width": {
+									"type": "double",
+									"value": 60
+								},
+								"height": {
+									"type": "double",
+									"value": 25
+								},
+								"style": {
+									"type": "map<string,string>",
+									"value": {
+										"stroke": "#000000",
+										"stroke-dasharray": "",
+										"fill": "#ffffff",
+										"fill-opacity": 1,
+										"font-size": "20px",
+										"stroke-width": 1,
+										"arrow-start": "none",
+										"arrow-end": "none"
+									}
+								},
+								"mapper": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */\n(\n{\n    width:getAttr(\"width\"),\n    height:getAttr(\"height\")   \n}\n)"
+								},
+								"parser": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */\n(\n{\n    width:getAttr(\"width\"),\n    height:getAttr(\"height\")   \n}\n)"
+								},
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Image",
+								"position": {
+									"type": "list<double>",
+									"value": [
+										1,
+										4
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": 0
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								}
+							},
+							"34": {
+								"textContent": {
+									"type": "string",
+									"value": "Train2"
+								},
+								"style": {
+									"type": "map<string,string>",
+									"value": {
+										"stroke": "#000000",
+										"stroke-dasharray": "",
+										"fill": "#000000",
+										"fill-opacity": 1,
+										"font-size": "20px",
+										"font-family": "Calibri",
+										"stroke-width": 1,
+										"arrow-start": "none",
+										"arrow-end": "none"
+									}
+								},
+								"mapper": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,csattr:val,...} */\n({textContent:getAttr(\"name\")})"
+								},
+								"parser": {
+									"type": "code",
+									"value": "/* specify code that evaluates to an associative array of the form {...,attr:val,...} */"
+								},
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Text",
+								"position": {
+									"type": "list<double>",
+									"value": [
+										3,
+										5
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": 0
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								}
+							}
+						},
+						"edges": []
+					}
+				},
+				"$asuri": {
+					"type": "string",
+					"value": "/Formalisms/Railway/Railway/Train/360.instance"
+				},
+				"$type": "/Formalisms/Railway/Railway.defaultIcons/TrainIcon"
 			}
 		},
 		"edges": [],
@@ -3943,46 +6043,6 @@
 				},
 				"$type": "/Formalisms/Railway/Railway/TrackToTrack"
 			},
-			"319": {
-				"width": {
-					"type": "int",
-					"value": 180
-				},
-				"height": {
-					"type": "int",
-					"value": 40
-				},
-				"position": {
-					"type": "list<int>",
-					"value": [
-						445,
-						395
-					]
-				},
-				"highlight": {
-					"type": "boolean",
-					"value": false
-				},
-				"comment": {
-					"type": "string",
-					"value": ""
-				},
-				"$type": "/Formalisms/Railway/Railway/Straight"
-			},
-			"320": {
-				"direction": {
-					"type": "ENUM(STRAIGHT,TURN)",
-					"value": "STRAIGHT"
-				},
-				"$type": "/Formalisms/Railway/Railway/TrackToTrack"
-			},
-			"321": {
-				"direction": {
-					"type": "ENUM(STRAIGHT,TURN)",
-					"value": "TURN"
-				},
-				"$type": "/Formalisms/Railway/Railway/TrackToTrack"
-			},
 			"322": {
 				"width": {
 					"type": "int",
@@ -4054,8 +6114,8 @@
 				"position": {
 					"type": "list<int>",
 					"value": [
-						169,
-						852
+						856,
+						687
 					]
 				},
 				"highlight": {
@@ -4116,6 +6176,223 @@
 			},
 			"341": {
 				"$type": "/Formalisms/TrainSchedule/TrainSchedule/NextStep"
+			},
+			"342": {
+				"width": {
+					"type": "int",
+					"value": 180
+				},
+				"height": {
+					"type": "int",
+					"value": 40
+				},
+				"position": {
+					"type": "list<int>",
+					"value": [
+						867,
+						185
+					]
+				},
+				"highlight": {
+					"type": "boolean",
+					"value": false
+				},
+				"comment": {
+					"type": "string",
+					"value": ""
+				},
+				"$type": "/Formalisms/Railway/Railway/Straight"
+			},
+			"343": {
+				"width": {
+					"type": "int",
+					"value": 180
+				},
+				"height": {
+					"type": "int",
+					"value": 100
+				},
+				"inDirection": {
+					"type": "ENUM(STRAIGHT,TURN)",
+					"value": "STRAIGHT"
+				},
+				"position": {
+					"type": "list<int>",
+					"value": [
+						445,
+						395
+					]
+				},
+				"highlight": {
+					"type": "boolean",
+					"value": false
+				},
+				"comment": {
+					"type": "string",
+					"value": ""
+				},
+				"$type": "/Formalisms/Railway/Railway/Junction"
+			},
+			"344": {
+				"direction": {
+					"type": "ENUM(STRAIGHT,TURN)",
+					"value": "STRAIGHT"
+				},
+				"$type": "/Formalisms/Railway/Railway/TrackToTrack"
+			},
+			"345": {
+				"direction": {
+					"type": "ENUM(STRAIGHT,TURN)",
+					"value": "STRAIGHT"
+				},
+				"$type": "/Formalisms/Railway/Railway/TrackToTrack"
+			},
+			"346": {
+				"width": {
+					"type": "int",
+					"value": 180
+				},
+				"height": {
+					"type": "int",
+					"value": 40
+				},
+				"position": {
+					"type": "list<int>",
+					"value": [
+						265,
+						475
+					]
+				},
+				"highlight": {
+					"type": "boolean",
+					"value": false
+				},
+				"comment": {
+					"type": "string",
+					"value": ""
+				},
+				"$type": "/Formalisms/Railway/Railway/Straight"
+			},
+			"347": {
+				"direction": {
+					"type": "ENUM(STRAIGHT,TURN)",
+					"value": "TURN"
+				},
+				"$type": "/Formalisms/Railway/Railway/TrackToTrack"
+			},
+			"348": {
+				"width": {
+					"type": "int",
+					"value": 180
+				},
+				"height": {
+					"type": "int",
+					"value": 70
+				},
+				"name": {
+					"type": "string",
+					"value": "StartStation2"
+				},
+				"position": {
+					"type": "list<int>",
+					"value": [
+						85,
+						439
+					]
+				},
+				"highlight": {
+					"type": "boolean",
+					"value": false
+				},
+				"comment": {
+					"type": "string",
+					"value": ""
+				},
+				"$type": "/Formalisms/Railway/Railway/Station"
+			},
+			"349": {
+				"direction": {
+					"type": "ENUM(STRAIGHT,TURN)",
+					"value": "STRAIGHT"
+				},
+				"$type": "/Formalisms/Railway/Railway/TrackToTrack"
+			},
+			"350": {
+				"train": {
+					"type": "string",
+					"value": "Train2"
+				},
+				"$type": "/Formalisms/TrainSchedule/TrainSchedule/Schedule"
+			},
+			"351": {
+				"station": {
+					"type": "string",
+					"value": "StartStation2"
+				},
+				"$type": "/Formalisms/TrainSchedule/TrainSchedule/Start"
+			},
+			"352": {
+				"$type": "/Formalisms/TrainSchedule/TrainSchedule/StepInSchedule"
+			},
+			"353": {
+				"direction": {
+					"type": "ENUM(STRAIGHT,TURN)",
+					"value": "TURN"
+				},
+				"$type": "/Formalisms/TrainSchedule/TrainSchedule/Waypoint"
+			},
+			"354": {
+				"$type": "/Formalisms/TrainSchedule/TrainSchedule/StepInSchedule"
+			},
+			"355": {
+				"$type": "/Formalisms/TrainSchedule/TrainSchedule/NextStep"
+			},
+			"356": {
+				"station": {
+					"type": "string",
+					"value": "EndStation"
+				},
+				"$type": "/Formalisms/TrainSchedule/TrainSchedule/End"
+			},
+			"357": {
+				"$type": "/Formalisms/TrainSchedule/TrainSchedule/StepInSchedule"
+			},
+			"358": {
+				"$type": "/Formalisms/TrainSchedule/TrainSchedule/NextStep"
+			},
+			"360": {
+				"width": {
+					"type": "int",
+					"value": 60
+				},
+				"height": {
+					"type": "int",
+					"value": 25
+				},
+				"name": {
+					"type": "string",
+					"value": "Train2"
+				},
+				"step": {
+					"type": "int",
+					"value": "1"
+				},
+				"position": {
+					"type": "list<int>",
+					"value": [
+						823,
+						925
+					]
+				},
+				"highlight": {
+					"type": "boolean",
+					"value": false
+				},
+				"comment": {
+					"type": "string",
+					"value": ""
+				},
+				"$type": "/Formalisms/Railway/Railway/Train"
 			}
 		},
 		"edges": [
@@ -4150,22 +6427,6 @@
 			{
 				"src": "318",
 				"dest": "315"
-			},
-			{
-				"src": "319",
-				"dest": "320"
-			},
-			{
-				"src": "320",
-				"dest": "309"
-			},
-			{
-				"src": "317",
-				"dest": "321"
-			},
-			{
-				"src": "321",
-				"dest": "319"
 			},
 			{
 				"src": "322",
@@ -4230,6 +6491,78 @@
 			{
 				"src": "341",
 				"dest": "333"
+			},
+			{
+				"src": "343",
+				"dest": "344"
+			},
+			{
+				"src": "344",
+				"dest": "309"
+			},
+			{
+				"src": "317",
+				"dest": "345"
+			},
+			{
+				"src": "345",
+				"dest": "343"
+			},
+			{
+				"src": "346",
+				"dest": "347"
+			},
+			{
+				"src": "347",
+				"dest": "343"
+			},
+			{
+				"src": "348",
+				"dest": "349"
+			},
+			{
+				"src": "349",
+				"dest": "346"
+			},
+			{
+				"src": "350",
+				"dest": "352"
+			},
+			{
+				"src": "352",
+				"dest": "351"
+			},
+			{
+				"src": "350",
+				"dest": "354"
+			},
+			{
+				"src": "354",
+				"dest": "353"
+			},
+			{
+				"src": "351",
+				"dest": "355"
+			},
+			{
+				"src": "355",
+				"dest": "353"
+			},
+			{
+				"src": "350",
+				"dest": "357"
+			},
+			{
+				"src": "357",
+				"dest": "356"
+			},
+			{
+				"src": "353",
+				"dest": "358"
+			},
+			{
+				"src": "358",
+				"dest": "356"
 			}
 		],
 		"metamodels": [
