@@ -33,8 +33,6 @@ At its core, a model consists of multiple segments which can be connected to eac
 \hline
 \textbf{Name:}                 & \textbf{Symbol:} & \textbf{Description:}                                                                                                                                                                      \\ \hline
 Straight                       & \includegraphics[scale=0.25]{images/straight} & \begin{tabular}[c]{@{}l@{}}a basic segment that connects and is connected\\ by one other segment\end{tabular}                                                                              \\ \hline
-Start                          & \includegraphics[scale=0.25]{images/start} & a segment with only an outgoing rail                                                                                                                                                       \\ \hline
-End                            & \includegraphics[scale=0.25]{images/end} & a segment with only an incoming rail                                                                                                                                                       \\ \hline
 Turnout                        & \includegraphics[scale=0.25]{images/turnout1} & \begin{tabular}[c]{@{}l@{}}a segment with internally a switch, which can be\\ used to control its outgoing rail (either going \\ straight or make a turn)\end{tabular}                     \\ \hline
 Junction                       & \includegraphics[scale=0.25]{images/junction1} & \begin{tabular}[c]{@{}l@{}}similar to a turnout, but instead of controlling its\\ outgoing rail, it will control the ingoing rail\\ (trains can arrive straight or in a turn)\end{tabular} \\ \hline
 Crossing                       & \includegraphics[scale=0.25]{images/crossing21} & \begin{tabular}[c]{@{}l@{}}a combination of a turnout and a junction, has two\\ switches available, allowing to control both the\\ incoming and outgoing rails\end{tabular}                \\ \hline
@@ -58,10 +56,12 @@ Now that we have defined the initial concepts of our formalism, we can start by 
     \label{abstract_syntax}
 \end{figure}
 
+\todo{update figure of abstract syntax}
+
 Since we deal with multiple types of segments, an inheritance tree would be suitable for this problem. At the root, we have an abstract class \texttt{Track}, from here on, we have three (abstract) subclasses:
 
 \begin{itemize}
-    \item \texttt{BasicTrack}: All the most basic tracks that have at most one incoming and outgoing track (\texttt{Start} does not have an incoming track and \texttt{End} not an outgoing one).
+    \item \texttt{BasicTrack}: All the most basic tracks that have at most one incoming and outgoing track.
     \item \texttt{Join}: A track where two incoming tracks converge, in other words, a junction. It also has an attribute (\texttt{inDirection}) which tells in which the switch is set.
     \item \texttt{Split}: A track that has two outgoing tracks. Similar to \texttt{Join}, this also has an attribute (\texttt{outDirection}) to indicate the current direction of the outgoing track.
 \end{itemize}
@@ -92,7 +92,7 @@ This section will go over the operation semantics of the Railway formalism, i.e.
 
 Before we implement the rules, a second domain specific language is modelled to define train schedules (the path it takes from start to end) as was suggested in the \cite{assignments} given in the \textit{Model Driven Engineering} course \cite{assignments}. This way, we can easily operate the switches by looking at the train schedules.
 
-The abstract syntax can be found in figure \ref{abstract_syntax_trainschedule} and the concrete in figure \ref{concrete_syntax_trainschedule}. Basically, a schedule consists of one startion station and one ending station. In between are zero or more steps that tell in which direction the train should move when it encounters a waypoint (turnout or crossing). One schedule is associated with  exactly one train and vice versa.
+The abstract syntax can be found in figure \ref{abstract_syntax_trainschedule} and the concrete in figure \ref{concrete_syntax_trainschedule}. Basically, a schedule consists of one start station and one ending station. In between are zero or more steps that tell in which direction the train should move when it encounters a waypoint (turnout or crossing). One schedule is associated with  exactly one train and vice versa.
 
 \begin{figure}[H]
     \centering
@@ -125,7 +125,7 @@ To explain the semantics, I will go over the MoTif schedule (figure \ref{schedul
     \item Set switches: Set the switches on splits and joins:
         \begin{itemize}
             \item Joins: if a train wants to enter a junction, the control system will set the direction of the incoming track correctly so that the train can enter. If two trains want to enter, it will "randomly" choose one.
-            \item Split: to set the switch for splits, we look at the train schedule of the train that is currently on this split. This schedule will tell us in which direction we should move. (see figure \ref{set_split_switch})
+            \item Split: to set the switch for splits, we look at the train schedule of the train that is currently on this split. This schedule will tell us in which direction we should move. We then remove that step, indicating it was taken. (see figure \ref{set_split_switch})
             \begin{figure}[H]
                 \centering
                 \includegraphics[width=\textwidth]{images/SetSplitSwitch.png}
@@ -139,9 +139,66 @@ To explain the semantics, I will go over the MoTif schedule (figure \ref{schedul
     \item Update Clock: Finally, if the \texttt{TrainExists} was successful, we can move to the next simulation cycle: this step will update the clock as well as the step internally of all the trains so that they are synchronized with the clock.
 \end{enumerate}
 
-\section{Mapping to Petri-Nets}
+\section{Safety Analysis}
 
-\section{Mapping to DEVS}
+Given a model written in our railway formalism, one would also want to do some analysis regarding its safety, for example if there is a reachable deadlock state. To do all this, we can define a mapping (using transformation rules) to petri-nets. These nets are highly suitable to these kinds of analyses. In this case specifically, the tool \textit{LoLA} (\textit{a Low Level Petri net Analyzer}) \cite{lola} will be used to analyze a given petri-net by building the reachability graph etc.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.25\textwidth]{images/analyze.png}
+    \caption{Schedule for the safety analysis}
+    \label{schedule_safety}
+\end{figure}
+
+The full MoTif schedule for the safety analysis can be found in figure \ref{safety_analysis}. First, we initialize the model so the trains are on the right tracks and the lights are all correctly set. Then we actually do the petri-net mapping and finally we can analyze the intermediate petri-net with a few LoLA calls and update the railway model if that's necessary.
+
+This section is divided in three parts; section \ref{petri-net_mapping} will define the mapping itself, section \ref{safety_analysis} will discuss some "safety" properties and how we can define those in \textit{LoLA} and finally, in section \ref{safety_updating} will go over how we can use the results generated by \textit{LoLA} to update our initial model to show it to the user.
+
+\subsection{Mapping}
+\label{petri-net_mapping}
+
+The complete mapping is fairly trivial and can be split in several steps/rules:
+
+\begin{itemize}
+    \item Tracks become places. If one contains a train, the place has a marking value of $1$.
+    \item Links between tracks (\texttt{TrackToTrack}) become transitions. Note that when a train goes from one track to another, it will also look at the places that correspond to the lights (see next point).
+    \item Lights can be split up in two places: one for the green color and one for the red color. This will mean that at all time the sum of these places will always be equal to $1$.
+    \item To make sure the petri-net can go on forever, we add one additional place for each end station in a train schedule and one transition that will take all the tokens in those places and put them back. This means that if all the trains have reach their end station, this transition can fire an infinite amount of times.
+\end{itemize}
+
+Combining all these rules, we now have an analyzable petri-net that represents the Railway formalism.
+
+\subsection{Analysis}
+\label{safety_analysis}
+
+On this petri-net, we can run several analyzes using \textit{LoLa} to verify if the model satisfies a particular property.
+
+\subsubsection{Deadlock}
+
+A simple property is deadlock; we want to be able to verify if there is a reachable deadlock state from the start state. If there is any, the user may want to change the initial model to prevent this from happening. In this context, a deadlock means that it is possible for a train to get stuck somewhere in the railway network and never get moving again, which is of course not what we want. This property will also implicitly tell us whether the trains can all reach their end station.
+
+\subsubsection{Reachability}
+
+Petri-nets are highly suitable for reachability analysis, more specifically, with this we can verify if a specific place is reachable from the the initials state. In other words, tracks that cannot be reached by a train (in the initial setup). For this, we make $n$ LoLA calls ($n$ = number of tracks) where we check each time individually if that track can be reached.
+
+\subsubsection{Safeness}
+
+Since we're dealing with trains on rails, it's of course desirable to have that trains cannot crash into each other, i.e. two trains on one single track. To verify this, we can check if our whole petri-net is 1-bounded or safe, meaning in every place there cannot be more than one token or on every track there can be at most one train present.
+
+\subsubsection{Lights Invariant}
+
+In our petri-net mapping, we introduced two places for each signalling light. Implicitly, this means that only one token can be in those two places combined or else the lights are both green and red (or neither of them are on). This property will then check if at all time the sum of two places (of a light) is equal to $1$ (invariant).
+
+\subsection{Updating model}
+\label{safety_updating}
+
+When analyzing and finally generating the results, we want to be able to show them to the user somehow. The way we do this is also through a small model transformation that reads those results in and updates the railway model accordingly. For example, highlight (and add a few comments about) the path that led to a deadlock state.
+
+One important thing to note is when mapping the results (of the analysis) back to our original model, we need some form of traceability. We can create traces by making use of unique identifiers for the objects in the railway model and then use the same ones in the petri-net model. This way, we can correspond a petri-net element to its original element.
+
+\todo{add reference to appendix?}
+
+\section{Queueing Analysis}
 
 \section{Conclusion}
 
