@@ -5,6 +5,26 @@
 				"name": "train",
 				"type": "string",
 				"default": "T"
+			},
+			{
+				"name": "IAT_min",
+				"type": "int",
+				"default": "60"
+			},
+			{
+				"name": "IAT_max",
+				"type": "int",
+				"default": "600"
+			},
+			{
+				"name": "a_min",
+				"type": "int",
+				"default": "0.2"
+			},
+			{
+				"name": "a_max",
+				"type": "int",
+				"default": "0.7"
 			}
 		],
 		"Step": [],

@@ -183,7 +183,7 @@
 							"99": {
 								"textContent": {
 									"type": "string",
-									"value": "+ train : string = T"
+									"value": "+ train : string = T\n+ IAT_min : int = 60\n+ IAT_max : int = 600\n+ a_min : int = 0.2\n+ a_max : int = 0.7"
 								},
 								"style": {
 									"type": "map<string,string>",
@@ -2698,6 +2698,26 @@
 							"name": "train",
 							"type": "string",
 							"default": "T"
+						},
+						{
+							"name": "IAT_min",
+							"type": "int",
+							"default": "60"
+						},
+						{
+							"name": "IAT_max",
+							"type": "int",
+							"default": "600"
+						},
+						{
+							"name": "a_min",
+							"type": "int",
+							"default": "0.2"
+						},
+						{
+							"name": "a_max",
+							"type": "int",
+							"default": "0.7"
 						}
 					]
 				},
