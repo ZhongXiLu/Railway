@@ -3791,14 +3791,14 @@
 			"61": {
 				"Condition": {
 					"type": "code",
-					"value": "clockStep = getAttr(\"step\", \"10\")\ntrainStep = getAttr(\"step\", \"3\")\nprint(\"direction Link:\" + getAttr(\"direction\", \"2\"))\nprint(\"direction track:\" +  getAttr(\"outDirection\", \"0\"))\nresult = ((getAttr(\"direction\", \"2\") == getAttr(\"outDirection\", \"0\")) and (getAttr(\"color\", \"8\") == \"GREEN\") and (clockStep == trainStep))"
+					"value": "clockStep = getAttr(\"step\", \"10\")\ntrainStep = getAttr(\"step\", \"3\")\nresult = ((getAttr(\"direction\", \"2\") == getAttr(\"outDirection\", \"0\")) and (getAttr(\"color\", \"8\") == \"GREEN\") and (clockStep == trainStep))"
 				},
 				"$type": "/Formalisms/__Transformations__/TransformationRule/TransformationRule/LHS"
 			},
 			"62": {
 				"Action": {
 					"type": "code",
-					"value": "setAttr(\"step\", str(int(getAttr(\"step\", \"3\"))+1), \"3\")"
+					"value": "setAttr(\"step\", str(int(getAttr(\"step\", \"3\"))+1), \"3\")\n#print(\"direction Link:\" + getAttr(\"direction\", \"2\"))\n#print(\"direction track:\" +  getAttr(\"outDirection\", \"0\"))"
 				},
 				"$type": "/Formalisms/__Transformations__/TransformationRule/TransformationRule/RHS"
 			},
