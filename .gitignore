@@ -5,4 +5,7 @@
 *.out
 *.aux
 
+*.pyc
+__pycache__
+
 git_add_all.sh

@@ -820,7 +820,7 @@
 				},
 				"end_condition": {
 					"type": "code",
-					"value": "result = \"return time >= 5000\""
+					"value": "result = \"5000\""
 				},
 				"$type": "/Formalisms/ClassicDEVS/ClassicDEVS.pattern/__pSimulation"
 			},
