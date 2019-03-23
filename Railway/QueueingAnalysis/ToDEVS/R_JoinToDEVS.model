@@ -4803,7 +4803,8 @@
 			"/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons",
 			"/Formalisms/Railway/Railway.defaultIcons.pattern",
 			"/Formalisms/ClassicDEVS/ClassicDEVS.defaultIcons.pattern",
-			"/Formalisms/GenericGraph/GenericGraph.defaultIcons.pattern"
+			"/Formalisms/GenericGraph/GenericGraph.defaultIcons.pattern",
+			"/Formalisms/TrainSchedule/TrainSchedule.defaultIcons.pattern"
 		]
 	},
 	"asm": {
@@ -4999,7 +5000,7 @@
 			"96": {
 				"Action": {
 					"type": "code",
-					"value": "setAttr(\"position\", getAttr(\"position\", \"0\"), \"2\")\nsetAttr(\"position\", [getAttr(\"position\", \"0\")[0], getAttr(\"position\", \"0\")[1]+25], \"9\")\nsetAttr(\"position\", [getAttr(\"position\", \"0\")[0], getAttr(\"position\", \"0\")[1]+50], \"11\")\nsetAttr(\"position\", [getAttr(\"position\", \"0\")[0], getAttr(\"position\", \"0\")[1]+75], \"5\")\nsetAttr(\"position\", [getAttr(\"position\", \"0\")[0]+100, getAttr(\"position\", \"0\")[1]+25], \"10\")\nsetAttr(\"position\", [getAttr(\"position\", \"0\")[0]+100, getAttr(\"position\", \"0\")[1]+50], \"12\")\nsetAttr(\"position\", [getAttr(\"position\", \"0\")[0]+100, getAttr(\"position\", \"0\")[1]+75], \"7\")\nsetAttr(\"name\", \"r\" + getAttr(\"$atompmId\", \"0\"), \"2\")"
+					"value": "setAttr(\"position\", getAttr(\"position\", \"0\"), \"2\")\nsetAttr(\"position\", [getAttr(\"position\", \"0\")[0], getAttr(\"position\", \"0\")[1]+25], \"9\")\nsetAttr(\"position\", [getAttr(\"position\", \"0\")[0], getAttr(\"position\", \"0\")[1]+50], \"11\")\nsetAttr(\"position\", [getAttr(\"position\", \"0\")[0], getAttr(\"position\", \"0\")[1]+75], \"5\")\nsetAttr(\"position\", [getAttr(\"position\", \"0\")[0]+100, getAttr(\"position\", \"0\")[1]+25], \"10\")\nsetAttr(\"position\", [getAttr(\"position\", \"0\")[0]+100, getAttr(\"position\", \"0\")[1]+50], \"12\")\nsetAttr(\"position\", [getAttr(\"position\", \"0\")[0]+100, getAttr(\"position\", \"0\")[1]+75], \"7\")\nsetAttr(\"name\", \"r\" + getAttr(\"$atompmId\", \"0\"), \"2\")\n\nbinding = {}\nbinding[\"length\"] = getAttr(\"length\", \"0\")\nsetAttr(\"parameter_binding\", [binding], \"2\")"
 				},
 				"$type": "/Formalisms/__Transformations__/TransformationRule/TransformationRule/RHS"
 			},
@@ -5663,7 +5664,8 @@
 			"/Formalisms/__Transformations__/TransformationRule/TransformationRule",
 			"/Formalisms/Railway/Railway.pattern",
 			"/Formalisms/ClassicDEVS/ClassicDEVS.pattern",
-			"/Formalisms/GenericGraph/GenericGraph.pattern"
+			"/Formalisms/GenericGraph/GenericGraph.pattern",
+			"/Formalisms/TrainSchedule/TrainSchedule.pattern"
 		]
 	}
 }

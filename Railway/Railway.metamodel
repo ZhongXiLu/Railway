@@ -2,6 +2,11 @@
 	"types": {
 		"Track": [
 			{
+				"name": "length",
+				"type": "int",
+				"default": 5000
+			},
+			{
 				"name": "position",
 				"type": "list<int>",
 				"default": [
@@ -42,6 +47,11 @@
 				"default": 40
 			},
 			{
+				"name": "length",
+				"type": "int",
+				"default": 5000
+			},
+			{
 				"name": "position",
 				"type": "list<int>",
 				"default": [
@@ -75,6 +85,11 @@
 				"name": "outDirection",
 				"type": "ENUM(STRAIGHT,TURN)",
 				"default": "STRAIGHT"
+			},
+			{
+				"name": "length",
+				"type": "int",
+				"default": 5000
 			},
 			{
 				"name": "position",
@@ -112,6 +127,11 @@
 				"default": "STRAIGHT"
 			},
 			{
+				"name": "length",
+				"type": "int",
+				"default": 5000
+			},
+			{
 				"name": "position",
 				"type": "list<int>",
 				"default": [
@@ -145,6 +165,11 @@
 				"name": "inDirection",
 				"type": "ENUM(STRAIGHT,TURN)",
 				"default": "STRAIGHT"
+			},
+			{
+				"name": "length",
+				"type": "int",
+				"default": 5000
 			},
 			{
 				"name": "position",
@@ -185,6 +210,11 @@
 				"name": "name",
 				"type": "string",
 				"default": "S"
+			},
+			{
+				"name": "length",
+				"type": "int",
+				"default": 5000
 			},
 			{
 				"name": "position",
@@ -333,6 +363,11 @@
 				"default": "STRAIGHT"
 			},
 			{
+				"name": "length",
+				"type": "int",
+				"default": 5000
+			},
+			{
 				"name": "position",
 				"type": "list<int>",
 				"default": [
@@ -373,6 +408,11 @@
 				"default": "STRAIGHT"
 			},
 			{
+				"name": "length",
+				"type": "int",
+				"default": 5000
+			},
+			{
 				"name": "position",
 				"type": "list<int>",
 				"default": [
@@ -402,6 +442,11 @@
 			}
 		],
 		"BasicTrack": [
+			{
+				"name": "length",
+				"type": "int",
+				"default": 5000
+			},
 			{
 				"name": "position",
 				"type": "list<int>",

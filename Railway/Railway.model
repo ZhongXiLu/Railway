@@ -183,7 +183,7 @@
 							"99": {
 								"textContent": {
 									"type": "string",
-									"value": ""
+									"value": "+ length : int = 5000"
 								},
 								"style": {
 									"type": "map<string,string>",
@@ -7415,7 +7415,13 @@
 				},
 				"attributes": {
 					"type": "list<$ATTRIBUTE>",
-					"value": []
+					"value": [
+						{
+							"name": "length",
+							"type": "int",
+							"default": 5000
+						}
+					]
 				},
 				"constraints": {
 					"type": "list<$EVENT_HANDLER>",
