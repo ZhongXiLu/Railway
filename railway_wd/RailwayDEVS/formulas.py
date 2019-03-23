@@ -1,3 +1,8 @@
+
+'''
+Source: http://msdl.cs.mcgill.ca/people/hv/teaching/MoSIS/assignments/DEVS
+'''
+
 def acceleration_formula(v_0, v_max, x_remaining, a):
     # Make sure everything is a float!
     v_0 = float(max(v_0, 0))

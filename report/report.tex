@@ -14,6 +14,9 @@
 
 \maketitle
 
+\todo{remove railway\_wd/railway.py}
+\todo{add source to formulas.py}
+
 \section{Introduction}
 
 Modelling is a powerful technique which allows us to work on the right abstraction level and avoid accidental complexity. Nowadays, we have a lot of different formalisms at our disposal, so it's necessary to choose the most appropriate language when building a model. Aside from that, it's also possible to define a mapping from one formalism to another, so that we can expose the functionality of one another.
@@ -199,6 +202,48 @@ One important thing to note is when mapping the results (of the analysis) back t
 \todo{add reference to appendix?}
 
 \section{Queueing Analysis}
+
+Another analysis we can perform is queueing analysis, for example, how long it averagely takes for a train to reach its end station or how long a train has to wait to enter its next segment. To do this, we create another mapping, this time we map the Railway formalism to DEVS. Here we can simulate a given DEVS model and retrieve the necessary information from it. The DEVS library used for this is \textit{PythonPDEVS} \cite{pythonpdevs}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.25\textwidth]{images/queueing_analysis_schedule.png}
+    \caption{Schedule for the queueing analysis}
+    \label{schedule_queueing}
+\end{figure}
+
+\subsection{Mapping}
+
+When mapping the Railway elements to DEVS elements, one must specify the DEVS model as well. For instance, we need a DEVS model for a track that describes its behaviour. One such model has different components, such an internal transition function, states, output function, etc. However, I did not choose to take this path, instead I already had these models implemented with the \textit{PythonPDEVS} library, so I saved myself some time, but ideally one should also model this (in \textit{AToMPM}). I will not go in further details on the semantics of the DEVS models, but more on how I implemented these can be found in the DEVS assignment, part of the \textit{Modelling of Software-Intensive Systems} course \cite{devs_assignment}.
+
+Either way, we still need to create instances of these DEVS models and encapsulate them in a coupled DEVS and of course, we use transformation rules yet again to transform our railway model. Similarly to the petri-net mapping, we can define some basic rules that will take care of this mapping:
+
+\begin{itemize}
+    \item Tracks become DEVS instances. There are four main DEVS models, namely \texttt{RailwaySegment}, \texttt{Join}, \texttt{Split} and \texttt{Crossing}. Most of these instances also link to in- and out-ports. The in-ports are \texttt{train\_in}, \texttt{Q\_recv} and \texttt{Q\_rack} and the out-ports \texttt{train\_out}, \texttt{Q\_send} and \texttt{Q\_rack}. What these ports specifically mean, I refer to the DEVS assignemnt \cite{devs_assignment}. Note that some of these models can have more ports, depending on their type; for example, a split will have a \texttt{train\_out} and \texttt{train\_out2} port.
+    \item Links between tracks (\texttt{TrackToTrack}) become so-called channels which connect to in- and out-ports.
+    \item Since we are performing a queueing analysis, we most likely want more than a few trains in our network. Hence, there is also a \texttt{Generator} DEVS model; this will generate trains following an inter arrival time distribution. This way, a more in depth analysis can be performed and trains actually get queued. The railway element that gets mapped to this generator is the \texttt{Station} that is also the start (station) of a train schedule.
+    \item On the other hand, a \texttt{Collector} is also represent. This will simply remove a train object and store some statistics. Here, the \texttt{Station} that corresponds to an end station of a schedule will get translated to this collector element.
+\end{itemize}
+
+\subsection{Analysis}
+
+Simulating a complete coupled DEVS model with \textit{PythonPDEVS} will create a detailed trace that specifically tells us at each point in time what has happened, but to retrieve more information, we need to add more logic to the models, but this is quite easily done. On top of that, there some extra attributes in the abstract model (e.g. segment length, train acceleration, ...), so that the user can manually (or by script) tweak the settings and try to optimize a given railway model. In the following small subsections, the few statistics integrated are discussed.
+
+\subsubsection{Average Transit Time of a Schedule}
+
+In the railway formalism we allowed to the user to define the schedule for a particular train, but it might also be interesting to see if the schedule is actually effective, i.e. getting fast from the start station to the end station and having to wait minimally. Maybe some schedules are interfering with each other, i.e. a train has always to wait for another train (some sort of priority), so knowing the actual transit time can be quite useful. To retrieve this information, we add an extra attribute to a train, namely the train's departure time and when a train arrives at its end station (i.e. a collector), we can subtract the current time with that departure time. At the end of the simulation, we can take the average of all the transit times to get the final result.
+
+Next to this, we can also show the number of trains that have been generated (at their start station) and that have arrived to their destination, this can then also tell us whether all the trains seemingly can drive to their end location.
+
+\subsubsection{Throughput and Average Transit Time of a Railway Segment}
+
+It might also be interesting to look at an individual segment instead of the complete schedule. In such manner, we can isolate single tracks and look at their own performance. First, we can record the time that a train needs to pass through this segment. This implicitly also says whether a train has to wait a lot while being on this segment. Knowing this, we can try to avoid this by changing the initial schedule and for instance, take another route.
+
+Secondly, we can also store a track's throughput, i.e. the percentage that a train is present on the track. Generally, having a higher throughput is better, but together with the average time to pass this segment, one might expose some conjunction points in the railway network. For example, a certain junction has a high throughput which might mean that trains get clustered before that junction. Additionally, the mount of trains that passed this section is also kept, so we can easily track the trains.
+
+\subsection{Updating Model}
+
+Like with safety analysis, we update our initial railway model with the gathered results from the DEVS simulation. Again, we make use of id's to have backward traceability, so we can precisely relate the results to a track.
 
 \section{Conclusion}
 
