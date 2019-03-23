@@ -141,7 +141,6 @@ class RailwaySegment(AtomicDEVS):
     def outputFnc(self):
         out = {}
         if self.state[0] == "send_query" or self.state[0] == "brake_train":
-            # print("send query for train {}".format(self.train))
             out[self.Q_send] = Query()
         elif self.state[0] == "leave_train":
             self.train.v = self.v_end
@@ -202,6 +201,33 @@ class RailwaySegment(AtomicDEVS):
 
         return self.state
 
+class Split(RailwaySegment):
+    def __init__(self, L, v_max=100):
+        RailwaySegment.__init__(self, L, v_max)
+        self.train_out2 = self.addOutPort("train_out2")
+        self.Q_send2 = self.addOutPort("Q_send2")
+
+    def outputFnc(self):
+        out = {}
+        if self.state[0] == "send_query" or self.state[0] == "brake_train":
+            if self.train.schedule[0] == "STRAIGHT":
+                out[self.Q_send] = Query()
+            else:
+                out[self.Q_send2] = Query()
+        elif self.state[0] == "leave_train":
+            self.train.schedule.pop(0)
+            self.train.v = self.v_end
+            if self.train.schedule[0] == "STRAIGHT":
+                out[self.train_out] = self.train
+            else:
+                out[self.train_out2] = self.train
+            self.train = None
+
+        if self.state[1] == "send_ack":
+            trafficLight = "Green" if self.train is None else "Red"
+            out[self.Q_sack] = QueryAck(trafficLight)
+
+        return out
 
 class PollQueue(AtomicDEVS):
     def __init__(self):
@@ -254,11 +280,12 @@ class PollQueue(AtomicDEVS):
         }[self.state]
 
 class Generator(AtomicDEVS):
-    def __init__(self, IAT_min, IAT_max, a_min, a_max):
+    def __init__(self, IAT_min, IAT_max, a_min, a_max, schedule=[]):
         AtomicDEVS.__init__(self, "Generator")
         self.train_out = self.addOutPort("train_out")
         self.elapsed = 0.0
         self.state = "Generator"
+        self.schedule = schedule
 
         self.IAT_min = IAT_min
         self.IAT_max = IAT_max
@@ -274,7 +301,7 @@ class Generator(AtomicDEVS):
     def outputFnc(self):
         a = random.random()*(self.a_max-self.a_min)+self.a_min
         departure_time = self.time_next[0]
-        return {self.train_out: Train(a, departure_time)}
+        return {self.train_out: Train(a, departure_time, self.schedule)}
 
     def intTransition(self):
         return self.state
