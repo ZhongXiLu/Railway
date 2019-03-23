@@ -1,6 +1,5 @@
 
 import random
-from Queue import Queue
 
 from entities import *
 from formulas import *
@@ -17,6 +16,7 @@ class Collector(AtomicDEVS):
         self.elapsed = 0.0
         self.current_time = 0.0
         self.state = "neutral"
+        self.query_id = -1
 
         self.transit_times = []
 
@@ -29,7 +29,7 @@ class Collector(AtomicDEVS):
 
     def outputFnc(self):
         if self.state == "send_ack":
-            return {self.Q_sack: QueryAck("Green")}     # always green
+            return {self.Q_sack: QueryAck(self.query_id, "Green")}     # always green
         elif self.state == "new_train":
             pass
             # print("Average transit time: {}s".format(sum(self.transit_times)/float(len(self.transit_times))))
@@ -48,6 +48,7 @@ class Collector(AtomicDEVS):
 
         # Received request
         if self.Q_recv in inputs:
+            self.query_id = inputs[self.Q_recv].train_id
             return "send_ack"
 
         # Train arrives on segment
@@ -83,6 +84,7 @@ class RailwaySegment(AtomicDEVS):
         self.timeArrival = 0
         self.duration = 0
         self.isLightInSight = False
+        self.query_id = -1
 
     def timeAdvance(self):
         firstState = 0
@@ -118,7 +120,6 @@ class RailwaySegment(AtomicDEVS):
             self.train.v, t = acceleration_formula(self.train.v, self.v_max, self.train.remaining_x, self.train.a_max)
             self.train.remaining_x = 0
             firstState = t
-            # print("t till end for train {}: {}".format(self.train, t))
             self.state = ("leave_train", self.state[1])
         elif self.state[0] == "brake_train":
             self.train.v = self.v_end
@@ -141,7 +142,7 @@ class RailwaySegment(AtomicDEVS):
     def outputFnc(self):
         out = {}
         if self.state[0] == "send_query" or self.state[0] == "brake_train":
-            out[self.Q_send] = Query()
+            out[self.Q_send] = Query(self.train.ID)
         elif self.state[0] == "leave_train":
             self.train.v = self.v_end
             out[self.train_out] = self.train
@@ -149,7 +150,7 @@ class RailwaySegment(AtomicDEVS):
 
         if self.state[1] == "send_ack":
             trafficLight = "Green" if self.train is None else "Red"
-            out[self.Q_sack] = QueryAck(trafficLight)
+            out[self.Q_sack] = QueryAck(self.query_id, trafficLight)
 
         return out
 
@@ -183,18 +184,65 @@ class RailwaySegment(AtomicDEVS):
     def extTransition(self, inputs):
         # Received ack
         if self.Q_rack in inputs:
-            if inputs[self.Q_rack].trafficLight == "Green":
-                return ("accelerating", self.state[1])
-            else:
-                return ("brake_train", self.state[1])
+            if (self.train is not None) and inputs[self.Q_rack].train_id == self.train.ID:
+                if inputs[self.Q_rack].trafficLight == "Green":
+                    return ("accelerating", self.state[1])
+                else:
+                    return ("brake_train", self.state[1])
 
         # Received request
         elif self.Q_recv in inputs:
             if self.train is None:
+                self.query_id = inputs[self.Q_recv].train_id
                 return (self.state[0], "send_ack")
 
         # Train arrives on segment
         elif self.train_in in inputs:
+            self.train = inputs[self.train_in]
+            self.train.remaining_x = self.L
+            return ("new_train", self.state[1])
+
+        return self.state
+
+class Join(RailwaySegment):
+    def __init__(self, L, v_max=100):
+        RailwaySegment.__init__(self, L, v_max)
+        self.sent_ack = False
+
+    def outputFnc(self):
+        out = {}
+        if self.state[0] == "send_query" or self.state[0] == "brake_train":
+            out[self.Q_send] = Query(self.train.ID)
+        elif self.state[0] == "leave_train":
+            self.train.v = self.v_end
+            out[self.train_out] = self.train
+            self.train = None
+
+        if self.state[1] == "send_ack" and not self.sent_ack:
+            trafficLight = "Green" if self.train is None else "Red"
+            out[self.Q_sack] = QueryAck(self.query_id, trafficLight)
+            self.sent_ack = True
+
+        return out
+
+    def extTransition(self, inputs):
+        # Received ack
+        if self.Q_rack in inputs:
+            if inputs[self.Q_rack].train_id == self.train.ID:
+                if inputs[self.Q_rack].trafficLight == "Green":
+                    return ("accelerating", self.state[1])
+                else:
+                    return ("brake_train", self.state[1])
+
+        # Received request
+        elif self.Q_recv in inputs:
+            if self.train is None:
+                self.query_id = inputs[self.Q_recv].train_id
+                return (self.state[0], "send_ack")
+
+        # Train arrives on segment
+        elif self.train_in in inputs:
+            self.sent_ack = False
             self.train = inputs[self.train_in]
             self.train.remaining_x = self.L
             return ("new_train", self.state[1])
@@ -211,13 +259,12 @@ class Split(RailwaySegment):
         out = {}
         if self.state[0] == "send_query" or self.state[0] == "brake_train":
             if self.train.schedule[0] == "STRAIGHT":
-                out[self.Q_send] = Query()
+                out[self.Q_send] = Query(self.train.ID)
             else:
-                out[self.Q_send2] = Query()
+                out[self.Q_send2] = Query(self.train.ID)
         elif self.state[0] == "leave_train":
-            self.train.schedule.pop(0)
             self.train.v = self.v_end
-            if self.train.schedule[0] == "STRAIGHT":
+            if self.train.schedule.pop(0) == "STRAIGHT":
                 out[self.train_out] = self.train
             else:
                 out[self.train_out2] = self.train
@@ -225,9 +272,63 @@ class Split(RailwaySegment):
 
         if self.state[1] == "send_ack":
             trafficLight = "Green" if self.train is None else "Red"
-            out[self.Q_sack] = QueryAck(trafficLight)
+            out[self.Q_sack] = QueryAck(self.query_id, trafficLight)
+            self.sent_ack = True
 
         return out
+
+class Crossing(RailwaySegment):
+    def __init__(self, L, v_max=100):
+        RailwaySegment.__init__(self, L, v_max)
+        self.train_out2 = self.addOutPort("train_out2")
+        self.Q_send2 = self.addOutPort("Q_send2")
+        self.sent_ack = False
+
+    def outputFnc(self):
+        out = {}
+        if self.state[0] == "send_query" or self.state[0] == "brake_train":
+            if self.train.schedule[0] == "STRAIGHT":
+                out[self.Q_send] = Query(self.train.ID)
+            else:
+                out[self.Q_send2] = Query(self.train.ID)
+        elif self.state[0] == "leave_train":
+            self.train.v = self.v_end
+            if self.train.schedule.pop(0) == "STRAIGHT":
+                out[self.train_out] = self.train
+            else:
+                out[self.train_out2] = self.train
+            self.train = None
+
+        if self.state[1] == "send_ack" and not self.sent_ack:
+            trafficLight = "Green" if self.train is None else "Red"
+            out[self.Q_sack] = QueryAck(self.query_id, trafficLight)
+            self.sent_ack = True
+
+        return out
+
+    def extTransition(self, inputs):
+        # Received ack
+        if self.Q_rack in inputs:
+            if inputs[self.Q_rack].train_id == self.train.ID:
+                if inputs[self.Q_rack].trafficLight == "Green":
+                    return ("accelerating", self.state[1])
+                else:
+                    return ("brake_train", self.state[1])
+
+        # Received request
+        elif self.Q_recv in inputs:
+            if self.train is None:
+                self.query_id = inputs[self.Q_recv].train_id
+                return (self.state[0], "send_ack")
+
+        # Train arrives on segment
+        elif self.train_in in inputs:
+            self.sent_ack = False
+            self.train = inputs[self.train_in]
+            self.train.remaining_x = self.L
+            return ("new_train", self.state[1])
+
+        return self.state
 
 class PollQueue(AtomicDEVS):
     def __init__(self):
@@ -238,7 +339,7 @@ class PollQueue(AtomicDEVS):
         self.Q_rack = self.addInPort("Q_rack")
         self.Q_send = self.addOutPort("Q_send")
 
-        self.queue = Queue()
+        self.queue = []
 
     def timeAdvance(self):
         timeAdvance = 1000 -self.time_next[0]*1000%1000      # schedule on the exact second
@@ -251,22 +352,22 @@ class PollQueue(AtomicDEVS):
 
     def outputFnc(self):
         if self.state is "send_query":
-            return {self.Q_send: Query()}
+            return {self.Q_send: Query(self.queue[0])}
         elif self.state is "send_train":
-            return {self.train_out: self.queue.get()}
+            return {self.train_out: self.queue.pop(0)}
         return {}
 
     def extTransition(self, inputs):
         # Send train to output segment
         if self.Q_rack in inputs:
-            if inputs[self.Q_rack].trafficLight == "Green" and not self.queue.empty():
+            if inputs[self.Q_rack].trafficLight == "Green" and len(self.queue) > 0:
                 return "send_train"
             else:
                 return "send_query_again"
 
         # Put new train in queue
         elif self.train_in in inputs:
-            self.queue.put(inputs[self.train_in])
+            self.queue.append(inputs[self.train_in])
             return "send_query"
 
         return self.state

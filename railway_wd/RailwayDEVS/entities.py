@@ -19,17 +19,18 @@ class Train:
 
 class Query:
 
-    def __init__(self):
-        pass
+    def __init__(self, train_id):
+        self.train_id = train_id
 
     def __str__(self):
-        return "Query"
+        return "Query for " + self.train_id
 
 class QueryAck:
 
-    def __init__(self, trafficLight):
+    def __init__(self, train_id, trafficLight):
+        self.train_id = train_id
         self.trafficLight = trafficLight
 
     def __str__(self):
-        return "Query Ack: {}".format(self.trafficLight)
+        return "Query Ack for {}: {}".format(self.train_id, self.trafficLight)
 
