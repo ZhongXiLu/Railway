@@ -86,6 +86,11 @@ class RailwaySegment(AtomicDEVS):
         self.isLightInSight = False
         self.query_id = -1
 
+        self.current_time = 0.0
+        self.train_arrival_time = 0.0
+        self.transit_times = []
+        self.uptime = 0
+
     def timeAdvance(self):
         firstState = 0
         if self.state[0] == "new_train":
@@ -147,6 +152,7 @@ class RailwaySegment(AtomicDEVS):
             self.train.v = self.v_end
             out[self.train_out] = self.train
             self.train = None
+            self.transit_times.append(self.current_time - self.train_arrival_time)
 
         if self.state[1] == "send_ack":
             trafficLight = "Green" if self.train is None else "Red"
@@ -155,6 +161,9 @@ class RailwaySegment(AtomicDEVS):
         return out
 
     def intTransition(self):
+        self.current_time += self.timeAdvance()
+        if self.train is not None:
+            self.uptime += self.timeAdvance()
         firstState = None
         if self.isLightInSight:
             self.isLightInSight = False
@@ -182,6 +191,9 @@ class RailwaySegment(AtomicDEVS):
         return (firstState, secondState)
 
     def extTransition(self, inputs):
+        self.current_time += self.elapsed
+        if self.train is not None:
+            self.uptime += self.elapsed
         # Received ack
         if self.Q_rack in inputs:
             if (self.train is not None) and inputs[self.Q_rack].train_id == self.train.ID:
@@ -198,6 +210,7 @@ class RailwaySegment(AtomicDEVS):
 
         # Train arrives on segment
         elif self.train_in in inputs:
+            self.train_arrival_time = self.current_time
             self.train = inputs[self.train_in]
             self.train.remaining_x = self.L
             return ("new_train", self.state[1])
@@ -217,6 +230,7 @@ class Join(RailwaySegment):
             self.train.v = self.v_end
             out[self.train_out] = self.train
             self.train = None
+            self.transit_times.append(self.current_time - self.train_arrival_time)
 
         if self.state[1] == "send_ack" and not self.sent_ack:
             trafficLight = "Green" if self.train is None else "Red"
@@ -226,6 +240,9 @@ class Join(RailwaySegment):
         return out
 
     def extTransition(self, inputs):
+        self.current_time += self.elapsed
+        if self.train is not None:
+            self.uptime += self.elapsed
         # Received ack
         if self.Q_rack in inputs:
             if inputs[self.Q_rack].train_id == self.train.ID:
@@ -242,6 +259,7 @@ class Join(RailwaySegment):
 
         # Train arrives on segment
         elif self.train_in in inputs:
+            self.train_arrival_time = self.current_time
             self.sent_ack = False
             self.train = inputs[self.train_in]
             self.train.remaining_x = self.L
@@ -269,6 +287,7 @@ class Split(RailwaySegment):
             else:
                 out[self.train_out2] = self.train
             self.train = None
+            self.transit_times.append(self.current_time - self.train_arrival_time)
 
         if self.state[1] == "send_ack":
             trafficLight = "Green" if self.train is None else "Red"
@@ -298,6 +317,7 @@ class Crossing(RailwaySegment):
             else:
                 out[self.train_out2] = self.train
             self.train = None
+            self.transit_times.append(self.current_time - self.train_arrival_time)
 
         if self.state[1] == "send_ack" and not self.sent_ack:
             trafficLight = "Green" if self.train is None else "Red"
@@ -307,6 +327,9 @@ class Crossing(RailwaySegment):
         return out
 
     def extTransition(self, inputs):
+        self.current_time += self.elapsed
+        if self.train is not None:
+            self.uptime += self.elapsed
         # Received ack
         if self.Q_rack in inputs:
             if inputs[self.Q_rack].train_id == self.train.ID:
@@ -323,6 +346,7 @@ class Crossing(RailwaySegment):
 
         # Train arrives on segment
         elif self.train_in in inputs:
+            self.train_arrival_time = self.current_time
             self.sent_ack = False
             self.train = inputs[self.train_in]
             self.train.remaining_x = self.L
@@ -390,9 +414,10 @@ class Generator(AtomicDEVS):
 
         self.IAT_min = IAT_min
         self.IAT_max = IAT_max
-
         self.a_min = a_min
         self.a_max = a_max
+
+        self.trains_generated = 0
 
         random.seed(123)
 
@@ -402,6 +427,7 @@ class Generator(AtomicDEVS):
     def outputFnc(self):
         a = random.random()*(self.a_max-self.a_min)+self.a_min
         departure_time = self.time_next[0]
+        self.trains_generated += 1
         return {self.train_out: Train(a, departure_time, self.schedule)}
 
     def intTransition(self):
