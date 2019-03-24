@@ -1,6 +1,7 @@
 \documentclass{article}
 
 \usepackage[utf8]{inputenc}
+\usepackage{a4wide}
 \usepackage{float}
 \usepackage{multirow}
 \usepackage{hyperref}
@@ -247,5 +248,109 @@ Like with safety analysis, we update our initial railway model with the gathered
 \bibliographystyle{ieeetr}
 \nocite{*}
 \bibliography{references}
+
+\newpage
+\section*{Appendix: Examples}
+\label{appendix}
+
+\subsection*{Operational Semantics}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{images/example_devs_railway.png}
+    \caption{Railway model for the operational semantics}
+    \label{example_devs_railway}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{images/example_devs_schedule.png}
+    \caption{Train schedule models for the railway model in figure \ref{example_devs_railway}}
+    \label{example_devs_schedule}
+\end{figure}
+
+The example model we will be working on for the operational semantics is shown in figure \ref{example_devs_railway}. The small network consists of four start and end stations that are connected to some sort of ladder. For each start station we also associate exact one train schedule, which can be found in figure \ref{example_devs_schedule}. For example, train \texttt{T1} has to continuously go straight, while \texttt{T4} always has to take a turn on a turnout.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{images/example_devs_after_init.png}
+    \caption{Model after initialization}
+    \label{example_devs_after_init}
+\end{figure}
+
+After the initialization (figure \ref{example_devs_after_init}), all the trains are placed on their start station and all the signalling lights are added and set correctly.
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{images/example_devs_after_first_iter.png}
+    \caption{Model after first iteration}
+    \label{example_devs_after_first_iter}
+\end{figure}
+
+After the initialization, the real simulation loop can start. The first iteration (figure \ref{example_devs_after_first_iter}) starts by setting the switches, in this case, only one switch (most bottom junction) will be set. There are however two trains (\texttt{T3} and \texttt{T4}) who want to enter this junction, so it will randomly select one (\texttt{T3} here). After this step, the trains can try to move to the next segment, all the trains can move, except \texttt{T4} since the switch of the junction is not set correctly.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{images/example_devs_after_few_iters.png}
+    \caption{Model after several iterations}
+    \label{example_devs_after_few_iters}
+\end{figure}
+
+If we let the simulation run several iterations, we come to the following model in figure \ref{example_devs_after_few_iters}. Interestingly enough, \texttt{T1} is almost already at its destination, while \texttt{T4} just left its start station. This is due to the fact that \texttt{T1} only has to enter one junction (more on this in the \nameref{queueing_analysis_section} section). Finally, if we let the simulation run until the end, \texttt{T1}, \texttt{T2}, \texttt{T3} and \texttt{T4} will eventually reach their end location in this order.
+
+\subsection*{Safety Analysis}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{images/example_pn.png}
+    \caption{Railway and Train Schedule Model for the safety analysis}
+    \label{example_pn}
+\end{figure}
+
+The model that we will be analyzing is pictured in figure \ref{example_pn}. It contains only one train of which its schedule is simply going straight until it reaches its end station.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{images/example_pn_pn.png}
+    \caption{Intermediate petri-net model}
+    \label{example_pn_pn}
+\end{figure}
+
+When running the model transformations, an intermediate petri-net model is created, this can be viewed in figure \ref{example_pn_pn}. All of the tracks have three places, one for the actual track and two for the light. For each end station (of a schedule) we also associate one place (here it is \texttt{End1Train1}) where the train resides after it has reached its end station. Note that the \texttt{PreEnd1Train1} place holds one token, so that only one train finish in this station. Finally, if the end condition is met (all trains are in their end station), the \texttt{EndTransition} will then infinitely be enabled and fired.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{images/example_pn_results.png}
+    \caption{Safety analysis results}
+    \label{example_pn_results}
+\end{figure}
+
+From this intermediate petri-net, we can run our analysis and import the results back onto our railway model. The effect of this can be seen in figure \ref{example_pn_results}. First, there is an unreachable station \texttt{Station} and secondly, it might be possible to end up in a deadlock situation if we follow the indicated path on the model, i.e. instead of going straight on the turnout, the train takes a turn and goes into a dead path. Note that in practise this should not be possible if the control system is functioning correctly, i.e. setting the switch on the turnout according to a train's schedule.
+
+\subsection*{Queuing Analysis}
+\label{queueing_analysis_section}
+
+For the queueing analysis, we start off with the same model we used for the operational semantics (figure \ref{example_devs_railway} and \ref{example_devs_schedule}). Note that the railway segments are all five kilometers long, the inter arrival time (IAT) for all the generators are $[5,10]$ seconds, the train's acceleration is $[0.2,0.7] m/s^2$ and the simulation runtime is 100.000 seconds (or roughly 28 hours). We make the inter IAT short enough so that trains can get queued, so we can see how the train system will function under heavy load. As earlier mentioned, we could already tell that \texttt{T1} reached its end station way before the others, but to go deeper on this, we can make use of the queueing analysis.
+
+\begin{figure}[H]
+    \begin{center}
+        \makebox[\textwidth]{\includegraphics[width=0.8\paperwidth]{images/example_devs_devs.png}}
+    \end{center}
+    \caption{Intermediate coupled DEVS model}
+    \label{example_devs_devs}
+\end{figure}
+
+Similarly to the safety analysis, we create an intermediate coupled DEVS model here (figure \ref{example_devs_devs}. This we can then use to simulate the whole railway system and retrieve the necessary statistics.
+
+\begin{figure}[H]
+    \begin{center}
+        \makebox[\textwidth]{\includegraphics[width=0.8\paperwidth]{images/example_devs_results.png}}
+    \end{center}
+    \caption{Queueing analysis results}
+    \label{example_devs_results}
+\end{figure}
+
+Looking at the results, we immediately see that the middle junction and turnout have a high throughput, meaning a lot of traffic (in fact, all traffic) goes through this point. Another shocking fact is that only one train from schedule 4 (\texttt{Start4} - \texttt{End4}) has arrived at their end station and that most of the trains that finished are from schedule 1. Furthermore, we can conclude that the tracks starting from \texttt{Start1} have a high throughput and a low transit time which is desirable. On the other hand, the tracks starting from \texttt{Start4} also have a high throughput (approx. 100\% even), but they have an extremely long transit time since the trains probably have to wait for the other ones. Judging from this, there is some kind of indirect priority system (probably due to the pseudo-randomness), i.e. trains from schedule 1 have the most priority.
 
 \end{document}

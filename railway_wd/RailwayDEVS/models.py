@@ -375,7 +375,7 @@ class PollQueue(AtomicDEVS):
         }[self.state]
 
     def outputFnc(self):
-        if self.state is "send_query":
+        if self.state is "send_query" and len(self.queue) > 0:
             return {self.Q_send: Query(self.queue[0])}
         elif self.state is "send_train":
             return {self.train_out: self.queue.pop(0)}
