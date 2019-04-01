@@ -257,13 +257,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 100, z: -10}
+  m_LocalRotation: {x: 0.18301274, y: -0.6830127, z: 0.18301274, w: 0.6830127}
+  m_LocalPosition: {x: 50, y: 30, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 30, y: -90, z: 0}
 --- !u!114 &534669906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -276,6 +276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6c55a92fa2bc3690bc21007b41bb8a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 5
 --- !u!1 &538984752
 GameObject:
   m_ObjectHideFlags: 0
@@ -306,7 +307,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundPrefab: {fileID: 110702, guid: 1a098c755f9e28a4cb692e77fad8c6cc, type: 3}
-  straightPrefab: {fileID: 166638, guid: f496534c3439ad649906ebc97a7f681d, type: 3}
+  straightPrefab: {fileID: 6285626281820246986, guid: 3cfc99674046ca010a250544da279705,
+    type: 3}
+  stationPrefab: {fileID: 2086883397179958999, guid: 0ba11ee02b8bef12494b64e298905083,
+    type: 3}
+  turnoutPrefab: {fileID: 2051377090433848378, guid: a08db0f21ecb95caea25c4cf65299ed4,
+    type: 3}
+  junctionPrefab: {fileID: 5370677120835004231, guid: d096e25a9a568e7d599a5ebb11bc9f18,
+    type: 3}
+  crossingPrefab: {fileID: 3366745100615142427, guid: 079daeeace2adcab9a96fb5ccd9e085b,
+    type: 3}
 --- !u!4 &538984754
 Transform:
   m_ObjectHideFlags: 0
