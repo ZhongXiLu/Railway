@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /**
-TrackFactoy: responsible for creating the different kinds of tracks.
+TrackFactory: responsible for creating the different kinds of tracks.
 
-Note that the all the tracks are 80 units long and 30 units wide.
+Note that the all the tracks are 80 units long and 30 units wide, except the crossing, which is twice its size.
 */
 public class TrackFactory : MonoBehaviour {
 

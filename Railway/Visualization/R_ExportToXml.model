@@ -1,0 +1,212 @@
+{
+	"csm": {
+		"nodes": {
+			"0": {
+				"typename": {
+					"type": "string",
+					"value": "LHSIcon"
+				},
+				"position": {
+					"type": "list<double>",
+					"value": [
+						158,
+						142
+					]
+				},
+				"orientation": {
+					"type": "double",
+					"value": 0
+				},
+				"scale": {
+					"type": "list<double>",
+					"value": [
+						1,
+						1
+					]
+				},
+				"mapper": {
+					"type": "code",
+					"value": ""
+				},
+				"parser": {
+					"type": "code",
+					"value": ""
+				},
+				"$contents": {
+					"type": "map<string,*>",
+					"value": {
+						"nodes": {
+							"4": {
+								"segments": {
+									"type": "string",
+									"value": "m0,0 l350,0 l100,250 l-100,250 l-350,0z"
+								},
+								"style": {
+									"type": "map<string,string>",
+									"value": {
+										"stroke": "#000000",
+										"stroke-dasharray": "",
+										"fill": "#ffffff",
+										"fill-opacity": 0.75,
+										"stroke-width": 2,
+										"arrow-start": "none",
+										"arrow-end": "none"
+									}
+								},
+								"mapper": {
+									"type": "code",
+									"value": ""
+								},
+								"parser": {
+									"type": "code",
+									"value": ""
+								},
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Path",
+								"position": {
+									"type": "list<double>",
+									"value": [
+										1,
+										0
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": 0
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								}
+							}
+						},
+						"edges": []
+					}
+				},
+				"$asuri": {
+					"type": "string",
+					"value": "/Formalisms/__Transformations__/TransformationRule/TransformationRule/LHS/0.instance"
+				},
+				"$type": "/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons/LHSIcon"
+			},
+			"1": {
+				"typename": {
+					"type": "string",
+					"value": "RHSIcon"
+				},
+				"position": {
+					"type": "list<double>",
+					"value": [
+						559,
+						142
+					]
+				},
+				"orientation": {
+					"type": "double",
+					"value": 0
+				},
+				"scale": {
+					"type": "list<double>",
+					"value": [
+						1,
+						1
+					]
+				},
+				"mapper": {
+					"type": "code",
+					"value": ""
+				},
+				"parser": {
+					"type": "code",
+					"value": ""
+				},
+				"$contents": {
+					"type": "map<string,*>",
+					"value": {
+						"nodes": {
+							"7": {
+								"segments": {
+									"type": "string",
+									"value": "m0,0 l450,0 l0,500 l-450,0 l100,-250z"
+								},
+								"style": {
+									"type": "map<string,string>",
+									"value": {
+										"stroke": "#000000",
+										"stroke-dasharray": "",
+										"fill": "#ffffff",
+										"fill-opacity": 0.75,
+										"stroke-width": 2,
+										"arrow-start": "none",
+										"arrow-end": "none"
+									}
+								},
+								"mapper": {
+									"type": "code",
+									"value": ""
+								},
+								"parser": {
+									"type": "code",
+									"value": ""
+								},
+								"$type": "/Formalisms/__LanguageSyntax__/ConcreteSyntax/ConcreteSyntax/Path",
+								"position": {
+									"type": "list<double>",
+									"value": [
+										0,
+										0
+									]
+								},
+								"orientation": {
+									"type": "double",
+									"value": 0
+								},
+								"scale": {
+									"type": "list<double>",
+									"value": [
+										1,
+										1
+									]
+								}
+							}
+						},
+						"edges": []
+					}
+				},
+				"$asuri": {
+					"type": "string",
+					"value": "/Formalisms/__Transformations__/TransformationRule/TransformationRule/RHS/1.instance"
+				},
+				"$type": "/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons/RHSIcon"
+			}
+		},
+		"edges": [],
+		"metamodels": [
+			"/Formalisms/__Transformations__/TransformationRule/TransformationRule.defaultIcons"
+		]
+	},
+	"asm": {
+		"nodes": {
+			"0": {
+				"Condition": {
+					"type": "code",
+					"value": "result = True"
+				},
+				"$type": "/Formalisms/__Transformations__/TransformationRule/TransformationRule/LHS"
+			},
+			"1": {
+				"Action": {
+					"type": "code",
+					"value": "import xml.etree.cElementTree as ET\n\nrailway = ET.Element(\"Railway\")\n\nfor track in getAllNodes([\"/Formalisms/Railway/Railway/Straight\", \"/Formalisms/Railway/Railway/Station\", \"/Formalisms/Railway/Railway/Turnout\", \"/Formalisms/Railway/Railway/Junction\", \"/Formalisms/Railway/Railway/Crossing\"]):\n    \n    trackElem = None\n    if getAttr(\"$type\", track) == \"/Formalisms/Railway/Railway/Station\":\n        trackElem = ET.SubElement(railway, \"Station\")\n    elif getAttr(\"$type\", track) == \"/Formalisms/Railway/Railway/Straight\":\n        trackElem = ET.SubElement(railway, \"Straight\")\n    elif getAttr(\"$type\", track) == \"/Formalisms/Railway/Railway/Junction\":\n        trackElem = ET.SubElement(railway, \"Junction\")\n    elif getAttr(\"$type\", track) == \"/Formalisms/Railway/Railway/Turnout\":\n        trackElem = ET.SubElement(railway, \"Turnout\")\n    elif getAttr(\"$type\", track) == \"/Formalisms/Railway/Railway/Crossing\":\n        trackElem = ET.SubElement(railway, \"Crossing\")\n    \n    if trackElem is not None:\n        ET.SubElement(trackElem, \"name\").text = getAttr(\"$atompmId\", track)\n        ports = ET.SubElement(trackElem, \"ports\")\n\n        for link in getNeighbors(\"<\", \"*\", track):\n            if getAttr(\"direction\", link) == \"STRAIGHT\":\n                ET.SubElement(ports, \"in\").text = getAttr(\"$atompmId\", (getNeighbors(\"<\", \"*\", link)[0]))\n            else:\n                ET.SubElement(ports, \"in2\").text = getAttr(\"$atompmId\", (getNeighbors(\"<\", \"*\", link)[0]))\n        for link in getNeighbors(\">\", \"*\", track):\n            if getAttr(\"direction\", link) == \"STRAIGHT\":\n                ET.SubElement(ports, \"out\").text = getAttr(\"$atompmId\", (getNeighbors(\">\", \"*\", link)[0]))\n            else:\n                ET.SubElement(ports, \"out2\").text = getAttr(\"$atompmId\", (getNeighbors(\">\", \"*\", link)[0]))\n\ntree = ET.ElementTree(railway)\ntree.write(\"railway_wd/RailwayUnity/Assets/Resources/railway.xml\")\n\nresult = True"
+				},
+				"$type": "/Formalisms/__Transformations__/TransformationRule/TransformationRule/RHS"
+			}
+		},
+		"edges": [],
+		"metamodels": [
+			"/Formalisms/__Transformations__/TransformationRule/TransformationRule"
+		]
+	}
+}
