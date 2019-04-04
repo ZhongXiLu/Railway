@@ -52,7 +52,7 @@ public class WordLoader : MonoBehaviour {
         } else if(track.type == "Turnout") {
             railwayFactory.createTurnout(track.id.ToString(), Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.y));
         } else if(track.type == "Straight") {
-            railwayFactory.createStraight(track.id.ToString(), Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.y), track.length);
+            railwayFactory.createStraight(track.id.ToString(), Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.y));
         } else if(track.type == "Station") {
             railwayFactory.createStation(track.id.ToString(), Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.y));
         } else if(track.type == "Crossing") {
@@ -101,13 +101,6 @@ public class WordLoader : MonoBehaviour {
                 }
             }
         }
-        // Check length of track (length is only supported for straights)
-        if(originalTrack.type == "Straight"  && (port == "out" || port == "out2")) {
-            newPosition.y += 80*(Mathf.RoundToInt(originalTrack.length/100)-1);
-        }
-        if(newTrack.type == "Straight" && (port == "in" || port == "in2")) {
-            newPosition.y -= 80*((originalTrack.length/100)-1); // TODO: check if correct
-        }
         return newPosition;
     }
 
@@ -131,7 +124,7 @@ public class WordLoader : MonoBehaviour {
 
         Railway.Track startStation = railway.getStartStation();
         Vector2 position = new Vector2(0, 0);
-        railwayFactory.createStation(startStation.id.ToString(), Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.y));
+        createTrack(startStation, position);
         positions[startStation.id] = position;
 
         Queue<Railway.Track> queue = new Queue<Railway.Track>();

@@ -22,8 +22,7 @@ public class Railway : MonoBehaviour {
     /**
     Get a random start station from the railway network.
 
-    @param railway  The railway network object.
-    @return         The tracks that contains a start station.
+    @return The track that contains a start station.
     */
     public Track getStartStation() {
         foreach(Track track in tracks.Values) {
