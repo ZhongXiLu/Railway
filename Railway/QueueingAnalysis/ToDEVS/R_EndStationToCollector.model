@@ -5277,7 +5277,7 @@
 			"4": {
 				"Action": {
 					"type": "code",
-					"value": "setAttr(\"position\", getAttr(\"position\", \"3\"), \"5\")\nsetAttr(\"position\", [getAttr(\"position\", \"3\")[0], getAttr(\"position\", \"3\")[1]+25], \"11\")\nsetAttr(\"position\", [getAttr(\"position\", \"3\")[0], getAttr(\"position\", \"3\")[1]+50], \"12\")\nsetAttr(\"position\", [getAttr(\"position\", \"3\")[0], getAttr(\"position\", \"3\")[1]+75], \"8\")\nsetAttr(\"name\", getAttr(\"$atompmId\", \"3\"), \"5\")"
+					"value": "setAttr(\"position\", getAttr(\"position\", \"3\"), \"5\")\nsetAttr(\"position\", [getAttr(\"position\", \"3\")[0], getAttr(\"position\", \"3\")[1]+25], \"11\")\nsetAttr(\"position\", [getAttr(\"position\", \"3\")[0], getAttr(\"position\", \"3\")[1]+50], \"12\")\nsetAttr(\"position\", [getAttr(\"position\", \"3\")[0], getAttr(\"position\", \"3\")[1]+75], \"8\")\nsetAttr(\"name\", \"_\" + getAttr(\"$atompmId\", \"3\"), \"5\")"
 				},
 				"$type": "/Formalisms/__Transformations__/TransformationRule/TransformationRule/RHS"
 			},

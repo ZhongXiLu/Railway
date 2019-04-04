@@ -10,40 +10,8 @@ WorldLoader: loads a railway network from a given file (Assets/Resources/railway
 */
 public class WordLoader : MonoBehaviour {
 
-    public TrackFactory trackFactory;
-
-    public class Track {
-        public string type;
-        public int name;
-        public Dictionary<string, int> ports = new Dictionary<string, int>();
-    }
-
-    public class Railway {
-
-        public Dictionary<int, Track> tracks = new Dictionary<int, Track>();
-
-    }
-
-    /**
-    Get a random start station from the railway network.
-
-    @param railway  The railway network object.
-    @return         The tracks that contains a start station.
-    */
-    Track getStartStation(Railway railway) {
-        foreach(Track track in railway.tracks.Values) {
-            int inCount = 0;
-            foreach(string port in track.ports.Keys) {
-                if(port == "in" || port == "in2") {
-                    inCount++;
-                }
-            }
-            if(inCount == 0) {
-                return track;
-            }
-        }
-        return null;    // no StartStation
-    }
+    public Railway railway;
+    public RailwayFactory railwayFactory;
 
     /**
     Fill the railway object, i.e. create all the Track objects.
@@ -53,41 +21,42 @@ public class WordLoader : MonoBehaviour {
     */
     void populateRailway(XmlDocument xmldoc, Railway railway) {
         foreach(XmlNode track in xmldoc.GetElementsByTagName("Railway")[0].ChildNodes) {
-            Track newTrack = new Track();
-            int name = -1;
+            Railway.Track newTrack = new Railway.Track();
+            int id = -1;
             newTrack.type = track.Name;
             foreach(XmlNode data in track.ChildNodes) {
-                if(data.Name == "name") {
-                    name = int.Parse(data.InnerText);
-                    newTrack.name = name;
+                if(data.Name == "id") {
+                    id = int.Parse(data.InnerText);
+                    newTrack.id = id;
+                } else if(data.Name == "length") {
+                    newTrack.length = int.Parse(data.InnerText);
                 } else if(data.Name == "ports") {
                     foreach(XmlNode port in data.ChildNodes) {
                         newTrack.ports[port.Name] = int.Parse(port.InnerText);
                     }
                 }
             }
-            railway.tracks.Add(name, newTrack);
+            railway.tracks.Add(id, newTrack);
         }
     }
 
     /**
     Create a track on a specific position.
 
-    @param type     The type of the track.
-    @param name     The name of the track.
+    @param track    The new track that will be placed.
     @param position The position of the track.
     */
-    void createTrack(string type, string name, Vector2 position) {
-        if(type == "Junction") {
-            trackFactory.createJunction(name, Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.y));
-        } else if(type == "Turnout") {
-            trackFactory.createTurnout(name, Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.y));
-        } else if(type == "Straight") {
-            trackFactory.createStraight(name, Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.y));
-        } else if(type == "Station") {
-            trackFactory.createStation(name, Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.y));
-        } else if(type == "Crossing") {
-            trackFactory.createCrossing(name, Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.y));
+    void createTrack(Railway.Track track, Vector2 position) {
+        if(track.type == "Junction") {
+            railwayFactory.createJunction(track.id.ToString(), Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.y));
+        } else if(track.type == "Turnout") {
+            railwayFactory.createTurnout(track.id.ToString(), Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.y));
+        } else if(track.type == "Straight") {
+            railwayFactory.createStraight(track.id.ToString(), Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.y), track.length);
+        } else if(track.type == "Station") {
+            railwayFactory.createStation(track.id.ToString(), Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.y));
+        } else if(track.type == "Crossing") {
+            railwayFactory.createCrossing(track.id.ToString(), Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.y));
         }
     }
 
@@ -100,8 +69,9 @@ public class WordLoader : MonoBehaviour {
     @param positions        Dictionary that contains the positions of already placed tracks.
     @return                 The position of the new track.
     */
-    Vector2 adjustPosition(Track originalTrack, Track newTrack, string port, Dictionary<int, Vector2> positions) {
-        Vector2 newPosition = positions[originalTrack.name];
+    Vector2 adjustPosition(Railway.Track originalTrack, Railway.Track newTrack, string port, Dictionary<int, Vector2> positions) {
+        Vector2 newPosition = positions[originalTrack.id];
+        // Position relative to other track
         if(port == "out") {
             newPosition.y += 80;
         } else if(port == "in") {
@@ -131,13 +101,21 @@ public class WordLoader : MonoBehaviour {
                 }
             }
         }
+        // Check length of track (length is only supported for straights)
+        if(originalTrack.type == "Straight"  && (port == "out" || port == "out2")) {
+            newPosition.y += 80*(Mathf.RoundToInt(originalTrack.length/100)-1);
+        }
+        if(newTrack.type == "Straight" && (port == "in" || port == "in2")) {
+            newPosition.y -= 80*((originalTrack.length/100)-1); // TODO: check if correct
+        }
         return newPosition;
     }
 
     void Start() {
 
         // Ground
-        trackFactory.createGround(1000, 1000);
+        railwayFactory.createGround(10000, 10000);
+        railwayFactory.createTrain("Test", 0, 0);
 
         // Load railway xml file
         TextAsset textAsset = (TextAsset)Resources.Load("railway");  
@@ -145,34 +123,33 @@ public class WordLoader : MonoBehaviour {
         xmldoc.LoadXml(textAsset.text);
 
         // Populate railway
-        Railway railway = new Railway();
         populateRailway(xmldoc, railway);
 
         // Place tracks in BFS order, starting from a start station
         Dictionary<int, bool> visited = new Dictionary<int, bool>();
         Dictionary<int, Vector2> positions = new Dictionary<int, Vector2>();
 
-        Track startStation = getStartStation(railway);
+        Railway.Track startStation = railway.getStartStation();
         Vector2 position = new Vector2(0, 0);
-        trackFactory.createStation(startStation.name.ToString(), Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.y));
-        positions[startStation.name] = position;
+        railwayFactory.createStation(startStation.id.ToString(), Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.y));
+        positions[startStation.id] = position;
 
-        Queue<Track> queue = new Queue<Track>();
+        Queue<Railway.Track> queue = new Queue<Railway.Track>();
         queue.Enqueue(startStation);
 
         while(queue.Count != 0) {
-            Track track = queue.Dequeue();
+            Railway.Track track = queue.Dequeue();
             foreach(KeyValuePair<string, int> port in track.ports) {
-                Track newTrack = railway.tracks[port.Value];
-                if(!visited.ContainsKey(newTrack.name) || !visited[newTrack.name]) {                        
+                Railway.Track newTrack = railway.tracks[port.Value];
+                if(!visited.ContainsKey(newTrack.id) || !visited[newTrack.id]) {                        
                     Vector2 newPosition = adjustPosition(track, newTrack, port.Key, positions);
-                    positions[newTrack.name] = newPosition;
-                    createTrack(railway.tracks[port.Value].type, newTrack.name.ToString(), newPosition);
+                    positions[newTrack.id] = newPosition;
+                    createTrack(newTrack, newPosition);
                     queue.Enqueue(newTrack);
                 }
             }
 
-            visited[track.name] = true;
+            visited[track.id] = true;
         }
     }
 }
