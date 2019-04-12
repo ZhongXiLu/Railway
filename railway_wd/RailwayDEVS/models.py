@@ -7,8 +7,8 @@ from pypdevs.simulator import Simulator
 from pypdevs.DEVS import AtomicDEVS, CoupledDEVS
 
 class Collector(AtomicDEVS):
-    def __init__(self):
-        AtomicDEVS.__init__(self, "Collector")
+    def __init__(self, name="Collector"):
+        AtomicDEVS.__init__(self, name)
         self.train_in = self.addInPort("train_in")
         self.Q_recv = self.addInPort("Q_recv")
         self.Q_sack = self.addOutPort("Q_sack")
@@ -64,8 +64,8 @@ class Collector(AtomicDEVS):
         return self.state
 
 class RailwaySegment(AtomicDEVS):
-    def __init__(self, L, v_max=100):
-        AtomicDEVS.__init__(self, "RailwaySegment")
+    def __init__(self, name="RailwaySegment", L=5000, v_max=100):
+        AtomicDEVS.__init__(self, name)
         self.train_in = self.addInPort("train_in")
         self.train_out = self.addOutPort("train_out")
         self.Q_recv = self.addInPort("Q_recv")
@@ -117,15 +117,18 @@ class RailwaySegment(AtomicDEVS):
                 self.isLightInSight = True
             firstState = self.duration
             self.timeArrival = self.time_last[0]
-            # print("duration till lights for train {}: {}".format(self.train, self.duration))
+            # print("duration till lights for Train {} : {}".format(self.train, self.duration))
 
         elif self.state[0] == "accelerating":
             self.train.v = self.v_end
             # self.train.remaining_x = 1000
+            # print("remaining_x Train {} : {}".format(self.train, self.train.remaining_x))
             self.train.v, t = acceleration_formula(self.train.v, self.v_max, self.train.remaining_x, self.train.a_max)
             self.train.remaining_x = 0
             firstState = t
-            self.state = ("leave_train", self.state[1])
+            self.duration = t
+            # print("accel Train {} : {}".format(self.train, self.duration))
+            # self.state = ("leave_train", self.state[1])
         elif self.state[0] == "brake_train":
             self.train.v = self.v_end
             self.train.remaining_x = self.x_end
@@ -218,8 +221,8 @@ class RailwaySegment(AtomicDEVS):
         return self.state
 
 class Join(RailwaySegment):
-    def __init__(self, L, v_max=100):
-        RailwaySegment.__init__(self, L, v_max)
+    def __init__(self, name="Join", L=5000, v_max=100):
+        RailwaySegment.__init__(self, name, L, v_max)
         self.sent_ack = False
 
     def outputFnc(self):
@@ -268,8 +271,8 @@ class Join(RailwaySegment):
         return self.state
 
 class Split(RailwaySegment):
-    def __init__(self, L, v_max=100):
-        RailwaySegment.__init__(self, L, v_max)
+    def __init__(self, name="Split", L=5000, v_max=100):
+        RailwaySegment.__init__(self, name, L, v_max)
         self.train_out2 = self.addOutPort("train_out2")
         self.Q_send2 = self.addOutPort("Q_send2")
 
@@ -297,8 +300,8 @@ class Split(RailwaySegment):
         return out
 
 class Crossing(RailwaySegment):
-    def __init__(self, L, v_max=100):
-        RailwaySegment.__init__(self, L, v_max)
+    def __init__(self, name="Crossing", L=5000, v_max=100):
+        RailwaySegment.__init__(self, name, L, v_max)
         self.train_out2 = self.addOutPort("train_out2")
         self.Q_send2 = self.addOutPort("Q_send2")
         self.sent_ack = False
@@ -355,13 +358,14 @@ class Crossing(RailwaySegment):
         return self.state
 
 class PollQueue(AtomicDEVS):
-    def __init__(self):
-        AtomicDEVS.__init__(self, "PollQueue")
+    def __init__(self, name="PollQueue"):
+        AtomicDEVS.__init__(self, name)
         self.state = "neutral"
         self.train_in = self.addInPort("train_in")
         self.train_out = self.addOutPort("train_out")
         self.Q_rack = self.addInPort("Q_rack")
         self.Q_send = self.addOutPort("Q_send")
+        self.train = None
 
         self.queue = []
 
@@ -369,22 +373,25 @@ class PollQueue(AtomicDEVS):
         timeAdvance = 1000 -self.time_next[0]*1000%1000      # schedule on the exact second
         return {
             "neutral": timeAdvance/1000.0,
+            "new_train": 0,
             "send_query": 0,
             "send_train": 0,
             "send_query_again": 1
         }[self.state]
 
     def outputFnc(self):
-        if self.state is "send_query" and len(self.queue) > 0:
-            return {self.Q_send: Query(self.queue[0])}
+        if self.state is "send_query" and self.train is not None:
+            return {self.Q_send: Query(self.train)}
         elif self.state is "send_train":
-            return {self.train_out: self.queue.pop(0)}
+            nextTrain = self.train
+            self.train = None
+            return {self.train_out: nextTrain}
         return {}
 
     def extTransition(self, inputs):
         # Send train to output segment
         if self.Q_rack in inputs:
-            if inputs[self.Q_rack].trafficLight == "Green" and len(self.queue) > 0:
+            if inputs[self.Q_rack].trafficLight == "Green" and self.train is not None:
                 return "send_train"
             else:
                 return "send_query_again"
@@ -392,21 +399,28 @@ class PollQueue(AtomicDEVS):
         # Put new train in queue
         elif self.train_in in inputs:
             self.queue.append(inputs[self.train_in])
-            return "send_query"
+            if self.train is None:
+                return "new_train"
+            else:
+                return "send_query"
 
         return self.state
 
     def intTransition(self):
+        if self.state == "new_train":
+            if len(self.queue) > 0:
+                self.train = self.queue.pop(0)
         return {
+            "new_train": "send_query",
             "send_query": "neutral",
             "send_query_again": "send_query",
-            "send_train": "neutral",
+            "send_train": "new_train",
             "neutral": "neutral"
         }[self.state]
 
 class Generator(AtomicDEVS):
-    def __init__(self, IAT_min, IAT_max, a_min, a_max, schedule=[]):
-        AtomicDEVS.__init__(self, "Generator")
+    def __init__(self, name="Generator", IAT_min=60, IAT_max=120, a_min=0.2, a_max=0.7, schedule=[]):
+        AtomicDEVS.__init__(self, name)
         self.train_out = self.addOutPort("train_out")
         self.elapsed = 0.0
         self.state = "Generator"

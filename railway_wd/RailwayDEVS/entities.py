@@ -1,6 +1,7 @@
 
 ID_counter = 0
 
+
 class Train:
 
     def __init__(self, a_max, departure_time=0, schedule=[]):
@@ -15,7 +16,9 @@ class Train:
         self.remaining_x = 0
 
     def __str__(self):
-        return "Train: id={}, departure_time={}".format(self.ID, self.departure_time)
+        # return "Train: id={}, departure_time={}".format(self.ID, self.departure_time)
+        return str(self.ID)
+
 
 class Query:
 
@@ -23,7 +26,8 @@ class Query:
         self.train_id = train_id
 
     def __str__(self):
-        return "Query for " + self.train_id
+        return "Query for {}".format(self.train_id)
+
 
 class QueryAck:
 
