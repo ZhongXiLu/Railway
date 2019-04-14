@@ -117,17 +117,13 @@ class RailwaySegment(AtomicDEVS):
                 self.isLightInSight = True
             firstState = self.duration
             self.timeArrival = self.time_last[0]
-            # print("duration till lights for Train {} : {}".format(self.train, self.duration))
 
         elif self.state[0] == "accelerating":
             self.train.v = self.v_end
-            # self.train.remaining_x = 1000
-            # print("remaining_x Train {} : {}".format(self.train, self.train.remaining_x))
             self.train.v, t = acceleration_formula(self.train.v, self.v_max, self.train.remaining_x, self.train.a_max)
             self.train.remaining_x = 0
             firstState = t
             self.duration = t
-            # print("accel Train {} : {}".format(self.train, self.duration))
             # self.state = ("leave_train", self.state[1])
         elif self.state[0] == "brake_train":
             self.train.v = self.v_end

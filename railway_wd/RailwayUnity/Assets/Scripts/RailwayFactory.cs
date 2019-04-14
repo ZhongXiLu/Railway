@@ -25,8 +25,8 @@ public class RailwayFactory : MonoBehaviour {
         return ground;
     }
 
-    public GameObject createTrain(string name, int x, int z) {
-        GameObject train = Instantiate(trainPrefab, new Vector3(x, 0, z+5), Quaternion.identity) as GameObject;
+    public GameObject createTrain(string name, float x, float z) {
+        GameObject train = Instantiate(trainPrefab, new Vector3(x, 0, z-25), Quaternion.identity) as GameObject;
         train.name = name;
         return train;
     }

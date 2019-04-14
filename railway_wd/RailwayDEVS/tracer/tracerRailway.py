@@ -52,12 +52,13 @@ class TracerRailway(object):
             if aDEVS.state[0] == "driving":
                 self.trace(aDEVS.time_last, "Train {} reaches 1km mark in {}s on Track {}".format(aDEVS.train, aDEVS.duration, aDEVS.getModelName()[1:]))
 
+            # Train accelerates to end of segment
             elif aDEVS.state[0] == "accelerating":
                 self.trace(aDEVS.time_last, "Train {} accelerates to end in {}s on Track {}".format(aDEVS.train, aDEVS.duration, aDEVS.getModelName()[1:]))
 
-            # Train driving on segment (last 1km = next light within sight)
-            # elif aDEVS.state[0] == "leave_train":
-            #     self.trace(aDEVS.time_last, "Train {} left in {}s on Track {}".format(aDEVS.train, aDEVS.duration, aDEVS.getModelName()[1:]))
+            # Train brakes on last part of segment
+            elif aDEVS.state[0] == "brake_train":
+                self.trace(aDEVS.time_last, "Train {} brakes on end for {}s on Track {}".format(aDEVS.train, aDEVS.duration, aDEVS.getModelName()[1:]))
 
     def traceExternal(self, aDEVS):
         """

@@ -8,7 +8,7 @@ using System.IO;
 /**
 WorldLoader: loads a railway network from a given file (Assets/Resources/railway.xml).
 */
-public class WordLoader : MonoBehaviour {
+public class WorldLoader : MonoBehaviour {
 
     public Railway railway;
     public RailwayFactory railwayFactory;
@@ -104,14 +104,13 @@ public class WordLoader : MonoBehaviour {
         return newPosition;
     }
 
-    void Start() {
+    public void loadWorld(string railwayfile) {
 
         // Ground
         railwayFactory.createGround(10000, 10000);
-        railwayFactory.createTrain("Test", 0, 0);
 
         // Load railway xml file
-        TextAsset textAsset = (TextAsset)Resources.Load("railway");  
+        TextAsset textAsset = (TextAsset)Resources.Load(railwayfile);  
         XmlDocument xmldoc = new XmlDocument();
         xmldoc.LoadXml(textAsset.text);
 
