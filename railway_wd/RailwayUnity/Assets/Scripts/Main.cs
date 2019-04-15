@@ -24,14 +24,14 @@ public class Main : MonoBehaviour {
 
     void Start() {
         worldLoader.loadWorld("railway");
-        traceParser.loadTrace("railway_log");
 
+        traceParser.loadTrace("railway_log");
         StartCoroutine(simulate());
     }
 
     void Update() {
         if(Input.GetKeyDown(KeyCode.Space)) {
-            canvas.SetActive(!canvas.activeSelf);
+            canvas.GetComponent<Canvas>().enabled = !canvas.GetComponent<Canvas>().enabled;
         }
     }
 }
