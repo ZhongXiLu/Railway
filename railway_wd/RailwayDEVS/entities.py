@@ -16,8 +16,7 @@ class Train:
         self.remaining_x = 0
 
     def __str__(self):
-        # return "Train: id={}, departure_time={}".format(self.ID, self.departure_time)
-        return str(self.ID)
+        return "Train id={} schedule=[{}]".format(self.ID, ','.join(map(str, [str(step) for step in self.schedule])))
 
 
 class Query:

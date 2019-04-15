@@ -45,20 +45,20 @@ class TracerRailway(object):
         if type(aDEVS.model) is PollQueue:
             if aDEVS.state == "send_query":
                 if aDEVS.model.train is not None:
-                    self.trace(aDEVS.time_last, "Train {} to StartStation {}".format(aDEVS.train, aDEVS.getModelName()[1:]))
+                    self.trace(aDEVS.time_last, "{} to StartStation {}".format(aDEVS.train, aDEVS.getModelName()[1:]))
 
         elif isinstance(aDEVS.model, RailwaySegment):
             # Train driving on segment (until 1km mark = next light within sight)
             if aDEVS.state[0] == "driving":
-                self.trace(aDEVS.time_last, "Train {} reaches 1km mark in {}s on Track {}".format(aDEVS.train, aDEVS.duration, aDEVS.getModelName()[1:]))
+                self.trace(aDEVS.time_last, "{} reaches 1km mark in {}s on {} {}".format(aDEVS.train, aDEVS.duration, aDEVS.model.__class__.__name__, aDEVS.getModelName()[1:]))
 
             # Train accelerates to end of segment
             elif aDEVS.state[0] == "accelerating":
-                self.trace(aDEVS.time_last, "Train {} accelerates to end in {}s on Track {}".format(aDEVS.train, aDEVS.duration, aDEVS.getModelName()[1:]))
+                self.trace(aDEVS.time_last, "{} accelerates to end in {}s on {} {}".format(aDEVS.train, aDEVS.duration, aDEVS.model.__class__.__name__, aDEVS.getModelName()[1:]))
 
             # Train brakes on last part of segment
             elif aDEVS.state[0] == "brake_train":
-                self.trace(aDEVS.time_last, "Train {} brakes on end for {}s on Track {}".format(aDEVS.train, aDEVS.duration, aDEVS.getModelName()[1:]))
+                self.trace(aDEVS.time_last, "{} brakes on end for {}s on {} {}".format(aDEVS.train, aDEVS.duration, aDEVS.model.__class__.__name__, aDEVS.getModelName()[1:]))
 
     def traceExternal(self, aDEVS):
         """
@@ -72,16 +72,16 @@ class TracerRailway(object):
                 # Train arrived at end station
                 if type(aDEVS.model) is Collector:
                     for train in aDEVS.my_input.get(aDEVS.IPorts[I], []):
-                        text = "Train {} to EndStation {}".format(train, aDEVS.getModelName()[1:])
+                        text = "{} to EndStation {}".format(train, aDEVS.getModelName()[1:])
 
                 # Train moved from one track to another
                 elif type(aDEVS.model) is not PollQueue:
                     for train in aDEVS.my_input.get(aDEVS.IPorts[I], []):
-                        text = "Train {} to Track {}".format(train, aDEVS.getModelName()[1:])
+                        text = "{} to {} {}".format(train, aDEVS.model.__class__.__name__, aDEVS.getModelName()[1:])
 
         if isinstance(aDEVS.model, RailwaySegment):
             if aDEVS.state[0] == "accelerating":
-                self.trace(aDEVS.time_last, "Train {} accelerates to end in {}s on Track {}".format(aDEVS.train, aDEVS.duration, aDEVS.getModelName()[1:]))
+                self.trace(aDEVS.time_last, "{} accelerates to end in {}s on {} {}".format(aDEVS.train, aDEVS.duration, aDEVS.model.__class__.__name__, aDEVS.getModelName()[1:]))
 
         if text:
             self.trace(aDEVS.time_last, text)

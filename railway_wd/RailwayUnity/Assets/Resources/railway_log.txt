@@ -1,29 +1,891 @@
-5.261818 : Train 0 to StartStation 32
-5.261818 : Train 0 to Track 30
-5.261818 : Train 0 reaches 1km mark in 110.888919382s on Track 30
-126.16212 : Train 0 accelerates to end in 55.4444596909s on Track 30
-126.473442 : Train 0 accelerates to end in 0.0s on Track 30
-126.473442 : Train 0 to Track 28
-126.473442 : Train 0 reaches 1km mark in 110.577597382s on Track 28
-239.346517 : Train 0 accelerates to end in 55.4444596909s on Track 28
-239.346517 : Train 0 accelerates to end in 0.0s on Track 28
-239.346517 : Train 0 to Track 20
-239.346517 : Train 0 reaches 1km mark in 110.888919382s on Track 20
-353.083565 : Train 0 accelerates to end in 55.4444596909s on Track 20
-353.083565 : Train 0 accelerates to end in 0.0s on Track 20
-353.083565 : Train 0 to Track 17
-353.083565 : Train 0 reaches 1km mark in 110.888919382s on Track 17
-463.972484 : Train 0 reaches 1km mark in 110.888919382s on Track 17
-508.663418 : Train 0 accelerates to end in 55.4444596909s on Track 17
-508.663418 : Train 0 accelerates to end in 0.0s on Track 17
-508.663418 : Train 0 to Track 10
-508.663418 : Train 0 reaches 1km mark in 110.888919382s on Track 10
-619.552337 : Train 0 reaches 1km mark in 110.888919382s on Track 10
-730.441256 : Train 0 reaches 1km mark in 3.81831483764e-07s on Track 10
-731.441256 : Train 0 accelerates to end in 55.4444596909s on Track 10
-786.885716 : Train 0 to Track 8
-786.885716 : Train 0 reaches 1km mark in 55.4444593818s on Track 8
-842.330175 : Train 0 reaches 1km mark in 55.4444593818s on Track 8
-897.774634 : Train 0 reaches 1km mark in 3.81831370078e-07s on Track 8
-898.774634 : Train 0 accelerates to end in 55.4444596909s on Track 8
-954.219094 : Train 0 to EndStation 3
+5.261818 : Train id=0 schedule=[TURN,STRAIGHT] to StartStation 32
+5.261818 : Train id=0 schedule=[TURN,STRAIGHT] to RailwaySegment 30
+5.261818 : Train id=0 schedule=[TURN,STRAIGHT] reaches 1km mark in 110.888919382s on RailwaySegment 30
+5.435933 : Train id=1 schedule=[TURN,TURN,STRAIGHT] to StartStation 33
+5.435933 : Train id=1 schedule=[TURN,TURN,STRAIGHT] to Join 36
+5.435933 : Train id=1 schedule=[TURN,TURN,STRAIGHT] reaches 1km mark in 130.729981511s on Join 36
+5.538501 : Train id=2 schedule=[TURN,TURN,TURN] to StartStation 34
+7.036209 : Train id=3 schedule=[STRAIGHT] to StartStation 26
+7.036209 : Train id=3 schedule=[STRAIGHT] to RailwaySegment 24
+7.036209 : Train id=3 schedule=[STRAIGHT] reaches 1km mark in 147.32024134s on RailwaySegment 24
+10.452586 : Train id=4 schedule=[TURN,STRAIGHT] to StartStation 32
+12.096921 : Train id=6 schedule=[TURN,TURN,STRAIGHT] to StartStation 33
+13.705191 : Train id=7 schedule=[STRAIGHT] to StartStation 26
+126.16212 : Train id=0 schedule=[TURN,STRAIGHT] accelerates to end in 55.4444596909s on RailwaySegment 30
+126.473442 : Train id=0 schedule=[TURN,STRAIGHT] accelerates to end in 0.0s on RailwaySegment 30
+126.473442 : Train id=0 schedule=[TURN,STRAIGHT] to Join 28
+126.473442 : Train id=0 schedule=[TURN,STRAIGHT] reaches 1km mark in 110.577597382s on Join 28
+132.160299 : Train id=4 schedule=[TURN,STRAIGHT] to RailwaySegment 30
+132.160299 : Train id=4 schedule=[TURN,STRAIGHT] reaches 1km mark in 157.479905796s on RailwaySegment 30
+132.160299 : Train id=8 schedule=[TURN,STRAIGHT] to StartStation 32
+164.28685 : Train id=3 schedule=[STRAIGHT] accelerates to end in 73.6601206702s on RailwaySegment 24
+166.860598 : Train id=3 schedule=[STRAIGHT] accelerates to end in 0.0s on RailwaySegment 24
+166.860598 : Train id=3 schedule=[STRAIGHT] to RailwaySegment 22
+166.860598 : Train id=3 schedule=[STRAIGHT] reaches 1km mark in 144.74649334s on RailwaySegment 22
+176.168833 : Train id=7 schedule=[STRAIGHT] to RailwaySegment 24
+176.168833 : Train id=7 schedule=[STRAIGHT] reaches 1km mark in 149.543528513s on RailwaySegment 24
+176.168833 : Train id=12 schedule=[STRAIGHT] to StartStation 26
+239.346517 : Train id=0 schedule=[TURN,STRAIGHT] accelerates to end in 55.4444596909s on Join 28
+239.346517 : Train id=0 schedule=[TURN,STRAIGHT] accelerates to end in 0.0s on Join 28
+239.346517 : Train id=0 schedule=[TURN,STRAIGHT] to Join 20
+239.346517 : Train id=0 schedule=[TURN,STRAIGHT] reaches 1km mark in 110.888919382s on Join 20
+240.480975 : Train id=1 schedule=[TURN,TURN,STRAIGHT] accelerates to end in 65.3649907553s on Join 36
+246.1658 : Train id=1 schedule=[TURN,TURN,STRAIGHT] accelerates to end in 0.0s on Join 36
+246.1658 : Train id=1 schedule=[TURN,TURN,STRAIGHT] to Join 28
+246.1658 : Train id=1 schedule=[TURN,TURN,STRAIGHT] reaches 1km mark in 125.045156511s on Join 28
+248.679167 : Train id=6 schedule=[TURN,TURN,STRAIGHT] to Join 36
+248.679167 : Train id=10 schedule=[TURN,TURN,STRAIGHT] to StartStation 33
+248.679167 : Train id=2 schedule=[TURN,TURN,TURN] to Join 36
+248.679167 : Train id=5 schedule=[TURN,TURN,TURN] to StartStation 34
+248.679167 : Train id=2 schedule=[TURN,TURN,TURN] reaches 1km mark in 113.042773456s on Join 36
+353.083565 : Train id=0 schedule=[TURN,STRAIGHT] accelerates to end in 55.4444596909s on Join 20
+353.083565 : Train id=0 schedule=[TURN,STRAIGHT] accelerates to end in 0.0s on Join 20
+353.083565 : Train id=0 schedule=[TURN,STRAIGHT] to Split 17
+353.083565 : Train id=0 schedule=[TURN,STRAIGHT] reaches 1km mark in 110.888919382s on Split 17
+354.083565 : Train id=3 schedule=[STRAIGHT] accelerates to end in 73.6601206702s on RailwaySegment 22
+354.083565 : Train id=3 schedule=[STRAIGHT] accelerates to end in 0.0s on RailwaySegment 22
+354.083565 : Train id=3 schedule=[STRAIGHT] to Join 20
+354.083565 : Train id=3 schedule=[STRAIGHT] reaches 1km mark in 147.32024134s on Join 20
+355.083565 : Train id=7 schedule=[STRAIGHT] accelerates to end in 74.7717642564s on RailwaySegment 24
+358.096834 : Train id=7 schedule=[STRAIGHT] accelerates to end in 0.0s on RailwaySegment 24
+358.096834 : Train id=7 schedule=[STRAIGHT] to RailwaySegment 22
+358.096834 : Train id=7 schedule=[STRAIGHT] reaches 1km mark in 146.530259513s on RailwaySegment 22
+363.948335 : Train id=2 schedule=[TURN,TURN,TURN] reaches 1km mark in 1.05819345551s on Join 36
+366.329854 : Train id=12 schedule=[STRAIGHT] to RailwaySegment 24
+366.329854 : Train id=12 schedule=[STRAIGHT] reaches 1km mark in 113.691539765s on RailwaySegment 24
+366.329854 : Train id=16 schedule=[STRAIGHT] to StartStation 26
+371.411931 : Train id=1 schedule=[TURN,TURN,STRAIGHT] reaches 1km mark in 0.122644510538s on Join 28
+463.972484 : Train id=0 schedule=[TURN,STRAIGHT] reaches 1km mark in 110.888919382s on Split 17
+485.541057 : Train id=12 schedule=[STRAIGHT] reaches 1km mark in 1.02844576527s on RailwaySegment 24
+508.663418 : Train id=0 schedule=[TURN,STRAIGHT] accelerates to end in 55.4444596909s on Split 17
+508.663418 : Train id=0 schedule=[TURN,STRAIGHT] accelerates to end in 0.0s on Split 17
+508.663418 : Train id=0 schedule=[STRAIGHT] to Split 10
+508.663418 : Train id=0 schedule=[STRAIGHT] reaches 1km mark in 110.888919382s on Split 10
+509.663418 : Train id=3 schedule=[STRAIGHT] accelerates to end in 73.6601206702s on Join 20
+509.663418 : Train id=3 schedule=[STRAIGHT] accelerates to end in 0.0s on Join 20
+509.663418 : Train id=3 schedule=[STRAIGHT] to Split 17
+509.663418 : Train id=3 schedule=[STRAIGHT] reaches 1km mark in 147.32024134s on Split 17
+510.663418 : Train id=7 schedule=[STRAIGHT] accelerates to end in 74.7717642564s on RailwaySegment 22
+510.990413 : Train id=7 schedule=[STRAIGHT] accelerates to end in 0.0s on RailwaySegment 22
+510.990413 : Train id=7 schedule=[STRAIGHT] to Join 20
+510.990413 : Train id=7 schedule=[STRAIGHT] reaches 1km mark in 149.216533513s on Join 20
+511.990413 : Train id=12 schedule=[STRAIGHT] accelerates to end in 56.8457698826s on RailwaySegment 24
+515.836326 : Train id=12 schedule=[STRAIGHT] accelerates to end in 0.0s on RailwaySegment 24
+515.836326 : Train id=12 schedule=[STRAIGHT] to RailwaySegment 22
+515.836326 : Train id=12 schedule=[STRAIGHT] reaches 1km mark in 109.845626765s on RailwaySegment 22
+521.722337 : Train id=16 schedule=[STRAIGHT] to RailwaySegment 24
+521.722337 : Train id=16 schedule=[STRAIGHT] reaches 1km mark in 149.563997788s on RailwaySegment 24
+521.722337 : Train id=20 schedule=[STRAIGHT] to StartStation 26
+619.552337 : Train id=0 schedule=[STRAIGHT] reaches 1km mark in 110.888919382s on Split 10
+625.681953 : Train id=12 schedule=[STRAIGHT] reaches 1km mark in 109.845626765s on RailwaySegment 22
+656.983659 : Train id=3 schedule=[STRAIGHT] reaches 1km mark in 147.32024134s on Split 17
+664.206947 : Train id=3 schedule=[STRAIGHT] accelerates to end in 73.6601206702s on Split 17
+664.206947 : Train id=3 schedule=[STRAIGHT] accelerates to end in 0.0s on Split 17
+664.206947 : Train id=3 schedule=[] to RailwaySegment 15
+664.206947 : Train id=3 schedule=[] reaches 1km mark in 147.32024134s on RailwaySegment 15
+665.825469 : Train id=7 schedule=[STRAIGHT] accelerates to end in 74.7717642564s on Join 20
+667.273339 : Train id=7 schedule=[STRAIGHT] accelerates to end in 0.0s on Join 20
+667.273339 : Train id=7 schedule=[STRAIGHT] to Split 17
+667.273339 : Train id=7 schedule=[STRAIGHT] reaches 1km mark in 148.095658513s on Split 17
+674.445649 : Train id=1 schedule=[TURN,TURN,STRAIGHT] accelerates to end in 65.3649907553s on Join 28
+674.49495 : Train id=1 schedule=[TURN,TURN,STRAIGHT] accelerates to end in 0.0s on Join 28
+674.49495 : Train id=1 schedule=[TURN,TURN,STRAIGHT] to Join 20
+674.49495 : Train id=1 schedule=[TURN,TURN,STRAIGHT] reaches 1km mark in 130.680680511s on Join 20
+675.137193 : Train id=2 schedule=[TURN,TURN,TURN] accelerates to end in 56.5213867278s on Join 36
+676.926462 : Train id=2 schedule=[TURN,TURN,TURN] accelerates to end in 0.0s on Join 36
+676.926462 : Train id=2 schedule=[TURN,TURN,TURN] to Join 28
+676.926462 : Train id=2 schedule=[TURN,TURN,TURN] reaches 1km mark in 112.253504456s on Join 28
+680.012034 : Train id=10 schedule=[TURN,TURN,STRAIGHT] to Join 36
+680.012034 : Train id=14 schedule=[TURN,TURN,STRAIGHT] to StartStation 33
+680.012034 : Train id=5 schedule=[TURN,TURN,TURN] to Join 36
+680.012034 : Train id=9 schedule=[TURN,TURN,TURN] to StartStation 34
+680.012034 : Train id=5 schedule=[TURN,TURN,TURN] reaches 1km mark in 138.320079004s on Join 36
+730.441256 : Train id=0 schedule=[STRAIGHT] reaches 1km mark in 3.81831483764e-07s on Split 10
+731.441256 : Train id=0 schedule=[STRAIGHT] accelerates to end in 55.4444596909s on Split 10
+786.885716 : Train id=0 schedule=[] to RailwaySegment 8
+786.885716 : Train id=0 schedule=[] reaches 1km mark in 55.4444593818s on RailwaySegment 8
+805.180104 : Train id=1 schedule=[TURN,TURN,STRAIGHT] reaches 1km mark in 0.970605510538s on Join 20
+811.527188 : Train id=3 schedule=[] reaches 1km mark in 147.32024134s on RailwaySegment 15
+823.60302 : Train id=3 schedule=[] accelerates to end in 73.6601206702s on RailwaySegment 15
+823.60302 : Train id=3 schedule=[] accelerates to end in 0.0s on RailwaySegment 15
+823.60302 : Train id=3 schedule=[] to RailwaySegment 13
+823.60302 : Train id=3 schedule=[] reaches 1km mark in 147.32024134s on RailwaySegment 13
+825.110345 : Train id=7 schedule=[STRAIGHT] accelerates to end in 74.7717642564s on Split 17
+826.598363 : Train id=7 schedule=[STRAIGHT] accelerates to end in 0.0s on Split 17
+826.598363 : Train id=7 schedule=[] to RailwaySegment 15
+826.598363 : Train id=7 schedule=[] reaches 1km mark in 148.055510513s on RailwaySegment 15
+827.598363 : Train id=1 schedule=[TURN,TURN,STRAIGHT] accelerates to end in 65.3649907553s on Join 20
+827.598363 : Train id=1 schedule=[TURN,TURN,STRAIGHT] accelerates to end in 0.0s on Join 20
+827.598363 : Train id=1 schedule=[TURN,TURN,STRAIGHT] to Split 17
+827.598363 : Train id=1 schedule=[TURN,TURN,STRAIGHT] reaches 1km mark in 130.729981511s on Split 17
+828.598363 : Train id=12 schedule=[STRAIGHT] accelerates to end in 56.8457698826s on RailwaySegment 22
+828.869146 : Train id=12 schedule=[STRAIGHT] accelerates to end in 0.0s on RailwaySegment 22
+828.869146 : Train id=12 schedule=[STRAIGHT] to Join 20
+828.869146 : Train id=12 schedule=[STRAIGHT] reaches 1km mark in 113.420756765s on Join 20
+829.869146 : Train id=16 schedule=[STRAIGHT] accelerates to end in 74.7819988941s on RailwaySegment 24
+835.326799 : Train id=16 schedule=[STRAIGHT] accelerates to end in 0.0s on RailwaySegment 24
+835.326799 : Train id=16 schedule=[STRAIGHT] to RailwaySegment 22
+835.326799 : Train id=16 schedule=[STRAIGHT] reaches 1km mark in 144.106344788s on RailwaySegment 22
+842.330175 : Train id=0 schedule=[] reaches 1km mark in 55.4444593818s on RailwaySegment 8
+842.698862 : Train id=20 schedule=[STRAIGHT] to RailwaySegment 24
+842.698862 : Train id=20 schedule=[STRAIGHT] reaches 1km mark in 134.372279887s on RailwaySegment 24
+842.698862 : Train id=23 schedule=[STRAIGHT] to StartStation 26
+897.774634 : Train id=0 schedule=[] reaches 1km mark in 3.81831370078e-07s on RailwaySegment 8
+898.774634 : Train id=0 schedule=[] accelerates to end in 55.4444596909s on RailwaySegment 8
+947.754993 : Train id=12 schedule=[STRAIGHT] reaches 1km mark in 4.60635776527s on Join 20
+954.219094 : Train id=0 schedule=[] to EndStation 3
+961.13167 : Train id=1 schedule=[TURN,TURN,STRAIGHT] accelerates to end in 65.3649907553s on Split 17
+961.13167 : Train id=1 schedule=[TURN,TURN,STRAIGHT] accelerates to end in 0.0s on Split 17
+961.13167 : Train id=1 schedule=[TURN,STRAIGHT] to Split 10
+961.13167 : Train id=1 schedule=[TURN,STRAIGHT] reaches 1km mark in 130.729981511s on Split 10
+962.13167 : Train id=12 schedule=[STRAIGHT] accelerates to end in 56.8457698826s on Join 20
+965.972219 : Train id=12 schedule=[STRAIGHT] accelerates to end in 0.0s on Join 20
+965.972219 : Train id=12 schedule=[STRAIGHT] to Split 17
+965.972219 : Train id=12 schedule=[STRAIGHT] reaches 1km mark in 109.850990765s on Split 17
+970.923261 : Train id=3 schedule=[] reaches 1km mark in 147.32024134s on RailwaySegment 13
+973.322995 : Train id=2 schedule=[TURN,TURN,TURN] accelerates to end in 56.5213867278s on Join 28
+973.322995 : Train id=2 schedule=[TURN,TURN,TURN] accelerates to end in 0.0s on Join 28
+973.322995 : Train id=2 schedule=[TURN,TURN,TURN] to Join 20
+973.322995 : Train id=2 schedule=[TURN,TURN,TURN] reaches 1km mark in 113.042773456s on Join 20
+974.161279 : Train id=5 schedule=[TURN,TURN,TURN] accelerates to end in 69.1600395022s on Join 36
+974.653874 : Train id=7 schedule=[] reaches 1km mark in 148.055510513s on RailwaySegment 15
+976.481578 : Train id=5 schedule=[TURN,TURN,TURN] accelerates to end in 0.0s on Join 36
+976.481578 : Train id=5 schedule=[TURN,TURN,TURN] to Join 28
+976.481578 : Train id=5 schedule=[TURN,TURN,TURN] reaches 1km mark in 138.076959004s on Join 28
+978.63833 : Train id=14 schedule=[TURN,TURN,STRAIGHT] to Join 36
+978.63833 : Train id=18 schedule=[TURN,TURN,STRAIGHT] to StartStation 33
+978.63833 : Train id=9 schedule=[TURN,TURN,TURN] to Join 36
+978.63833 : Train id=13 schedule=[TURN,TURN,TURN] to StartStation 34
+978.63833 : Train id=9 schedule=[TURN,TURN,TURN] reaches 1km mark in 171.786970728s on Join 36
+1075.82321 : Train id=12 schedule=[STRAIGHT] reaches 1km mark in 109.850990765s on Split 17
+1091.861652 : Train id=1 schedule=[TURN,STRAIGHT] reaches 1km mark in 130.729981511s on Split 10
+1091.918652 : Train id=3 schedule=[] accelerates to end in 73.6601206702s on RailwaySegment 13
+1092.918652 : Train id=3 schedule=[] accelerates to end in 0.0s on RailwaySegment 13
+1092.918652 : Train id=3 schedule=[] to EndStation 2
+1093.918652 : Train id=7 schedule=[] accelerates to end in 74.7717642564s on RailwaySegment 15
+1094.444021 : Train id=7 schedule=[] accelerates to end in 0.0s on RailwaySegment 15
+1094.444021 : Train id=7 schedule=[] to RailwaySegment 13
+1094.444021 : Train id=7 schedule=[] reaches 1km mark in 149.018159513s on RailwaySegment 13
+1095.444021 : Train id=12 schedule=[STRAIGHT] accelerates to end in 56.8457698826s on Split 17
+1095.444021 : Train id=12 schedule=[STRAIGHT] accelerates to end in 0.0s on Split 17
+1095.444021 : Train id=12 schedule=[] to RailwaySegment 15
+1095.444021 : Train id=12 schedule=[] reaches 1km mark in 113.691539765s on RailwaySegment 15
+1096.444021 : Train id=2 schedule=[TURN,TURN,TURN] accelerates to end in 56.5213867278s on Join 20
+1096.444021 : Train id=2 schedule=[TURN,TURN,TURN] accelerates to end in 0.0s on Join 20
+1096.444021 : Train id=2 schedule=[TURN,TURN,TURN] to Split 17
+1096.444021 : Train id=2 schedule=[TURN,TURN,TURN] reaches 1km mark in 113.042773456s on Split 17
+1098.138013 : Train id=16 schedule=[STRAIGHT] accelerates to end in 74.7819988941s on RailwaySegment 22
+1098.138013 : Train id=16 schedule=[STRAIGHT] accelerates to end in 0.0s on RailwaySegment 22
+1098.138013 : Train id=16 schedule=[STRAIGHT] to Join 20
+1098.138013 : Train id=16 schedule=[STRAIGHT] reaches 1km mark in 149.563997788s on Join 20
+1099.138013 : Train id=20 schedule=[STRAIGHT] accelerates to end in 67.1861399436s on RailwaySegment 24
+1105.14714 : Train id=20 schedule=[STRAIGHT] accelerates to end in 0.0s on RailwaySegment 24
+1105.14714 : Train id=20 schedule=[STRAIGHT] to RailwaySegment 22
+1105.14714 : Train id=20 schedule=[STRAIGHT] reaches 1km mark in 128.363152887s on RailwaySegment 22
+1111.625427 : Train id=23 schedule=[STRAIGHT] to RailwaySegment 24
+1111.625427 : Train id=23 schedule=[STRAIGHT] reaches 1km mark in 114.510741735s on RailwaySegment 24
+1111.625427 : Train id=29 schedule=[STRAIGHT] to StartStation 26
+1209.135561 : Train id=12 schedule=[] reaches 1km mark in 113.691539765s on RailwaySegment 15
+1209.486794 : Train id=2 schedule=[TURN,TURN,TURN] reaches 1km mark in 113.042773456s on Split 17
+1223.591634 : Train id=1 schedule=[TURN,STRAIGHT] accelerates to end in 65.3649907553s on Split 10
+1233.510293 : Train id=20 schedule=[STRAIGHT] reaches 1km mark in 128.363152887s on RailwaySegment 22
+1243.462181 : Train id=7 schedule=[] reaches 1km mark in 149.018159513s on RailwaySegment 13
+1248.072945 : Train id=16 schedule=[STRAIGHT] reaches 1km mark in 0.0603307882567s on Join 20
+1250.64168 : Train id=1 schedule=[TURN,STRAIGHT] accelerates to end in 0.0s on Split 10
+1250.64168 : Train id=1 schedule=[STRAIGHT] to Split 0
+1250.64168 : Train id=1 schedule=[STRAIGHT] reaches 1km mark in 103.679935511s on Split 0
+1251.64168 : Train id=2 schedule=[TURN,TURN,TURN] accelerates to end in 56.5213867278s on Split 17
+1251.64168 : Train id=2 schedule=[TURN,TURN,TURN] accelerates to end in 0.0s on Split 17
+1251.64168 : Train id=2 schedule=[TURN,TURN] to Split 10
+1251.64168 : Train id=2 schedule=[TURN,TURN] reaches 1km mark in 113.042773456s on Split 10
+1252.64168 : Train id=16 schedule=[STRAIGHT] accelerates to end in 74.7819988941s on Join 20
+1252.64168 : Train id=16 schedule=[STRAIGHT] accelerates to end in 0.0s on Join 20
+1252.64168 : Train id=16 schedule=[STRAIGHT] to Split 17
+1252.64168 : Train id=16 schedule=[STRAIGHT] reaches 1km mark in 149.563997788s on Split 17
+1253.64168 : Train id=20 schedule=[STRAIGHT] accelerates to end in 67.1861399436s on RailwaySegment 22
+1253.64168 : Train id=20 schedule=[STRAIGHT] accelerates to end in 0.0s on RailwaySegment 22
+1253.64168 : Train id=20 schedule=[STRAIGHT] to Join 20
+1253.64168 : Train id=20 schedule=[STRAIGHT] reaches 1km mark in 134.372279887s on Join 20
+1255.46368 : Train id=23 schedule=[STRAIGHT] accelerates to end in 57.2553708675s on RailwaySegment 24
+1263.723185 : Train id=23 schedule=[STRAIGHT] accelerates to end in 0.0s on RailwaySegment 24
+1263.723185 : Train id=23 schedule=[STRAIGHT] to RailwaySegment 22
+1263.723185 : Train id=23 schedule=[STRAIGHT] reaches 1km mark in 106.251236735s on RailwaySegment 22
+1269.534306 : Train id=29 schedule=[STRAIGHT] to RailwaySegment 24
+1269.534306 : Train id=29 schedule=[STRAIGHT] reaches 1km mark in 124.737309726s on RailwaySegment 24
+1269.534306 : Train id=32 schedule=[STRAIGHT] to StartStation 26
+1324.827101 : Train id=7 schedule=[] accelerates to end in 74.7717642564s on RailwaySegment 13
+1325.827101 : Train id=7 schedule=[] accelerates to end in 0.0s on RailwaySegment 13
+1325.827101 : Train id=7 schedule=[] to EndStation 2
+1326.827101 : Train id=12 schedule=[] accelerates to end in 56.8457698826s on RailwaySegment 15
+1354.321616 : Train id=1 schedule=[STRAIGHT] reaches 1km mark in 103.679935511s on Split 0
+1364.684453 : Train id=2 schedule=[TURN,TURN] reaches 1km mark in 113.042773456s on Split 10
+1369.974422 : Train id=23 schedule=[STRAIGHT] reaches 1km mark in 106.251236735s on RailwaySegment 22
+1383.672871 : Train id=12 schedule=[] to RailwaySegment 13
+1383.672871 : Train id=12 schedule=[] reaches 1km mark in 56.8457697653s on RailwaySegment 13
+1389.609807 : Train id=20 schedule=[STRAIGHT] reaches 1km mark in 1.49039088711s on Join 20
+1404.68229 : Train id=16 schedule=[STRAIGHT] accelerates to end in 74.7819988941s on Split 17
+1404.68229 : Train id=16 schedule=[STRAIGHT] accelerates to end in 0.0s on Split 17
+1404.68229 : Train id=16 schedule=[] to RailwaySegment 15
+1404.68229 : Train id=16 schedule=[] reaches 1km mark in 149.563997788s on RailwaySegment 15
+1405.68229 : Train id=20 schedule=[STRAIGHT] accelerates to end in 67.1861399436s on Join 20
+1405.68229 : Train id=20 schedule=[STRAIGHT] accelerates to end in 0.0s on Join 20
+1405.68229 : Train id=20 schedule=[STRAIGHT] to Split 17
+1405.68229 : Train id=20 schedule=[STRAIGHT] reaches 1km mark in 134.372279887s on Split 17
+1406.68229 : Train id=23 schedule=[STRAIGHT] accelerates to end in 57.2553708675s on RailwaySegment 22
+1407.002574 : Train id=23 schedule=[STRAIGHT] accelerates to end in 0.0s on RailwaySegment 22
+1407.002574 : Train id=23 schedule=[STRAIGHT] to Join 20
+1407.002574 : Train id=23 schedule=[STRAIGHT] reaches 1km mark in 114.190457735s on Join 20
+1408.002574 : Train id=29 schedule=[STRAIGHT] accelerates to end in 62.368654863s on RailwaySegment 24
+1412.90487 : Train id=29 schedule=[STRAIGHT] accelerates to end in 0.0s on RailwaySegment 24
+1412.90487 : Train id=29 schedule=[STRAIGHT] to RailwaySegment 22
+1412.90487 : Train id=29 schedule=[STRAIGHT] reaches 1km mark in 119.835013726s on RailwaySegment 22
+1420.50002 : Train id=32 schedule=[STRAIGHT] to RailwaySegment 24
+1420.50002 : Train id=32 schedule=[STRAIGHT] reaches 1km mark in 110.551526311s on RailwaySegment 24
+1420.50002 : Train id=36 schedule=[STRAIGHT] to StartStation 26
+1440.518641 : Train id=12 schedule=[] reaches 1km mark in 56.8457697653s on RailwaySegment 13
+1459.001552 : Train id=1 schedule=[STRAIGHT] accelerates to end in 65.3649907553s on Split 0
+1477.727226 : Train id=2 schedule=[TURN,TURN] reaches 1km mark in 4.55514268083e-07s on Split 10
+1478.727226 : Train id=1 schedule=[STRAIGHT] accelerates to end in 0.0s on Split 0
+1478.727226 : Train id=1 schedule=[] to EndStation 4
+1479.727226 : Train id=2 schedule=[TURN,TURN] accelerates to end in 56.5213867278s on Split 10
+1498.364411 : Train id=12 schedule=[] accelerates to end in 56.8457698826s on RailwaySegment 13
+1532.739884 : Train id=29 schedule=[STRAIGHT] reaches 1km mark in 119.835013726s on RailwaySegment 22
+1536.248613 : Train id=2 schedule=[TURN] to Split 0
+1536.248613 : Train id=2 schedule=[TURN] reaches 1km mark in 56.5213864555s on Split 0
+1555.210181 : Train id=12 schedule=[] to EndStation 2
+1556.652818 : Train id=16 schedule=[] accelerates to end in 74.7819988941s on RailwaySegment 15
+1556.652818 : Train id=16 schedule=[] accelerates to end in 0.0s on RailwaySegment 15
+1556.652818 : Train id=16 schedule=[] to RailwaySegment 13
+1556.652818 : Train id=16 schedule=[] reaches 1km mark in 149.563997788s on RailwaySegment 13
+1557.652818 : Train id=20 schedule=[STRAIGHT] accelerates to end in 67.1861399436s on Split 17
+1559.251747 : Train id=20 schedule=[STRAIGHT] accelerates to end in 0.0s on Split 17
+1559.251747 : Train id=20 schedule=[] to RailwaySegment 15
+1559.251747 : Train id=20 schedule=[] reaches 1km mark in 132.773350887s on RailwaySegment 15
+1560.251747 : Train id=23 schedule=[STRAIGHT] accelerates to end in 57.2553708675s on Join 20
+1560.251747 : Train id=23 schedule=[STRAIGHT] accelerates to end in 0.0s on Join 20
+1560.251747 : Train id=23 schedule=[STRAIGHT] to Split 17
+1560.251747 : Train id=23 schedule=[STRAIGHT] reaches 1km mark in 114.510741735s on Split 17
+1560.861285 : Train id=5 schedule=[TURN,TURN,TURN] accelerates to end in 69.1600395022s on Join 28
+1560.861285 : Train id=5 schedule=[TURN,TURN,TURN] accelerates to end in 0.0s on Join 28
+1560.861285 : Train id=5 schedule=[TURN,TURN,TURN] to Join 20
+1560.861285 : Train id=5 schedule=[TURN,TURN,TURN] reaches 1km mark in 138.320079004s on Join 20
+1561.861285 : Train id=4 schedule=[TURN,STRAIGHT] accelerates to end in 78.7399528979s on RailwaySegment 30
+1562.49229 : Train id=4 schedule=[TURN,STRAIGHT] accelerates to end in 0.0s on RailwaySegment 30
+1562.49229 : Train id=4 schedule=[TURN,STRAIGHT] to Join 28
+1562.49229 : Train id=4 schedule=[TURN,STRAIGHT] reaches 1km mark in 156.848900796s on Join 28
+1570.056625 : Train id=8 schedule=[TURN,STRAIGHT] to RailwaySegment 30
+1570.056625 : Train id=8 schedule=[TURN,STRAIGHT] reaches 1km mark in 110.710397819s on RailwaySegment 30
+1570.056625 : Train id=11 schedule=[TURN,STRAIGHT] to StartStation 32
+1592.769999 : Train id=2 schedule=[TURN] reaches 1km mark in 56.5213864555s on Split 0
+1649.291385 : Train id=2 schedule=[TURN] reaches 1km mark in 4.55514268083e-07s on Split 0
+1650.291385 : Train id=2 schedule=[TURN] accelerates to end in 56.5213867278s on Split 0
+1674.762489 : Train id=23 schedule=[STRAIGHT] reaches 1km mark in 114.510741735s on Split 17
+1692.025098 : Train id=20 schedule=[] reaches 1km mark in 132.773350887s on RailwaySegment 15
+1706.812772 : Train id=2 schedule=[] to EndStation 5
+1709.057186 : Train id=16 schedule=[] accelerates to end in 74.7819988941s on RailwaySegment 13
+1710.057186 : Train id=16 schedule=[] accelerates to end in 0.0s on RailwaySegment 13
+1710.057186 : Train id=16 schedule=[] to EndStation 2
+1711.057186 : Train id=20 schedule=[] accelerates to end in 67.1861399436s on RailwaySegment 15
+1711.08367 : Train id=20 schedule=[] accelerates to end in 0.0s on RailwaySegment 15
+1711.08367 : Train id=20 schedule=[] to RailwaySegment 13
+1711.08367 : Train id=20 schedule=[] reaches 1km mark in 134.345795887s on RailwaySegment 13
+1712.08367 : Train id=23 schedule=[STRAIGHT] accelerates to end in 57.2553708675s on Split 17
+1712.08367 : Train id=23 schedule=[STRAIGHT] accelerates to end in 0.0s on Split 17
+1712.08367 : Train id=23 schedule=[] to RailwaySegment 15
+1712.08367 : Train id=23 schedule=[] reaches 1km mark in 114.510741735s on RailwaySegment 15
+1713.08367 : Train id=5 schedule=[TURN,TURN,TURN] accelerates to end in 69.1600395022s on Join 20
+1713.08367 : Train id=5 schedule=[TURN,TURN,TURN] accelerates to end in 0.0s on Join 20
+1713.08367 : Train id=5 schedule=[TURN,TURN,TURN] to Split 17
+1713.08367 : Train id=5 schedule=[TURN,TURN,TURN] reaches 1km mark in 138.320079004s on Split 17
+1714.08367 : Train id=29 schedule=[STRAIGHT] accelerates to end in 62.368654863s on RailwaySegment 22
+1714.551208 : Train id=29 schedule=[STRAIGHT] accelerates to end in 0.0s on RailwaySegment 22
+1714.551208 : Train id=29 schedule=[STRAIGHT] to Join 20
+1714.551208 : Train id=29 schedule=[STRAIGHT] reaches 1km mark in 124.269771726s on Join 20
+1715.551208 : Train id=32 schedule=[STRAIGHT] accelerates to end in 55.2757631555s on RailwaySegment 24
+1723.501556 : Train id=32 schedule=[STRAIGHT] accelerates to end in 0.0s on RailwaySegment 24
+1723.501556 : Train id=32 schedule=[STRAIGHT] to RailwaySegment 22
+1723.501556 : Train id=32 schedule=[STRAIGHT] reaches 1km mark in 102.601178311s on RailwaySegment 22
+1730.361013 : Train id=36 schedule=[STRAIGHT] to RailwaySegment 24
+1730.361013 : Train id=36 schedule=[STRAIGHT] reaches 1km mark in 107.212879682s on RailwaySegment 24
+1730.361013 : Train id=41 schedule=[STRAIGHT] to StartStation 26
+1826.102734 : Train id=32 schedule=[STRAIGHT] reaches 1km mark in 102.601178311s on RailwaySegment 22
+1826.594412 : Train id=23 schedule=[] reaches 1km mark in 114.510741735s on RailwaySegment 15
+1843.005853 : Train id=36 schedule=[STRAIGHT] reaches 1km mark in 1.81261168158s on RailwaySegment 24
+1845.429466 : Train id=20 schedule=[] reaches 1km mark in 134.345795887s on RailwaySegment 13
+1853.811118 : Train id=5 schedule=[TURN,TURN,TURN] accelerates to end in 69.1600395022s on Split 17
+1853.811118 : Train id=5 schedule=[TURN,TURN,TURN] accelerates to end in 0.0s on Split 17
+1853.811118 : Train id=5 schedule=[TURN,TURN] to Split 10
+1853.811118 : Train id=5 schedule=[TURN,TURN] reaches 1km mark in 138.320079004s on Split 10
+1854.811118 : Train id=29 schedule=[STRAIGHT] accelerates to end in 62.368654863s on Join 20
+1855.144982 : Train id=29 schedule=[STRAIGHT] accelerates to end in 0.0s on Join 20
+1855.144982 : Train id=29 schedule=[STRAIGHT] to Split 17
+1855.144982 : Train id=29 schedule=[STRAIGHT] reaches 1km mark in 124.403445726s on Split 17
+1855.369948 : Train id=4 schedule=[TURN,STRAIGHT] accelerates to end in 78.7399528979s on Join 28
+1855.369948 : Train id=4 schedule=[TURN,STRAIGHT] accelerates to end in 0.0s on Join 28
+1855.369948 : Train id=4 schedule=[TURN,STRAIGHT] to Join 20
+1855.369948 : Train id=4 schedule=[TURN,STRAIGHT] reaches 1km mark in 157.479905796s on Join 20
+1855.964802 : Train id=8 schedule=[TURN,STRAIGHT] accelerates to end in 55.3551989096s on RailwaySegment 30
+1863.818121 : Train id=8 schedule=[TURN,STRAIGHT] accelerates to end in 0.0s on RailwaySegment 30
+1863.818121 : Train id=8 schedule=[TURN,STRAIGHT] to Join 28
+1863.818121 : Train id=8 schedule=[TURN,STRAIGHT] reaches 1km mark in 110.036701819s on Join 28
+1870.49848 : Train id=11 schedule=[TURN,STRAIGHT] to RailwaySegment 30
+1870.49848 : Train id=11 schedule=[TURN,STRAIGHT] reaches 1km mark in 128.207229865s on RailwaySegment 30
+1870.49848 : Train id=15 schedule=[TURN,STRAIGHT] to StartStation 32
+1943.105154 : Train id=20 schedule=[] accelerates to end in 67.1861399436s on RailwaySegment 13
+1944.105154 : Train id=20 schedule=[] accelerates to end in 0.0s on RailwaySegment 13
+1944.105154 : Train id=20 schedule=[] to EndStation 2
+1945.105154 : Train id=23 schedule=[] accelerates to end in 57.2553708675s on RailwaySegment 15
+1979.548428 : Train id=29 schedule=[STRAIGHT] reaches 1km mark in 124.403445726s on Split 17
+1992.131197 : Train id=5 schedule=[TURN,TURN] reaches 1km mark in 138.320079004s on Split 10
+2002.360525 : Train id=23 schedule=[] to RailwaySegment 13
+2002.360525 : Train id=23 schedule=[] reaches 1km mark in 57.2553707349s on RailwaySegment 13
+2016.263608 : Train id=29 schedule=[STRAIGHT] accelerates to end in 62.368654863s on Split 17
+2016.263608 : Train id=29 schedule=[STRAIGHT] accelerates to end in 0.0s on Split 17
+2016.263608 : Train id=29 schedule=[] to RailwaySegment 15
+2016.263608 : Train id=29 schedule=[] reaches 1km mark in 124.737309726s on RailwaySegment 15
+2017.322767 : Train id=4 schedule=[TURN,STRAIGHT] accelerates to end in 78.7399528979s on Join 20
+2017.322767 : Train id=4 schedule=[TURN,STRAIGHT] accelerates to end in 0.0s on Join 20
+2017.322767 : Train id=4 schedule=[TURN,STRAIGHT] to Split 17
+2017.322767 : Train id=4 schedule=[TURN,STRAIGHT] reaches 1km mark in 157.479905796s on Split 17
+2018.322767 : Train id=32 schedule=[STRAIGHT] accelerates to end in 55.2757631555s on RailwaySegment 22
+2018.322767 : Train id=32 schedule=[STRAIGHT] accelerates to end in 0.0s on RailwaySegment 22
+2018.322767 : Train id=32 schedule=[STRAIGHT] to Join 20
+2018.322767 : Train id=32 schedule=[STRAIGHT] reaches 1km mark in 110.551526311s on Join 20
+2019.322767 : Train id=36 schedule=[STRAIGHT] accelerates to end in 53.6064398408s on RailwaySegment 24
+2023.357568 : Train id=36 schedule=[STRAIGHT] accelerates to end in 0.0s on RailwaySegment 24
+2023.357568 : Train id=36 schedule=[STRAIGHT] to RailwaySegment 22
+2023.357568 : Train id=36 schedule=[STRAIGHT] reaches 1km mark in 103.178078682s on RailwaySegment 22
+2028.525343 : Train id=41 schedule=[STRAIGHT] to RailwaySegment 24
+2028.525343 : Train id=41 schedule=[STRAIGHT] reaches 1km mark in 139.655634849s on RailwaySegment 24
+2028.525343 : Train id=44 schedule=[STRAIGHT] to StartStation 26
+2059.615896 : Train id=23 schedule=[] reaches 1km mark in 57.2553707349s on RailwaySegment 13
+2117.871267 : Train id=23 schedule=[] accelerates to end in 57.2553708675s on RailwaySegment 13
+2126.535647 : Train id=36 schedule=[STRAIGHT] reaches 1km mark in 103.178078682s on RailwaySegment 22
+2130.318964 : Train id=32 schedule=[STRAIGHT] reaches 1km mark in 0.163871311085s on Join 20
+2130.451276 : Train id=5 schedule=[TURN,TURN] reaches 1km mark in 4.4963428536e-09s on Split 10
+2131.451276 : Train id=5 schedule=[TURN,TURN] accelerates to end in 69.1600395022s on Split 10
+2141.000918 : Train id=29 schedule=[] reaches 1km mark in 124.737309726s on RailwaySegment 15
+2175.126638 : Train id=23 schedule=[] to EndStation 2
+2177.450372 : Train id=5 schedule=[TURN,TURN] accelerates to end in 0.0s on Split 10
+2177.450372 : Train id=5 schedule=[TURN] to Split 0
+2177.450372 : Train id=5 schedule=[TURN] reaches 1km mark in 92.3209830045s on Split 0
+2178.450372 : Train id=4 schedule=[TURN,STRAIGHT] accelerates to end in 78.7399528979s on Split 17
+2178.893341 : Train id=4 schedule=[TURN,STRAIGHT] accelerates to end in 0.0s on Split 17
+2178.893341 : Train id=4 schedule=[STRAIGHT] to Split 10
+2178.893341 : Train id=4 schedule=[STRAIGHT] reaches 1km mark in 157.036936796s on Split 10
+2182.256381 : Train id=32 schedule=[STRAIGHT] accelerates to end in 55.2757631555s on Join 20
+2182.256381 : Train id=32 schedule=[STRAIGHT] accelerates to end in 0.0s on Join 20
+2182.256381 : Train id=32 schedule=[STRAIGHT] to Split 17
+2182.256381 : Train id=32 schedule=[STRAIGHT] reaches 1km mark in 110.551526311s on Split 17
+2183.256381 : Train id=36 schedule=[STRAIGHT] accelerates to end in 53.6064398408s on RailwaySegment 22
+2183.256381 : Train id=36 schedule=[STRAIGHT] accelerates to end in 0.0s on RailwaySegment 22
+2183.256381 : Train id=36 schedule=[STRAIGHT] to Join 20
+2183.256381 : Train id=36 schedule=[STRAIGHT] reaches 1km mark in 107.212879682s on Join 20
+2184.256381 : Train id=41 schedule=[STRAIGHT] accelerates to end in 69.8278174244s on RailwaySegment 24
+2185.674785 : Train id=41 schedule=[STRAIGHT] accelerates to end in 0.0s on RailwaySegment 24
+2185.674785 : Train id=41 schedule=[STRAIGHT] to RailwaySegment 22
+2185.674785 : Train id=41 schedule=[STRAIGHT] reaches 1km mark in 138.237230849s on RailwaySegment 22
+2191.016295 : Train id=44 schedule=[STRAIGHT] to RailwaySegment 24
+2191.016295 : Train id=44 schedule=[STRAIGHT] reaches 1km mark in 197.893451533s on RailwaySegment 24
+2191.016295 : Train id=48 schedule=[STRAIGHT] to StartStation 26
+2266.738228 : Train id=29 schedule=[] accelerates to end in 62.368654863s on RailwaySegment 15
+2269.771355 : Train id=5 schedule=[TURN] reaches 1km mark in 92.3209830045s on Split 0
+2292.807907 : Train id=32 schedule=[STRAIGHT] reaches 1km mark in 110.551526311s on Split 17
+2295.154438 : Train id=29 schedule=[] accelerates to end in 0.0s on RailwaySegment 15
+2295.154438 : Train id=29 schedule=[] to RailwaySegment 13
+2295.154438 : Train id=29 schedule=[] reaches 1km mark in 96.3210997261s on RailwaySegment 13
+2296.154438 : Train id=32 schedule=[STRAIGHT] accelerates to end in 55.2757631555s on Split 17
+2296.154438 : Train id=32 schedule=[STRAIGHT] accelerates to end in 0.0s on Split 17
+2296.154438 : Train id=32 schedule=[] to RailwaySegment 15
+2296.154438 : Train id=32 schedule=[] reaches 1km mark in 110.551526311s on RailwaySegment 15
+2297.154438 : Train id=36 schedule=[STRAIGHT] accelerates to end in 53.6064398408s on Join 20
+2300.234003 : Train id=36 schedule=[STRAIGHT] accelerates to end in 0.0s on Join 20
+2300.234003 : Train id=36 schedule=[STRAIGHT] to Split 17
+2300.234003 : Train id=36 schedule=[STRAIGHT] reaches 1km mark in 104.133314682s on Split 17
+2306.569996 : Train id=8 schedule=[TURN,STRAIGHT] accelerates to end in 55.3551989096s on Join 28
+2306.569996 : Train id=8 schedule=[TURN,STRAIGHT] accelerates to end in 0.0s on Join 28
+2306.569996 : Train id=8 schedule=[TURN,STRAIGHT] to Join 20
+2306.569996 : Train id=8 schedule=[TURN,STRAIGHT] reaches 1km mark in 110.710397819s on Join 20
+2306.645279 : Train id=9 schedule=[TURN,TURN,TURN] accelerates to end in 85.8934853639s on Join 36
+2309.500939 : Train id=9 schedule=[TURN,TURN,TURN] accelerates to end in 0.0s on Join 36
+2309.500939 : Train id=9 schedule=[TURN,TURN,TURN] to Join 28
+2309.500939 : Train id=9 schedule=[TURN,TURN,TURN] reaches 1km mark in 170.931310728s on Join 28
+2313.272572 : Train id=18 schedule=[TURN,TURN,STRAIGHT] to Join 36
+2313.272572 : Train id=22 schedule=[TURN,TURN,STRAIGHT] to StartStation 33
+2313.272572 : Train id=13 schedule=[TURN,TURN,TURN] to Join 36
+2313.272572 : Train id=17 schedule=[TURN,TURN,TURN] to StartStation 34
+2313.272572 : Train id=13 schedule=[TURN,TURN,TURN] reaches 1km mark in 146.700149795s on Join 36
+2335.930278 : Train id=4 schedule=[STRAIGHT] reaches 1km mark in 157.036936796s on Split 10
+2362.092338 : Train id=5 schedule=[TURN] reaches 1km mark in 4.49611547992e-09s on Split 0
+2363.092338 : Train id=5 schedule=[TURN] accelerates to end in 69.1600395022s on Split 0
+2391.475538 : Train id=29 schedule=[] reaches 1km mark in 96.3210997261s on RailwaySegment 13
+2404.367318 : Train id=36 schedule=[STRAIGHT] reaches 1km mark in 104.133314682s on Split 17
+2406.705964 : Train id=32 schedule=[] reaches 1km mark in 110.551526311s on RailwaySegment 15
+2423.275586 : Train id=29 schedule=[] accelerates to end in 62.368654863s on RailwaySegment 13
+2424.451241 : Train id=29 schedule=[] accelerates to end in 0.0s on RailwaySegment 13
+2424.451241 : Train id=29 schedule=[] to EndStation 2
+2425.451241 : Train id=32 schedule=[] accelerates to end in 55.2757631555s on RailwaySegment 15
+2425.451241 : Train id=32 schedule=[] accelerates to end in 0.0s on RailwaySegment 15
+2425.451241 : Train id=32 schedule=[] to RailwaySegment 13
+2425.451241 : Train id=32 schedule=[] reaches 1km mark in 110.551526311s on RailwaySegment 13
+2426.451241 : Train id=36 schedule=[STRAIGHT] accelerates to end in 53.6064398408s on Split 17
+2426.451241 : Train id=36 schedule=[STRAIGHT] accelerates to end in 0.0s on Split 17
+2426.451241 : Train id=36 schedule=[] to RailwaySegment 15
+2426.451241 : Train id=36 schedule=[] reaches 1km mark in 107.212879682s on RailwaySegment 15
+2427.451241 : Train id=8 schedule=[TURN,STRAIGHT] accelerates to end in 55.3551989096s on Join 20
+2427.451241 : Train id=8 schedule=[TURN,STRAIGHT] accelerates to end in 0.0s on Join 20
+2427.451241 : Train id=8 schedule=[TURN,STRAIGHT] to Split 17
+2427.451241 : Train id=8 schedule=[TURN,STRAIGHT] reaches 1km mark in 110.710397819s on Split 17
+2429.347164 : Train id=41 schedule=[STRAIGHT] accelerates to end in 69.8278174244s on RailwaySegment 22
+2429.347164 : Train id=41 schedule=[STRAIGHT] accelerates to end in 0.0s on RailwaySegment 22
+2429.347164 : Train id=41 schedule=[STRAIGHT] to Join 20
+2429.347164 : Train id=41 schedule=[STRAIGHT] reaches 1km mark in 139.655634849s on Join 20
+2430.347164 : Train id=44 schedule=[STRAIGHT] accelerates to end in 98.9467257664s on RailwaySegment 24
+2432.252378 : Train id=5 schedule=[] to EndStation 5
+2435.294196 : Train id=44 schedule=[STRAIGHT] accelerates to end in 0.0s on RailwaySegment 24
+2435.294196 : Train id=44 schedule=[STRAIGHT] to RailwaySegment 22
+2435.294196 : Train id=44 schedule=[STRAIGHT] reaches 1km mark in 192.946419533s on RailwaySegment 22
+2441.985368 : Train id=48 schedule=[STRAIGHT] to RailwaySegment 24
+2441.985368 : Train id=48 schedule=[STRAIGHT] reaches 1km mark in 117.911793548s on RailwaySegment 24
+2441.985368 : Train id=52 schedule=[STRAIGHT] to StartStation 26
+2493.967215 : Train id=4 schedule=[STRAIGHT] accelerates to end in 78.7399528979s on Split 10
+2533.664121 : Train id=36 schedule=[] reaches 1km mark in 107.212879682s on RailwaySegment 15
+2536.002767 : Train id=32 schedule=[] reaches 1km mark in 110.551526311s on RailwaySegment 13
+2538.161639 : Train id=8 schedule=[TURN,STRAIGHT] reaches 1km mark in 110.710397819s on Split 17
+2571.200643 : Train id=41 schedule=[STRAIGHT] reaches 1km mark in 12.5354068487s on Join 20
+2572.707168 : Train id=4 schedule=[] to RailwaySegment 8
+2572.707168 : Train id=4 schedule=[] reaches 1km mark in 78.7399527959s on RailwaySegment 8
+2574.138945 : Train id=8 schedule=[TURN,STRAIGHT] accelerates to end in 55.3551989096s on Split 17
+2574.138945 : Train id=8 schedule=[TURN,STRAIGHT] accelerates to end in 0.0s on Split 17
+2574.138945 : Train id=8 schedule=[STRAIGHT] to Split 10
+2574.138945 : Train id=8 schedule=[STRAIGHT] reaches 1km mark in 110.710397819s on Split 10
+2575.138945 : Train id=41 schedule=[STRAIGHT] accelerates to end in 69.8278174244s on Join 20
+2577.611784 : Train id=41 schedule=[STRAIGHT] accelerates to end in 0.0s on Join 20
+2577.611784 : Train id=41 schedule=[STRAIGHT] to Split 17
+2577.611784 : Train id=41 schedule=[STRAIGHT] reaches 1km mark in 137.182795849s on Split 17
+2583.949386 : Train id=9 schedule=[TURN,TURN,TURN] accelerates to end in 85.8934853639s on Join 28
+2583.949386 : Train id=9 schedule=[TURN,TURN,TURN] accelerates to end in 0.0s on Join 28
+2583.949386 : Train id=9 schedule=[TURN,TURN,TURN] to Join 20
+2583.949386 : Train id=9 schedule=[TURN,TURN,TURN] reaches 1km mark in 171.786970728s on Join 20
+2584.066322 : Train id=13 schedule=[TURN,TURN,TURN] accelerates to end in 73.3500748977s on Join 36
+2586.187696 : Train id=13 schedule=[TURN,TURN,TURN] accelerates to end in 0.0s on Join 36
+2586.187696 : Train id=13 schedule=[TURN,TURN,TURN] to Join 28
+2586.187696 : Train id=13 schedule=[TURN,TURN,TURN] reaches 1km mark in 146.578775795s on Join 28
+2588.736073 : Train id=22 schedule=[TURN,TURN,STRAIGHT] to Join 36
+2588.736073 : Train id=26 schedule=[TURN,TURN,STRAIGHT] to StartStation 33
+2588.736073 : Train id=17 schedule=[TURN,TURN,TURN] to Join 36
+2588.736073 : Train id=21 schedule=[TURN,TURN,TURN] to StartStation 34
+2588.736073 : Train id=17 schedule=[TURN,TURN,TURN] reaches 1km mark in 116.977113247s on Join 36
+2642.877001 : Train id=32 schedule=[] accelerates to end in 55.2757631555s on RailwaySegment 13
+2643.877001 : Train id=32 schedule=[] accelerates to end in 0.0s on RailwaySegment 13
+2643.877001 : Train id=32 schedule=[] to EndStation 2
+2644.877001 : Train id=36 schedule=[] accelerates to end in 53.6064398408s on RailwaySegment 15
+2651.447121 : Train id=4 schedule=[] reaches 1km mark in 78.7399527959s on RailwaySegment 8
+2684.849343 : Train id=8 schedule=[STRAIGHT] reaches 1km mark in 110.710397819s on Split 10
+2698.483441 : Train id=36 schedule=[] to RailwaySegment 13
+2698.483441 : Train id=36 schedule=[] reaches 1km mark in 53.6064396816s on RailwaySegment 13
+2706.014223 : Train id=17 schedule=[TURN,TURN,TURN] reaches 1km mark in 4.88849724736s on Join 36
+2714.79458 : Train id=41 schedule=[STRAIGHT] reaches 1km mark in 137.182795849s on Split 17
+2731.187074 : Train id=4 schedule=[] accelerates to end in 78.7399528979s on RailwaySegment 8
+2752.089881 : Train id=36 schedule=[] reaches 1km mark in 53.6064396816s on RailwaySegment 13
+2759.395464 : Train id=41 schedule=[STRAIGHT] accelerates to end in 69.8278174244s on Split 17
+2759.395464 : Train id=41 schedule=[STRAIGHT] accelerates to end in 0.0s on Split 17
+2759.395464 : Train id=41 schedule=[] to RailwaySegment 15
+2759.395464 : Train id=41 schedule=[] reaches 1km mark in 139.655634849s on RailwaySegment 15
+2760.864893 : Train id=9 schedule=[TURN,TURN,TURN] accelerates to end in 85.8934853639s on Join 20
+2761.268589 : Train id=9 schedule=[TURN,TURN,TURN] accelerates to end in 0.0s on Join 20
+2761.268589 : Train id=9 schedule=[TURN,TURN,TURN] to Split 17
+2761.268589 : Train id=9 schedule=[TURN,TURN,TURN] reaches 1km mark in 171.383274728s on Split 17
+2762.268589 : Train id=44 schedule=[STRAIGHT] accelerates to end in 98.9467257664s on RailwaySegment 22
+2762.268589 : Train id=44 schedule=[STRAIGHT] accelerates to end in 0.0s on RailwaySegment 22
+2762.268589 : Train id=44 schedule=[STRAIGHT] to Join 20
+2762.268589 : Train id=44 schedule=[STRAIGHT] reaches 1km mark in 197.893451533s on Join 20
+2763.268589 : Train id=48 schedule=[STRAIGHT] accelerates to end in 58.9558967738s on RailwaySegment 24
+2768.56403 : Train id=48 schedule=[STRAIGHT] accelerates to end in 0.0s on RailwaySegment 24
+2768.56403 : Train id=48 schedule=[STRAIGHT] to RailwaySegment 22
+2768.56403 : Train id=48 schedule=[STRAIGHT] reaches 1km mark in 112.616352548s on RailwaySegment 22
+2775.402169 : Train id=52 schedule=[STRAIGHT] to RailwaySegment 24
+2775.402169 : Train id=52 schedule=[STRAIGHT] reaches 1km mark in 121.769581667s on RailwaySegment 24
+2775.402169 : Train id=55 schedule=[STRAIGHT] to StartStation 26
+2796.559741 : Train id=4 schedule=[] accelerates to end in 0.0s on RailwaySegment 8
+2796.559741 : Train id=4 schedule=[] to EndStation 3
+2797.559741 : Train id=8 schedule=[STRAIGHT] accelerates to end in 55.3551989096s on Split 10
+2806.696321 : Train id=36 schedule=[] accelerates to end in 53.6064398408s on RailwaySegment 13
+2852.91494 : Train id=8 schedule=[] to RailwaySegment 8
+2852.91494 : Train id=8 schedule=[] reaches 1km mark in 55.3551988192s on RailwaySegment 8
+2860.302761 : Train id=36 schedule=[] to EndStation 2
+2881.180383 : Train id=48 schedule=[STRAIGHT] reaches 1km mark in 112.616352548s on RailwaySegment 22
+2899.051099 : Train id=41 schedule=[] reaches 1km mark in 139.655634849s on RailwaySegment 15
+2908.270139 : Train id=8 schedule=[] reaches 1km mark in 55.3551988192s on RailwaySegment 8
+2932.651864 : Train id=9 schedule=[TURN,TURN,TURN] reaches 1km mark in 171.383274728s on Split 17
+2964.625338 : Train id=8 schedule=[] accelerates to end in 55.3551989096s on RailwaySegment 8
+2964.705417 : Train id=9 schedule=[TURN,TURN,TURN] accelerates to end in 85.8934853639s on Split 17
+2964.705417 : Train id=9 schedule=[TURN,TURN,TURN] accelerates to end in 0.0s on Split 17
+2964.705417 : Train id=9 schedule=[TURN,TURN] to Split 10
+2964.705417 : Train id=9 schedule=[TURN,TURN] reaches 1km mark in 171.786970728s on Split 10
+2965.705417 : Train id=44 schedule=[STRAIGHT] accelerates to end in 98.9467257664s on Join 20
+2965.705417 : Train id=44 schedule=[STRAIGHT] accelerates to end in 0.0s on Join 20
+2965.705417 : Train id=44 schedule=[STRAIGHT] to Split 17
+2965.705417 : Train id=44 schedule=[STRAIGHT] reaches 1km mark in 197.893451533s on Split 17
+2966.705417 : Train id=48 schedule=[STRAIGHT] accelerates to end in 58.9558967738s on RailwaySegment 22
+2966.705417 : Train id=48 schedule=[STRAIGHT] accelerates to end in 0.0s on RailwaySegment 22
+2966.705417 : Train id=48 schedule=[STRAIGHT] to Join 20
+2966.705417 : Train id=48 schedule=[STRAIGHT] reaches 1km mark in 117.911793548s on Join 20
+2968.277046 : Train id=52 schedule=[STRAIGHT] accelerates to end in 60.8847908333s on RailwaySegment 24
+2974.442049 : Train id=52 schedule=[STRAIGHT] accelerates to end in 0.0s on RailwaySegment 24
+2974.442049 : Train id=52 schedule=[STRAIGHT] to RailwaySegment 22
+2974.442049 : Train id=52 schedule=[STRAIGHT] reaches 1km mark in 115.604578667s on RailwaySegment 22
+2979.649095 : Train id=55 schedule=[STRAIGHT] to RailwaySegment 24
+2979.649095 : Train id=55 schedule=[STRAIGHT] reaches 1km mark in 131.969645203s on RailwaySegment 24
+2979.649095 : Train id=59 schedule=[STRAIGHT] to StartStation 26
+3019.980537 : Train id=8 schedule=[] to EndStation 3
+3039.706734 : Train id=41 schedule=[] accelerates to end in 69.8278174244s on RailwaySegment 15
+3090.046628 : Train id=52 schedule=[STRAIGHT] reaches 1km mark in 115.604578667s on RailwaySegment 22
+3109.534551 : Train id=41 schedule=[] to RailwaySegment 13
+3109.534551 : Train id=41 schedule=[] reaches 1km mark in 69.8278178487s on RailwaySegment 13
+3136.492388 : Train id=9 schedule=[TURN,TURN] reaches 1km mark in 171.786970728s on Split 10
+3166.510227 : Train id=44 schedule=[STRAIGHT] accelerates to end in 98.9467257664s on Split 17
+3166.510227 : Train id=44 schedule=[STRAIGHT] accelerates to end in 0.0s on Split 17
+3166.510227 : Train id=44 schedule=[] to RailwaySegment 15
+3166.510227 : Train id=44 schedule=[] reaches 1km mark in 197.893451533s on RailwaySegment 15
+3167.510227 : Train id=48 schedule=[STRAIGHT] accelerates to end in 58.9558967738s on Join 20
+3167.510227 : Train id=48 schedule=[STRAIGHT] accelerates to end in 0.0s on Join 20
+3167.510227 : Train id=48 schedule=[STRAIGHT] to Split 17
+3167.510227 : Train id=48 schedule=[STRAIGHT] reaches 1km mark in 117.911793548s on Split 17
+3168.510227 : Train id=52 schedule=[STRAIGHT] accelerates to end in 60.8847908333s on RailwaySegment 22
+3168.510227 : Train id=52 schedule=[STRAIGHT] accelerates to end in 0.0s on RailwaySegment 22
+3168.510227 : Train id=52 schedule=[STRAIGHT] to Join 20
+3168.510227 : Train id=52 schedule=[STRAIGHT] reaches 1km mark in 121.769581667s on Join 20
+3169.510227 : Train id=55 schedule=[STRAIGHT] accelerates to end in 65.9848226015s on RailwaySegment 24
+3170.870066 : Train id=55 schedule=[STRAIGHT] accelerates to end in 0.0s on RailwaySegment 24
+3170.870066 : Train id=55 schedule=[STRAIGHT] to RailwaySegment 22
+3170.870066 : Train id=55 schedule=[STRAIGHT] reaches 1km mark in 130.609806203s on RailwaySegment 22
+3176.946915 : Train id=59 schedule=[STRAIGHT] to RailwaySegment 24
+3176.946915 : Train id=59 schedule=[STRAIGHT] reaches 1km mark in 107.874740948s on RailwaySegment 24
+3176.946915 : Train id=63 schedule=[STRAIGHT] to StartStation 26
+3179.362369 : Train id=41 schedule=[] reaches 1km mark in 69.8278178487s on RailwaySegment 13
+3250.190187 : Train id=41 schedule=[] accelerates to end in 69.8278174244s on RailwaySegment 13
+3285.422021 : Train id=48 schedule=[STRAIGHT] reaches 1km mark in 117.911793548s on Split 17
+3292.48728 : Train id=52 schedule=[STRAIGHT] reaches 1km mark in 0.86759666653s on Join 20
+3309.279359 : Train id=9 schedule=[TURN,TURN] accelerates to end in 85.8934853639s on Split 10
+3320.018004 : Train id=41 schedule=[] to EndStation 2
+3367.023104 : Train id=44 schedule=[] accelerates to end in 98.9467257664s on RailwaySegment 15
+3367.023104 : Train id=44 schedule=[] accelerates to end in 0.0s on RailwaySegment 15
+3367.023104 : Train id=44 schedule=[] to RailwaySegment 13
+3367.023104 : Train id=44 schedule=[] reaches 1km mark in 197.893451533s on RailwaySegment 13
+3368.023104 : Train id=48 schedule=[STRAIGHT] accelerates to end in 58.9558967738s on Split 17
+3368.839308 : Train id=48 schedule=[STRAIGHT] accelerates to end in 0.0s on Split 17
+3368.839308 : Train id=48 schedule=[] to RailwaySegment 15
+3368.839308 : Train id=48 schedule=[] reaches 1km mark in 117.095589548s on RailwaySegment 15
+3369.839308 : Train id=52 schedule=[STRAIGHT] accelerates to end in 60.8847908333s on Join 20
+3369.839308 : Train id=52 schedule=[STRAIGHT] accelerates to end in 0.0s on Join 20
+3369.839308 : Train id=52 schedule=[STRAIGHT] to Split 17
+3369.839308 : Train id=52 schedule=[STRAIGHT] reaches 1km mark in 121.769581667s on Split 17
+3370.839308 : Train id=55 schedule=[STRAIGHT] accelerates to end in 65.9848226015s on RailwaySegment 22
+3370.839308 : Train id=55 schedule=[STRAIGHT] accelerates to end in 0.0s on RailwaySegment 22
+3370.839308 : Train id=55 schedule=[STRAIGHT] to Join 20
+3370.839308 : Train id=55 schedule=[STRAIGHT] reaches 1km mark in 131.969645203s on Join 20
+3371.839308 : Train id=59 schedule=[STRAIGHT] accelerates to end in 53.937370474s on RailwaySegment 24
+3373.166584 : Train id=59 schedule=[STRAIGHT] accelerates to end in 0.0s on RailwaySegment 24
+3373.166584 : Train id=59 schedule=[STRAIGHT] to RailwaySegment 22
+3373.166584 : Train id=59 schedule=[STRAIGHT] reaches 1km mark in 106.547464948s on RailwaySegment 22
+3382.778218 : Train id=63 schedule=[STRAIGHT] to RailwaySegment 24
+3382.778218 : Train id=63 schedule=[STRAIGHT] reaches 1km mark in 146.104191457s on RailwaySegment 24
+3382.778218 : Train id=69 schedule=[STRAIGHT] to StartStation 26
+3395.172844 : Train id=9 schedule=[TURN] to Split 0
+3395.172844 : Train id=9 schedule=[TURN] reaches 1km mark in 85.8934857277s on Split 0
+3479.714049 : Train id=59 schedule=[STRAIGHT] reaches 1km mark in 106.547464948s on RailwaySegment 22
+3481.06633 : Train id=9 schedule=[TURN] reaches 1km mark in 85.8934857277s on Split 0
+3485.934898 : Train id=48 schedule=[] reaches 1km mark in 117.095589548s on RailwaySegment 15
+3491.60889 : Train id=52 schedule=[STRAIGHT] reaches 1km mark in 121.769581667s on Split 17
+3504.863925 : Train id=55 schedule=[STRAIGHT] reaches 1km mark in 1.71281520308s on Join 20
+3567.015743 : Train id=44 schedule=[] accelerates to end in 98.9467257664s on RailwaySegment 13
+3567.73555 : Train id=44 schedule=[] accelerates to end in 0.0s on RailwaySegment 13
+3567.73555 : Train id=44 schedule=[] to EndStation 2
+3567.959816 : Train id=9 schedule=[TURN] accelerates to end in 85.8934853639s on Split 0
+3568.73555 : Train id=48 schedule=[] accelerates to end in 58.9558967738s on RailwaySegment 15
+3568.73555 : Train id=48 schedule=[] accelerates to end in 0.0s on RailwaySegment 15
+3568.73555 : Train id=48 schedule=[] to RailwaySegment 13
+3568.73555 : Train id=48 schedule=[] reaches 1km mark in 117.911793548s on RailwaySegment 13
+3569.73555 : Train id=52 schedule=[STRAIGHT] accelerates to end in 60.8847908333s on Split 17
+3569.73555 : Train id=52 schedule=[STRAIGHT] accelerates to end in 0.0s on Split 17
+3569.73555 : Train id=52 schedule=[] to RailwaySegment 15
+3569.73555 : Train id=52 schedule=[] reaches 1km mark in 121.769581667s on RailwaySegment 15
+3570.73555 : Train id=55 schedule=[STRAIGHT] accelerates to end in 65.9848226015s on Join 20
+3570.73555 : Train id=55 schedule=[STRAIGHT] accelerates to end in 0.0s on Join 20
+3570.73555 : Train id=55 schedule=[STRAIGHT] to Split 17
+3570.73555 : Train id=55 schedule=[STRAIGHT] reaches 1km mark in 131.969645203s on Split 17
+3571.73555 : Train id=59 schedule=[STRAIGHT] accelerates to end in 53.937370474s on RailwaySegment 22
+3571.73555 : Train id=59 schedule=[STRAIGHT] accelerates to end in 0.0s on RailwaySegment 22
+3571.73555 : Train id=59 schedule=[STRAIGHT] to Join 20
+3571.73555 : Train id=59 schedule=[STRAIGHT] reaches 1km mark in 107.874740948s on Join 20
+3572.776904 : Train id=63 schedule=[STRAIGHT] accelerates to end in 73.0520957283s on RailwaySegment 24
+3577.472492 : Train id=63 schedule=[STRAIGHT] accelerates to end in 0.0s on RailwaySegment 24
+3577.472492 : Train id=63 schedule=[STRAIGHT] to RailwaySegment 22
+3577.472492 : Train id=63 schedule=[STRAIGHT] reaches 1km mark in 141.408603457s on RailwaySegment 22
+3585.127175 : Train id=69 schedule=[STRAIGHT] to RailwaySegment 24
+3585.127175 : Train id=69 schedule=[STRAIGHT] reaches 1km mark in 133.324259395s on RailwaySegment 24
+3585.127175 : Train id=72 schedule=[STRAIGHT] to StartStation 26
+3653.853301 : Train id=9 schedule=[] to EndStation 5
+3686.62979 : Train id=59 schedule=[STRAIGHT] reaches 1km mark in 5.45253194807s on Join 20
+3686.647344 : Train id=48 schedule=[] reaches 1km mark in 117.911793548s on RailwaySegment 13
+3691.505132 : Train id=52 schedule=[] reaches 1km mark in 121.769581667s on RailwaySegment 15
+3707.146089 : Train id=48 schedule=[] accelerates to end in 58.9558967738s on RailwaySegment 13
+3708.146089 : Train id=48 schedule=[] accelerates to end in 0.0s on RailwaySegment 13
+3708.146089 : Train id=48 schedule=[] to EndStation 2
+3709.18469 : Train id=52 schedule=[] accelerates to end in 60.8847908333s on RailwaySegment 15
+3709.18469 : Train id=52 schedule=[] accelerates to end in 0.0s on RailwaySegment 15
+3709.18469 : Train id=52 schedule=[] to RailwaySegment 13
+3709.18469 : Train id=52 schedule=[] reaches 1km mark in 121.769581667s on RailwaySegment 13
+3710.18469 : Train id=55 schedule=[STRAIGHT] accelerates to end in 65.9848226015s on Split 17
+3710.18469 : Train id=55 schedule=[STRAIGHT] accelerates to end in 0.0s on Split 17
+3710.18469 : Train id=55 schedule=[] to RailwaySegment 15
+3710.18469 : Train id=55 schedule=[] reaches 1km mark in 131.969645203s on RailwaySegment 15
+3711.18469 : Train id=59 schedule=[STRAIGHT] accelerates to end in 53.937370474s on Join 20
+3717.866372 : Train id=59 schedule=[STRAIGHT] accelerates to end in 0.0s on Join 20
+3717.866372 : Train id=59 schedule=[STRAIGHT] to Split 17
+3717.866372 : Train id=59 schedule=[STRAIGHT] reaches 1km mark in 101.193058948s on Split 17
+3718.881095 : Train id=63 schedule=[STRAIGHT] reaches 1km mark in 141.408603457s on RailwaySegment 22
+3726.884263 : Train id=13 schedule=[TURN,TURN,TURN] accelerates to end in 73.3500748977s on Join 28
+3726.884263 : Train id=13 schedule=[TURN,TURN,TURN] accelerates to end in 0.0s on Join 28
+3726.884263 : Train id=13 schedule=[TURN,TURN,TURN] to Join 20
+3726.884263 : Train id=13 schedule=[TURN,TURN,TURN] reaches 1km mark in 146.700149795s on Join 20
+3727.807026 : Train id=17 schedule=[TURN,TURN,TURN] accelerates to end in 58.4885566237s on Join 36
+3732.946255 : Train id=17 schedule=[TURN,TURN,TURN] accelerates to end in 0.0s on Join 36
+3732.946255 : Train id=17 schedule=[TURN,TURN,TURN] to Join 28
+3732.946255 : Train id=17 schedule=[TURN,TURN,TURN] reaches 1km mark in 116.724718247s on Join 28
+3736.216755 : Train id=26 schedule=[TURN,TURN,STRAIGHT] to Join 36
+3736.216755 : Train id=30 schedule=[TURN,TURN,STRAIGHT] to StartStation 33
+3736.216755 : Train id=21 schedule=[TURN,TURN,TURN] to Join 36
+3736.216755 : Train id=25 schedule=[TURN,TURN,TURN] to StartStation 34
+3736.216755 : Train id=21 schedule=[TURN,TURN,TURN] reaches 1km mark in 143.728606657s on Join 36
+3819.059431 : Train id=59 schedule=[STRAIGHT] reaches 1km mark in 101.193058948s on Split 17
+3830.954272 : Train id=52 schedule=[] reaches 1km mark in 121.769581667s on RailwaySegment 13
+3842.154335 : Train id=55 schedule=[] reaches 1km mark in 131.969645203s on RailwaySegment 15
+3873.655588 : Train id=13 schedule=[TURN,TURN,TURN] reaches 1km mark in 0.505911795429s on Join 20
+3878.078501 : Train id=52 schedule=[] accelerates to end in 60.8847908333s on RailwaySegment 13
+3879.078501 : Train id=52 schedule=[] accelerates to end in 0.0s on RailwaySegment 13
+3879.078501 : Train id=52 schedule=[] to EndStation 2
+3880.078501 : Train id=55 schedule=[] accelerates to end in 65.9848226015s on RailwaySegment 15
+3880.078501 : Train id=55 schedule=[] accelerates to end in 0.0s on RailwaySegment 15
+3880.078501 : Train id=55 schedule=[] to RailwaySegment 13
+3880.078501 : Train id=55 schedule=[] reaches 1km mark in 131.969645203s on RailwaySegment 13
+3880.08928 : Train id=21 schedule=[TURN,TURN,TURN] reaches 1km mark in 0.876948656692s on Join 36
+3881.078501 : Train id=59 schedule=[STRAIGHT] accelerates to end in 53.937370474s on Split 17
+3882.2471 : Train id=59 schedule=[STRAIGHT] accelerates to end in 0.0s on Split 17
+3882.2471 : Train id=59 schedule=[] to RailwaySegment 15
+3882.2471 : Train id=59 schedule=[] reaches 1km mark in 106.706141948s on RailwaySegment 15
+3883.2471 : Train id=13 schedule=[TURN,TURN,TURN] accelerates to end in 73.3500748977s on Join 20
+3884.169764 : Train id=13 schedule=[TURN,TURN,TURN] accelerates to end in 0.0s on Join 20
+3884.169764 : Train id=13 schedule=[TURN,TURN,TURN] to Split 17
+3884.169764 : Train id=13 schedule=[TURN,TURN,TURN] reaches 1km mark in 145.777485795s on Split 17
+3885.169764 : Train id=63 schedule=[STRAIGHT] accelerates to end in 73.0520957283s on RailwaySegment 22
+3885.169764 : Train id=63 schedule=[STRAIGHT] accelerates to end in 0.0s on RailwaySegment 22
+3885.169764 : Train id=63 schedule=[STRAIGHT] to Join 20
+3885.169764 : Train id=63 schedule=[STRAIGHT] reaches 1km mark in 146.104191457s on Join 20
+3886.169764 : Train id=69 schedule=[STRAIGHT] accelerates to end in 66.6621296974s on RailwaySegment 24
+3890.010056 : Train id=69 schedule=[STRAIGHT] accelerates to end in 0.0s on RailwaySegment 24
+3890.010056 : Train id=69 schedule=[STRAIGHT] to RailwaySegment 22
+3890.010056 : Train id=69 schedule=[STRAIGHT] reaches 1km mark in 129.483967395s on RailwaySegment 22
+3896.263539 : Train id=72 schedule=[STRAIGHT] to RailwaySegment 24
+3896.263539 : Train id=72 schedule=[STRAIGHT] reaches 1km mark in 132.868993474s on RailwaySegment 24
+3896.263539 : Train id=76 schedule=[STRAIGHT] to StartStation 26
+3988.953242 : Train id=59 schedule=[] reaches 1km mark in 106.706141948s on RailwaySegment 15
+4012.048146 : Train id=55 schedule=[] reaches 1km mark in 131.969645203s on RailwaySegment 13
+4019.494023 : Train id=69 schedule=[STRAIGHT] reaches 1km mark in 129.483967395s on RailwaySegment 22
+4029.94725 : Train id=13 schedule=[TURN,TURN,TURN] reaches 1km mark in 145.777485795s on Split 17
+4035.414093 : Train id=13 schedule=[TURN,TURN,TURN] accelerates to end in 73.3500748977s on Split 17
+4035.414093 : Train id=13 schedule=[TURN,TURN,TURN] accelerates to end in 0.0s on Split 17
+4035.414093 : Train id=13 schedule=[TURN,TURN] to Split 10
+4035.414093 : Train id=13 schedule=[TURN,TURN] reaches 1km mark in 146.700149795s on Split 10
+4035.489781 : Train id=72 schedule=[STRAIGHT] reaches 1km mark in 2.0064194741s on RailwaySegment 24
+4036.414093 : Train id=63 schedule=[STRAIGHT] accelerates to end in 73.0520957283s on Join 20
+4038.108273 : Train id=63 schedule=[STRAIGHT] accelerates to end in 0.0s on Join 20
+4038.108273 : Train id=63 schedule=[STRAIGHT] to Split 17
+4038.108273 : Train id=63 schedule=[STRAIGHT] reaches 1km mark in 144.410011457s on Split 17
+4038.723415 : Train id=69 schedule=[STRAIGHT] accelerates to end in 66.6621296974s on RailwaySegment 22
+4038.723415 : Train id=69 schedule=[STRAIGHT] accelerates to end in 0.0s on RailwaySegment 22
+4038.723415 : Train id=69 schedule=[STRAIGHT] to Join 20
+4038.723415 : Train id=69 schedule=[STRAIGHT] reaches 1km mark in 133.324259395s on Join 20
+4039.723415 : Train id=72 schedule=[STRAIGHT] accelerates to end in 66.4344967371s on RailwaySegment 24
+4043.880002 : Train id=72 schedule=[STRAIGHT] accelerates to end in 0.0s on RailwaySegment 24
+4043.880002 : Train id=72 schedule=[STRAIGHT] to RailwaySegment 22
+4043.880002 : Train id=72 schedule=[STRAIGHT] reaches 1km mark in 128.712406474s on RailwaySegment 22
+4050.674907 : Train id=76 schedule=[STRAIGHT] to RailwaySegment 24
+4050.674907 : Train id=76 schedule=[STRAIGHT] reaches 1km mark in 107.085739253s on RailwaySegment 24
+4050.674907 : Train id=81 schedule=[STRAIGHT] to StartStation 26
+4097.659384 : Train id=55 schedule=[] accelerates to end in 65.9848226015s on RailwaySegment 13
+4098.659384 : Train id=55 schedule=[] accelerates to end in 0.0s on RailwaySegment 13
+4098.659384 : Train id=55 schedule=[] to EndStation 2
+4099.659384 : Train id=59 schedule=[] accelerates to end in 53.937370474s on RailwaySegment 15
+4153.596754 : Train id=59 schedule=[] to RailwaySegment 13
+4153.596754 : Train id=59 schedule=[] reaches 1km mark in 53.9373709481s on RailwaySegment 13
+4174.047674 : Train id=69 schedule=[STRAIGHT] reaches 1km mark in 10.3416843947s on Join 20
+4182.114243 : Train id=13 schedule=[TURN,TURN] reaches 1km mark in 146.700149795s on Split 10
+4184.733501 : Train id=63 schedule=[STRAIGHT] accelerates to end in 73.0520957283s on Split 17
+4184.859984 : Train id=63 schedule=[STRAIGHT] accelerates to end in 0.0s on Split 17
+4184.859984 : Train id=63 schedule=[] to RailwaySegment 15
+4184.859984 : Train id=63 schedule=[] reaches 1km mark in 145.977708457s on RailwaySegment 15
+4185.859984 : Train id=69 schedule=[STRAIGHT] accelerates to end in 66.6621296974s on Join 20
+4185.859984 : Train id=69 schedule=[STRAIGHT] accelerates to end in 0.0s on Join 20
+4185.859984 : Train id=69 schedule=[STRAIGHT] to Split 17
+4185.859984 : Train id=69 schedule=[STRAIGHT] reaches 1km mark in 133.324259395s on Split 17
+4186.859984 : Train id=72 schedule=[STRAIGHT] accelerates to end in 66.4344967371s on RailwaySegment 22
+4186.859984 : Train id=72 schedule=[STRAIGHT] accelerates to end in 0.0s on RailwaySegment 22
+4186.859984 : Train id=72 schedule=[STRAIGHT] to Join 20
+4186.859984 : Train id=72 schedule=[STRAIGHT] reaches 1km mark in 132.868993474s on Join 20
+4187.859984 : Train id=76 schedule=[STRAIGHT] accelerates to end in 53.5428696265s on RailwaySegment 24
+4190.08071 : Train id=76 schedule=[STRAIGHT] accelerates to end in 0.0s on RailwaySegment 24
+4190.08071 : Train id=76 schedule=[STRAIGHT] to RailwaySegment 22
+4190.08071 : Train id=76 schedule=[STRAIGHT] reaches 1km mark in 104.865013253s on RailwaySegment 22
+4196.779719 : Train id=81 schedule=[STRAIGHT] to RailwaySegment 24
+4196.779719 : Train id=81 schedule=[STRAIGHT] reaches 1km mark in 130.871148952s on RailwaySegment 24
+4196.779719 : Train id=87 schedule=[STRAIGHT] to StartStation 26
+4207.534125 : Train id=59 schedule=[] reaches 1km mark in 53.9373709481s on RailwaySegment 13
+4262.471496 : Train id=59 schedule=[] accelerates to end in 53.937370474s on RailwaySegment 13
+4294.945723 : Train id=76 schedule=[STRAIGHT] reaches 1km mark in 104.865013253s on RailwaySegment 22
+4316.408866 : Train id=59 schedule=[] to EndStation 2
+4319.184243 : Train id=69 schedule=[STRAIGHT] reaches 1km mark in 133.324259395s on Split 17
+4329.814393 : Train id=13 schedule=[TURN,TURN] accelerates to end in 73.3500748977s on Split 10
+4333.15191 : Train id=63 schedule=[] accelerates to end in 73.0520957283s on RailwaySegment 15
+4333.15191 : Train id=63 schedule=[] accelerates to end in 0.0s on RailwaySegment 15
+4333.15191 : Train id=63 schedule=[] to RailwaySegment 13
+4333.15191 : Train id=63 schedule=[] reaches 1km mark in 146.104191457s on RailwaySegment 13
+4333.674803 : Train id=81 schedule=[STRAIGHT] reaches 1km mark in 0.339674952151s on RailwaySegment 24
+4334.15191 : Train id=69 schedule=[STRAIGHT] accelerates to end in 66.6621296974s on Split 17
+4334.15191 : Train id=69 schedule=[STRAIGHT] accelerates to end in 0.0s on Split 17
+4334.15191 : Train id=69 schedule=[] to RailwaySegment 15
+4334.15191 : Train id=69 schedule=[] reaches 1km mark in 133.324259395s on RailwaySegment 15
+4335.238146 : Train id=72 schedule=[STRAIGHT] accelerates to end in 66.4344967371s on Join 20
+4336.887126 : Train id=72 schedule=[STRAIGHT] accelerates to end in 0.0s on Join 20
+4336.887126 : Train id=72 schedule=[STRAIGHT] to Split 17
+4336.887126 : Train id=72 schedule=[STRAIGHT] reaches 1km mark in 131.220013474s on Split 17
+4337.887126 : Train id=76 schedule=[STRAIGHT] accelerates to end in 53.5428696265s on RailwaySegment 22
+4337.887126 : Train id=76 schedule=[STRAIGHT] accelerates to end in 0.0s on RailwaySegment 22
+4337.887126 : Train id=76 schedule=[STRAIGHT] to Join 20
+4337.887126 : Train id=76 schedule=[STRAIGHT] reaches 1km mark in 107.085739253s on Join 20
+4338.887126 : Train id=81 schedule=[STRAIGHT] accelerates to end in 65.4355744761s on RailwaySegment 24
+4344.758456 : Train id=81 schedule=[STRAIGHT] accelerates to end in 0.0s on RailwaySegment 24
+4344.758456 : Train id=81 schedule=[STRAIGHT] to RailwaySegment 22
+4344.758456 : Train id=81 schedule=[STRAIGHT] reaches 1km mark in 124.999818952s on RailwaySegment 22
+4351.717178 : Train id=87 schedule=[STRAIGHT] to RailwaySegment 24
+4351.717178 : Train id=87 schedule=[STRAIGHT] reaches 1km mark in 174.39067924s on RailwaySegment 24
+4351.717178 : Train id=91 schedule=[STRAIGHT] to StartStation 26
+4403.164468 : Train id=13 schedule=[TURN] to Split 0
+4403.164468 : Train id=13 schedule=[TURN] reaches 1km mark in 73.3500747954s on Split 0
+4467.476169 : Train id=69 schedule=[] reaches 1km mark in 133.324259395s on RailwaySegment 15
+4469.758275 : Train id=81 schedule=[STRAIGHT] reaches 1km mark in 124.999818952s on RailwaySegment 22
+4476.514543 : Train id=13 schedule=[TURN] reaches 1km mark in 73.3500747954s on Split 0
+4482.351976 : Train id=63 schedule=[] accelerates to end in 73.0520957283s on RailwaySegment 13
+4483.351976 : Train id=63 schedule=[] accelerates to end in 0.0s on RailwaySegment 13
+4483.351976 : Train id=63 schedule=[] to EndStation 2
+4484.351976 : Train id=69 schedule=[] accelerates to end in 66.6621296974s on RailwaySegment 15
+4484.351976 : Train id=69 schedule=[] accelerates to end in 0.0s on RailwaySegment 15
+4484.351976 : Train id=69 schedule=[] to RailwaySegment 13
+4484.351976 : Train id=69 schedule=[] reaches 1km mark in 133.324259395s on RailwaySegment 13
+4485.351976 : Train id=72 schedule=[STRAIGHT] accelerates to end in 66.4344967371s on Split 17
+4485.351976 : Train id=72 schedule=[STRAIGHT] accelerates to end in 0.0s on Split 17
+4485.351976 : Train id=72 schedule=[] to RailwaySegment 15
+4485.351976 : Train id=72 schedule=[] reaches 1km mark in 132.868993474s on RailwaySegment 15
+4486.351976 : Train id=76 schedule=[STRAIGHT] accelerates to end in 53.5428696265s on Join 20
+4487.887263 : Train id=76 schedule=[STRAIGHT] accelerates to end in 0.0s on Join 20
+4487.887263 : Train id=76 schedule=[STRAIGHT] to Split 17
+4487.887263 : Train id=76 schedule=[STRAIGHT] reaches 1km mark in 105.550452253s on Split 17
+4492.935859 : Train id=17 schedule=[TURN,TURN,TURN] accelerates to end in 58.4885566237s on Join 28
+4493.37163 : Train id=17 schedule=[TURN,TURN,TURN] accelerates to end in 0.0s on Join 28
+4493.37163 : Train id=17 schedule=[TURN,TURN,TURN] to Join 20
+4493.37163 : Train id=17 schedule=[TURN,TURN,TURN] reaches 1km mark in 116.541342247s on Join 20
+4493.69628 : Train id=11 schedule=[TURN,STRAIGHT] accelerates to end in 64.1036149326s on RailwaySegment 30
+4501.613231 : Train id=11 schedule=[TURN,STRAIGHT] accelerates to end in 0.0s on RailwaySegment 30
+4501.613231 : Train id=11 schedule=[TURN,STRAIGHT] to Join 28
+4501.613231 : Train id=11 schedule=[TURN,STRAIGHT] reaches 1km mark in 126.859870865s on Join 28
+4509.42854 : Train id=15 schedule=[TURN,STRAIGHT] to RailwaySegment 30
+4509.42854 : Train id=15 schedule=[TURN,STRAIGHT] reaches 1km mark in 131.371926187s on RailwaySegment 30
+4509.42854 : Train id=19 schedule=[TURN,STRAIGHT] to StartStation 32
+4550.864618 : Train id=13 schedule=[TURN] accelerates to end in 73.3500748977s on Split 0
+4593.437715 : Train id=76 schedule=[STRAIGHT] reaches 1km mark in 105.550452253s on Split 17
+4610.912972 : Train id=17 schedule=[TURN,TURN,TURN] reaches 1km mark in 0.0349462473584s on Join 20
+4617.676235 : Train id=69 schedule=[] reaches 1km mark in 133.324259395s on RailwaySegment 13
+4621.890291 : Train id=69 schedule=[] accelerates to end in 66.6621296974s on RailwaySegment 13
+4622.890291 : Train id=69 schedule=[] accelerates to end in 0.0s on RailwaySegment 13
+4622.890291 : Train id=69 schedule=[] to EndStation 2
+4623.890291 : Train id=72 schedule=[] accelerates to end in 66.4344967371s on RailwaySegment 15
+4623.890291 : Train id=72 schedule=[] accelerates to end in 0.0s on RailwaySegment 15
+4623.890291 : Train id=72 schedule=[] to RailwaySegment 13
+4623.890291 : Train id=72 schedule=[] reaches 1km mark in 132.868993474s on RailwaySegment 13
+4624.214693 : Train id=13 schedule=[] to EndStation 5
+4625.652106 : Train id=76 schedule=[STRAIGHT] accelerates to end in 53.5428696265s on Split 17
+4625.652106 : Train id=76 schedule=[STRAIGHT] accelerates to end in 0.0s on Split 17
+4625.652106 : Train id=76 schedule=[] to RailwaySegment 15
+4625.652106 : Train id=76 schedule=[] reaches 1km mark in 107.085739253s on RailwaySegment 15
+4626.652106 : Train id=17 schedule=[TURN,TURN,TURN] accelerates to end in 58.4885566237s on Join 20
+4626.652106 : Train id=17 schedule=[TURN,TURN,TURN] accelerates to end in 0.0s on Join 20
+4626.652106 : Train id=17 schedule=[TURN,TURN,TURN] to Split 17
+4626.652106 : Train id=17 schedule=[TURN,TURN,TURN] reaches 1km mark in 116.977113247s on Split 17
+4627.652106 : Train id=81 schedule=[STRAIGHT] accelerates to end in 65.4355744761s on RailwaySegment 22
+4627.652106 : Train id=81 schedule=[STRAIGHT] accelerates to end in 0.0s on RailwaySegment 22
+4627.652106 : Train id=81 schedule=[STRAIGHT] to Join 20
+4627.652106 : Train id=81 schedule=[STRAIGHT] reaches 1km mark in 130.871148952s on Join 20
+4628.611124 : Train id=11 schedule=[TURN,STRAIGHT] reaches 1km mark in 0.682973865209s on Join 28
+4628.652106 : Train id=87 schedule=[STRAIGHT] accelerates to end in 87.1953396198s on RailwaySegment 24
+4631.074553 : Train id=87 schedule=[STRAIGHT] accelerates to end in 0.0s on RailwaySegment 24
+4631.074553 : Train id=87 schedule=[STRAIGHT] to RailwaySegment 22
+4631.074553 : Train id=87 schedule=[STRAIGHT] reaches 1km mark in 171.96823224s on RailwaySegment 22
+4637.287847 : Train id=91 schedule=[STRAIGHT] to RailwaySegment 24
+4637.287847 : Train id=91 schedule=[STRAIGHT] reaches 1km mark in 188.053627894s on RailwaySegment 24
+4637.287847 : Train id=95 schedule=[STRAIGHT] to StartStation 26
+4732.737845 : Train id=76 schedule=[] reaches 1km mark in 107.085739253s on RailwaySegment 15
+4743.629219 : Train id=17 schedule=[TURN,TURN,TURN] reaches 1km mark in 116.977113247s on Split 17
+4756.759284 : Train id=72 schedule=[] reaches 1km mark in 132.868993474s on RailwaySegment 13
+4759.95596 : Train id=81 schedule=[STRAIGHT] reaches 1km mark in 3.74786495215s on Join 20
+4762.77539 : Train id=17 schedule=[TURN,TURN,TURN] accelerates to end in 58.4885566237s on Split 17
+4762.77539 : Train id=17 schedule=[TURN,TURN,TURN] accelerates to end in 0.0s on Split 17
+4762.77539 : Train id=17 schedule=[TURN,TURN] to Split 10
+4762.77539 : Train id=17 schedule=[TURN,TURN] reaches 1km mark in 116.977113247s on Split 10
+4763.77539 : Train id=81 schedule=[STRAIGHT] accelerates to end in 65.4355744761s on Join 20
+4766.139234 : Train id=81 schedule=[STRAIGHT] accelerates to end in 0.0s on Join 20
+4766.139234 : Train id=81 schedule=[STRAIGHT] to Split 17
+4766.139234 : Train id=81 schedule=[STRAIGHT] reaches 1km mark in 128.507304952s on Split 17
+4767.139234 : Train id=11 schedule=[TURN,STRAIGHT] accelerates to end in 64.1036149326s on Join 28
+4767.281206 : Train id=11 schedule=[TURN,STRAIGHT] accelerates to end in 0.0s on Join 28
+4767.281206 : Train id=11 schedule=[TURN,STRAIGHT] to Join 20
+4767.281206 : Train id=11 schedule=[TURN,STRAIGHT] reaches 1km mark in 128.065257865s on Join 20
+4767.936311 : Train id=15 schedule=[TURN,STRAIGHT] accelerates to end in 65.6859630937s on RailwaySegment 30
+4772.59989 : Train id=15 schedule=[TURN,STRAIGHT] accelerates to end in 0.0s on RailwaySegment 30
+4772.59989 : Train id=15 schedule=[TURN,STRAIGHT] to Join 28
+4772.59989 : Train id=15 schedule=[TURN,STRAIGHT] reaches 1km mark in 131.369661187s on Join 28
+4781.868258 : Train id=19 schedule=[TURN,STRAIGHT] to RailwaySegment 30
+4781.868258 : Train id=19 schedule=[TURN,STRAIGHT] reaches 1km mark in 122.475005875s on RailwaySegment 30
+4781.868258 : Train id=24 schedule=[TURN,STRAIGHT] to StartStation 32
+4839.823584 : Train id=76 schedule=[] reaches 1km mark in 2.53028161978e-07s on RailwaySegment 15
+4841.823584 : Train id=72 schedule=[] accelerates to end in 66.4344967371s on RailwaySegment 13
+4842.823584 : Train id=72 schedule=[] accelerates to end in 0.0s on RailwaySegment 13
+4842.823584 : Train id=72 schedule=[] to EndStation 2
+4843.823584 : Train id=76 schedule=[] accelerates to end in 53.5428696265s on RailwaySegment 15
+4879.752503 : Train id=17 schedule=[TURN,TURN] reaches 1km mark in 116.977113247s on Split 10
+4894.646539 : Train id=81 schedule=[STRAIGHT] reaches 1km mark in 128.507304952s on Split 17
+4897.366454 : Train id=76 schedule=[] to RailwaySegment 13
+4897.366454 : Train id=76 schedule=[] reaches 1km mark in 53.542869253s on RailwaySegment 13
+4899.344504 : Train id=81 schedule=[STRAIGHT] accelerates to end in 65.4355744761s on Split 17
+4899.344504 : Train id=81 schedule=[STRAIGHT] accelerates to end in 0.0s on Split 17
+4899.344504 : Train id=81 schedule=[] to RailwaySegment 15
+4899.344504 : Train id=81 schedule=[] reaches 1km mark in 130.871148952s on RailwaySegment 15
+4900.882092 : Train id=11 schedule=[TURN,STRAIGHT] accelerates to end in 64.1036149326s on Join 20
+4900.882092 : Train id=11 schedule=[TURN,STRAIGHT] accelerates to end in 0.0s on Join 20
+4900.882092 : Train id=11 schedule=[TURN,STRAIGHT] to Split 17
+4900.882092 : Train id=11 schedule=[TURN,STRAIGHT] reaches 1km mark in 128.207229865s on Split 17
+4901.882092 : Train id=87 schedule=[STRAIGHT] accelerates to end in 87.1953396198s on RailwaySegment 22
+4901.882092 : Train id=87 schedule=[STRAIGHT] accelerates to end in 0.0s on RailwaySegment 22
+4901.882092 : Train id=87 schedule=[STRAIGHT] to Join 20
+4901.882092 : Train id=87 schedule=[STRAIGHT] reaches 1km mark in 174.39067924s on Join 20
+4902.882092 : Train id=91 schedule=[STRAIGHT] accelerates to end in 94.0268139469s on RailwaySegment 24
+4904.777949 : Train id=15 schedule=[TURN,STRAIGHT] reaches 1km mark in 1.27906118739s on Join 28
+4904.850088 : Train id=91 schedule=[STRAIGHT] accelerates to end in 0.0s on RailwaySegment 24
+4904.850088 : Train id=91 schedule=[STRAIGHT] to RailwaySegment 22
+4904.850088 : Train id=91 schedule=[STRAIGHT] reaches 1km mark in 186.085631894s on RailwaySegment 22
+4910.571574 : Train id=95 schedule=[STRAIGHT] to RailwaySegment 24
+4910.571574 : Train id=95 schedule=[STRAIGHT] reaches 1km mark in 117.763557743s on RailwaySegment 24
+4910.571574 : Train id=99 schedule=[STRAIGHT] to StartStation 26
+4950.909323 : Train id=76 schedule=[] reaches 1km mark in 53.542869253s on RailwaySegment 13
+4996.729616 : Train id=17 schedule=[TURN,TURN] reaches 1km mark in 2.47358642014e-07s on Split 10
+4997.729616 : Train id=17 schedule=[TURN,TURN] accelerates to end in 58.4885566237s on Split 10

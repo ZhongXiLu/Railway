@@ -21,11 +21,15 @@ public class TrainMover : MonoBehaviour {
         float elapsedTime = 0;
         Vector3 startingPos = objectToMove.transform.position;
         while(elapsedTime < duration) {
-            objectToMove.transform.position = Vector3.Lerp(startingPos, newPosition, (elapsedTime / duration));
+            if(objectToMove != null) {
+                objectToMove.transform.position = Vector3.Lerp(startingPos, newPosition, (elapsedTime / duration));
+            }
             elapsedTime += Time.deltaTime;
             yield return new WaitForEndOfFrame();
         }
-        objectToMove.transform.position = newPosition;
+        if(objectToMove != null) {
+            objectToMove.transform.position = newPosition;
+        }
     }
 
     /**
@@ -37,22 +41,17 @@ public class TrainMover : MonoBehaviour {
 
     Taken from: https://stackoverflow.com/a/37588536
     */
-    bool rotating = false;
     IEnumerator rotateOverSeconds(GameObject objectToMove, Quaternion newRotation, float duration) {
-        if(rotating) {
-            yield break;
-        }
-        rotating = true;
-
         Quaternion currentRot = objectToMove.transform.rotation;
 
         float counter = 0;
         while(counter < duration) {
             counter += Time.deltaTime;
-            objectToMove.transform.rotation = Quaternion.Lerp(currentRot, newRotation, counter / duration);
+            if(objectToMove != null) {
+                objectToMove.transform.rotation = Quaternion.Lerp(currentRot, newRotation, counter / duration);
+            }
             yield return null;
         }
-        rotating = false;
     }
 
     /**
@@ -64,6 +63,7 @@ public class TrainMover : MonoBehaviour {
     */
     bool isAligned(GameObject train, GameObject track) {
         // TODO: fix?
+        // Sometimes train and track are not unit-perfectly aligned, so add a margin of 15 units.
         return (train.transform.position.x - track.transform.position.x) < 15;
     }
 
@@ -73,7 +73,7 @@ public class TrainMover : MonoBehaviour {
     the diagonal track of a junction, we have to rotate the train.
 
     @param trainId  The id of the train.
-    @param toTrack  The track the train is moving to.
+    @param toTrack  The id of the track the train is moving to.
     */
     public void moveTrainToTrack(string trainId, string toTrack) {
         GameObject train = GameObject.Find("Train " + trainId);
@@ -85,7 +85,6 @@ public class TrainMover : MonoBehaviour {
             // TODO: check for crossing
             rotation = Quaternion.Euler(new Vector3(0, -20, 0));
         } else {
-            Debug.Log("Reset rotation");
             rotation = Quaternion.Euler(new Vector3(0, 0, 0));
         }
         StartCoroutine(rotateOverSeconds(train, rotation, 3f));
@@ -96,20 +95,29 @@ public class TrainMover : MonoBehaviour {
     (The train can see the lights of the next track starting from this 1km mark)
 
     @param trainId          The id of the train.
-    @param currentTrack     The track the train is currently on.
+    @param trainSchedule    The schedule of the train (so we can determine if a train has to turn or not on a split).
+    @param currentTrack     The id of the track the train is currently on.
+    @param trackType        The type of track the train is currently on.
     @param duration         The duration of the movement in seconds.
     */
-    public void moveTrainTo1KmMark(string trainId, string currentTrack, float duration) {
-        if(duration != 0.0f) {
+    public void moveTrainTo1KmMark(string trainId, string trainSchedule, string currentTrack, string trackType, float duration) {
+        if(duration > 5.0f) {
             GameObject train = GameObject.Find("Train " + trainId);
             GameObject track = GameObject.Find(currentTrack);
 
             Vector3 newPosition = track.transform.position;
             // TODO: check for crossing
             newPosition.z += (3*80/5)-10;
-            if(!isAligned(train, track)) {
-                newPosition.x += 12;    // TODO:check
+
+            string[] schedule = trainSchedule.Split(',');
+            if(!isAligned(train, track) && (trackType == "Join" || trackType == "Crossing")) {
+                // TODO: check for crossing
+                newPosition.x += 12;
+            } else if((trackType == "Split" || trackType == "Crossing") && schedule.Length > 0 && schedule[0] == "TURN") {
+                newPosition.x += 18;    // TODO:check
+                StartCoroutine(rotateOverSeconds(train, Quaternion.Euler(new Vector3(0, 20, 0)), 3f));
             }
+
             StartCoroutine(moveOverSeconds(train, newPosition, duration));
         }
     }
@@ -118,11 +126,11 @@ public class TrainMover : MonoBehaviour {
     Move the train to the end of its current track.
 
     @param trainId          The id of the train.
-    @param currentTrack     The track the train is currently on.
+    @param currentTrack     The id of the track the train is currently on.
     @param duration         The duration of the movement in seconds.
     */
     public void moveTrainToEnd(string trainId, string currentTrack, float duration) {
-        if(duration != 0.0f) {
+        if(duration > 5.0f) {
             GameObject train = GameObject.Find("Train " + trainId);
             GameObject track = GameObject.Find(currentTrack);
 
