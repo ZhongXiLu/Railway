@@ -30,6 +30,8 @@ public class WorldLoader : MonoBehaviour {
                     newTrack.id = id;
                 } else if(data.Name == "length") {
                     newTrack.length = int.Parse(data.InnerText);
+                } else if(data.Name == "name") {
+                    newTrack.name = data.InnerText;
                 } else if(data.Name == "ports") {
                     foreach(XmlNode port in data.ChildNodes) {
                         newTrack.ports[port.Name] = int.Parse(port.InnerText);
@@ -54,7 +56,7 @@ public class WorldLoader : MonoBehaviour {
         } else if(track.type == "Straight") {
             railwayFactory.createStraight(track.id.ToString(), Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.y));
         } else if(track.type == "Station") {
-            railwayFactory.createStation(track.id.ToString(), Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.y));
+            railwayFactory.createStation(track.id.ToString(), Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.y), track.name);
         } else if(track.type == "Crossing") {
             railwayFactory.createCrossing(track.id.ToString(), Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.y));
         }

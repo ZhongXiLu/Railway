@@ -90,15 +90,11 @@ public class TraceParser : MonoBehaviour {
                 // New train at start station
                 if(trace[4] == "to" && trace[5] == "StartStation") {
                     GameObject track = GameObject.Find(trace[6]);
-                    railwayFactory.createTrain("Train " + train["id"], track.transform.position.x, track.transform.position.z+80);
+                    railwayFactory.createTrain("Train " + train["id"], track.transform.position.x, track.transform.position.z+80, trace[8], trace[10]);
 
                 // Train reaches end station
                 } else if(trace[4] == "to" && trace[5] == "EndStation") {
-                    GameObject trainObj = GameObject.Find("Train " + train["id"]);
-                    if(trainObj != null) {
-                        Destroy(trainObj);
-                    }
-                    // TODO: show that train reached end station (text, effect, ...)?
+                    railwayFactory.destroyTrain(train["id"], trace[6]);
 
                 // Train moves to new track
                 } else if(trace[4] == "to") {

@@ -45,7 +45,7 @@ class TracerRailway(object):
         if type(aDEVS.model) is PollQueue:
             if aDEVS.state == "send_query":
                 if aDEVS.model.train is not None:
-                    self.trace(aDEVS.time_last, "{} to StartStation {}".format(aDEVS.train, aDEVS.getModelName()[1:]))
+                    self.trace(aDEVS.time_last, "{} to StartStation {} from {} to {}".format(aDEVS.train, aDEVS.getModelName()[1:], aDEVS.train.start, aDEVS.train.end))
 
         elif isinstance(aDEVS.model, RailwaySegment):
             # Train driving on segment (until 1km mark = next light within sight)

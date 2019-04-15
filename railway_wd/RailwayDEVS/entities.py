@@ -4,11 +4,13 @@ ID_counter = 0
 
 class Train:
 
-    def __init__(self, a_max, departure_time=0, schedule=[]):
+    def __init__(self, a_max, departure_time=0, schedule=[], start="Start", end="End"):
         global ID_counter
         self.ID = ID_counter
         ID_counter += 1
         self.schedule = schedule
+        self.start = start
+        self.end = end
 
         self.a_max = a_max
         self.departure_time = departure_time

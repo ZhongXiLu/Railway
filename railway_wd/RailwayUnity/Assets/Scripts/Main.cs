@@ -6,6 +6,7 @@ public class Main : MonoBehaviour {
 
     public float simulationTimeScaleFactor = 1.0f;
 
+    public GameObject canvas;
     public WorldLoader worldLoader;
     public TraceParser traceParser;
 
@@ -26,5 +27,11 @@ public class Main : MonoBehaviour {
         traceParser.loadTrace("railway_log");
 
         StartCoroutine(simulate());
+    }
+
+    void Update() {
+        if(Input.GetKeyDown(KeyCode.Space)) {
+            canvas.SetActive(!canvas.activeSelf);
+        }
     }
 }

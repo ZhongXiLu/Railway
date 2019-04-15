@@ -13,6 +13,7 @@ public class Railway : MonoBehaviour {
     public class Track {
         public string type;
         public int id;
+        public string name = "";
         public int length = 100;
         public Dictionary<string, int> ports = new Dictionary<string, int>(); ///< Dictonary of port name to track id.
     }

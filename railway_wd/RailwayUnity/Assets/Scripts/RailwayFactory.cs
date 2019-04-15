@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 /**
 RailwayFactory: responsible for creating the different kinds of tracks and trains.
@@ -25,10 +26,46 @@ public class RailwayFactory : MonoBehaviour {
         return ground;
     }
 
-    public GameObject createTrain(string name, float x, float z) {
+    IEnumerator modifyLabel(string labelName, string text, bool overrideLabel) {
+        yield return new WaitForSeconds(0.01f);
+        GameObject label = GameObject.Find(labelName);
+        if(overrideLabel) {
+            label.transform.GetChild(1).gameObject.GetComponent<Text>().text = text;
+        } else {
+            label.transform.GetChild(1).gameObject.GetComponent<Text>().text += "\n" + text;
+        }
+    }
+
+    IEnumerator updateEndStationLabel(string labelName) {
+        yield return new WaitForSeconds(0.01f);
+        Debug.Log("Update station label");
+        GameObject label = GameObject.Find(labelName);
+        if(label.transform.GetChild(1).gameObject.GetComponent<Text>().text.Contains("\n")) {
+            string text = label.transform.GetChild(1).gameObject.GetComponent<Text>().text;
+            int count = int.Parse(text.Substring(text.Length-1, 1)) + 1;
+            text = text.Substring(0, text.Length-1);
+            label.transform.GetChild(1).gameObject.GetComponent<Text>().text = text + count;
+        } else {
+            label.transform.GetChild(1).gameObject.GetComponent<Text>().text += "\n#Trains arrived: 1";
+        }
+    }
+
+    public GameObject createTrain(string name, float x, float z, string start, string end) {
         GameObject train = Instantiate(trainPrefab, new Vector3(x, 0, z-25), Quaternion.identity) as GameObject;
         train.name = name;
+        // Wait for label to be createn first before modifying it
+        StartCoroutine(modifyLabel("Label " + name, "From " + start + " to " + end, false));
         return train;
+    }
+
+    public void destroyTrain(string train, string endStation) {
+        Destroy(GameObject.Find("Label Train " + train));
+        GameObject trainObj = GameObject.Find("Train " + train);
+        if(trainObj != null) {
+            Destroy(trainObj);
+        }
+        // TODO: show that train reached end station (text, effect, ...)?
+        StartCoroutine(updateEndStationLabel("Label " + endStation));
     }
 
     public GameObject createStraight(string name, int x, int z) {
@@ -37,9 +74,11 @@ public class RailwayFactory : MonoBehaviour {
         return straight;
     }
 
-    public GameObject createStation(string name, int x, int z) {
+    public GameObject createStation(string name, int x, int z, string stationName) {
         GameObject station = Instantiate(stationPrefab, new Vector3(x, 0, z), Quaternion.identity) as GameObject;
         station.name = name;
+        // Wait for label to be createn first before modifying it
+        StartCoroutine(modifyLabel("Label " + name, "Station: " + stationName, true));
         return station;
     }
 

@@ -415,12 +415,14 @@ class PollQueue(AtomicDEVS):
         }[self.state]
 
 class Generator(AtomicDEVS):
-    def __init__(self, name="Generator", IAT_min=60, IAT_max=120, a_min=0.2, a_max=0.7, schedule=[]):
+    def __init__(self, name="Generator", IAT_min=60, IAT_max=120, a_min=0.2, a_max=0.7, schedule=[], start="Start", end="End"):
         AtomicDEVS.__init__(self, name)
         self.train_out = self.addOutPort("train_out")
         self.elapsed = 0.0
         self.state = "Generator"
         self.schedule = schedule
+        self.start = start
+        self.end = end
 
         self.IAT_min = IAT_min
         self.IAT_max = IAT_max
@@ -438,7 +440,7 @@ class Generator(AtomicDEVS):
         a = random.random()*(self.a_max-self.a_min)+self.a_min
         departure_time = self.time_next[0]
         self.trains_generated += 1
-        return {self.train_out: Train(a, departure_time, self.schedule)}
+        return {self.train_out: Train(a, departure_time, self.schedule, self.start, self.end)}
 
     def intTransition(self):
         return self.state
