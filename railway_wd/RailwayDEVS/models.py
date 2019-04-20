@@ -430,7 +430,6 @@ class Generator(AtomicDEVS):
         self.a_max = a_max
 
         self.trains_generated = 0
-
         random.seed(123)
 
     def timeAdvance(self):

@@ -71,6 +71,43 @@ public class TraceParser : MonoBehaviour {
         }
         return train;
     }
+
+
+    /**
+    Simulate a command.
+    @param command         The command.
+    @param timeScaleFactor Time scale factor of the simulation (e.g. '2' means twice as fast).
+    */
+    public void simulateCommand(string command, float timeScaleFactor) {
+        if(command.Contains(":")) {
+            Debug.Log(command);
+
+            string[] trace = command.Split(':')[1].Split(' ');
+            Dictionary<string, string> train = parseTrain(command);
+
+            // New train at start station
+            if(trace[4] == "to" && trace[5] == "StartStation") {
+                GameObject track = GameObject.Find(trace[6]);
+                railwayFactory.createTrain("Train " + train["id"], track.transform.position.x, track.transform.position.z+80, trace[8], trace[10]);
+
+            // Train reaches end station
+            } else if(trace[4] == "to" && trace[5] == "EndStation") {
+                railwayFactory.destroyTrain(train["id"], trace[6]);
+
+            // Train moves to new track
+            } else if(trace[4] == "to") {
+                trainMover.moveTrainToTrack(train["id"], trace[6]);
+
+            // Train moves to 1km mark on track
+            } else if(trace[4] == "reaches" && trace[5] == "1km") {
+                trainMover.moveTrainTo1KmMark(train["id"], train["schedule"], trace[11], trace[10], float.Parse(trace[8].Substring(0, trace[8].Length - 1))/timeScaleFactor);
+
+            // Train accelerates last part of track
+            } else if(trace[4] == "accelerates") {
+                trainMover.moveTrainToEnd(train["id"], trace[11], float.Parse(trace[8].Substring(0, trace[8].Length - 1))/timeScaleFactor);
+            }
+        }
+    }
      
     /**
     Simulate the next command from the trace.
@@ -80,35 +117,9 @@ public class TraceParser : MonoBehaviour {
 
         if(commands.Count > 0) {
             string line = commands[0];
-            Debug.Log(line);
             commands.RemoveAt(0);
             
-            if(line.Contains(":")) {
-                string[] trace = line.Split(':')[1].Split(' ');
-                Dictionary<string, string> train = parseTrain(line);
-
-                // New train at start station
-                if(trace[4] == "to" && trace[5] == "StartStation") {
-                    GameObject track = GameObject.Find(trace[6]);
-                    railwayFactory.createTrain("Train " + train["id"], track.transform.position.x, track.transform.position.z+80, trace[8], trace[10]);
-
-                // Train reaches end station
-                } else if(trace[4] == "to" && trace[5] == "EndStation") {
-                    railwayFactory.destroyTrain(train["id"], trace[6]);
-
-                // Train moves to new track
-                } else if(trace[4] == "to") {
-                    trainMover.moveTrainToTrack(train["id"], trace[6]);
-
-                // Train moves to 1km mark on track
-                } else if(trace[4] == "reaches" && trace[5] == "1km") {
-                    trainMover.moveTrainTo1KmMark(train["id"], train["schedule"], trace[11], trace[10], float.Parse(trace[8].Substring(0, trace[8].Length - 1))/timeScaleFactor);
-
-                // Train accelerates last part of track
-                } else if(trace[4] == "accelerates") {
-                    trainMover.moveTrainToEnd(train["id"], trace[11], float.Parse(trace[8].Substring(0, trace[8].Length - 1))/timeScaleFactor);
-                }
-            }
+            simulateCommand(line, timeScaleFactor);
         }
     }
 }

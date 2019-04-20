@@ -1,16 +1,22 @@
 
-import sys
+import sys, socket, time
 
 from RailwayDEVS.models import *
 
 class TracerRailway(object):
 
-    def __init__(self, uid, server, filename=None):
+    def __init__(self, uid, server, filename=None, sendToSocket=False):
         """
         Both uid and server can be ignored, as these are only required for distributed simulation
         filename contains the name of the file in which we should write the trace
         """
         self.filename = filename
+        self.sendToSocket = sendToSocket
+        if self.sendToSocket:
+            HOST, PORT = "127.0.0.1", 11000
+            self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            self.sock.connect((HOST, PORT))
+            self.sock.send('Hello World!<EOF>')
 
     def startTracer(self, recover):
         """
@@ -30,7 +36,10 @@ class TracerRailway(object):
         self.verb_file.flush()
 
     def trace(self, time, text):
-        message = "{} : {}\n".format(time[0], text)
+        message = "{} : {}".format(time[0], text)
+        if self.sendToSocket:
+            self.sock.send(message + '<EOF>')
+        message += "\n"
         try:
             self.verb_file.write(message)
         except TypeError:
