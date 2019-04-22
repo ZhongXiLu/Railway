@@ -16,8 +16,9 @@ public class RailwayFactory : MonoBehaviour {
     public GameObject turnoutPrefab;
     public GameObject junctionPrefab;
     public GameObject crossingPrefab;
-
     public GameObject trainPrefab;
+
+    public ParameterShower parameterShower;
 
     public GameObject createGround(int width, int height) {
         GameObject ground = Instantiate(groundPrefab, new Vector3(2.5f*width, 0, -2.5f*height), Quaternion.identity) as GameObject;
@@ -30,31 +31,34 @@ public class RailwayFactory : MonoBehaviour {
         yield return new WaitForSeconds(0.01f);
         GameObject label = GameObject.Find(labelName);
         if(overrideLabel) {
-            label.transform.GetChild(1).gameObject.GetComponent<Text>().text = text;
+            label.transform.Find("Text").gameObject.GetComponent<Text>().text = text;
         } else {
-            label.transform.GetChild(1).gameObject.GetComponent<Text>().text += "\n" + text;
+            label.transform.Find("Text").gameObject.GetComponent<Text>().text += "\n" + text;
         }
     }
 
     IEnumerator updateEndStationLabel(string labelName) {
         yield return new WaitForSeconds(0.01f);
-        Debug.Log("Update station label");
         GameObject label = GameObject.Find(labelName);
-        if(label.transform.GetChild(1).gameObject.GetComponent<Text>().text.Contains("\n")) {
-            string text = label.transform.GetChild(1).gameObject.GetComponent<Text>().text;
+        if(label.transform.Find("Text").gameObject.GetComponent<Text>().text.Contains("\n")) {
+            string text = label.transform.Find("Text").gameObject.GetComponent<Text>().text;
             int count = int.Parse(text.Substring(text.Length-1, 1)) + 1;
             text = text.Substring(0, text.Length-1);
-            label.transform.GetChild(1).gameObject.GetComponent<Text>().text = text + count;
+            label.transform.Find("Text").gameObject.GetComponent<Text>().text = text + count;
         } else {
-            label.transform.GetChild(1).gameObject.GetComponent<Text>().text += "\n#Trains arrived: 1";
+            label.transform.Find("Text").gameObject.GetComponent<Text>().text += "\n#Trains arrived: 1";
         }
     }
 
-    public GameObject createTrain(string name, float x, float z, string start, string end) {
+    public GameObject createTrain(string id, float x, float z, string start, string end, string schedule, string a_max) {
         GameObject train = Instantiate(trainPrefab, new Vector3(x, 0, z-25), Quaternion.identity) as GameObject;
-        train.name = name;
+        train.name = "Train " + id;
         // Wait for label to be createn first before modifying it
-        StartCoroutine(modifyLabel("Label " + name, "From " + start + " to " + end, false));
+        StartCoroutine(modifyLabel("Label " + train.name, "From " + start + " to " + end, false));
+        train.GetComponent<Train>().id = id;
+        train.GetComponent<Train>().parameterShower = parameterShower;
+        train.GetComponent<Train>().schedule = schedule;
+        train.GetComponent<Train>().a_max = a_max;
         return train;
     }
 

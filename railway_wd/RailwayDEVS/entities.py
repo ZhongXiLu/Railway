@@ -18,7 +18,7 @@ class Train:
         self.remaining_x = 0
 
     def __str__(self):
-        return "Train id={} schedule=[{}]".format(self.ID, ','.join(map(str, [str(step) for step in self.schedule])))
+        return "Train id={} schedule=[{}] a_max={}".format(self.ID, ','.join(map(str, [str(step) for step in self.schedule])), self.a_max)
 
 
 class Query:

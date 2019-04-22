@@ -67,6 +67,8 @@ public class TraceParser : MonoBehaviour {
                 train.Add("id", text.Substring(3, text.Length-3));
             } else if(text.Contains("schedule")) {
                 train.Add("schedule", text.Substring(10, text.Length-11));
+            } else if(text.Contains("a_max")) {
+                train.Add("a_max", text.Substring(6, text.Length-6));
             }
         }
         return train;
@@ -85,26 +87,27 @@ public class TraceParser : MonoBehaviour {
             string[] trace = command.Split(':')[1].Split(' ');
             Dictionary<string, string> train = parseTrain(command);
 
+            int traceOffset = 5;
             // New train at start station
-            if(trace[4] == "to" && trace[5] == "StartStation") {
-                GameObject track = GameObject.Find(trace[6]);
-                railwayFactory.createTrain("Train " + train["id"], track.transform.position.x, track.transform.position.z+80, trace[8], trace[10]);
+            if(trace[traceOffset] == "to" && trace[traceOffset+1] == "StartStation") {
+                GameObject track = GameObject.Find(trace[traceOffset+2]);
+                railwayFactory.createTrain(train["id"], track.transform.position.x, track.transform.position.z+80, trace[traceOffset+4], trace[traceOffset+6], train["schedule"], train["a_max"]);
 
             // Train reaches end station
-            } else if(trace[4] == "to" && trace[5] == "EndStation") {
-                railwayFactory.destroyTrain(train["id"], trace[6]);
+            } else if(trace[traceOffset] == "to" && trace[traceOffset+1] == "EndStation") {
+                railwayFactory.destroyTrain(train["id"], trace[traceOffset+2]);
 
             // Train moves to new track
-            } else if(trace[4] == "to") {
-                trainMover.moveTrainToTrack(train["id"], trace[6]);
+            } else if(trace[traceOffset] == "to") {
+                trainMover.moveTrainToTrack(train["id"], trace[traceOffset+2]);
 
             // Train moves to 1km mark on track
-            } else if(trace[4] == "reaches" && trace[5] == "1km") {
-                trainMover.moveTrainTo1KmMark(train["id"], train["schedule"], trace[11], trace[10], float.Parse(trace[8].Substring(0, trace[8].Length - 1))/timeScaleFactor);
+            } else if(trace[traceOffset] == "reaches" && trace[traceOffset+1] == "1km") {
+                trainMover.moveTrainTo1KmMark(train["id"], train["schedule"], trace[traceOffset+7], trace[traceOffset+6], float.Parse(trace[traceOffset+4].Substring(0, trace[traceOffset+4].Length - 1))/timeScaleFactor);
 
             // Train accelerates last part of track
-            } else if(trace[4] == "accelerates") {
-                trainMover.moveTrainToEnd(train["id"], trace[11], float.Parse(trace[8].Substring(0, trace[8].Length - 1))/timeScaleFactor);
+            } else if(trace[traceOffset] == "accelerates") {
+                trainMover.moveTrainToEnd(train["id"], trace[traceOffset+7], float.Parse(trace[traceOffset+4].Substring(0, trace[traceOffset+4].Length - 1))/timeScaleFactor);
             }
         }
     }

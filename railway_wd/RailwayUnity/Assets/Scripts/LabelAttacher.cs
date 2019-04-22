@@ -14,7 +14,7 @@ public class LabelAttacher : MonoBehaviour {
         text.transform.SetParent(GameObject.Find("Canvas").transform);
 
         text.name = "Label " + transform.parent.name;
-        text.transform.GetChild(1).gameObject.GetComponent<Text>().text = transform.parent.name;
+        text.transform.Find("Text").gameObject.GetComponent<Text>().text = transform.parent.name;
     }
 
     void Update() {

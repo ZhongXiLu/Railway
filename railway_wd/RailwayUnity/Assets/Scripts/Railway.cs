@@ -4,6 +4,7 @@ using UnityEngine;
 
 /**
 Railway: represents the complete railway network.
+Note that this is only used for generating the objects.
 */
 public class Railway : MonoBehaviour {
 
