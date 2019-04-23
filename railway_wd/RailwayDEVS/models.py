@@ -12,6 +12,7 @@ class Collector(AtomicDEVS):
         self.train_in = self.addInPort("train_in")
         self.Q_recv = self.addInPort("Q_recv")
         self.Q_sack = self.addOutPort("Q_sack")
+        self.UPDATE = self.addInPort("UPDATE")
 
         self.elapsed = 0.0
         self.current_time = 0.0
@@ -61,6 +62,9 @@ class Collector(AtomicDEVS):
 
             return "new_train"
 
+        elif self.UPDATE in inputs:
+            print("TODO: RECEIVED UPDATE")
+
         return self.state
 
 class RailwaySegment(AtomicDEVS):
@@ -72,6 +76,7 @@ class RailwaySegment(AtomicDEVS):
         self.Q_sack = self.addOutPort("Q_sack")
         self.Q_rack = self.addInPort("Q_rack")
         self.Q_send = self.addOutPort("Q_send")
+        self.UPDATE = self.addInPort("UPDATE")
 
         self.elapsed = 0.0
         self.state = ("neutral", "neutral")
@@ -213,6 +218,9 @@ class RailwaySegment(AtomicDEVS):
             self.train = inputs[self.train_in]
             self.train.remaining_x = self.L
             return ("new_train", self.state[1])
+
+        elif self.UPDATE in inputs:
+            print("TODO: RECEIVED UPDATE")
 
         return self.state
 
@@ -418,6 +426,8 @@ class Generator(AtomicDEVS):
     def __init__(self, name="Generator", IAT_min=60, IAT_max=120, a_min=0.2, a_max=0.7, schedule=[], start="Start", end="End"):
         AtomicDEVS.__init__(self, name)
         self.train_out = self.addOutPort("train_out")
+        self.UPDATE = self.addInPort("UPDATE")
+
         self.elapsed = 0.0
         self.state = "Generator"
         self.schedule = schedule
@@ -444,3 +454,7 @@ class Generator(AtomicDEVS):
     def intTransition(self):
         return self.state
 
+    def extTransition(self, inputs):
+
+        if self.UPDATE in inputs:
+            print("TODO: RECEIVED UPDATE")
