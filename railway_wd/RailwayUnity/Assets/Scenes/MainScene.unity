@@ -729,7 +729,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   simulationTimeScaleFactor: 10
-  simulateLive: 0
+  simulateLive: 1
   canvas: {fileID: 2122634552}
   worldLoader: {fileID: 1400127073}
   traceParser: {fileID: 2078015081}

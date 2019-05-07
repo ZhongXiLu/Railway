@@ -75,22 +75,23 @@ class TracerRailway(object):
         """
 
         text = None
-        for I in range(len(aDEVS.IPorts)):
+        if hasattr(aDEVS, 'model'):     # this will fix a thread bug apparently
+            for I in range(len(aDEVS.IPorts)):
 
-            if aDEVS.IPorts[I].getPortName() == "train_in":
-                # Train arrived at end station
-                if type(aDEVS.model) is Collector:
-                    for train in aDEVS.my_input.get(aDEVS.IPorts[I], []):
-                        text = "{} to EndStation {}".format(train, aDEVS.getModelName()[1:])
+                if aDEVS.IPorts[I].getPortName() == "train_in":
+                    # Train arrived at end station
+                    if type(aDEVS.model) is Collector:
+                        for train in aDEVS.my_input.get(aDEVS.IPorts[I], []):
+                            text = "{} to EndStation {}".format(train, aDEVS.getModelName()[1:])
 
-                # Train moved from one track to another
-                elif type(aDEVS.model) is not PollQueue:
-                    for train in aDEVS.my_input.get(aDEVS.IPorts[I], []):
-                        text = "{} to {} {}".format(train, aDEVS.model.__class__.__name__, aDEVS.getModelName()[1:])
+                    # Train moved from one track to another
+                    elif type(aDEVS.model) is not PollQueue:
+                        for train in aDEVS.my_input.get(aDEVS.IPorts[I], []):
+                            text = "{} to {} {}".format(train, aDEVS.model.__class__.__name__, aDEVS.getModelName()[1:])
 
-        if isinstance(aDEVS.model, RailwaySegment):
-            if aDEVS.state[0] == "accelerating":
-                self.trace(aDEVS.time_last, "{} accelerates to end in {}s on {} {}".format(aDEVS.train, aDEVS.duration, aDEVS.model.__class__.__name__, aDEVS.getModelName()[1:]))
+            if isinstance(aDEVS.model, RailwaySegment):
+                if aDEVS.state[0] == "accelerating":
+                    self.trace(aDEVS.time_last, "{} accelerates to end in {}s on {} {}".format(aDEVS.train, aDEVS.duration, aDEVS.model.__class__.__name__, aDEVS.getModelName()[1:]))
 
         if text:
             self.trace(aDEVS.time_last, text)

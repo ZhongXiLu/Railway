@@ -1,5 +1,5 @@
 
-import random
+import random, json
 
 from entities import *
 from formulas import *
@@ -63,7 +63,7 @@ class Collector(AtomicDEVS):
             return "new_train"
 
         elif self.UPDATE in inputs:
-            print("TODO: RECEIVED UPDATE")
+            data = json.loads(inputs[self.UPDATE][0])
 
         return self.state
 
@@ -220,7 +220,7 @@ class RailwaySegment(AtomicDEVS):
             return ("new_train", self.state[1])
 
         elif self.UPDATE in inputs:
-            print("TODO: RECEIVED UPDATE")
+            data = json.loads(inputs[self.UPDATE][0])
 
         return self.state
 
@@ -271,6 +271,9 @@ class Join(RailwaySegment):
             self.train = inputs[self.train_in]
             self.train.remaining_x = self.L
             return ("new_train", self.state[1])
+
+        elif self.UPDATE in inputs:
+            data = json.loads(inputs[self.UPDATE][0])
 
         return self.state
 
@@ -358,6 +361,9 @@ class Crossing(RailwaySegment):
             self.train = inputs[self.train_in]
             self.train.remaining_x = self.L
             return ("new_train", self.state[1])
+
+        elif self.UPDATE in inputs:
+            data = json.loads(inputs[self.UPDATE][0])
 
         return self.state
 

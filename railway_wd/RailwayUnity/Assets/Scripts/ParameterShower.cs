@@ -1,5 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Net;
+using System.Net.Sockets;
+using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,8 +15,39 @@ public class ParameterShower : MonoBehaviour {
     public GameObject formPrefab;
     public GameObject inputPrefab;
 
+    private Socket listener;
+    private Socket handler = null;
+
+    bool sent = false;
+
+    void Start() {
+        IPAddress ipAddress = IPAddress.Parse("127.0.0.1");
+        IPEndPoint remoteEndPoint = new IPEndPoint(ipAddress, 11001);
+        // Debug.Log(String.Format("Listening on : {0}:{1}", ipAddress, 11001));
+
+        listener = new Socket(ipAddress.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
+        listener.Blocking = false;
+        listener.Bind(remoteEndPoint);
+        listener.Listen(1);
+    }
+
     void Update() {
-        // TODO: press button => send message to simulator
+        if(handler == null) {
+            try {
+                handler = listener.Accept();
+                handler.Blocking = false;
+                // Debug.Log("Accepted a connection... again");
+            } catch(SocketException) {
+                // since we're not blocking, no connection has been made, just continue to next frame...
+            }
+        } else {
+            // TODO: press button => send message to simulator
+            if(!sent) {
+                byte[] msg = Encoding.UTF8.GetBytes("AYAYA");
+                handler.Send(msg);
+                sent = true;
+            }
+        }
     }
 
     /**
