@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8256529295819031220}
+  - component: {fileID: 7431723740213283749}
   m_Layer: 0
   m_Name: Turnout
   m_TagString: Untagged
@@ -32,6 +33,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &7431723740213283749
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2051377090433848378}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 30, y: 1, z: 80}
+  m_Center: {x: 15, y: 0, z: 30}
 --- !u!1001 &1797109611160885644
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -99,7 +113,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 935330002050348295, guid: 7a743c77c6bbf4378a905c8f510c9549, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7a743c77c6bbf4378a905c8f510c9549, type: 3}
 --- !u!4 &7914118879174260813 stripped
 Transform:
@@ -174,7 +189,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7842767598693000969, guid: 3cfc99674046ca010a250544da279705, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3cfc99674046ca010a250544da279705, type: 3}
 --- !u!4 &498352899237249149 stripped
 Transform:

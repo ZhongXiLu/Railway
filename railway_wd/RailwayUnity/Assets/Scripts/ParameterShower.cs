@@ -51,10 +51,17 @@ public class ParameterShower : MonoBehaviour {
             foreach(KeyValuePair<string, string> parameter in parameters) {
                 trainData.GetType().GetField(parameter.Key).SetValue(trainData, parameter.Value);
             }
-            // Debug.Log(JsonUtility.ToJson(trainData));
             socketManager.send(string.Format("UPDATE_{0} {1}", train.currentTrack, JsonUtility.ToJson(trainData)));
-        }
         
+        } else if(gameObj.GetComponent<Track>() != null) {
+            Track track = gameObj.GetComponent<Track>();
+            TrackData trackData = track.track;
+
+            foreach(KeyValuePair<string, string> parameter in parameters) {
+                trackData.GetType().GetField(parameter.Key).SetValue(trackData, parameter.Value);
+            }
+            socketManager.send(string.Format("UPDATE_{0} {1}", trackData.id, JsonUtility.ToJson(trackData)));
+        }
 
     }
 

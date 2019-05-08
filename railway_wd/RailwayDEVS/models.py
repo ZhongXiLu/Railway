@@ -236,6 +236,10 @@ class RailwaySegment(AtomicDEVS):
             if valid_schedule:
                 self.train.schedule = schedule
 
+        else:
+            self.L = int(data['length'])
+            self.v_max = int(data['v_max'])
+
 
 class Join(RailwaySegment):
     def __init__(self, name="Join", L=5000, v_max=100):

@@ -50,15 +50,15 @@ public class WorldLoader : MonoBehaviour {
     */
     void createTrack(Railway.Track track, Vector2 position) {
         if(track.type == "Junction") {
-            railwayFactory.createJunction(track.id.ToString(), Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.y));
+            railwayFactory.createJunction(track.id.ToString(), track.length, Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.y));
         } else if(track.type == "Turnout") {
-            railwayFactory.createTurnout(track.id.ToString(), Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.y));
+            railwayFactory.createTurnout(track.id.ToString(), track.length, Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.y));
         } else if(track.type == "Straight") {
-            railwayFactory.createStraight(track.id.ToString(), Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.y));
+            railwayFactory.createStraight(track.id.ToString(), track.length, Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.y));
         } else if(track.type == "Station") {
             railwayFactory.createStation(track.id.ToString(), Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.y), track.name);
         } else if(track.type == "Crossing") {
-            railwayFactory.createCrossing(track.id.ToString(), Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.y));
+            railwayFactory.createCrossing(track.id.ToString(), track.length, Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.y));
         }
     }
 

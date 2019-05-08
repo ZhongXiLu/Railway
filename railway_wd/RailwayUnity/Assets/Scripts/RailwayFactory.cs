@@ -73,9 +73,10 @@ public class RailwayFactory : MonoBehaviour {
         StartCoroutine(updateEndStationLabel("Label " + endStation));
     }
 
-    public GameObject createStraight(string name, int x, int z) {
+    public GameObject createStraight(string name, int length, int x, int z) {
         GameObject straight = Instantiate(straightPrefab, new Vector3(x, 0, z), Quaternion.identity) as GameObject;
         straight.name = name;
+        addTrackComponent(straight, length);
         return straight;
     }
 
@@ -87,21 +88,31 @@ public class RailwayFactory : MonoBehaviour {
         return station;
     }
 
-    public GameObject createTurnout(string name, int x, int z) {
+    public GameObject createTurnout(string name, int length, int x, int z) {
         GameObject turnout = Instantiate(turnoutPrefab, new Vector3(x, 0, z), Quaternion.identity) as GameObject;
         turnout.name = name;
+        addTrackComponent(turnout, length);
         return turnout;
     }
 
-    public GameObject createJunction(string name, int x, int z) {
+    public GameObject createJunction(string name, int length, int x, int z) {
         GameObject junction = Instantiate(junctionPrefab, new Vector3(x, 0, z), Quaternion.identity) as GameObject;
         junction.name = name;
+        addTrackComponent(junction, length);
         return junction;
     }
 
-    public GameObject createCrossing(string name, int x, int z) {
+    public GameObject createCrossing(string name, int length, int x, int z) {
         GameObject crossing = Instantiate(crossingPrefab, new Vector3(x, 0, z), Quaternion.identity) as GameObject;
         crossing.name = name;
+        addTrackComponent(crossing, length);
         return crossing;
+    }
+
+    void addTrackComponent(GameObject track, int length) {
+        track.AddComponent<Track>();
+        track.GetComponent<Track>().parameterShower = parameterShower;
+        track.GetComponent<Track>().track.id = track.name;
+        track.GetComponent<Track>().track.length = length.ToString();
     }
 }
