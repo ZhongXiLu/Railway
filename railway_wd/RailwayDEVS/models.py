@@ -220,9 +220,22 @@ class RailwaySegment(AtomicDEVS):
             return ("new_train", self.state[1])
 
         elif self.UPDATE in inputs:
-            data = json.loads(inputs[self.UPDATE][0])
+            self._update(json.loads(inputs[self.UPDATE][0]))
 
         return self.state
+
+    def _update(self, data):
+        if data['id'].startswith('Train'):  # Update train
+            self.train.a_max = float(data['a_max'])
+
+            schedule = data['schedule'].split(',')
+            valid_schedule = True
+            for step in schedule:
+                if step != "STRAIGHT" and step != "TURN":
+                    valid_schedule = False
+            if valid_schedule:
+                self.train.schedule = schedule
+
 
 class Join(RailwaySegment):
     def __init__(self, name="Join", L=5000, v_max=100):
@@ -273,7 +286,7 @@ class Join(RailwaySegment):
             return ("new_train", self.state[1])
 
         elif self.UPDATE in inputs:
-            data = json.loads(inputs[self.UPDATE][0])
+            self._update(json.loads(inputs[self.UPDATE][0]))
 
         return self.state
 
@@ -363,7 +376,7 @@ class Crossing(RailwaySegment):
             return ("new_train", self.state[1])
 
         elif self.UPDATE in inputs:
-            data = json.loads(inputs[self.UPDATE][0])
+            self._update(json.loads(inputs[self.UPDATE][0]))
 
         return self.state
 
@@ -463,4 +476,5 @@ class Generator(AtomicDEVS):
     def extTransition(self, inputs):
 
         if self.UPDATE in inputs:
-            print("TODO: RECEIVED UPDATE")
+            data = json.loads(inputs[self.UPDATE][0])
+

@@ -50,21 +50,22 @@ public class RailwayFactory : MonoBehaviour {
         }
     }
 
-    public GameObject createTrain(string id, float x, float z, string start, string end, string schedule, string a_max) {
+    public GameObject createTrain(string id, float x, float z, string start, string end, string schedule, string a_max, string startStation) {
         GameObject train = Instantiate(trainPrefab, new Vector3(x, 0, z-25), Quaternion.identity) as GameObject;
-        train.name = "Train " + id;
+        train.name = "Train_" + id;
         // Wait for label to be createn first before modifying it
         StartCoroutine(modifyLabel("Label " + train.name, "From " + start + " to " + end, false));
-        train.GetComponent<Train>().id = id;
+        train.GetComponent<Train>().train.id = "Train_" + id;
         train.GetComponent<Train>().parameterShower = parameterShower;
-        train.GetComponent<Train>().schedule = schedule;
-        train.GetComponent<Train>().a_max = a_max;
+        train.GetComponent<Train>().train.schedule = schedule;
+        train.GetComponent<Train>().train.a_max = a_max;
+        train.GetComponent<Train>().currentTrack = startStation;
         return train;
     }
 
     public void destroyTrain(string train, string endStation) {
         Destroy(GameObject.Find("Label Train " + train));
-        GameObject trainObj = GameObject.Find("Train " + train);
+        GameObject trainObj = GameObject.Find("Train_" + train);
         if(trainObj != null) {
             Destroy(trainObj);
         }

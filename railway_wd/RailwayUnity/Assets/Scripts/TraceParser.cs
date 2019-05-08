@@ -91,7 +91,7 @@ public class TraceParser : MonoBehaviour {
             // New train at start station
             if(trace[traceOffset] == "to" && trace[traceOffset+1] == "StartStation") {
                 GameObject track = GameObject.Find(trace[traceOffset+2]);
-                railwayFactory.createTrain(train["id"], track.transform.position.x, track.transform.position.z+80, trace[traceOffset+4], trace[traceOffset+6], train["schedule"], train["a_max"]);
+                railwayFactory.createTrain(train["id"], track.transform.position.x, track.transform.position.z+80, trace[traceOffset+4], trace[traceOffset+6], train["schedule"], train["a_max"], trace[traceOffset+2]);
 
             // Train reaches end station
             } else if(trace[traceOffset] == "to" && trace[traceOffset+1] == "EndStation") {
@@ -99,7 +99,7 @@ public class TraceParser : MonoBehaviour {
 
             // Train moves to new track
             } else if(trace[traceOffset] == "to") {
-                trainMover.moveTrainToTrack(train["id"], trace[traceOffset+2]);
+                trainMover.moveTrainToTrack(train["id"], trace[traceOffset+2], train["schedule"]);
 
             // Train moves to 1km mark on track
             } else if(trace[traceOffset] == "reaches" && trace[traceOffset+1] == "1km") {

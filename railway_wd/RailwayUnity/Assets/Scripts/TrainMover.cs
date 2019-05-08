@@ -75,8 +75,8 @@ public class TrainMover : MonoBehaviour {
     @param trainId  The id of the train.
     @param toTrack  The id of the track the train is moving to.
     */
-    public void moveTrainToTrack(string trainId, string toTrack) {
-        GameObject train = GameObject.Find("Train " + trainId);
+    public void moveTrainToTrack(string trainId, string toTrack, string schedule) {
+        GameObject train = GameObject.Find("Train_" + trainId);
         GameObject track = GameObject.Find(toTrack);
 
         Quaternion rotation;
@@ -88,6 +88,9 @@ public class TrainMover : MonoBehaviour {
             rotation = Quaternion.Euler(new Vector3(0, 0, 0));
         }
         StartCoroutine(rotateOverSeconds(train, rotation, 3f));
+
+        train.GetComponent<Train>().currentTrack = toTrack;
+        train.GetComponent<Train>().train.schedule = schedule;
     }
 
     /**
@@ -102,7 +105,7 @@ public class TrainMover : MonoBehaviour {
     */
     public void moveTrainTo1KmMark(string trainId, string trainSchedule, string currentTrack, string trackType, float duration) {
         if(duration > 5.0f) {
-            GameObject train = GameObject.Find("Train " + trainId);
+            GameObject train = GameObject.Find("Train_" + trainId);
             GameObject track = GameObject.Find(currentTrack);
 
             Vector3 newPosition = track.transform.position;
@@ -131,7 +134,7 @@ public class TrainMover : MonoBehaviour {
     */
     public void moveTrainToEnd(string trainId, string currentTrack, float duration) {
         if(duration > 5.0f) {
-            GameObject train = GameObject.Find("Train " + trainId);
+            GameObject train = GameObject.Find("Train_" + trainId);
             GameObject track = GameObject.Find(currentTrack);
 
             Vector3 newPosition = track.transform.position;

@@ -1,9 +1,7 @@
 ﻿using System;
+using System.Reflection;
 using System.Collections;
 using System.Collections.Generic;
-using System.Net;
-using System.Net.Sockets;
-using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,40 +12,50 @@ public class ParameterShower : MonoBehaviour {
 
     public GameObject formPrefab;
     public GameObject inputPrefab;
+    string idObj = "0";    // the id of the gameobject of which it is showing the parameters
 
-    private Socket listener;
-    private Socket handler = null;
-
-    bool sent = false;
+    SocketManager socketManager;
 
     void Start() {
-        IPAddress ipAddress = IPAddress.Parse("127.0.0.1");
-        IPEndPoint remoteEndPoint = new IPEndPoint(ipAddress, 11001);
-        // Debug.Log(String.Format("Listening on : {0}:{1}", ipAddress, 11001));
-
-        listener = new Socket(ipAddress.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
-        listener.Blocking = false;
-        listener.Bind(remoteEndPoint);
-        listener.Listen(1);
+        socketManager = GameObject.Find("SocketManager").GetComponent<SocketManager>();
     }
 
-    void Update() {
-        if(handler == null) {
-            try {
-                handler = listener.Accept();
-                handler.Blocking = false;
-                // Debug.Log("Accepted a connection... again");
-            } catch(SocketException) {
-                // since we're not blocking, no connection has been made, just continue to next frame...
-            }
-        } else {
-            // TODO: press button => send message to simulator
-            if(!sent) {
-                byte[] msg = Encoding.UTF8.GetBytes("AYAYA");
-                handler.Send(msg);
-                sent = true;
+    /**
+    Update the game object by
+        (1) TODO: updating the attributes of the gameobject in unity
+        (2) updating the attributes of the models in DEVS
+    */
+    void updateObject() {
+
+        // Parse form data
+        GameObject form = GameObject.Find("Parameters Form");
+        GameObject content = form.transform.Find("Viewport/Content").gameObject;
+
+        // Loop over all elements in form
+        Dictionary<string, string> parameters = new Dictionary<string, string>();
+        foreach(Transform child in content.transform) {
+            // Loop to get input value
+            foreach(Transform child2 in child) {
+                if(child2.name == "InputField") {
+                    parameters.Add(child.name, child2.gameObject.GetComponent<InputField>().text);
+                }
             }
         }
+
+        // TODO: for other data objects
+        GameObject gameObj = GameObject.Find(idObj);
+        if(gameObj.GetComponent<Train>() != null) {
+            Train train = gameObj.GetComponent<Train>();
+            TrainData trainData = train.train;
+
+            foreach(KeyValuePair<string, string> parameter in parameters) {
+                trainData.GetType().GetField(parameter.Key).SetValue(trainData, parameter.Value);
+            }
+            // Debug.Log(JsonUtility.ToJson(trainData));
+            socketManager.send(string.Format("UPDATE_{0} {1}", train.currentTrack, JsonUtility.ToJson(trainData)));
+        }
+        
+
     }
 
     /**
@@ -56,6 +64,7 @@ public class ParameterShower : MonoBehaviour {
     @param parameters   A dictionary of all the parameters names with their value that needs to be shown.
     */
     public void show(string title, Dictionary<string, string> parameters) {
+        idObj = title;
 
         // Remove the previous form if there is any
         GameObject oldForm = GameObject.Find("Parameters Form");
@@ -88,7 +97,8 @@ public class ParameterShower : MonoBehaviour {
         }
 
         // Fix position of 'Save' button
-        form.transform.Find("Viewport/Content/Button").gameObject.GetComponent<RectTransform>().anchoredPosition = new Vector3(5, -60*(index-1), 0); 
-
+        GameObject saveButton = form.transform.Find("Viewport/Content/Button").gameObject;
+        saveButton.GetComponent<RectTransform>().anchoredPosition = new Vector3(5, -60*(index-1), 0); 
+        saveButton.GetComponent<Button>().onClick.AddListener(updateObject);
     }
 }

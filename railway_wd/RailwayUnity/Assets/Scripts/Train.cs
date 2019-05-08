@@ -2,24 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
+public class TrainData {
+    public string id = "Train_0"; // name of gameobject
+    public string a_max = "0.7";
+    public string schedule = "";
+}
 
 /**
 Train script attached to a Train GameObject.
 */
 public class Train : MonoBehaviour {
 
-    public string id = "0";
-    public string a_max = "0.7";
-    public string schedule = "[]";
-
+    public TrainData train = new TrainData();
     public ParameterShower parameterShower;
+    public string currentTrack = "0";
 
     void OnMouseDown() {
         Dictionary<string, string> parameters = new Dictionary<string, string>() {
-            {"a_max", a_max},
-            {"schedule", schedule}
+            {"a_max", train.a_max},
+            {"schedule", train.schedule}
         };
-        parameterShower.show(id, parameters);
+        parameterShower.show(train.id, parameters);
     }   
 
 }
