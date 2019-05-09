@@ -16,6 +16,8 @@ public class Railway : MonoBehaviour {
         public int id;
         public string name = "";
         public int length = 100;
+        public bool isStartStation = false; ///< in case it is a station
+        public string schedule  = ""; ///< in case it is a station
         public Dictionary<string, int> ports = new Dictionary<string, int>(); ///< Dictonary of port name to track id.
     }
 

@@ -61,6 +61,15 @@ public class ParameterShower : MonoBehaviour {
                 trackData.GetType().GetField(parameter.Key).SetValue(trackData, parameter.Value);
             }
             socketManager.send(string.Format("UPDATE_{0} {1}", trackData.id, JsonUtility.ToJson(trackData)));
+        
+        } else if(gameObj.GetComponent<StartStation>() != null) {
+            StartStation startStation = gameObj.GetComponent<StartStation>();
+            StartStationData startStationData = startStation.startStation;
+
+            foreach(KeyValuePair<string, string> parameter in parameters) {
+                startStationData.GetType().GetField(parameter.Key).SetValue(startStationData, parameter.Value);
+            }
+            socketManager.send(string.Format("UPDATE_{0} {1}", startStationData.id, JsonUtility.ToJson(startStationData)));
         }
 
     }
@@ -95,7 +104,7 @@ public class ParameterShower : MonoBehaviour {
             GameObject inputField = Instantiate(inputPrefab) as GameObject;
             inputField.transform.SetParent(content.transform);
             inputField.name = parameter.Key;
-            inputField.GetComponent<RectTransform>().anchoredPosition = new Vector3(5, -60*index, 0);
+            inputField.GetComponent<RectTransform>().anchoredPosition = new Vector3(5, 90-(60*index), 0);
 
             inputField.transform.Find("Text").gameObject.GetComponent<Text>().text = parameter.Key;
             inputField.transform.Find("InputField").GetComponent<InputField>().text = parameter.Value;
@@ -105,7 +114,7 @@ public class ParameterShower : MonoBehaviour {
 
         // Fix position of 'Save' button
         GameObject saveButton = form.transform.Find("Viewport/Content/Button").gameObject;
-        saveButton.GetComponent<RectTransform>().anchoredPosition = new Vector3(5, -60*(index-1), 0); 
+        saveButton.GetComponent<RectTransform>().anchoredPosition = new Vector3(5, 90-(60*(index-1)), 0); 
         saveButton.GetComponent<Button>().onClick.AddListener(updateObject);
     }
 }

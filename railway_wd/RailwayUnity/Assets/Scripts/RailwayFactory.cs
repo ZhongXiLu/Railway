@@ -80,11 +80,17 @@ public class RailwayFactory : MonoBehaviour {
         return straight;
     }
 
-    public GameObject createStation(string name, int x, int z, string stationName) {
+    public GameObject createStation(string name, bool isStartStation, string schedule, int x, int z, string stationName) {
         GameObject station = Instantiate(stationPrefab, new Vector3(x, 0, z), Quaternion.identity) as GameObject;
         station.name = name;
         // Wait for label to be createn first before modifying it
         StartCoroutine(modifyLabel("Label " + name, "Station: " + stationName, true));
+        if(isStartStation) {
+            station.AddComponent<StartStation>();
+            station.GetComponent<StartStation>().parameterShower = parameterShower;
+            station.GetComponent<StartStation>().startStation.id = station.name;
+            station.GetComponent<StartStation>().startStation.schedule = schedule;
+        }
         return station;
     }
 

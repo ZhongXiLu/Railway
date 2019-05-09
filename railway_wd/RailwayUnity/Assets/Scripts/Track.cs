@@ -18,7 +18,6 @@ public class Track : MonoBehaviour {
     public ParameterShower parameterShower;
 
     void OnMouseDown() {
-        Debug.Log("OnMouseDown");
         Dictionary<string, string> parameters = new Dictionary<string, string>() {
             {"length", track.length},
             {"v_max", track.v_max}

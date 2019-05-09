@@ -32,6 +32,12 @@ public class WorldLoader : MonoBehaviour {
                     newTrack.length = int.Parse(data.InnerText);
                 } else if(data.Name == "name") {
                     newTrack.name = data.InnerText;
+                } else if(data.Name == "isStartStation") {
+                    if(data.InnerText == "true") {
+                        newTrack.isStartStation = true;
+                    }
+                } else if(data.Name == "schedule") {
+                    newTrack.schedule = data.InnerText;
                 } else if(data.Name == "ports") {
                     foreach(XmlNode port in data.ChildNodes) {
                         newTrack.ports[port.Name] = int.Parse(port.InnerText);
@@ -56,7 +62,7 @@ public class WorldLoader : MonoBehaviour {
         } else if(track.type == "Straight") {
             railwayFactory.createStraight(track.id.ToString(), track.length, Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.y));
         } else if(track.type == "Station") {
-            railwayFactory.createStation(track.id.ToString(), Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.y), track.name);
+            railwayFactory.createStation(track.id.ToString(), track.isStartStation, track.schedule, Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.y), track.name);
         } else if(track.type == "Crossing") {
             railwayFactory.createCrossing(track.id.ToString(), track.length, Mathf.RoundToInt(position.x), Mathf.RoundToInt(position.y));
         }

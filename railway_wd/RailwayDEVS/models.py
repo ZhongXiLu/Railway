@@ -481,4 +481,9 @@ class Generator(AtomicDEVS):
 
         if self.UPDATE in inputs:
             data = json.loads(inputs[self.UPDATE][0])
+            self.schedule = data['schedule'].split(',')
+            self.IAT_min = int(data['IAT_min'])
+            self.IAT_max = int(data['IAT_max'])
+            self.a_min = float(data['a_min'])
+            self.a_max = float(data['a_max'])
 
