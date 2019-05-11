@@ -5,6 +5,22 @@
 
 For more information about this research project, read the [report](report/report.pdf).
 
+### Dependencies
+
+- AToMPM: [https://atompm.github.io/](https://atompm.github.io/)
+- LoLA: [https://www2.informatik.hu-berlin.de/top/lola/loladoku/index.html](https://www2.informatik.hu-berlin.de/top/lola/loladoku/index.html)
+- PythonPDEVS: [http://msdl.cs.mcgill.ca/projects/DEVS/PythonPDEVS](http://msdl.cs.mcgill.ca/projects/DEVS/PythonPDEVS)
+- Unity: [https://unity.com/](https://unity.com/)
+    - ~~Railway assets: [https://assetstore.unity.com/packages/3d/vehicles/land/simple-trains-cartoon-assets-86794](https://assetstore.unity.com/packages/3d/vehicles/land/simple-trains-cartoon-assets-86794) (import the `.unitypackage` package in the `Railway/Assets/Resources` directory in Unity)~~
+
+### Installation
+
+- Install by running the install script and passing AToMPM's home directory. This script will put the formalisms on its right place for all the users and it will create a working directory for the Railway formalism.
+
+```bash
+(sudo) ./install.sh ATOMPM_DIR
+```
+
 ### Directory Structure
 
 - `Railway`: the Railway formalism modelled in AToMPM
@@ -13,14 +29,6 @@ For more information about this research project, read the [report](report/repor
     - `RailwayDEVS`: the railway model in DEVS
     - `RailwayUnity`: the railway model in Unity
 - `report`: the sources of the report and the report itself
-
-### Dependencies
-
-- AToMPM: [https://atompm.github.io/](https://atompm.github.io/)
-- LoLA: [https://www2.informatik.hu-berlin.de/top/lola/loladoku/index.html](https://www2.informatik.hu-berlin.de/top/lola/loladoku/index.html)
-- PythonPDEVS: [http://msdl.cs.mcgill.ca/projects/DEVS/PythonPDEVS](http://msdl.cs.mcgill.ca/projects/DEVS/PythonPDEVS)
-- Unity: [https://unity.com/](https://unity.com/)
-    - ~~Railway assets: [https://assetstore.unity.com/packages/3d/vehicles/land/simple-trains-cartoon-assets-86794](https://assetstore.unity.com/packages/3d/vehicles/land/simple-trains-cartoon-assets-86794) (import the `.unitypackage` package in the `Railway/Assets/Resources` directory in Unity)~~
 
 ### Manual
 
