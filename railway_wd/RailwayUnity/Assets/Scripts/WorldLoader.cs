@@ -94,7 +94,7 @@ public class WorldLoader : MonoBehaviour {
             if(newTrack.type == "Junction") {
                 newPosition += new Vector2(-30, -80);
             } else {
-                newPosition += new Vector2(30, -80);
+                newPosition += new Vector2(-30, -80);
             }
         }
         // Crossing is twice its size
@@ -148,7 +148,6 @@ public class WorldLoader : MonoBehaviour {
                     queue.Enqueue(newTrack);
                 }
             }
-
             visited[track.id] = true;
         }
     }
