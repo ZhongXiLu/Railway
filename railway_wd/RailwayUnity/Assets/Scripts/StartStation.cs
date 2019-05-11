@@ -6,8 +6,8 @@ using UnityEngine;
 public class StartStationData {
     public string id = "0";
     public string schedule = "";
-    public string IAT_min = "60";
-    public string IAT_max = "120";
+    public string IAT_min = "10";
+    public string IAT_max = "30";
     public string a_min = "0.2";
     public string a_max = "0.7";
 }

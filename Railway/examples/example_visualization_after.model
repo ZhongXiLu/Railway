@@ -72511,8 +72511,8 @@
 								"TURN"
 							],
 							"a_min": "0.2",
-							"IAT_max": "600",
-							"IAT_min": "60",
+							"IAT_max": "30",
+							"IAT_min": "10",
 							"start": "Start3",
 							"length": 5000
 						}
@@ -72676,8 +72676,8 @@
 								"STRAIGHT"
 							],
 							"a_min": "0.2",
-							"IAT_max": "600",
-							"IAT_min": "60",
+							"IAT_max": "30",
+							"IAT_min": "10",
 							"start": "Start1",
 							"length": 5000
 						}
@@ -72842,8 +72842,8 @@
 								"STRAIGHT"
 							],
 							"a_min": "0.2",
-							"IAT_max": "600",
-							"IAT_min": "60",
+							"IAT_max": "30",
+							"IAT_min": "10",
 							"start": "Start2",
 							"length": 5000
 						}

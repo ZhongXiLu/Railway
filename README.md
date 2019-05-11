@@ -32,12 +32,13 @@ For more information about this research project, read the [report](report/repor
     - Alternatively the `T_QueueingAnalysisAfterDEVSTransformation.model` transformation can be ran on a model that has already be transformed to a DEVS model (using `T_ToDEVS.model`)
 - **Visualization**:
     - Visualize using a trace:
-        - Just run the queueing analysis (`T_QueueingAnalysis.model`) to create a tracefile
+        - Just run the queueing analysis (`T_QueueingAnalysis.model`) to create a tracefile and `railway.xml` file
         - Open the Unity project
         - Set the `simulateLive` parameter to `false` on the `Main` object (you can also specify the `simulationTimeScaleFactor` if you like)
         - Start the Unity project
     - Visualizing live while simulating:
+        - You might need to run the queueing analysis beforehand (to create the `railway.xml`), so Unity can instantly load this file
         - Open the Unity project
         - Set the `simulateLive` parameter to `true` on the `Main` object
         - Start the Unity project
-        - Run the `T_Visualization.model` transformation
+        - Run the `T_Visualization.model` transformation (or `T_VisualizationAfterDEVSTransformation.model`)
