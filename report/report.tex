@@ -3,13 +3,18 @@
 \usepackage[utf8]{inputenc}
 \usepackage{a4wide}
 \usepackage{float}
-\usepackage{multirow}
 \usepackage{hyperref}
-\usepackage{todonotes}
+\usepackage{graphicx}
+\usepackage{authblk}
+
+\newcommand*{\email}[1]{%
+    \normalsize\href{mailto:#1}{#1}\par
+}
 
 \title{Mapping the Railway formalism onto different domains}
 \author{Zhong Xi Lu}
-\date{March 2019}
+\affil{\small Department of Mathematics \\ and Computer Science \\ University of Antwerp, Belgium \\ \email{zhong-xi.lu@student.uantwerpen.be}}
+\date{May 2019}
 
 \begin{document}
 
@@ -19,15 +24,23 @@
 
 Modelling is a powerful technique which allows us to work on the right abstraction level and avoid accidental complexity. Nowadays, we have a lot of different formalisms at our disposal, so it's necessary to choose the most appropriate language when building a model. Aside from that, it's also possible to define a mapping from one formalism to another, so that we can expose the functionality of one another.
 
-This paper will revolve around the \textit{Railway} formalism, which is mostly based on \textit{Railway Operation and Control} \cite{railway_book} by \textit{Joern Pachl} and some of the assignments \cite{assignments} given in the \textit{Model Driven Engineering} course in the \textit{University of Antwerp}. This formalism is first modelled in the tool \textit{AToMPM} \cite{atompm} to create a basic visual modelling environment, here we can also simulate a model by defining its operational semantics. To analyze if a model satisfies certain properties, we will map it to petri-nets, where we can do a reachability, coverability, deadlock, ... analysis. Next to that, we can also map it to \textit{Discrete Event System Specifications} (DEVS), which is more appropriate when it comes to queueing, throughput, ... analysis. Finally, to visualize and animate the model, we make use of \textit{Unity} \cite{unity}. \todo{finish introduction}
+This paper will revolve around the \textit{Railway} formalism, which is mostly based on \textit{Railway Operation and Control} \cite{railway_book} by \textit{Joern Pachl} and some of the assignments \cite{assignments} given in the \textit{Model Driven Engineering} course at the \textit{University of Antwerp}. This formalism is first modelled in the tool \textit{AToMPM} \cite{atompm} to create a basic visual modelling environment, here we can also simulate a model by defining its operational semantics. To analyze if a model satisfies certain properties, we will map it to petri-nets, where we can do a reachability, coverability, deadlock, ... analysis. Next to that, we can also map it to Discrete Event System Specifications (DEVS), which is more appropriate when it comes to queueing, throughput, ... analysis. Finally, to visualize and animate the model, we make use of \textit{Unity} \cite{unity}, here we also allow the user to modify the model. In the appendix (section \ref{appendix}), a few examples are worked out with a few analyses for illustration.
 
-\todo{add diagram with the different formalisms}
+In figure \ref{overview}, a small overview is given with the different formalisms and mappings in between them.
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/overview.png}
+    \caption{Overview of the different formalisms and mappings}
+    \label{overview}
+\end{figure}
+
+\newpage
 \section{Railway Formalism}
 
-As earlier mentioned, the book \textit{Railway Operation and Control} by \textit{Joern Pachl} \cite{railway_book} was a starting point for this Railway formalism. However, the language used in that book is heavily simplified to make the steps throughout this paper much easier. On top of that, the focus mainly lies on the railway (that consists of different segments) and not much on scheduling, signaling, ... This section will give a brief introduction on this simplified Railway formalism.
+As earlier mentioned, the book \textit{Railway Operation and Control} by \textit{Joern Pachl} \cite{railway_book} was a starting point for this Railway formalism. However, the language used in that book is heavily simplified to make the steps throughout this project much easier. On top of that, the focus mainly lies on the railway (that consists of different segments) and not much on scheduling, signaling, ... This section will give a brief introduction on this simplified Railway formalism.
 
-At its core, a model consists of multiple segments which can be connected to each other to form a railway. These segments also have a signalling light equipped which will inform an approaching train about its current state: green light means that there's no train represent on the segment and red light means there is. The different types of segments supported by this formalism can be found in table \ref{types_segments}.
+At its core, a model consists of multiple segments which can be connected to each other to form a railway network. These segments also have a signalling light equipped which will inform an approaching train about its current state: green light means that there's no train represent on the segment and red light means there is. The different types of segments supported by this formalism can be found in table \ref{types_segments}.
 
 \begin{table}[H]
 \begin{tabular}{|l|l|l|}
@@ -56,8 +69,6 @@ Now that we have defined the initial concepts of our formalism, we can start by 
     \caption{Abstract syntax of the Railway formalism}
     \label{abstract_syntax}
 \end{figure}
-
-\todo{update figure of abstract syntax}
 
 Since we deal with multiple types of segments, an inheritance tree would be suitable for this problem. At the root, we have an abstract class \texttt{Track}, from here on, we have three (abstract) subclasses:
 
@@ -91,7 +102,7 @@ This section will go over the operation semantics of the Railway formalism, i.e.
 
 \subsection{Train Schedule Formalism}
 
-Before we implement the rules, a second domain specific language is modelled to define train schedules (the path it takes from start to end) as was suggested in the \cite{assignments} given in the \textit{Model Driven Engineering} course \cite{assignments}. This way, we can easily operate the switches by looking at the train schedules.
+Before we implement the rules, a second domain specific language is modelled to define train schedules (the path it takes from start to end station) as was suggested in the \cite{assignments} given in the \textit{Model Driven Engineering} course \cite{assignments}. This way, we can easily operate the switches by looking at the train schedules.
 
 The abstract syntax can be found in figure \ref{abstract_syntax_trainschedule} and the concrete in figure \ref{concrete_syntax_trainschedule}. Basically, a schedule consists of one start station and one ending station. In between are zero or more steps that tell in which direction the train should move when it encounters a waypoint (turnout or crossing). One schedule is associated with  exactly one train and vice versa.
 
@@ -122,7 +133,7 @@ To explain the semantics, I will go over the MoTif schedule (figure \ref{schedul
 
 \begin{enumerate}
     \item Initialization: Adds signalling lights to all tracks if that wasn't the case already and it will place all the trains on their starting station according to their unique train schedule.
-    \item Set Lights: Set the lights correctly depending on their state; set the light green if there's no train present and red otherwise.
+    \item Set Lights: Set the lights correctly depending on their state; set the light green if there's no train present on the track the light is on and red otherwise.
     \item Set switches: Set the switches on splits and joins:
         \begin{itemize}
             \item Joins: if a train wants to enter a junction, the control system will set the direction of the incoming track correctly so that the train can enter. If two trains want to enter, it will "randomly" choose one.
@@ -134,15 +145,15 @@ To explain the semantics, I will go over the MoTif schedule (figure \ref{schedul
                 \label{set_split_switch}
             \end{figure}
         \end{itemize}
-    \item Move Train: This step will try to move a train to the next segment. There are however several cases that we have to keep in mind; for example, we can only move if the light on the next section is green. Most of these cases verify if the in/out-direction is set correctly.
+    \item Move Train: This step will try to move a train to the next segment. There are however several cases that we have to keep in mind; for example, we can only move if the light on the next section is green. Most of these cases also verify if the in/out-direction is set correctly, e.g. a train cannot move to a junction when the switch is not set correctly.
     \item Remove Train: Whenever a train reaches its end (station), we will remove it from the model, so that potential future train can enter this station as well.
-    \item Train Exists: A simple query rule to check if there are still trains left on any track. This is the end condition and the transformation will halt if there cannot be a train found.
+    \item Train Exists: A simple query rule to check if there are still trains left on any track. This serves as the end condition and the transformation will halt if there cannot be a train found.
     \item Update Clock: Finally, if the \texttt{TrainExists} was successful, we can move to the next simulation cycle: this step will update the clock as well as the step internally of all the trains so that they are synchronized with the clock.
 \end{enumerate}
 
 \section{Safety Analysis}
 
-Given a model written in our railway formalism, one would also want to do some analysis regarding its safety, for example if there is a reachable deadlock state. To do all this, we can define a mapping (using transformation rules) to petri-nets. These nets are highly suitable to these kinds of analyses. In this case specifically, the tool \textit{LoLA} (\textit{a Low Level Petri net Analyzer}) \cite{lola} will be used to analyze a given petri-net by building the reachability graph etc.
+Given a model written in our railway formalism, one would also want to do some analysis regarding its safety, for example if there is a reachable deadlock state. To do all this, we can define a mapping (using transformation rules) to petri-nets. These nets are highly suitable to these kind of analyses. In this case specifically, the tool \textit{LoLA} (\textit{a Low Level Petri net Analyzer}) \cite{lola} will be used to analyze a given petri-net by building the reachability graph etc.
 
 \begin{figure}[H]
     \centering
@@ -151,9 +162,9 @@ Given a model written in our railway formalism, one would also want to do some a
     \label{schedule_safety}
 \end{figure}
 
-The full MoTif schedule for the safety analysis can be found in figure \ref{safety_analysis}. First, we initialize the model so the trains are on the right tracks and the lights are all correctly set. Then we actually do the petri-net mapping and finally we can analyze the intermediate petri-net with a few LoLA calls and update the railway model if that's necessary.
+The full MoTif schedule for the safety analysis can be found in figure \ref{schedule_safety}. First, we initialize the model so the trains are on the right tracks and the lights are all set correctly. Then we actually do the petri-net mapping and finally we can analyze the intermediate petri-net with a few LoLA calls and update the railway model if that's necessary.
 
-This section is divided in three parts; section \ref{petri-net_mapping} will define the mapping itself, section \ref{safety_analysis} will discuss some "safety" properties and how we can define those in \textit{LoLA} and finally, in section \ref{safety_updating} will go over how we can use the results generated by \textit{LoLA} to update our initial model to show it to the user.
+This section is divided in three parts; section \ref{petri-net_mapping} will define the mapping itself, section \ref{safety_analysis} will discuss some "safety" properties and how we can define those in \textit{LoLA} and finally, section \ref{safety_updating} will go over how we can use the results generated by \textit{LoLA} to update our initial model to show it to the user.
 
 \subsection{Mapping}
 \label{petri-net_mapping}
@@ -163,8 +174,8 @@ The complete mapping is fairly trivial and can be split in several steps/rules:
 \begin{itemize}
     \item Tracks become places. If one contains a train, the place has a marking value of $1$.
     \item Links between tracks (\texttt{TrackToTrack}) become transitions. Note that when a train goes from one track to another, it will also look at the places that correspond to the lights (see next point).
-    \item Lights can be split up in two places: one for the green color and one for the red color. This will mean that at all time the sum of these places will always be equal to $1$.
-    \item To make sure the petri-net can go on forever, we add one additional place for each end station in a train schedule and one transition that will take all the tokens in those places and put them back. This means that if all the trains have reach their end station, this transition can fire an infinite amount of times.
+    \item Lights can be split up in two places: one for the green color and one for the red color. This will mean that at all time the sum of the tokens of these places will be equal to $1$.
+    \item To make sure the petri-net can run forever, we add one additional place for each end station in a train schedule and one transition that will take all the tokens in those places and put them back. This means that if all the trains have reach their end station, this transition can fire an infinite amount of times.
 \end{itemize}
 
 Combining all these rules, we now have an analyzable petri-net that represents the Railway formalism.
@@ -180,7 +191,7 @@ A simple property is deadlock; we want to be able to verify if there is a reacha
 
 \subsubsection{Reachability}
 
-Petri-nets are highly suitable for reachability analysis, more specifically, with this we can verify if a specific place is reachable from the the initials state. In other words, tracks that cannot be reached by a train (in the initial setup). For this, we make $n$ LoLA calls ($n$ = number of tracks) where we check each time individually if that track can be reached.
+Petri-nets are highly suitable for reachability analysis, more specifically, with this we can verify if a specific place is reachable from the initial state. In other words, tracks that cannot be reached by a train (in the initial setup). For this, we make $n$ LoLA calls ($n$ = number of tracks) where we check each time individually if that track can be reached.
 
 \subsubsection{Safeness}
 
@@ -188,7 +199,7 @@ Since we're dealing with trains on rails, it's of course desirable to have that 
 
 \subsubsection{Lights Invariant}
 
-In our petri-net mapping, we introduced two places for each signalling light. Implicitly, this means that only one token can be in those two places combined or else the lights are both green and red (or neither of them are on). This property will then check if at all time the sum of two places (of a light) is equal to $1$ (invariant).
+In our petri-net mapping, we introduced two places for each signalling light. Implicitly, this means that only one token can be in those two places combined or else the lights are both green and red (or neither of them are on). This property will then check if at all time the sum of the tokens of these two places (of a light) is equal to $1$ (invariant).
 
 \subsection{Updating model}
 \label{safety_updating}
@@ -197,11 +208,10 @@ When analyzing and finally generating the results, we want to be able to show th
 
 One important thing to note is when mapping the results (of the analysis) back to our original model, we need some form of traceability. We can create traces by making use of unique identifiers for the objects in the railway model and then use the same ones in the petri-net model. This way, we can correspond a petri-net element to its original element.
 
-\todo{add reference to appendix?}
 
 \section{Queueing Analysis}
 
-Another analysis we can perform is queueing analysis, for example, how long it averagely takes for a train to reach its end station or how long a train has to wait to enter its next segment. To do this, we create another mapping, this time we map the Railway formalism to DEVS. Here we can simulate a given DEVS model and retrieve the necessary information from it. The DEVS library used for this is \textit{PythonPDEVS} \cite{pythonpdevs}.
+Another analysis we can perform is queueing analysis, for example, how long it averagely takes for a train to reach its end station or how long a train has to wait to enter its next segment. To do this, we create another mapping, this time we map the Railway formalism to Discrete Event System Specifications (DEVS). Here we can simulate a given DEVS model and retrieve the necessary information from it. The DEVS library used for this is \textit{PythonPDEVS} \cite{pythonpdevs}.
 
 \begin{figure}[H]
     \centering
@@ -225,11 +235,11 @@ Either way, we still need to create instances of these DEVS models and encapsula
 
 \subsection{Analysis}
 
-Simulating a complete coupled DEVS model with \textit{PythonPDEVS} will create a detailed trace that specifically tells us at each point in time what has happened, but to retrieve more information, we need to add more logic to the models, but this is quite easily done. On top of that, there some extra attributes in the abstract model (e.g. segment length, train acceleration, ...), so that the user can manually (or by script) tweak the settings and try to optimize a given railway model. In the following small subsections, the few statistics integrated are discussed.
+Simulating a complete coupled DEVS model with \textit{PythonPDEVS} will create a detailed trace that specifically tells us at each point in time what has happened, but to retrieve more information, we need to add more logic to the models, but this is quite easily done. On top of that, there are some extra attributes in the abstract model (e.g. segment length, train acceleration, ...), so that the user can manually (or by script) tweak the settings and try to optimize a given railway model. In the following small subsections, the few statistics integrated are discussed.
 
 \subsubsection{Average Transit Time of a Schedule}
 
-In the railway formalism we allowed to the user to define the schedule for a particular train, but it might also be interesting to see if the schedule is actually effective, i.e. getting fast from the start station to the end station and having to wait minimally. Maybe some schedules are interfering with each other, i.e. a train has always to wait for another train (some sort of priority), so knowing the actual transit time can be quite useful. To retrieve this information, we add an extra attribute to a train, namely the train's departure time and when a train arrives at its end station (i.e. a collector), we can subtract the current time with that departure time. At the end of the simulation, we can take the average of all the transit times to get the final result.
+In the railway formalism we allowed the user to define the schedule for a particular train, but it might also be interesting to see if the schedule is actually effective, i.e. getting fast from the start station to the end station and having to wait minimally. Maybe some schedules are interfering with each other, i.e. a train has always to wait for another train (some sort of priority), so knowing the actual transit time can be quite useful. To retrieve this information, we add an extra attribute to a train, namely the train's departure time and when a train arrives at its end station (i.e. a collector), we can subtract the current time with that departure time. At the end of the simulation, we can take the average of all the transit times to get the final result.
 
 Next to this, we can also show the number of trains that have been generated (at their start station) and that have arrived to their destination, this can then also tell us whether all the trains seemingly can drive to their end location.
 
@@ -237,13 +247,45 @@ Next to this, we can also show the number of trains that have been generated (at
 
 It might also be interesting to look at an individual segment instead of the complete schedule. In such manner, we can isolate single tracks and look at their own performance. First, we can record the time that a train needs to pass through this segment. This implicitly also says whether a train has to wait a lot while being on this segment. Knowing this, we can try to avoid this by changing the initial schedule and for instance, take another route.
 
-Secondly, we can also store a track's throughput, i.e. the percentage that a train is present on the track. Generally, having a higher throughput is better, but together with the average time to pass this segment, one might expose some conjunction points in the railway network. For example, a certain junction has a high throughput which might mean that trains get clustered before that junction. Additionally, the mount of trains that passed this section is also kept, so we can easily track the trains.
+Secondly, we can also store a track's throughput, i.e. the percentage that a train is present on the track. Generally, having a higher throughput is better, but together with the average time to pass this segment, one might expose some conjunction points in the railway network. For example, a certain junction has a high throughput which might mean that trains get clustered before that junction. Additionally, the amount of trains that passed this section is also kept, so we can easily track the trains.
 
 \subsection{Updating Model}
 
 Like with safety analysis, we update our initial railway model with the gathered results from the DEVS simulation. Again, we make use of id's to have backward traceability, so we can precisely relate the results to a track.
 
+\section{Visualization}
+
+This whole time we stayed in \textit{AToMPM}'s environment, both for creating the railway model and showing the results of the analyses. In the back-end, we did use some other tools though, such as \textit{LoLA} and \textit{PythonPDEVS}, but in the end we went back to the railway formalism. This section will go over how we can visualize a railway model in a more user-friendly way by creating a 3D world in \textit{Unity}.
+
+\subsection{Model Generation}
+
+The first step is generating all the 3D objects, unfortunately we cannot directly use transformation rules to transform our model to one written for \textit{Unity}. Therefor, an intermediate step is taken; I created a small (\texttt{xml}) file that contains the essential information of the railway network, such as how the railway is structured or what parameter values are associated with a track. This file can then be used to instantiate the objects in \textit{Unity}.
+
+\subsection{Simulation}
+
+Not only do we want to visualize a model, we also want to see the interactions in the model. To do this, we simulate the model (in \textit{AToMPM}) by mapping it to DEVS. During this simulation, it will create a trace file, telling precisely at each point in time the dynamics of the system. After creating a tracefile, this can then be parsed and executed in \textit{Unity}, of course while respecting their times.
+
+Finally, there is also support for live simulation, i.e. visualizing the railway system while it's running. This is done by simulating the DEVS model in real time and each time a transition is taken or an event is occurring, the simulator will then pass a message to \textit{Unity}, which will parse it and display the results of it.
+
+\subsection{User Interaction}
+
+Since we support live simulation, it might also be very useful to allow user interaction. By doing so, a user can easily tweak a few parameters in \textit{Unity} and immediately see the effect of it. The way this is achieved is by sending a message back to the DEVS simulator from \textit{Unity}. This message is then interpreted as an external (or user) event in the DEVS model and contains information on which object and what parameters to update.
+
+\section{Future Work}
+
+This research project serves as a proof of concept, we created a few mappings starting from a railway formalism. However during this work, I took many shortcuts that could be improved in the future; these are some some of things that may need some work:
+
+\begin{itemize}
+    \item The base railway formalism can be extended; for example, to allow the railway formalism to construct tracks that allow trains to transit in two directions.
+    \item Currently the DEVS model is implemented in \textit{PythonPDEVS}, but this could of course also be modelled explicitly and replace the current one. On top of that, the current simulator is missing some features as well, such as explicit switches on junctions or allowing to bypass a station.
+    \item The visualization in \textit{Unity} is at this point a little bit sloppy in the sense that the movement of trains is not really accurately being displayed (trains are not pixel-perfect on tracks). This could be improved as well as general user-friendliness.
+\end{itemize}
+
+Apart from improving existing translations or models, it is also possible to add more mappings. For example, one could maybe model the user interaction explicitly in statecharts.
+
 \section{Conclusion}
+
+The whole idea behind this project was to model as much as possible and use the many advantages modelling offers without coding too much. In this particular case, we used a railway system as our base formalism and tried to map it onto many different domains. We successfully defined several mappings with the goal that we can solve the "problem" there, i.e. some sort of analysis and then link the results back. As earlier mentioned in the introduction, this way we tackled down the accidental complexity that programming brings with it and used modelling instead.
 
 \bibliographystyle{ieeetr}
 \nocite{*}
@@ -288,7 +330,7 @@ After the initialization (figure \ref{example_devs_after_init}), all the trains 
     \label{example_devs_after_first_iter}
 \end{figure}
 
-After the initialization, the real simulation loop can start. The first iteration (figure \ref{example_devs_after_first_iter}) starts by setting the switches, in this case, only one switch (most bottom junction) will be set. There are however two trains (\texttt{T3} and \texttt{T4}) who want to enter this junction, so it will randomly select one (\texttt{T3} here). After this step, the trains can try to move to the next segment, all the trains can move, except \texttt{T4} since the switch of the junction is not set correctly.
+Now, the real simulation loop can start. The first iteration (figure \ref{example_devs_after_first_iter}) starts by setting the switches, in this case, only one switch (most bottom junction) will be set. There are however two trains (\texttt{T3} and \texttt{T4}) who want to enter this junction, so it will randomly select one (\texttt{T3} here). After this step, the trains can try to move to the next segment, all the trains can move, except \texttt{T4} since the switch of the junction is not set correctly.
 
 \begin{figure}[H]
     \centering
@@ -297,7 +339,7 @@ After the initialization, the real simulation loop can start. The first iteratio
     \label{example_devs_after_few_iters}
 \end{figure}
 
-If we let the simulation run several iterations, we come to the following model in figure \ref{example_devs_after_few_iters}. Interestingly enough, \texttt{T1} is almost already at its destination, while \texttt{T4} just left its start station. This is due to the fact that \texttt{T1} only has to enter one junction (more on this in the \nameref{queueing_analysis_section} section). Finally, if we let the simulation run until the end, \texttt{T1}, \texttt{T2}, \texttt{T3} and \texttt{T4} will eventually reach their end location in this order.
+If we let the simulation run several iterations, we come to the following model in figure \ref{example_devs_after_few_iters}. Interestingly enough, \texttt{T1} is almost already at its destination, while \texttt{T4} just left its start station. This is due to the fact that \texttt{T1} only has to enter one junction. Finally, if we let the simulation run until the end, all the trains will eventually reach their end location. However, I noticed that the order in which the trains arrive can differ in each simulation; for example \texttt{T2} might arrive before \texttt{T1}, but more on this in the \nameref{queueing_analysis_section} section.
 
 \subsection*{Safety Analysis}
 
@@ -328,7 +370,7 @@ When running the model transformations, an intermediate petri-net model is creat
 
 From this intermediate petri-net, we can run our analysis and import the results back onto our railway model. The effect of this can be seen in figure \ref{example_pn_results}. First, there is an unreachable station \texttt{Station} and secondly, it might be possible to end up in a deadlock situation if we follow the indicated path on the model, i.e. instead of going straight on the turnout, the train takes a turn and goes into a dead path. Note that in practise this should not be possible if the control system is functioning correctly, i.e. setting the switch on the turnout according to a train's schedule.
 
-\subsection*{Queuing Analysis}
+\subsection*{Queueing Analysis}
 \label{queueing_analysis_section}
 
 For the queueing analysis, we start off with the same model we used for the operational semantics (figure \ref{example_devs_railway} and \ref{example_devs_schedule}). Note that the railway segments are all five kilometers long, the inter arrival time (IAT) for all the generators are $[5,10]$ seconds, the train's acceleration is $[0.2,0.7] m/s^2$ and the simulation runtime is 100.000 seconds (or roughly 28 hours). We make the inter IAT short enough so that trains can get queued, so we can see how the train system will function under heavy load. As earlier mentioned, we could already tell that \texttt{T1} reached its end station way before the others, but to go deeper on this, we can make use of the queueing analysis.
@@ -341,7 +383,7 @@ For the queueing analysis, we start off with the same model we used for the oper
     \label{example_devs_devs}
 \end{figure}
 
-Similarly to the safety analysis, we create an intermediate coupled DEVS model here (figure \ref{example_devs_devs}. This we can then use to simulate the whole railway system and retrieve the necessary statistics.
+Similarly to the safety analysis, we create an intermediate coupled DEVS model here (figure \ref{example_devs_devs}). This we can then use to simulate the whole railway system and retrieve the necessary statistics.
 
 \begin{figure}[H]
     \begin{center}
