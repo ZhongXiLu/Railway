@@ -1,4 +1,6 @@
-# Mapping the Railway formalism onto different domains
+## Mapping the Railway formalism onto different domains
+
+![](report/images/overview.png)
 
 - **Promoter**: Hans Vangheluwe
 - **Supervisor**: Simon Van Mierlo
