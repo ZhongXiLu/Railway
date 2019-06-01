@@ -5,7 +5,7 @@
 - **Promoter**: Hans Vangheluwe
 - **Supervisor**: Simon Van Mierlo
 
-For more information about this research project, read the [report](report/report.pdf).
+For more information about this research project, read the [report](report/report.pdf) or view the [presentation](report/presentation.pdf).
 
 ### Dependencies
 
