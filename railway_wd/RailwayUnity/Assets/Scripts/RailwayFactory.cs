@@ -64,7 +64,7 @@ public class RailwayFactory : MonoBehaviour {
     }
 
     public void destroyTrain(string train, string endStation) {
-        Destroy(GameObject.Find("Label Train " + train));
+        Destroy(GameObject.Find("Label Train_" + train));
         GameObject trainObj = GameObject.Find("Train_" + train);
         if(trainObj != null) {
             Destroy(trainObj);
