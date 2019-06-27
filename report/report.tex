@@ -42,7 +42,7 @@
 \title{Mapping the Railway formalism onto different domains}
 \author{Zhong Xi Lu}
 \affil{\small Department of Mathematics \\ and Computer Science \\ University of Antwerp, Belgium \\ \email{zhong-xi.lu@student.uantwerpen.be}}
-\date{May 2019}
+\date{June 2019}
 
 \begin{document}
 
@@ -317,15 +317,15 @@ The first step is generating all the 3D objects, unfortunately we cannot directl
 
 Not only do we want to visualize a model, we also want to see the interactions in the model. To do this, we simulate the model (in \textit{AToMPM}) by mapping it to DEVS and the let the \textit{PythonPDEVS} simulator do the work. During this simulation, it will create a trace file, telling precisely at each point in time the dynamics of the system. For this, however, a custom tracer was written to incorporate additional information about the models.
 
-After the creation of a trace, we can start our "gameloop" in \texttt{Unity}; first, we generate the world by loading the \texttt{xml} file that represented the railway network. Next, we can parse the trace and re-simulate the DEVS model; it will first look at the next event, if the timestamp of that event corresponds to the current time, it will simulate it and go to the next event. However, if the timestamp does not correspond, i.e. it occurs in the future, the game loop will wait until that event. The pseudocode for this gameloop can be found in listing \ref{lst:gameloop}. In this manner, we respect the timings of the simulation. Note that since the whole simulation was already ran, we can easily allow the user to set a speed up factor for a faster simulation time.
+After the creation of a trace, we can start our "gameloop" in \texttt{Unity} (\texttt{Update()}); first, we generate the world by loading the \texttt{xml} file that represented the railway network. Then the \texttt{Update} function is called each frame (note that we can also use \texttt{FixedUpdate} to get a consistent update). During this frame, we check the trace if there are any events that occurred in the past, i.e. the timestamp of the event is less or equal than the time since the startup. If this is the case, we simulate all these past events, otherwise we just wait for the next frame and repeat the process. The psuedocode for this gameloop can be found in listing \ref{lst:gameloop}. In this manner, we respect the timings of the simulation. Note that since the whole simulation was already ran, we can easily allow the user to set a speed up factor for a faster simulation time.
 
 \begin{lstlisting}[language=python, caption=Pseudocode Gameloop, label={lst:gameloop}]
-currentTime = 0.0
-while nextEventExists():
-    if currentTime != nextTimestamp:
-        wait (nextTimestamp - currentTime)
-        currentTime = nextTimestamp
-    simulateNextEvent()
+Update():
+    while next event exists:
+        if timestamp of next event <= time since startup:
+            simulate next event
+        else:
+            break
 \end{lstlisting}
 
 Finally, there is also support for live simulation, i.e. visualizing the railway system while it's running. This is done by simulating the DEVS model in real time and each time a transition is taken or an event is occurring, the simulator (or rather the tracer) will then pass a message to \textit{Unity} through sockets, which will then parse it and display the results of it. It's basically the same as before, but instead of reading the event from a tracefile, we now get these messages live from the simulator. This also means that we don't really have a gameloop anymore or have to worry much about the timestamps since all that is dealt with in the original simulator in \textit{PythonPDEVS}. Note that here, we also have to load the world prior to the actual simulation, this means that an \texttt{xml} must already exist before we can do the live simulation. A small overview of all this is given in figure \ref{live_simulation_overview}.
