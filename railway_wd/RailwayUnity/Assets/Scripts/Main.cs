@@ -22,23 +22,10 @@ public class Main : MonoBehaviour {
     private string data = null;
     private byte[] bytes = new Byte[1024];
 
-    IEnumerator simulate() {
-        float currentTime = 0.0f;
-        while(traceParser.nextCommand()) {
-            float nextTimestamp = traceParser.nextTimestamp()/simulationTimeScaleFactor;
-            if(currentTime != nextTimestamp) {
-                yield return new WaitForSeconds(nextTimestamp - currentTime);
-                currentTime = nextTimestamp;
-            }
-            traceParser.simulateNextCommand(simulationTimeScaleFactor);
-        }
-    }
-
     void Start() {
         if(!simulateLive) {
             worldLoader.loadWorld("railway");
             traceParser.loadTrace("railway_log");
-            StartCoroutine(simulate());
             
         } else {
             // Establish the local endpoint for the socket.
@@ -90,6 +77,18 @@ public class Main : MonoBehaviour {
                             traceParser.simulateCommand(command, 1f);
                         }
                     }
+                }
+            }
+
+        } else {
+            // Running simulation from tracefile
+            while(traceParser.nextCommand()) {
+                float nextTimestamp = traceParser.nextTimestamp()/simulationTimeScaleFactor;
+                if(nextTimestamp <= Time.realtimeSinceStartup) {
+                    traceParser.simulateNextCommand(simulationTimeScaleFactor);
+                } else {
+                    // next command in not in time (wait for next frames...)
+                    break;
                 }
             }
         }
