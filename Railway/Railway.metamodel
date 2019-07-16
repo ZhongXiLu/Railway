@@ -501,6 +501,16 @@
 				"name": "satisfied",
 				"type": "ENUM(TRUE,FALSE,UNKNOWN)",
 				"default": "UNKNOWN"
+			},
+			{
+				"name": "path",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "replay",
+				"type": "boolean",
+				"default": false
 			}
 		],
 		"TrackLink": [

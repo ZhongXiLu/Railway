@@ -199,7 +199,7 @@
 			"1": {
 				"Action": {
 					"type": "code",
-					"value": "import json\n\nfor safetyProperty in getAllNodes([\"/Formalisms/Railway/Railway/Property\"]):\n    with open(\"railway_wd/{}.json\".format(getAttr(\"name\", safetyProperty)), \"r\") as file:\n        data = json.load(file)\n        if data[\"analysis\"][\"result\"]:\n            setAttr(\"satisfied\", \"TRUE\", safetyProperty)\n        else:\n            setAttr(\"satisfied\", \"FALSE\", safetyProperty)\n\nresult = True"
+					"value": "import json\n\nfor safetyProperty in getAllNodes([\"/Formalisms/Railway/Railway/Property\"]):\n    with open(\"railway_wd/{}.json\".format(getAttr(\"name\", safetyProperty)), \"r\") as file:\n        data = json.load(file)\n        if data[\"analysis\"][\"result\"]:\n            setAttr(\"satisfied\", \"TRUE\", safetyProperty)\n        else:\n            setAttr(\"satisfied\", \"FALSE\", safetyProperty)\n        with open(\"railway_wd/{}_path.txt\".format(getAttr(\"name\", safetyProperty)), \"r\") as pathFile:\n            setAttr(\"path\", pathFile.read(), safetyProperty)\n\nresult = True"
 				},
 				"$type": "/Formalisms/__Transformations__/TransformationRule/TransformationRule/RHS"
 			}

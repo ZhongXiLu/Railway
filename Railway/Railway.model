@@ -7582,7 +7582,7 @@
 							"99": {
 								"textContent": {
 									"type": "string",
-									"value": "+ name : string = Property\n+ pathQuantifier : ENUM(ALL,EXISTS) = ALL\n+ temporalOperator : ENUM(FINALLY,GLOBALLY,NEXT) = GLOBALLY\n+ expression : string = TRUE\n+ satisfied : ENUM(TRUE,FALSE,UNKNOWN) = UNKNOWN"
+									"value": "+ name : string = Property\n+ pathQuantifier : ENUM(ALL,EXISTS) = ALL\n+ temporalOperator : ENUM(FINALLY,GLOBALLY,NEXT) = GLOBALLY\n+ expression : string = TRUE\n+ satisfied : ENUM(TRUE,FALSE,UNKNOWN) = UNKNOWN\n+ path : string\n+ replay : boolean"
 								},
 								"style": {
 									"type": "map<string,string>",
@@ -8823,6 +8823,16 @@
 							"name": "satisfied",
 							"type": "ENUM(TRUE,FALSE,UNKNOWN)",
 							"default": "UNKNOWN"
+						},
+						{
+							"name": "path",
+							"type": "string",
+							"default": ""
+						},
+						{
+							"name": "replay",
+							"type": "boolean",
+							"default": false
 						}
 					]
 				},
