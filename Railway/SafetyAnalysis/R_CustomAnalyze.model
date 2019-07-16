@@ -9,8 +9,8 @@
 				"position": {
 					"type": "list<double>",
 					"value": [
-						236,
-						213
+						182,
+						169
 					]
 				},
 				"orientation": {
@@ -99,8 +99,8 @@
 				"position": {
 					"type": "list<double>",
 					"value": [
-						637,
-						213
+						583,
+						169
 					]
 				},
 				"orientation": {
@@ -199,7 +199,7 @@
 			"1": {
 				"Action": {
 					"type": "code",
-					"value": "import os\nimport json\n\n\n'''\nRun analysis with LoLA on the generated .net file\n'''\n\n# Deadlock\nos.system(\"lola railway_wd/railway.net --json=railway_wd/deadlock.json --path=railway_wd/deadlock_path.txt --state=railway_wd/deadlock_state.txt --formula='EF DEADLOCK'\")\n\n# Reachable places\nfile2 = open(\"railway_wd/unreachable_places.txt\", \"w\")\nfile2.truncate(0)\nfor track in getAllNodes([\"/Formalisms/Railway/Railway/Straight\", \"/Formalisms/Railway/Railway/Station\", \"/Formalisms/Railway/Railway/Turnout\", \"/Formalisms/Railway/Railway/Junction\", \"/Formalisms/Railway/Railway/Crossing\"]):\n    os.system(\"lola railway_wd/railway.net --json=railway_wd/reachable_places.json --formula='EF {} > 0'\".format(\"T\" + getAttr(\"$atompmId\", track)))\n    with open(\"railway_wd/reachable_places.json\", \"r\") as file:\n        data = json.load(file)\n        if not data[\"analysis\"][\"result\"]:\n            file2.write(getAttr(\"$atompmId\", track) + \"\\n\")\nfile2.close()\n\n# Safeness\nfile2 = open(\"railway_wd/unsafe_places.txt\", \"w\")\nfile2.truncate(0)\nfor track in getAllNodes([\"/Formalisms/Railway/Railway/Straight\", \"/Formalisms/Railway/Railway/Station\", \"/Formalisms/Railway/Railway/Turnout\", \"/Formalisms/Railway/Railway/Junction\", \"/Formalisms/Railway/Railway/Crossing\"]):\n    os.system(\"lola railway_wd/railway.net --json=railway_wd/safe_places.json --formula='AG {} <= 1'\".format(\"T\" + getAttr(\"$atompmId\", track)))\n    with open(\"railway_wd/safe_places.json\", \"r\") as file:\n        data = json.load(file)\n        if not data[\"analysis\"][\"result\"]:\n            file2.write(getAttr(\"$atompmId\", track) + \"\\n\")\nfile2.close()\n\n# Invariance lights\nfile2 = open(\"railway_wd/invariance_lights_places.txt\", \"w\")\nfile2.truncate(0)\nfor track in getAllNodes([\"/Formalisms/Railway/Railway/Straight\", \"/Formalisms/Railway/Railway/Station\", \"/Formalisms/Railway/Railway/Turnout\", \"/Formalisms/Railway/Railway/Junction\", \"/Formalisms/Railway/Railway/Crossing\"]):\n    os.system(\"lola railway_wd/railway.net --json=railway_wd/invariance_lights.json --formula='AG ({} = 1 OR {} = 1)'\".format(\"G\" + getAttr(\"$atompmId\", track), \"R\" + getAttr(\"$atompmId\", track)))\n    with open(\"railway_wd/invariance_lights.json\", \"r\") as file:\n        data = json.load(file)\n        if not data[\"analysis\"][\"result\"]:\n            file2.write(getAttr(\"$atompmId\", track) + \"\\n\")\nfile2.close()\n\nresult = True"
+					"value": "import os\nimport json\nimport re\n\n\n'''\nRun custom analysis with LoLA on the generated .net file\n'''\n\nfor safetyProperty in getAllNodes([\"/Formalisms/Railway/Railway/Property\"]):\n\n    expression = getAttr(\"expression\", safetyProperty)\n\n    # Replace references to tracks by their ID\n    for link in getNeighbors(\">\", \"*\", safetyProperty):\n        refName = getAttr(\"ID\", link)\n        idTrack = getAttr(\"$atompmId\", getNeighbors(\">\", \"*\", link)[0])\n        expression = re.sub(r'\\b{}\\b'.format(refName), \"T\"+idTrack, expression)\n\n    command = \"lola railway_wd/railway.net --json=railway_wd/{}.json --formula='{}{} {}'\".format(\n        getAttr(\"name\", safetyProperty),\n        getAttr(\"pathQuantifier\", safetyProperty)[0],\n        getAttr(\"temporalOperator\", safetyProperty)[0],\n        expression\n    )\n\n    os.system(command)\n\nresult = True"
 				},
 				"$type": "/Formalisms/__Transformations__/TransformationRule/TransformationRule/RHS"
 			}

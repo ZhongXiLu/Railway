@@ -9,8 +9,8 @@
 				"position": {
 					"type": "list<double>",
 					"value": [
-						236,
-						213
+						524,
+						225
 					]
 				},
 				"orientation": {
@@ -99,8 +99,8 @@
 				"position": {
 					"type": "list<double>",
 					"value": [
-						637,
-						213
+						925,
+						225
 					]
 				},
 				"orientation": {
@@ -199,7 +199,7 @@
 			"1": {
 				"Action": {
 					"type": "code",
-					"value": "import os\nimport json\n\n\n'''\nRun analysis with LoLA on the generated .net file\n'''\n\n# Deadlock\nos.system(\"lola railway_wd/railway.net --json=railway_wd/deadlock.json --path=railway_wd/deadlock_path.txt --state=railway_wd/deadlock_state.txt --formula='EF DEADLOCK'\")\n\n# Reachable places\nfile2 = open(\"railway_wd/unreachable_places.txt\", \"w\")\nfile2.truncate(0)\nfor track in getAllNodes([\"/Formalisms/Railway/Railway/Straight\", \"/Formalisms/Railway/Railway/Station\", \"/Formalisms/Railway/Railway/Turnout\", \"/Formalisms/Railway/Railway/Junction\", \"/Formalisms/Railway/Railway/Crossing\"]):\n    os.system(\"lola railway_wd/railway.net --json=railway_wd/reachable_places.json --formula='EF {} > 0'\".format(\"T\" + getAttr(\"$atompmId\", track)))\n    with open(\"railway_wd/reachable_places.json\", \"r\") as file:\n        data = json.load(file)\n        if not data[\"analysis\"][\"result\"]:\n            file2.write(getAttr(\"$atompmId\", track) + \"\\n\")\nfile2.close()\n\n# Safeness\nfile2 = open(\"railway_wd/unsafe_places.txt\", \"w\")\nfile2.truncate(0)\nfor track in getAllNodes([\"/Formalisms/Railway/Railway/Straight\", \"/Formalisms/Railway/Railway/Station\", \"/Formalisms/Railway/Railway/Turnout\", \"/Formalisms/Railway/Railway/Junction\", \"/Formalisms/Railway/Railway/Crossing\"]):\n    os.system(\"lola railway_wd/railway.net --json=railway_wd/safe_places.json --formula='AG {} <= 1'\".format(\"T\" + getAttr(\"$atompmId\", track)))\n    with open(\"railway_wd/safe_places.json\", \"r\") as file:\n        data = json.load(file)\n        if not data[\"analysis\"][\"result\"]:\n            file2.write(getAttr(\"$atompmId\", track) + \"\\n\")\nfile2.close()\n\n# Invariance lights\nfile2 = open(\"railway_wd/invariance_lights_places.txt\", \"w\")\nfile2.truncate(0)\nfor track in getAllNodes([\"/Formalisms/Railway/Railway/Straight\", \"/Formalisms/Railway/Railway/Station\", \"/Formalisms/Railway/Railway/Turnout\", \"/Formalisms/Railway/Railway/Junction\", \"/Formalisms/Railway/Railway/Crossing\"]):\n    os.system(\"lola railway_wd/railway.net --json=railway_wd/invariance_lights.json --formula='AG ({} = 1 OR {} = 1)'\".format(\"G\" + getAttr(\"$atompmId\", track), \"R\" + getAttr(\"$atompmId\", track)))\n    with open(\"railway_wd/invariance_lights.json\", \"r\") as file:\n        data = json.load(file)\n        if not data[\"analysis\"][\"result\"]:\n            file2.write(getAttr(\"$atompmId\", track) + \"\\n\")\nfile2.close()\n\nresult = True"
+					"value": "import os\nimport json\n\n'''\nGenerate .net file\n'''\n\nif not os.path.exists(\"railway_wd\"):\n    os.makedirs(\"railway_wd\")\n\nfileName = \"{}/{}/{}\".format(os.getcwd(), \"railway_wd\", \"railway.net\")\nfile = open(fileName, \"w\")\n\n# Places\nmarkings = {}\nfile.write(\"\\nPLACE\\n\")\nplaces = getAllNodes([\"/Formalisms/PN/PN/Place\"])\nfor i, place in enumerate(places):\n    pname = getAttr(\"pname\", place)\n    tokens = getAttr(\"tokens\", place)\n    markings[pname] = tokens\n    if i == len(places) - 1:\n        file.write(pname + \"\\n\")\n    else:\n        file.write(pname + \",\\n\")\nfile.write(\";\\n\")\n\n# Markings\nfile.write(\"\\nMARKING\\n\")\nfor i, (pname, marking) in enumerate(markings.items()):\n    if i == len(markings) - 1:\n        file.write(\"{}: {}\\n\".format(pname, marking))\n    else:\n        file.write(\"{}: {},\\n\".format(pname, marking))\nfile.write(\";\\n\")\n\n# Transitions\nfor transition in getAllNodes([\"/Formalisms/PN/PN/Transition\"]):\n    produces = getNeighbors(\">\", \"*\", transition)\n    consumes = getNeighbors(\"<\", \"*\", transition)\n    file.write(\"\\nTRANSITION {}\\n\".format(getAttr(\"tname\", transition)))\n    file.write(\"CONSUME\\n\")\n    for i, consume in enumerate(consumes):\n        if getAttr(\"pname\", getNeighbors(\"<\", \"*\", consume)[0]) is not None:\n            pname = getAttr(\"pname\", getNeighbors(\"<\", \"*\", consume)[0])\n            if i == len(consumes) - 1:\n                file.write(\"{}: {}\".format(pname, getAttr(\"weight\", consume)))\n            else:\n                file.write(\"{}: {}, \".format(pname, getAttr(\"weight\", consume)))\n    file.write(\";\\n\")\n    file.write(\"PRODUCE\\n\")\n    for i, produce in enumerate(produces):\n        if getAttr(\"pname\", getNeighbors(\">\", \"*\", produce)[0]) is not None:\n            pname = getAttr(\"pname\", getNeighbors(\">\", \"*\", produce)[0])\n            if i == len(produces) - 1:\n                file.write(\"{}: {}\".format(pname, getAttr(\"weight\", produce)))\n            else:\n                file.write(\"{}: {}, \".format(pname, getAttr(\"weight\", produce)))\n    file.write(\";\\n\")\n\nfile.close()"
 				},
 				"$type": "/Formalisms/__Transformations__/TransformationRule/TransformationRule/RHS"
 			}
