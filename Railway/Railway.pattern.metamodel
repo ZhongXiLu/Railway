@@ -761,6 +761,80 @@
 				"type": "code",
 				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
 			}
+		],
+		"__pProperty": [
+			{
+				"name": "__pLabel",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotIn",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotOut",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pMatchSubtypes",
+				"type": "boolean",
+				"default": true
+			},
+			{
+				"name": "name",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			},
+			{
+				"name": "pathQuantifier",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			},
+			{
+				"name": "temporalOperator",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			},
+			{
+				"name": "expression",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			},
+			{
+				"name": "satisfied",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			}
+		],
+		"__pTrackLink": [
+			{
+				"name": "__pLabel",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotIn",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pPivotOut",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "__pMatchSubtypes",
+				"type": "boolean",
+				"default": true
+			},
+			{
+				"name": "ID",
+				"type": "code",
+				"default": "\"[PYTHON]\"\n\"Example:\t result = True\"\n\"Example:\t result = getAttr()\"\n\n\"[JAVASCRIPT]\"\n\"Example:\t true\"\n\"Example:\t getAttr()\""
+			}
 		]
 	},
 	"constraints": [
@@ -882,6 +956,12 @@
 				"type": "__pLightOnTrack",
 				"min": 0,
 				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "__pTrackLink",
+				"min": 0,
+				"max": "Infinity"
 			}
 		],
 		"__pStraight": [
@@ -908,6 +988,12 @@
 				"type": "__pLightOnTrack",
 				"min": 0,
 				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "__pTrackLink",
+				"min": 0,
+				"max": "Infinity"
 			}
 		],
 		"__pTurnout": [
@@ -934,6 +1020,12 @@
 				"type": "__pLightOnTrack",
 				"min": 0,
 				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "__pTrackLink",
+				"min": 0,
+				"max": "Infinity"
 			}
 		],
 		"__pJunction": [
@@ -960,6 +1052,12 @@
 				"type": "__pLightOnTrack",
 				"min": 0,
 				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "__pTrackLink",
+				"min": 0,
+				"max": "Infinity"
 			}
 		],
 		"__pCrossing": [
@@ -986,6 +1084,12 @@
 				"type": "__pLightOnTrack",
 				"min": 0,
 				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "__pTrackLink",
+				"min": 0,
+				"max": "Infinity"
 			}
 		],
 		"__pStation": [
@@ -1012,6 +1116,12 @@
 				"type": "__pLightOnTrack",
 				"min": 0,
 				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "__pTrackLink",
+				"min": 0,
+				"max": "Infinity"
 			}
 		],
 		"__pTrain": [
@@ -1290,6 +1400,12 @@
 				"type": "__pLightOnTrack",
 				"min": 0,
 				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "__pTrackLink",
+				"min": 0,
+				"max": "Infinity"
 			}
 		],
 		"__pSplit": [
@@ -1316,6 +1432,12 @@
 				"type": "__pLightOnTrack",
 				"min": 0,
 				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "__pTrackLink",
+				"min": 0,
+				"max": "Infinity"
 			}
 		],
 		"__pBasicTrack": [
@@ -1340,6 +1462,82 @@
 			{
 				"dir": "out",
 				"type": "__pLightOnTrack",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "__pTrackLink",
+				"min": 0,
+				"max": "Infinity"
+			}
+		],
+		"__pProperty": [
+			{
+				"dir": "out",
+				"type": "__pTrackLink",
+				"min": 0,
+				"max": "Infinity"
+			}
+		],
+		"__pTrackLink": [
+			{
+				"dir": "in",
+				"type": "__pProperty",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "__pTrack",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "__pStraight",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "__pTurnout",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "__pJunction",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "__pCrossing",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "__pStation",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "__pJoin",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "__pSplit",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "__pBasicTrack",
 				"min": 0,
 				"max": "1"
 			}
@@ -1660,12 +1858,42 @@
 			"__pLight": [
 				"__pLightOnTrack"
 			]
+		},
+		"__pProperty": {
+			"__pTrack": [
+				"__pTrackLink"
+			],
+			"__pStraight": [
+				"__pTrackLink"
+			],
+			"__pTurnout": [
+				"__pTrackLink"
+			],
+			"__pJunction": [
+				"__pTrackLink"
+			],
+			"__pCrossing": [
+				"__pTrackLink"
+			],
+			"__pStation": [
+				"__pTrackLink"
+			],
+			"__pJoin": [
+				"__pTrackLink"
+			],
+			"__pSplit": [
+				"__pTrackLink"
+			],
+			"__pBasicTrack": [
+				"__pTrackLink"
+			]
 		}
 	},
 	"connectorTypes": {
 		"__pTrackToTrack": "visual",
 		"__pTrainOnTrack": "containment",
-		"__pLightOnTrack": "containment"
+		"__pLightOnTrack": "containment",
+		"__pTrackLink": "visual"
 	},
 	"types2parentTypes": {
 		"__pTrack": [
@@ -1720,6 +1948,8 @@
 		"__pBasicTrack": [
 			"__pPositionable",
 			"__pTrack"
-		]
+		],
+		"__pProperty": [],
+		"__pTrackLink": []
 	}
 }

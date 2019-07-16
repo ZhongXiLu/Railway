@@ -475,6 +475,40 @@
 				"type": "string",
 				"default": ""
 			}
+		],
+		"Property": [
+			{
+				"name": "name",
+				"type": "string",
+				"default": "Property"
+			},
+			{
+				"name": "pathQuantifier",
+				"type": "ENUM(ALL,EXISTS)",
+				"default": "ALL"
+			},
+			{
+				"name": "temporalOperator",
+				"type": "ENUM(FINALLY,GLOBALLY,NEXT)",
+				"default": "GLOBALLY"
+			},
+			{
+				"name": "expression",
+				"type": "string",
+				"default": "TRUE"
+			},
+			{
+				"name": "satisfied",
+				"type": "ENUM(TRUE,FALSE,UNKNOWN)",
+				"default": "UNKNOWN"
+			}
+		],
+		"TrackLink": [
+			{
+				"name": "ID",
+				"type": "string",
+				"default": "T"
+			}
 		]
 	},
 	"constraints": [
@@ -590,6 +624,12 @@
 				"type": "LightOnTrack",
 				"min": "0",
 				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "TrackLink",
+				"min": "0",
+				"max": "Infinity"
 			}
 		],
 		"Straight": [
@@ -616,6 +656,12 @@
 				"type": "LightOnTrack",
 				"min": "0",
 				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "TrackLink",
+				"min": "0",
+				"max": "Infinity"
 			}
 		],
 		"Turnout": [
@@ -642,6 +688,12 @@
 				"type": "LightOnTrack",
 				"min": "0",
 				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "TrackLink",
+				"min": "0",
+				"max": "Infinity"
 			}
 		],
 		"Junction": [
@@ -668,6 +720,12 @@
 				"type": "LightOnTrack",
 				"min": "0",
 				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "TrackLink",
+				"min": "0",
+				"max": "Infinity"
 			}
 		],
 		"Crossing": [
@@ -694,6 +752,12 @@
 				"type": "LightOnTrack",
 				"min": "0",
 				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "TrackLink",
+				"min": "0",
+				"max": "Infinity"
 			}
 		],
 		"Station": [
@@ -720,6 +784,12 @@
 				"type": "LightOnTrack",
 				"min": "0",
 				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "TrackLink",
+				"min": "0",
+				"max": "Infinity"
 			}
 		],
 		"Train": [
@@ -998,6 +1068,12 @@
 				"type": "LightOnTrack",
 				"min": "0",
 				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "TrackLink",
+				"min": "0",
+				"max": "Infinity"
 			}
 		],
 		"Split": [
@@ -1024,6 +1100,12 @@
 				"type": "LightOnTrack",
 				"min": "0",
 				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "TrackLink",
+				"min": "0",
+				"max": "Infinity"
 			}
 		],
 		"BasicTrack": [
@@ -1048,6 +1130,82 @@
 			{
 				"dir": "out",
 				"type": "LightOnTrack",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "TrackLink",
+				"min": "0",
+				"max": "Infinity"
+			}
+		],
+		"Property": [
+			{
+				"dir": "out",
+				"type": "TrackLink",
+				"min": "0",
+				"max": "Infinity"
+			}
+		],
+		"TrackLink": [
+			{
+				"dir": "in",
+				"type": "Property",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "Track",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "Straight",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "Turnout",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "Junction",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "Crossing",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "Station",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "Join",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "Split",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "BasicTrack",
 				"min": "0",
 				"max": "1"
 			}
@@ -1368,12 +1526,42 @@
 			"Light": [
 				"LightOnTrack"
 			]
+		},
+		"Property": {
+			"Track": [
+				"TrackLink"
+			],
+			"Straight": [
+				"TrackLink"
+			],
+			"Turnout": [
+				"TrackLink"
+			],
+			"Junction": [
+				"TrackLink"
+			],
+			"Crossing": [
+				"TrackLink"
+			],
+			"Station": [
+				"TrackLink"
+			],
+			"Join": [
+				"TrackLink"
+			],
+			"Split": [
+				"TrackLink"
+			],
+			"BasicTrack": [
+				"TrackLink"
+			]
 		}
 	},
 	"connectorTypes": {
 		"TrackToTrack": "visual",
 		"TrainOnTrack": "containment",
-		"LightOnTrack": "containment"
+		"LightOnTrack": "containment",
+		"TrackLink": "visual"
 	},
 	"types2parentTypes": {
 		"Track": [
@@ -1428,6 +1616,8 @@
 		"BasicTrack": [
 			"Positionable",
 			"Track"
-		]
+		],
+		"Property": [],
+		"TrackLink": []
 	}
 }
