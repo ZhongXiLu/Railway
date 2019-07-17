@@ -34,27 +34,34 @@ For more information about this research project, read the [report](report/repor
 
 ### Manual
 
-- **Creating the Railway model**: import the `Railway.defaultIcons.metamodel` toolbar
-    - To define a train's schedule: import the `TrainSchedule.defaultIcons.metamodel` toolbar
-- **Operational Semantics**: run the `T_OperationalSemantics.model` transformation
-- **Safety Analysis**:
-    - For default analysis: run the `T_SafetyAnalysis.model` transformation
-    - For custom analysis (using custom properties): run the `T_CustomSafetyAnalysis.model` transformation
-    - To replay a counterexample:
-        - Make sure there was a trace generated (check the `trace` property of a Property)
-        - Set `replay` to `true` on the Property object
-        - Run the `T_ReplayTrace.model` transformation
-- **Queuing Analysis**: run the `T_QueueingAnalysis.model` transformation
-    - Alternatively the `T_QueueingAnalysisAfterDEVSTransformation.model` transformation can be ran on a model that has already be transformed to a DEVS model (using `T_ToDEVS.model`)
-- **Visualization**:
-    - Visualize using a trace:
-        - Just run the queueing analysis (`T_QueueingAnalysis.model`) to create a tracefile and `railway.xml` file
-        - Open the Unity project
-        - Set the `simulateLive` parameter to `false` on the `Main` object (you can also specify the `simulationTimeScaleFactor` if you like)
-        - Start the Unity project
-    - Visualizing live while simulating:
-        - You might need to run the queueing analysis beforehand (to create the `railway.xml`), so Unity can instantly load this file
-        - Open the Unity project
-        - Set the `simulateLive` parameter to `true` on the `Main` object
-        - Start the Unity project
-        - Run the `T_Visualization.model` transformation (or `T_VisualizationAfterDEVSTransformation.model`)
+#### Create Railway model
+- Import the `Railway.defaultIcons.metamodel` toolbar
+- To define a train's schedule: import the `TrainSchedule.defaultIcons.metamodel` toolbar
+
+#### Operational Semantics
+- Run the `T_OperationalSemantics.model` transformation
+
+#### Safety Analysis
+- For default analysis: run the `T_SafetyAnalysis.model` transformation
+- For custom analysis (using custom properties): run the `T_CustomSafetyAnalysis.model` transformation
+- To replay a counterexample:
+    - Make sure there was a trace generated (check the `trace` property of a Property)
+    - Set `replay` to `true` on the Property object
+    - Run the `T_ReplayTrace.model` transformation
+
+#### Queuing Analysis
+- Run the `T_QueueingAnalysis.model` transformation
+- Alternatively the `T_QueueingAnalysisAfterDEVSTransformation.model` transformation can be ran on a model that has already been transformed to a DEVS model (using `T_ToDEVS.model`)
+
+#### Visualization
+- Visualize using a trace:
+    - Just run the queueing analysis (`T_QueueingAnalysis.model`) to create a tracefile and `railway.xml` file
+    - Open the Unity project
+    - Set the `simulateLive` parameter to `false` on the `Main` object (you can also specify the `simulationTimeScaleFactor` if you like)
+    - Start the Unity project
+- Visualizing live while simulating:
+    - You might need to run the queueing analysis beforehand (to create the `railway.xml`), so Unity can instantly load this file
+    - Open the Unity project
+    - Set the `simulateLive` parameter to `true` on the `Main` object
+    - Start the Unity project
+    - Run the `T_Visualization.model` transformation (or `T_VisualizationAfterDEVSTransformation.model`)
