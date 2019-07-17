@@ -42,7 +42,7 @@
 \title{Mapping the Railway formalism onto different domains}
 \author{Zhong Xi Lu}
 \affil{\small Department of Mathematics \\ and Computer Science \\ University of Antwerp, Belgium \\ \email{zhong-xi.lu@student.uantwerpen.be}}
-\date{June 2019}
+\date{July 2019}
 
 \begin{document}
 
@@ -225,7 +225,7 @@ Petri-nets are highly suitable for reachability analysis, more specifically, wit
 
 The CTL formula to verify this is "\texttt{EF T > 0}" (with \texttt{T} the name of the track/place), this translates to whether it's possible to reach a state where the marking value of this place is strictly greater than $0$.
 
-\subsubsection{Safeness}
+\subsubsection{Safenty}
 
 Since we're dealing with trains on rails, it's of course desirable to have that trains cannot crash into each other, i.e. two trains on one single track. To verify this, we can check if our whole petri-net is 1-bounded or safe, meaning in every place there cannot be more than one token or on every track there can be at most one train present.
 
@@ -237,12 +237,20 @@ In our petri-net mapping, we introduced two places for each signalling light. Im
 
 This invariant we can model as "\texttt{AG (G = 1 OR R = 1)}" (where \texttt{G} and \texttt{R} stand for the places that respectively correspond to the green and red light of a track). Similarly to the previous property, this will make sure that on all paths (\texttt{A}) and globally (\texttt{G}), either there is a token in the "green" place or one in the "red" place. Of course, here we do this same call for each track, since we want to verify this invariant for every light.
 
+\subsubsection{Custom Properties}
+
+It's all well and good having these safety properties, but it doesn't allow much for extensibility in the sense that we can define our own properties if that's needed. Hence, we can again define our own little language that has the ability to model these properties. However, this language is merged into the railway formalism, so we can reference particular tracks and individually check certain tracks.
+
+This property formalism is heavily based on the CTL language that we pass onto LoLA, so in the end a user has to know a little bit about this to define a property.
+
 \subsection{Interfaces}
 \label{safety_interfaces}
 
 As slightly mentioned, to be able to call \texttt{LoLA}, we first generate a petri-net file suitable for analysis. Then we can simply call \texttt{LoLA} via a command and make the necessary property checks. This is all done in one transformation rule (the \texttt{Analyze} step in figure \ref{schedule_safety}).
 
 When analyzing and generating the results, we want to be able to show them to the user somehow. The way this is achieved is also through a small model transformation that reads the (\textit{LoLA} generated) results in and updates the railway model accordingly. For example, highlight (and add a few comments about) the path that led to a deadlock state.
+
+Another way of showing these results, is to show a replay of a counterexample if one exists and is given by LoLA. This replay is of course done through almost the same transformation rules as the ones in the operational semantics. However, this time we don't take the train schedules into account, instead we base the semantics on the generated trace by LoLA. This trace tells us precisely which actions have been taken (which transitions have been fired), so all that we have to do, is translate and replay these actions on our railway model. 
 
 One important thing to note is when mapping the results (of the analysis) back to our original model, we need some form of traceability. We can create traces by making use of unique identifiers for the objects in the railway model and then use the same ones in the petri-net model. This way, we can correspond a petri-net element to its original element.
 
@@ -441,6 +449,33 @@ When running the model transformations, an intermediate petri-net model is creat
 \end{figure}
 
 From this intermediate petri-net, we can run our analysis and import the results back onto our railway model. The effect of this can be seen in figure \ref{example_pn_results}. First, there is an unreachable station \texttt{Station} and secondly, it might be possible to end up in a deadlock situation if we follow the indicated path on the model, i.e. instead of going straight on the turnout, the train takes a turn and goes into a dead path. Note that in practise this should not be possible if the control system is functioning correctly, i.e. setting the switch on the turnout according to a train's schedule.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/custom_properties.png}
+    \caption{Some custom defined properties}
+    \label{custom_properties}
+\end{figure}
+
+In figure \ref{custom_properties} a couple custom define properties are modelled. As earlier mentioned, this is in the form of CTL. Also note that in the formulas it is possible to reference a particular track, if we do this, we do have to create a link between the referenced name (\texttt{T} is used here) and the actual track in the railway model.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\textwidth]{images/custom_properties_result.png}
+    \caption{Results for the custom defined properties}
+    \label{custom_properties_results}
+\end{figure}
+
+This time, we can call the custom analysis, which will take this CTL formulas and directly pass it to LoLA for analysis. After each call, we can easily give feedback on whether the property was satisfied or not (green is satisfied and red isn't). For example, the \texttt{EF DEADLOCK} is satisfied, meaning that it found a path to a deadlock state.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/custom_properties_replay.png}
+    \caption{Results for the replay of the deadlock property}
+    \label{custom_properties_replay}
+\end{figure}
+
+Lastly, we can ask for a replay to precisely give us the snapshots during the run. In figure \ref{custom_properties_replay}, the last snapshot is given and as expected from the default analysis (figure \ref{example_pn_results}), we concluded with the same path that led to a deadlock state.
 
 \subsection*{Queueing Analysis}
 \label{queueing_analysis_section}

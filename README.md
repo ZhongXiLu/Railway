@@ -37,7 +37,13 @@ For more information about this research project, read the [report](report/repor
 - **Creating the Railway model**: import the `Railway.defaultIcons.metamodel` toolbar
     - To define a train's schedule: import the `TrainSchedule.defaultIcons.metamodel` toolbar
 - **Operational Semantics**: run the `T_OperationalSemantics.model` transformation
-- **Safety Analysis**: run the `T_SafetyAnalysis.model` transformation
+- **Safety Analysis**:
+    - For default analysis: run the `T_SafetyAnalysis.model` transformation
+    - For custom analysis (using custom properties): run the `T_CustomSafetyAnalysis.model` transformation
+    - To replay a counterexample:
+        - Make sure there was a trace generated (check the `trace` property of a Property)
+        - Set `replay` to `true` on the Property object
+        - Run the `T_ReplayTrace.model` transformation
 - **Queuing Analysis**: run the `T_QueueingAnalysis.model` transformation
     - Alternatively the `T_QueueingAnalysisAfterDEVSTransformation.model` transformation can be ran on a model that has already be transformed to a DEVS model (using `T_ToDEVS.model`)
 - **Visualization**:
